@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { FounderPhoto } from "./FounderPhoto";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -40,14 +40,7 @@ export function Founder() {
 
               {/* Photo container */}
               <div className="relative aspect-[4/5] overflow-hidden border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-mid)]">
-                <Image
-                  src="/enes.jpg"
-                  alt="Enes Tokmak, founder af CactAi"
-                  fill
-                  className="object-cover grayscale-[0.15] contrast-[1.05]"
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                  priority
-                />
+                <FounderPhoto />
                 {/* Subtle green overlay for brand cohesion */}
                 <div
                   aria-hidden

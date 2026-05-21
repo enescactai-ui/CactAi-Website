@@ -1,5 +1,7 @@
 "use client";
 
+import { Logo } from "./Logo";
+
 const FOOTER_LINKS = {
   Firma: [
     { label: "Sådan virker det", href: "#how" },
@@ -25,7 +27,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2.5">
-              <CactusMark />
+              <Logo size={28} />
               <span className="font-display text-xl font-semibold tracking-tight">
                 CactAi
               </span>
@@ -73,26 +75,3 @@ export function Footer() {
   );
 }
 
-function CactusMark() {
-  return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient id="cactusGradFooter" x1="0" y1="0" x2="32" y2="32">
-          <stop offset="0%" stopColor="#87dd5c" />
-          <stop offset="100%" stopColor="#52b788" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M16 4c1.5 0 2.5 1 2.5 2.5v8h2.5c1.5 0 2.5 1 2.5 2.5v3c0 1.5-1 2.5-2.5 2.5h-2.5v5c0 1.5-1 2.5-2.5 2.5h-0c-1.5 0-2.5-1-2.5-2.5v-9h-2.5c-1.5 0-2.5-1-2.5-2.5v-2c0-1.5 1-2.5 2.5-2.5h2.5V6.5c0-1.5 1-2.5 2.5-2.5z"
-        fill="url(#cactusGradFooter)"
-      />
-    </svg>
-  );
-}

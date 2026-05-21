@@ -1,7 +1,7 @@
 import { Footer } from "@/components/site/Footer";
+import { FounderPhoto } from "@/components/site/FounderPhoto";
 import { Navbar } from "@/components/site/Navbar";
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Om CactAi",
@@ -36,14 +36,7 @@ export default function OmPage() {
               <div className="relative">
                 <div className="absolute -bottom-3 -right-3 h-full w-full border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)]/40" />
                 <div className="relative aspect-[4/5] overflow-hidden border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-mid)]">
-                  <Image
-                    src="/enes.jpg"
-                    alt="Enes Tokmak, founder af CactAi"
-                    fill
-                    className="object-cover grayscale-[0.15] contrast-[1.05]"
-                    sizes="(min-width: 1024px) 40vw, 100vw"
-                    priority
-                  />
+                  <FounderPhoto size="large" />
                 </div>
                 <div className="mt-4 flex items-start justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/50">
                   <span>Fig. 01 — Enes T.</span>
