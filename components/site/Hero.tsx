@@ -36,7 +36,9 @@ export function Hero() {
       id="top"
       className="relative isolate overflow-hidden pt-28 pb-24 lg:pt-40 lg:pb-32"
     >
-      {/* Background video — looping, muted, autoplay */}
+      {/* Background video — looping, muted, autoplay
+          WebM served to supporting browsers (Chrome/Firefox/Edge) for smaller size
+          MP4 fallback for Safari + older browsers */}
       <video
         autoPlay
         loop
@@ -44,9 +46,10 @@ export function Hero() {
         playsInline
         preload="auto"
         aria-hidden="true"
-        className="absolute inset-0 -z-30 h-full w-full object-cover opacity-[0.35]"
+        className="absolute inset-0 -z-30 h-full w-full object-cover opacity-[0.4]"
         poster="/hero-poster.svg"
       >
+        <source src="/hero-bg.webm" type="video/webm" />
         <source src="/hero-bg.mp4" type="video/mp4" />
       </video>
 
