@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
-  { label: "Sådan virker det", href: "#how" },
-  { label: "Priser", href: "#priser" },
-  { label: "Garanti", href: "#garanti" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Manifest", href: "/#manifest" },
+  { label: "Sådan virker det", href: "/#how" },
+  { label: "ROI", href: "/#roi" },
+  { label: "Priser", href: "/#priser" },
+  { label: "Om", href: "/om" },
 ];
 
 export function Navbar() {
