@@ -1,6 +1,7 @@
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Om CactAi",
@@ -28,6 +29,36 @@ export default function OmPage() {
             </span>
             .
           </h1>
+
+          {/* Editorial portrait */}
+          <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-12">
+            <div className="lg:col-span-5">
+              <div className="relative">
+                <div className="absolute -bottom-3 -right-3 h-full w-full border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)]/40" />
+                <div className="relative aspect-[4/5] overflow-hidden border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-mid)]">
+                  <Image
+                    src="/enes.jpg"
+                    alt="Enes Tokmak, founder af CactAi"
+                    fill
+                    className="object-cover grayscale-[0.15] contrast-[1.05]"
+                    sizes="(min-width: 1024px) 40vw, 100vw"
+                    priority
+                  />
+                </div>
+                <div className="mt-4 flex items-start justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/50">
+                  <span>Fig. 01 — Enes T.</span>
+                  <span>Greve, 22.05.2026</span>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-7">
+              <p className="font-display text-2xl font-light italic leading-[1.3] tracking-[-0.01em] text-[color:var(--color-cactus-cream)]/75 sm:text-3xl">
+                "Den eneste måde at vide om noget virker er at lade nogen
+                betale for det først. Hvis de ikke vil betale, så virker det
+                ikke."
+              </p>
+            </div>
+          </div>
 
           <div className="mt-16 grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-8 space-y-6 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/75">
