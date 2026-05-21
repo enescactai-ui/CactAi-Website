@@ -36,6 +36,26 @@ export function Hero() {
       id="top"
       className="relative isolate overflow-hidden pt-28 pb-24 lg:pt-40 lg:pb-32"
     >
+      {/* Background video — looping, muted, autoplay */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+        className="absolute inset-0 -z-30 h-full w-full object-cover opacity-[0.35]"
+        poster="/hero-poster.svg"
+      >
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay for text contrast on top of video */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-25 bg-gradient-to-b from-[color:var(--color-cactus-deep)]/40 via-[color:var(--color-cactus-deep)]/70 to-[color:var(--color-cactus-deep)]"
+      />
+
       {/* Mouse-tracking spotlight */}
       <motion.div
         aria-hidden
