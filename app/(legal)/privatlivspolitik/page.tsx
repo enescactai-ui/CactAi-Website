@@ -11,7 +11,7 @@ const SECTIONS = [
     n: "01",
     title: "Hvem er vi",
     body: [
-      "CactAi v/Enes Tokmak, Krogager 44, 2670 Greve. CVR 46210689. Kontakt: enes@cactaihq.com / +45 71 72 37 91.",
+      "CactAi v/Enes Tokmak, Krogager 44, 2670 Greve. CVR 46210689. Kontakt: enes@cactaihq.com / +45 91 30 95 60.",
       "Vi er dataansvarlig for de personoplysninger vi indsamler om dig som prospekt eller klient.",
     ],
   },

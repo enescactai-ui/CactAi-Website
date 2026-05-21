@@ -13,7 +13,7 @@ const FOOTER_LINKS = {
     { label: "Cookies", href: "/cookies" },
   ],
   Kontakt: [
-    { label: "+45 71 72 37 91", href: "tel:+4571723791" },
+    { label: "+45 91 30 95 60", href: "tel:+4591309560" },
     { label: "enes@cactaihq.com", href: "mailto:enes@cactaihq.com" },
   ],
 };

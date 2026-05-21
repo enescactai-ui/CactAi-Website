@@ -67,8 +67,10 @@ export default function OmPage() {
                 driver CactAi solo fra Greve.
               </p>
               <p>
-                Jeg startede med at lære marketing fra YouTube — Hormozi, Jack
-                SMMA, Kyran. De fleste danske bureauer kører gamle leveringsmodeller (faste retainere, vagt månedsabonnement, "vi kan ikke garantere noget"). Det
+                Jeg startede med at lære marketing fra YouTube, mentorships
+                og bøger fra folk som Alex Hormozi. De fleste danske bureauer
+                kører gamle leveringsmodeller (faste retainere, vagt
+                månedsabonnement, "vi kan ikke garantere noget"). Det
                 irriterede mig.
               </p>
               <p>

@@ -47,10 +47,10 @@ export function CTA() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="tel:+4571723791"
+              href="tel:+4591309560"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-[color:var(--color-cactus-cream)]/20 px-8 py-4 text-base font-medium text-[color:var(--color-cactus-cream)] transition-colors hover:border-[color:var(--color-cactus-cream)]/40 hover:bg-[color:var(--color-cactus-cream)]/5"
             >
-              Eller ring +45 71 72 37 91
+              Eller ring +45 91 30 95 60
             </a>
           </div>
 

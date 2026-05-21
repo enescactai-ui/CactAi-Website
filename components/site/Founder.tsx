@@ -5,12 +5,19 @@ import Image from "next/image";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
+const TIMELINE = [
+  { date: "Jan 2026", event: "CactAi grundlagt. Enkeltmandsvirksomhed. CVR 46210689." },
+  { date: "Mar 2026", event: "Første betalende klient: Solrød Rengøring." },
+  { date: "Maj 2026", event: "Skalerer pay-per-show til VVS, EL, maler, tagdækker." },
+  { date: "Nu", event: "Bygger CactAi til 5 fast tilbagevendende klienter." },
+];
+
 const FACTS = [
   ["Navn", "Enes Tokmak"],
   ["Alder", "19"],
   ["Lokation", "Greve, Sjælland"],
   ["Startede CactAi", "Januar 2026"],
-  ["Lærte fra", "Hormozi · Jack SMMA · Kyran"],
+  ["Lærte fra", "Alex Hormozi + mentorships"],
   ["Sover på", "Aldrig før tirsdag"],
 ];
 
@@ -95,9 +102,9 @@ export function Founder() {
                   <strong className="text-[color:var(--color-cactus-cream)]">
                     Enes Tokmak, 19 år.
                   </strong>{" "}
-                  Født og opvokset i Danmark. Lærte marketing fra YouTube — Hormozi,
-                  Jack SMMA, Kyran Rawson — fordi business-skoler ikke lærer
-                  hvad der virker i 2026.
+                  Født og opvokset i Danmark. Lærte marketing fra YouTube,
+                  mentorships, og bøger fra folk som Alex Hormozi — fordi
+                  business-skoler ikke lærer hvad der virker i 2026.
                 </p>
                 <p>
                   Da jeg startede CactAi var der INGEN i Danmark der kørte
@@ -166,37 +173,75 @@ export function Founder() {
                 </div>
               ))}
             </motion.dl>
-
-            {/* CTA row */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.6 }}
-              className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm"
-            >
-              <a
-                href="/om"
-                className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)] underline decoration-[color:var(--color-cactus-green)] decoration-2 underline-offset-[6px] transition-colors hover:text-[color:var(--color-cactus-green)]"
-              >
-                Læs hele historien
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </a>
-              <a
-                href="mailto:enes@cactaihq.com"
-                className="font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/55 transition-colors hover:text-[color:var(--color-cactus-cream)]"
-              >
-                enes@cactaihq.com
-              </a>
-              <a
-                href="tel:+4571723791"
-                className="font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/55 transition-colors hover:text-[color:var(--color-cactus-cream)]"
-              >
-                +45 71 72 37 91
-              </a>
-            </motion.div>
           </div>
         </div>
+
+        {/* Timeline — full width, breaks below the grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
+          className="mt-24 border-t border-[color:var(--color-cactus-green)]/15 pt-16 lg:mt-32 lg:pt-20"
+        >
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
+            Tidslinje // CactAi
+          </div>
+          <div className="mt-10 grid gap-y-12 lg:grid-cols-4 lg:gap-x-10">
+            {TIMELINE.map((item, i) => (
+              <motion.div
+                key={item.date}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
+                className="relative pl-6 lg:pl-0 lg:pt-8"
+              >
+                {/* Vertical line on mobile, horizontal on desktop */}
+                <div className="absolute left-0 top-0 h-full w-[2px] bg-[color:var(--color-cactus-green)]/20 lg:left-0 lg:right-0 lg:top-0 lg:h-[2px] lg:w-full" />
+                <div className="absolute left-0 top-0 h-3 w-3 -translate-x-[5px] rounded-full bg-[color:var(--color-cactus-green)] ring-4 ring-[color:var(--color-cactus-deep)] lg:left-0 lg:top-0 lg:-translate-x-0 lg:-translate-y-[5px]" />
+
+                <div className="font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-green)]">
+                  {item.date}
+                </div>
+                <p className="mt-3 font-display text-base leading-snug text-[color:var(--color-cactus-cream)]/80 lg:text-lg">
+                  {item.event}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA row — full width below timeline */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="mt-16 flex flex-wrap items-center justify-between gap-6 border-t border-[color:var(--color-cactus-green)]/15 pt-8"
+        >
+          <a
+            href="/om"
+            className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)] underline decoration-[color:var(--color-cactus-green)] decoration-2 underline-offset-[6px] transition-colors hover:text-[color:var(--color-cactus-green)]"
+          >
+            Læs hele historien
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            <a
+              href="mailto:enes@cactaihq.com"
+              className="font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/55 transition-colors hover:text-[color:var(--color-cactus-cream)]"
+            >
+              enes@cactaihq.com
+            </a>
+            <a
+              href="tel:+4591309560"
+              className="font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/55 transition-colors hover:text-[color:var(--color-cactus-cream)]"
+            >
+              +45 91 30 95 60
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
