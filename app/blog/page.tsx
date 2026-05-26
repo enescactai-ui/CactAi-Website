@@ -46,7 +46,12 @@ export default function BlogIndexPage() {
           { name: "Blog & Indsigt", url: "https://cactaihq.com/blog" },
         ]}
       />
-      <script type="application/ld+json">{JSON.stringify(BLOG_SCHEMA)}</script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(BLOG_SCHEMA).replace(/</g, "\\u003c"),
+        }}
+      />
 
       <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">

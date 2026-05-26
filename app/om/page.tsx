@@ -46,7 +46,12 @@ export default function OmPage() {
           { name: "Om CactAi", url: "https://cactaihq.com/om" },
         ]}
       />
-      <script type="application/ld+json">{JSON.stringify(PERSON_SCHEMA)}</script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(PERSON_SCHEMA).replace(/</g, "\\u003c"),
+        }}
+      />
       <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <article className="mx-auto max-w-4xl px-6 lg:px-12">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">

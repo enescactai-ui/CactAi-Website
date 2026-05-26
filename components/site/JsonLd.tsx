@@ -110,16 +110,28 @@ const WEBSITE_SCHEMA = {
   publisher: { "@id": "https://cactaihq.com/#org" },
 } as const;
 
+// Per Next.js 16 docs (app/02-guides/json-ld.md): JSON-LD must use
+// dangerouslySetInnerHTML — passing JSON as text children breaks React 19
+// hydration and silently wipes the DOM tree.
+function ld(schema: object) {
+  return JSON.stringify(schema).replace(/</g, "\\u003c");
+}
+
 export function JsonLd() {
   return (
     <>
-      <script type="application/ld+json">{JSON.stringify(ORG_SCHEMA)}</script>
-      <script type="application/ld+json">
-        {JSON.stringify(LOCAL_BUSINESS_SCHEMA)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(WEBSITE_SCHEMA)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: ld(ORG_SCHEMA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: ld(LOCAL_BUSINESS_SCHEMA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: ld(WEBSITE_SCHEMA) }}
+      />
     </>
   );
 }

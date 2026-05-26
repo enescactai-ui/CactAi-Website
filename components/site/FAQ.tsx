@@ -56,7 +56,12 @@ const FAQ_SCHEMA = {
 export function FAQ() {
   return (
     <section id="faq" className="relative py-24 lg:py-32">
-      <script type="application/ld+json">{JSON.stringify(FAQ_SCHEMA)}</script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(FAQ_SCHEMA).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="mx-auto max-w-4xl px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

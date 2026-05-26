@@ -84,9 +84,12 @@ export default async function BlogPostPage({ params }: Props) {
           { name: post.title, url: `https://cactaihq.com/blog/${post.slug}` },
         ]}
       />
-      <script type="application/ld+json">
-        {JSON.stringify(articleSchema)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c"),
+        }}
+      />
 
       <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <article>
