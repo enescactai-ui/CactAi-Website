@@ -69,14 +69,47 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "ss01", "cv11";
+    /* Continuous fixed-attachment gradient — flows down the whole page so
+       no section feels "different colored" from another. Soft blobs are
+       larger and lower-opacity to eliminate harsh banding. */
     background-image:
-      radial-gradient(circle at 18% 12%, rgba(82, 183, 136, 0.12), transparent 40%),
-      radial-gradient(circle at 82% 0%, rgba(135, 221, 92, 0.06), transparent 45%),
-      radial-gradient(circle at 50% 100%, rgba(82, 183, 136, 0.08), transparent 55%);
+      radial-gradient(ellipse 70% 50% at 20% 8%, rgba(82, 183, 136, 0.10), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 25%, rgba(135, 221, 92, 0.045), transparent 65%),
+      radial-gradient(ellipse 80% 60% at 50% 70%, rgba(82, 183, 136, 0.055), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 30% 95%, rgba(82, 183, 136, 0.06), transparent 65%);
+    background-attachment: fixed;
+  }
+  /* Subtle film-grain overlay — masks gradient banding on dark backgrounds.
+     Fixed positioning so grain stays uniform during scroll. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    mix-blend-mode: overlay;
+  }
+  /* Ensure all interactive content sits above the grain overlay */
+  body > * {
+    position: relative;
+    z-index: 2;
   }
   html {
     @apply font-sans;
     scroll-behavior: smooth;
+  }
+  /* Anchor scroll offset — accounts for fixed navbar (h-16 mobile, h-20 desktop)
+     so clicking #manifest, #how, etc. lands the section title below the nav,
+     not hidden behind it. */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+  @media (min-width: 1024px) {
+    section[id] {
+      scroll-margin-top: 6rem;
+    }
   }
   ::selection {
     background-color: rgba(82, 183, 136, 0.35);
@@ -108,5 +141,38 @@
       0 0 0 1px rgba(82, 183, 136, 0.15),
       0 8px 40px -8px rgba(82, 183, 136, 0.35),
       inset 0 1px 0 rgba(244, 241, 232, 0.05);
+  }
+
+  /* Marquee — infinite horizontal scroll. Track contains 2× content side-by-side,
+     animate translateX from 0 to -50% so the second copy seamlessly takes over. */
+  .marquee-track {
+    animation: marquee 35s linear infinite;
+    will-change: transform;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Respect reduced-motion preference — disable non-essential animations.
+   Framer Motion has its own internal reduced-motion handling; this covers
+   our CSS-driven animations (marquee, ping, etc.). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
   }
 }

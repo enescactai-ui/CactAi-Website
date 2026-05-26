@@ -34,8 +34,17 @@ export function Manifesto() {
   return (
     <section
       id="manifest"
-      className="relative border-y border-[color:var(--color-cactus-green)]/15 py-24 lg:py-32"
+      className="relative py-24 lg:py-32"
     >
+      {/* Soft gradient-fade divider — replaces the harsh edge-to-edge border */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:var(--color-cactus-green)]/20 to-transparent"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[color:var(--color-cactus-green)]/20 to-transparent"
+      />
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
           {/* Left: Header */}

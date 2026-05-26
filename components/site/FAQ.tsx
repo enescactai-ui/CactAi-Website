@@ -39,9 +39,24 @@ const FAQS = [
   },
 ];
 
+/**
+ * FAQPage JSON-LD schema — gives Google rich results for these questions.
+ * Each Q&A becomes an expandable result in search.
+ */
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export function FAQ() {
   return (
     <section id="faq" className="relative py-24 lg:py-32">
+      <script type="application/ld+json">{JSON.stringify(FAQ_SCHEMA)}</script>
       <div className="mx-auto max-w-4xl px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

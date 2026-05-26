@@ -29,16 +29,12 @@ export function FounderPhoto({ size = "default" }: { size?: "default" | "large" 
   }
 
   return (
-    <picture>
-      <source srcSet="/enes.webp" type="image/webp" />
-      <source srcSet="/enes.jpg" type="image/jpeg" />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/enes.webp"
-        alt="Enes Tokmak, founder af CactAi"
-        onError={() => setErrored(true)}
-        className="absolute inset-0 h-full w-full object-cover grayscale-[0.15] contrast-[1.05]"
-      />
-    </picture>
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
+      src="/enes.webp"
+      alt="Enes Tokmak, founder af CactAi"
+      onError={() => setErrored(true)}
+      className="absolute inset-0 h-full w-full object-cover grayscale-[0.15] contrast-[1.05]"
+    />
   );
 }

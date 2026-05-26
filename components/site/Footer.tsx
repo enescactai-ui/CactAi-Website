@@ -4,10 +4,11 @@ import { Logo } from "./Logo";
 
 const FOOTER_LINKS = {
   Firma: [
-    { label: "Sådan virker det", href: "#how" },
-    { label: "Priser", href: "#priser" },
-    { label: "Garanti", href: "#garanti" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Ydelser", href: "/ydelser" },
+    { label: "Sådan virker det", href: "/#how" },
+    { label: "Priser", href: "/#priser" },
+    { label: "Om", href: "/om" },
+    { label: "FAQ", href: "/#faq" },
   ],
   Juridisk: [
     { label: "Privatlivspolitik", href: "/privatlivspolitik" },
@@ -16,7 +17,7 @@ const FOOTER_LINKS = {
   ],
   Kontakt: [
     { label: "+45 91 30 95 60", href: "tel:+4591309560" },
-    { label: "enes@cactaihq.com", href: "mailto:enes@cactaihq.com" },
+    { label: "enescactai@gmail.com", href: "mailto:enescactai@gmail.com" },
   ],
 };
 

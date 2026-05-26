@@ -1,3 +1,4 @@
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,6 +9,12 @@ export const metadata: Metadata = {
 export default function CookiesPage() {
   return (
     <article>
+      <Breadcrumb
+        items={[
+          { name: "Hjem", url: "https://cactaihq.com" },
+          { name: "Cookie-politik", url: "https://cactaihq.com/cookies" },
+        ]}
+      />
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
         Juridisk // Cookies
       </div>
@@ -18,7 +25,7 @@ export default function CookiesPage() {
         Den korteste cookie-politik du nogensinde har læst.
       </p>
 
-      <section className="mt-16 border-t border-[color:var(--color-cactus-green)]/15 pt-8">
+      <section className="relative mt-16 pt-8 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[color:var(--color-cactus-green)]/20 before:to-transparent">
         <div className="flex items-baseline gap-4">
           <span className="font-mono text-sm text-[color:var(--color-cactus-green)]">
             01
@@ -34,7 +41,7 @@ export default function CookiesPage() {
         </p>
       </section>
 
-      <section className="mt-12 border-t border-[color:var(--color-cactus-green)]/15 pt-8">
+      <section className="relative mt-12 pt-8 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[color:var(--color-cactus-green)]/20 before:to-transparent">
         <div className="flex items-baseline gap-4">
           <span className="font-mono text-sm text-[color:var(--color-cactus-green)]">
             02
@@ -51,7 +58,7 @@ export default function CookiesPage() {
         </ul>
       </section>
 
-      <section className="mt-12 border-t border-[color:var(--color-cactus-green)]/15 pt-8">
+      <section className="relative mt-12 pt-8 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[color:var(--color-cactus-green)]/20 before:to-transparent">
         <div className="flex items-baseline gap-4">
           <span className="font-mono text-sm text-[color:var(--color-cactus-green)]">
             03

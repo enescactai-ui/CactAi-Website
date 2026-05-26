@@ -186,7 +186,8 @@ export function ROICalculator() {
                     key={b.key}
                     type="button"
                     onClick={() => handleBrancheChange(b.key)}
-                    className={`rounded-xl border px-3 py-2.5 text-sm transition-all ${
+                    aria-pressed={b.key === brancheKey}
+                    className={`min-h-[44px] rounded-xl border px-3 py-2.5 text-center text-[13px] leading-tight text-balance transition-all ${
                       b.key === brancheKey
                         ? "border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)]/15 text-[color:var(--color-cactus-cream)]"
                         : "border-[color:var(--color-cactus-cream)]/10 text-[color:var(--color-cactus-cream)]/65 hover:border-[color:var(--color-cactus-green)]/30 hover:bg-[color:var(--color-cactus-green)]/5"
@@ -344,23 +345,33 @@ function SliderField({
   format: (v: number) => string;
 }) {
   const pct = ((value - min) / (max - min)) * 100;
+  // Stable, unique id for label↔input linkage (a11y)
+  const id = `slider-${label.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase()}`;
   return (
     <div className="mt-8">
-      <div className="flex items-baseline justify-between gap-3">
-        <label className="text-xs font-medium uppercase tracking-wide text-[color:var(--color-cactus-cream)]/45">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+        <label
+          htmlFor={id}
+          className="text-xs font-medium uppercase tracking-wide text-[color:var(--color-cactus-cream)]/45"
+        >
           {label}
         </label>
-        <span className="font-display text-lg font-semibold tracking-tight text-[color:var(--color-cactus-green)]">
+        <span className="font-display text-lg font-semibold tracking-tight text-[color:var(--color-cactus-green)] tabular-nums">
           {format(value)}
         </span>
       </div>
       <input
+        id={id}
         type="range"
         min={min}
         max={max}
         step={step}
         value={value}
         onChange={(e) => setValue(Number(e.target.value))}
+        aria-label={`${label}: ${format(value)}`}
+        aria-valuemin={min}
+        aria-valuemax={max}
+        aria-valuenow={value}
         className="mt-3 h-2 w-full cursor-pointer appearance-none rounded-full bg-[color:var(--color-cactus-cream)]/10 accent-[color:var(--color-cactus-green)]"
         style={{
           background: `linear-gradient(to right, var(--color-cactus-green) 0%, var(--color-cactus-green) ${pct}%, rgba(244,241,232,0.10) ${pct}%, rgba(244,241,232,0.10) 100%)`,

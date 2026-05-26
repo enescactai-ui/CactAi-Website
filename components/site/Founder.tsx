@@ -16,8 +16,8 @@ const FACTS = [
   ["Navn", "Enes Tokmak"],
   ["Alder", "19"],
   ["Lokation", "Greve, Sjælland"],
+  ["Uddannelse", "HHX"],
   ["Startede CactAi", "Januar 2026"],
-  ["Lærte fra", "Alex Hormozi + mentorships"],
   ["Sover på", "Aldrig før tirsdag"],
 ];
 
@@ -95,9 +95,14 @@ export function Founder() {
                   <strong className="text-[color:var(--color-cactus-cream)]">
                     Enes Tokmak, 19 år.
                   </strong>{" "}
-                  Født og opvokset i Danmark. Lærte marketing fra YouTube,
-                  mentorships, og bøger fra folk som Alex Hormozi — fordi
-                  business-skoler ikke lærer hvad der virker i 2026.
+                  Født og opvokset i Danmark. Læser HHX sideløbende med at jeg
+                  driver CactAi — formel business-uddannelse + det praktiske
+                  jeg lærer ved at gøre.
+                </p>
+                <p>
+                  Det praktiske lærer jeg fra YouTube, mentorships og bøger fra
+                  folk som Alex Hormozi. Skole giver dig teorien; marketing i
+                  2026 lærer du ved at gøre.
                 </p>
                 <p>
                   Da jeg startede CactAi var der INGEN i Danmark der kørte
@@ -180,7 +185,12 @@ export function Founder() {
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
             Tidslinje // CactAi
           </div>
-          <div className="mt-10 grid gap-y-12 lg:grid-cols-4 lg:gap-x-10">
+          <div className="relative mt-10 grid gap-y-12 lg:grid-cols-4 lg:gap-x-10">
+            {/* Continuous timeline line — horizontal on desktop, vertical on mobile */}
+            <div
+              aria-hidden
+              className="absolute left-0 top-0 h-full w-[2px] bg-[color:var(--color-cactus-green)]/20 lg:bottom-auto lg:left-0 lg:right-0 lg:top-0 lg:h-[2px] lg:w-full"
+            />
             {TIMELINE.map((item, i) => (
               <motion.div
                 key={item.date}
@@ -190,9 +200,11 @@ export function Founder() {
                 transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
                 className="relative pl-6 lg:pl-0 lg:pt-8"
               >
-                {/* Vertical line on mobile, horizontal on desktop */}
-                <div className="absolute left-0 top-0 h-full w-[2px] bg-[color:var(--color-cactus-green)]/20 lg:left-0 lg:right-0 lg:top-0 lg:h-[2px] lg:w-full" />
-                <div className="absolute left-0 top-0 h-3 w-3 -translate-x-[5px] rounded-full bg-[color:var(--color-cactus-green)] ring-4 ring-[color:var(--color-cactus-deep)] lg:left-0 lg:top-0 lg:-translate-x-0 lg:-translate-y-[5px]" />
+                {/* Per-cell dot — sits on the continuous line */}
+                <div
+                  aria-hidden
+                  className="absolute left-0 top-0 h-3 w-3 -translate-x-[5px] rounded-full bg-[color:var(--color-cactus-green)] ring-4 ring-[color:var(--color-cactus-deep)] lg:left-0 lg:top-0 lg:-translate-x-0 lg:-translate-y-[5px]"
+                />
 
                 <div className="font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-green)]">
                   {item.date}
@@ -222,10 +234,10 @@ export function Founder() {
           </a>
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
             <a
-              href="mailto:enes@cactaihq.com"
+              href="mailto:enescactai@gmail.com"
               className="font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/55 transition-colors hover:text-[color:var(--color-cactus-cream)]"
             >
-              enes@cactaihq.com
+              enescactai@gmail.com
             </a>
             <a
               href="tel:+4591309560"

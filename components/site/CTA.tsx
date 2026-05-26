@@ -17,6 +17,7 @@ export function CTA() {
           transition={{ duration: 0.7, ease: EASE }}
           className="relative overflow-hidden rounded-3xl border border-[color:var(--color-cactus-green)]/25 bg-gradient-to-br from-[color:var(--color-cactus-green)]/15 via-[color:var(--color-cactus-mid)] to-[color:var(--color-cactus-deep)] p-8 lg:p-14"
         >
+          {/* Ambient background glow */}
           <div className="absolute inset-0 -z-10 opacity-30">
             <div className="absolute -top-20 left-1/4 h-60 w-60 rounded-full bg-[color:var(--color-cactus-lime)]/40 blur-3xl" />
             <div className="absolute -bottom-20 right-1/4 h-60 w-60 rounded-full bg-[color:var(--color-cactus-green)]/40 blur-3xl" />
@@ -38,7 +39,7 @@ export function CTA() {
               </h2>
 
               <p className="mt-6 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/75">
-                Vælg en tid der passer dig. Vi regner konkret på hvad
+                Udfyld kort formen, vælg en tid. Vi regner konkret på hvad
                 PPSA-modellen betyder for dit firma — og du beslutter selv
                 om det giver mening.
               </p>
@@ -71,7 +72,7 @@ export function CTA() {
               </div>
             </div>
 
-            {/* RIGHT — embedded booking widget */}
+            {/* RIGHT — embedded booking widget (handles form + calendar in one flow) */}
             <div className="lg:col-span-7">
               <BookingEmbed />
             </div>

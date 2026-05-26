@@ -1,14 +1,14 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const NAV_LINKS = [
   { label: "Manifest", href: "/#manifest" },
+  { label: "Ydelser", href: "/ydelser" },
   { label: "Sådan virker det", href: "/#how" },
-  { label: "ROI", href: "/#roi" },
   { label: "Priser", href: "/#priser" },
   { label: "Om", href: "/om" },
 ];
@@ -18,6 +18,14 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Scroll progress for the top-of-nav indicator bar
+  const { scrollYProgress } = useScroll();
+  const progressX = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 30,
+    mass: 0.2,
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -111,6 +119,13 @@ export function Navbar() {
             </button>
           </div>
         </div>
+
+        {/* Scroll progress indicator — full-width bottom edge of nav */}
+        <motion.div
+          aria-hidden
+          style={{ scaleX: progressX, transformOrigin: "0% 50%" }}
+          className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[color:var(--color-cactus-green)] via-[color:var(--color-cactus-lime)] to-[color:var(--color-cactus-green)]"
+        />
       </motion.header>
 
       {/* Mobile menu — full-screen overlay */}
@@ -205,10 +220,10 @@ export function Navbar() {
                     +45 91 30 95 60
                   </a>
                   <a
-                    href="mailto:enes@cactaihq.com"
+                    href="mailto:enescactai@gmail.com"
                     className="block transition-colors hover:text-[color:var(--color-cactus-cream)]"
                   >
-                    enes@cactaihq.com
+                    enescactai@gmail.com
                   </a>
                 </div>
               </motion.div>

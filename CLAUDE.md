@@ -3,7 +3,7 @@
 # CactAi Website — Project Memory
 
 > Read this file FIRST in every session. It contains permanent project context.
-> Owner: Enes Tokmak · Last updated: 2026-05-22
+> Owner: Enes Tokmak · Last updated: 2026-05-26
 
 ---
 
@@ -31,7 +31,12 @@ If a design choice makes the site prettier but lowers conversion → reject it.
 - **Deploy:** Vercel (auto-deploy on push to main)
 - **Domain:** cactaihq.com (currently on GHL — repointing pending)
 - **Analytics:** Vercel Analytics + Speed Insights (when deployed)
-- **Forms/booking:** Calendly link → calendly.com/cactai/book
+- **Forms/booking:** GoHighLevel widget embedded via `components/site/BookingEmbed.tsx`.
+  Uses `api.leadconnectorhq.com` (GHL platform URL) since the white-label
+  `link.cactaihq.com` CNAME isn't configured in DNS yet.
+- **SEO:** Auto-generated OG image (`app/opengraph-image.tsx`),
+  JSON-LD via `components/site/JsonLd.tsx` (Organization + ProfessionalService
+  + WebSite at root, FAQPage on homepage).
 
 ---
 
@@ -75,15 +80,24 @@ Text opacity for hierarchy: `/85` (primary), `/65` (secondary), `/45` (tertiary)
 
 | Component | Purpose | Key state |
 |---|---|---|
-| `Navbar.tsx` | Sticky top nav, scroll-aware blur | `scrolled` boolean |
-| `Hero.tsx` | Animated headline + trust stats | Framer entrance animation |
+| `Navbar.tsx` | Sticky top nav, scroll-aware blur + mobile overlay | `scrolled`, `mobileOpen` |
+| `Hero.tsx` | Animated headline + video bg + mouse spotlight | Framer + useMotionValue |
+| `TrustMarquee.tsx` | Infinite scrolling tagline ticker | CSS-only animation |
+| `Manifesto.tsx` | Brand positioning / "why we exist" | Scroll-triggered |
+| `Founder.tsx` | Enes bio + facts grid + photo + timeline | Uses `FounderPhoto.tsx` |
 | `HowItWorks.tsx` | 4-step process cards | Scroll-triggered cards |
+| `BeforeAfter.tsx` | Split-screen "Din uge nu / efter" timeline | Editorial contrast |
+| `Receipt.tsx` | PPSA receipt visualization (fremmødt vs no-show) | Static |
 | `ROICalculator.tsx` | Interactive ROI widget | branche, jobValue, meetings, closeRate |
 | `Pricing.tsx` | 3 tiers (Starter/Premium/Elite) | Premium is `highlight: true` |
+| `Comparison.tsx` | 8-row table "Traditionelt bureau vs CactAi" | Hover-revealed |
 | `Guarantee.tsx` | 14-day guarantee section | Circular "0 kr" badge |
-| `FAQ.tsx` | 8-question accordion | `open` boolean per item |
-| `CTA.tsx` | Final book-section | Links to Calendly |
+| `FAQ.tsx` | 8-question accordion + FAQPage JSON-LD | `open` boolean per item |
+| `CTA.tsx` | Final book-section, embeds `BookingEmbed.tsx` | GHL widget iframe |
+| `BookingEmbed.tsx` | GHL booking iframe + form_embed.js script | Lazy-loaded |
 | `Footer.tsx` | Brand + nav + legal + contact | Static |
+| `Logo.tsx` | SVG cactus logo (used in Navbar + Footer) | Static |
+| `JsonLd.tsx` | Server Component emitting 3 schema.org blocks | Static |
 
 **Naming conventions:**
 - Components: PascalCase, `components/site/Hero.tsx`
@@ -160,14 +174,21 @@ Before reporting "done" on any UI change:
 
 ## What's NOT on the site yet (future work)
 
-- [ ] Privatlivspolitik page (`/privatlivspolitik`)
-- [ ] Vilkår page (`/vilkaar`)
-- [ ] Cookie-politik (`/cookies`)
+- [x] ~~Privatlivspolitik page~~ — done, GDPR-grade v2.0
+- [x] ~~Vilkår page~~ — done, B2B-grade v2.0
+- [x] ~~Cookie-politik~~ — done, minimal "we use almost nothing" page
+- [x] ~~OG image generation~~ — done, auto-generated via `app/opengraph-image.tsx`
+- [x] ~~Sitemap.xml + robots.txt~~ — done, `app/sitemap.ts` + `app/robots.ts`
+- [x] ~~Booking embed~~ — done, GHL widget via `BookingEmbed.tsx`
+- [x] ~~JSON-LD structured data~~ — done, 4 schemas in initial HTML
+- [x] ~~Services page~~ — done at `/ydelser` with 5 services
+- [ ] DNS repoint cactaihq.com from GHL to Vercel (pending Enes)
+- [ ] Set up GHL white-label CNAME `link.cactaihq.com` (then revert
+      `BookingEmbed.tsx` URLs from `api.leadconnectorhq.com`)
 - [ ] Blog (`/blog` + `/blog/[slug]`)
 - [ ] Case studies (when more clients sign)
-- [ ] OG image generation (currently placeholder)
-- [ ] Sitemap.xml + robots.txt
-- [ ] Calendly inline embed (currently external link)
+- [ ] Per-service qualification forms (currently all CTAs → `/#book`)
+- [ ] Vercel Analytics + Speed Insights wiring (just add `@vercel/analytics`)
 
 ---
 

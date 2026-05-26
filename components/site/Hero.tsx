@@ -112,17 +112,17 @@ export function Hero() {
           }}
           className="font-display tracking-[-0.04em] leading-[0.92]"
         >
-          <HeadlineLine className="text-[15vw] font-light text-[color:var(--color-cactus-cream)]/60 sm:text-[11vw] lg:text-[8.5vw]">
+          <HeadlineLine className="text-[13vw] font-light text-[color:var(--color-cactus-cream)]/60 sm:text-[11vw] lg:text-[8.5vw]">
             Du betaler
           </HeadlineLine>
-          <HeadlineLine className="text-[18vw] font-black text-[color:var(--color-cactus-cream)] sm:text-[14vw] lg:text-[11vw]">
+          <HeadlineLine className="text-[16vw] font-black text-[color:var(--color-cactus-cream)] sm:text-[14vw] lg:text-[11vw]">
             kun{" "}
             <span className="relative italic font-light">
               når
               <Underline />
             </span>
           </HeadlineLine>
-          <HeadlineLine className="text-[16vw] font-black text-balance text-[color:var(--color-cactus-cream)] sm:text-[12vw] lg:text-[9.5vw]">
+          <HeadlineLine className="text-[14vw] font-black text-balance text-[color:var(--color-cactus-cream)] sm:text-[12vw] lg:text-[9.5vw]">
             <span className="text-[color:var(--color-cactus-green)]">
               kunden
             </span>{" "}
@@ -175,7 +175,7 @@ export function Hero() {
         transition={{ duration: 1, delay: 1.2 }}
         className="relative mt-32 border-y border-[color:var(--color-cactus-green)]/15"
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-[color:var(--color-cactus-green)]/15 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[color:var(--color-cactus-green)]/15 lg:grid-cols-4 lg:divide-y-0">
           {[
             { metric: "0 kr", note: "ved no-show" },
             { metric: "14 dage", note: "garanti-periode" },
@@ -184,15 +184,15 @@ export function Hero() {
           ].map((s, i) => (
             <div
               key={s.metric}
-              className="group relative px-6 py-10 lg:px-10 lg:py-12"
+              className="group relative px-5 py-8 sm:px-6 sm:py-10 lg:px-10 lg:py-12"
             >
               <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-cream)]/40">
                 Fakt #{String(i + 1).padStart(2, "0")}
               </div>
-              <div className="mt-3 font-display text-4xl font-medium tracking-[-0.02em] text-[color:var(--color-cactus-cream)] sm:text-5xl">
+              <div className="mt-3 font-display text-3xl font-medium tracking-[-0.02em] text-[color:var(--color-cactus-cream)] sm:text-4xl lg:text-5xl">
                 {s.metric}
               </div>
-              <div className="mt-2 text-sm text-[color:var(--color-cactus-cream)]/55">
+              <div className="mt-2 text-[13px] leading-snug text-[color:var(--color-cactus-cream)]/55 sm:text-sm">
                 {s.note}
               </div>
               <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[color:var(--color-cactus-green)] transition-all duration-500 group-hover:w-full" />
