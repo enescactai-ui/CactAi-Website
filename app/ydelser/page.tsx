@@ -66,9 +66,9 @@ const SERVICES: Service[] = [
     description:
       "Vi forbinder dine værktøjer — CRM, kalender, regnskab, formularer, SMS — så data flyder automatisk. Når et lead kommer ind, kører hele kæden af sig selv: kontakt, booking, faktura, opfølgning.",
     bullets: [
-      "Make.com / n8n / Zapier — vi vælger det rette for dit setup",
-      "GoHighLevel, Pipedrive, HubSpot CRM-integration",
-      "Faktura-automation til Billy / e-conomic / Dinero",
+      "Make.com og n8n — vi vælger automatiserings-platformen der passer dit setup",
+      "GoHighLevel CRM-integration og setup",
+      "Forbindelse til dine eksisterende værktøjer (kalender, regnskab, sheets, formularer)",
       "Lead-routing og auto-followup-sekvenser",
     ],
     idealFor: "Firmaer med 5+ ansatte og flere systemer der ikke snakker sammen",
