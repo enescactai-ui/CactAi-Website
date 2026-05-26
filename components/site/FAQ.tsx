@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: "Hvad koster det egentlig?",
-    a: "Setup starter ved 3.000–5.000 kr (engangsbeløb). Per fremmødt møde betaler du 500–4.500 kr afhængigt af pakke og job-størrelse. Ad-budget (5.000–10.000 kr/md) betales direkte til Meta. Vi får aldrig adgang til dit kort.",
+    a: "Setup starter ved 5.000 kr (engangsbeløb). Per fremmødt møde betaler du 500–4.500 kr afhængigt af pakke og job-størrelse. Ad-budget (5.000–10.000 kr/md) betales direkte til Meta. Vi får aldrig adgang til dit kort.",
   },
   {
     q: "Hvor mange leads får jeg om måneden?",
