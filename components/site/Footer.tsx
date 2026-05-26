@@ -7,6 +7,7 @@ const FOOTER_LINKS = {
     { label: "Ydelser", href: "/ydelser" },
     { label: "Sådan virker det", href: "/#how" },
     { label: "Priser", href: "/#priser" },
+    { label: "Blog & Indsigt", href: "/blog" },
     { label: "Om", href: "/om" },
     { label: "FAQ", href: "/#faq" },
   ],

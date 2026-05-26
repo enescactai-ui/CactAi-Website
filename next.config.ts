@@ -15,10 +15,7 @@ const nextConfig: NextConfig = {
    */
   async redirects() {
     return [
-      // Legacy blog — old GHL site had /blog; new site doesn't have one yet.
-      // Redirect to homepage until we build a real blog.
-      { source: "/blog", destination: "/", permanent: true },
-      { source: "/blog/:slug*", destination: "/", permanent: true },
+      // /blog now exists as a real section — no redirect needed!
 
       // Spelling fix: old site used single-a "/vilkar", new uses "/vilkaar".
       { source: "/vilkar", destination: "/vilkaar", permanent: true },

@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const NAV_LINKS = [
-  { label: "Manifest", href: "/#manifest" },
   { label: "Ydelser", href: "/ydelser" },
   { label: "Sådan virker det", href: "/#how" },
   { label: "Priser", href: "/#priser" },
+  { label: "Blog", href: "/blog" },
   { label: "Om", href: "/om" },
 ];
 
