@@ -69,13 +69,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  // Google Search Console verification.
-  // After deploy + DNS, sign up at search.google.com/search-console,
-  // choose URL prefix method, copy the verification code (looks like
-  // "abc123_XYZ-d4F..."), paste it here, redeploy. Then click "Verify".
-  verification: {
-    google: "PASTE_GOOGLE_SEARCH_CONSOLE_TOKEN_HERE",
-  },
+  // Google Search Console verification is handled via DNS TXT record
+  // (google-site-verification=iPwYYW_dfTiGEXmRGfjG5pIICVlbmMv_7vJO-KDe5BA)
+  // already configured in Cloudflare. No meta-tag needed.
 };
 
 export const viewport: Viewport = {
