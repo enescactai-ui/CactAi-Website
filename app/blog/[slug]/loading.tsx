@@ -2,14 +2,19 @@
  * Loading skeleton for individual blog posts.
  *
  * Shows during client-side navigation while the next post's data streams
- * in. Without this, slow networks show a blank screen and might trigger
- * the error UI if streaming hiccups. The skeleton signals "page is on
- * its way" so users wait instead of bouncing or hitting reload prematurely.
+ * in. Includes Navbar + Footer so navigation chrome persists during the
+ * transition (otherwise user loses orientation when those disappear).
  */
+
+import { Footer } from "@/components/site/Footer";
+import { Navbar } from "@/components/site/Navbar";
+
 export default function BlogPostLoading() {
   return (
-    <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
-      <article className="mx-auto max-w-3xl px-6 lg:px-12">
+    <>
+      <Navbar />
+      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+        <article className="mx-auto max-w-3xl px-6 lg:px-12">
         {/* Eyebrow */}
         <div className="flex items-center gap-3">
           <div className="h-3 w-20 animate-pulse bg-[color:var(--color-cactus-green)]/30" />
@@ -58,7 +63,9 @@ export default function BlogPostLoading() {
         <div className="mt-16 text-center font-mono text-[11px] uppercase tracking-[0.22em] text-[color:var(--color-cactus-cream)]/35">
           Indlæser artikel...
         </div>
-      </article>
-    </main>
+        </article>
+      </main>
+      <Footer />
+    </>
   );
 }
