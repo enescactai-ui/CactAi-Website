@@ -50,25 +50,25 @@ export default function FounderLessonsPost() {
         Hvis du kan eliminere risikoen for kunden, har du allerede solgt.
       </Quote>
 
-      <H2>Lektion 1: Cold outreach virker — men ikke som du tror</H2>
+      <H2>Lektion 1: Cold calling virker — men ikke som du tror</H2>
 
       <P>
-        Jeg startede med at sende 200 SMS'er om dagen til håndværkere
-        fundet via Google Maps. Konvertering: 0,5%. Det var 1 møde per
-        dag, hvilket lød fint på papiret.
+        Jeg startede med at ringe 200 håndværkere om dagen fundet via
+        Google Maps. Konvertering: 0,5%. Det var 1 møde per dag, hvilket
+        lød fint på papiret.
       </P>
 
       <P>
         Men de møder var skidt-kvalitet. De fleste var ikke beslutningstagere.
-        Halvdelen var folk der ringede tilbage uden at huske SMS'en. Mit
-        close-rate var elendigt.
+        Halvdelen var folk der svarede uden rigtig at vide hvem jeg var.
+        Mit close-rate var elendigt.
       </P>
 
       <P>
-        Det jeg lærte: kvalitet over kvantitet. Bedre at sende 30 SMS'er
-        om dagen til folk jeg har researchet (firmastørrelse, type, areal)
-        end 200 til en bred liste. Min nuværende konvertering er 4-7%
-        på warm outreach — 10× bedre med 7× færre beskeder.
+        Det jeg lærte: kvalitet over kvantitet. Bedre at lave 30 målrettede
+        opkald om dagen til folk jeg har researchet (firmastørrelse, type,
+        areal) end 200 til en bred liste. Min nuværende konvertering er
+        4-7% på warm outreach — 10× bedre med 7× færre opkald.
       </P>
 
       <H2>Lektion 2: Folk køber af mennesker, ikke logos</H2>
