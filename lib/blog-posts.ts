@@ -84,11 +84,34 @@ export function getRelatedPosts(currentSlug: string, count = 2): BlogPost[] {
   return POSTS.filter((p) => p.slug !== currentSlug).slice(0, count);
 }
 
+/**
+ * Deterministic Danish date formatting.
+ *
+ * NEVER use toLocaleDateString here — it depends on ICU locale data which
+ * can differ subtly between Node.js (server) and Chrome (client). Even
+ * one different character (e.g. normal vs non-breaking space) triggers
+ * a React hydration mismatch, which silently wipes the DOM.
+ *
+ * Manual string construction = byte-identical output on both sides.
+ */
+const DANISH_MONTHS = [
+  "januar",
+  "februar",
+  "marts",
+  "april",
+  "maj",
+  "juni",
+  "juli",
+  "august",
+  "september",
+  "oktober",
+  "november",
+  "december",
+] as const;
+
 export function formatPostDate(date: string): string {
-  const d = new Date(date);
-  return d.toLocaleDateString("da-DK", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  // Expect ISO format "YYYY-MM-DD". Parse manually — no Date object needed.
+  const [year, month, day] = date.split("-").map(Number);
+  if (!year || !month || !day) return date; // graceful fallback
+  return `${day}. ${DANISH_MONTHS[month - 1]} ${year}`;
 }
