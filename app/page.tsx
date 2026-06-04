@@ -12,6 +12,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Pricing } from "@/components/site/Pricing";
 import { Receipt } from "@/components/site/Receipt";
 import { ROICalculator } from "@/components/site/ROICalculator";
+import { Services } from "@/components/site/Services";
 import { TrustMarquee } from "@/components/site/TrustMarquee";
 
 export default function HomePage() {
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Hero />
         <TrustMarquee />
         <Manifesto />
+        <Services />
         <Founder />
         <HowItWorks />
         <BeforeAfter />
