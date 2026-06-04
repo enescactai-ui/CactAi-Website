@@ -31,7 +31,7 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:mt-20 lg:grid-cols-6">
           {SERVICES.map((s, i) => (
             <ServiceCard key={s.n} service={s} index={i} />
           ))}
@@ -73,7 +73,7 @@ function ServiceCard({ service: s, index }: { service: Service; index: number })
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: index * 0.08, ease: EASE }}
-      className="group relative flex flex-col overflow-hidden rounded-3xl border border-[color:var(--color-cactus-green)]/10 bg-gradient-to-br from-[color:var(--color-cactus-dark)] to-[color:var(--color-cactus-deep)] p-8 transition-all hover:border-[color:var(--color-cactus-green)]/30 hover:shadow-[0_8px_40px_-12px_rgba(82,183,136,0.35)]"
+      className={`group relative flex flex-col overflow-hidden rounded-3xl border border-[color:var(--color-cactus-green)]/10 bg-gradient-to-br from-[color:var(--color-cactus-dark)] to-[color:var(--color-cactus-deep)] p-8 transition-all hover:border-[color:var(--color-cactus-green)]/30 hover:shadow-[0_8px_40px_-12px_rgba(82,183,136,0.35)] lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""}`}
     >
       <div
         aria-hidden

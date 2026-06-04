@@ -102,30 +102,26 @@ export function Hero() {
           <span>Live // CactAi // CVR 46210689 // Greve, DK</span>
         </motion.div>
 
-        {/* Massive headline — editorial mixed weights */}
+        {/* Headline — restrained, contained */}
         <motion.h1
           initial="hidden"
           animate="show"
           variants={{
             hidden: {},
-            show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+            show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
           }}
-          className="font-display tracking-[-0.04em] leading-[0.92]"
+          className="max-w-4xl font-display tracking-[-0.03em] leading-[1.05]"
         >
-          <HeadlineLine className="text-[13vw] font-light text-[color:var(--color-cactus-cream)]/60 sm:text-[11vw] lg:text-[8.5vw]">
+          <HeadlineLine className="text-xl font-light text-[color:var(--color-cactus-cream)]/55 sm:text-2xl lg:text-3xl">
             Du betaler
           </HeadlineLine>
-          <HeadlineLine className="text-[16vw] font-black text-[color:var(--color-cactus-cream)] sm:text-[14vw] lg:text-[11vw]">
+          <HeadlineLine className="mt-2 text-balance text-5xl font-bold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-7xl">
             kun{" "}
             <span className="relative italic font-light">
               når
               <Underline />
-            </span>
-          </HeadlineLine>
-          <HeadlineLine className="text-[14vw] font-black text-balance text-[color:var(--color-cactus-cream)] sm:text-[12vw] lg:text-[9.5vw]">
-            <span className="text-[color:var(--color-cactus-green)]">
-              kunden
             </span>{" "}
+            <span className="text-[color:var(--color-cactus-green)]">kunden</span>{" "}
             møder op
             <span className="text-[color:var(--color-cactus-green)]">.</span>
           </HeadlineLine>
@@ -136,10 +132,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.6, ease: EASE }}
-          className="mt-16 grid gap-12 lg:mt-24 lg:grid-cols-12 lg:gap-16"
+          className="mt-12 grid gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-16"
         >
           <div className="lg:col-span-7">
-            <p className="font-display text-2xl leading-[1.3] tracking-[-0.01em] text-[color:var(--color-cactus-cream)]/85 sm:text-3xl lg:text-4xl">
+            <p className="font-display text-lg leading-[1.45] tracking-[-0.01em] text-[color:var(--color-cactus-cream)]/85 sm:text-xl lg:text-2xl">
               Vi laver{" "}
               <Strike>halv-dårlige</Strike> Meta-ads målrettet danske
               boligejere — screener hver lead personligt — booker dem i din
