@@ -54,7 +54,7 @@ If a design choice makes the site prettier but lowers conversion → reject it.
 - ❌ NO emojis in body copy (only in chat with Enes)
 - ❌ NO "AI receptionist" focus — that's deprioritized
 - ❌ NO fake testimonials, fake numbers, fake "50+ kunder"
-  (Only 1 paying client: Solrød Rengøring. Use generic "lokal klient" if needed.)
+  (Active client: Lindas Rengøring (Linda Okoh, Aalborg). Use "lokal klient" in copy, never name without client's explicit approval.)
 
 **Always use Danish.** English version exists separately if requested.
 

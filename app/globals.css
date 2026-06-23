@@ -26,12 +26,15 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --color-cactus-deep: #050d08;
-  --color-cactus-dark: #0a1f12;
-  --color-cactus-mid: #163a23;
-  --color-cactus-green: #52b788;
-  --color-cactus-lime: #87dd5c;
-  --color-cactus-cream: #f4f1e8;
+  --color-cactus-deep: #ffffff;
+  --color-cactus-dark: #f0faf5;
+  --color-cactus-mid: #d6f0e3;
+  --color-cactus-green: #2a9d6f;
+  --color-cactus-lime: #52b788;
+  --color-cactus-cream: #0d1f16;
+  --color-cactus-surface: #ffffff;
+  --color-cactus-border: #c8e8d8;
+  --color-cactus-muted: #4a7a60;
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -41,24 +44,24 @@
 }
 
 :root {
-  --background: #050d08;
-  --foreground: #f4f1e8;
-  --card: #0a1f12;
-  --card-foreground: #f4f1e8;
-  --popover: #0a1f12;
-  --popover-foreground: #f4f1e8;
-  --primary: #52b788;
-  --primary-foreground: #050d08;
-  --secondary: #163a23;
-  --secondary-foreground: #f4f1e8;
-  --muted: #163a23;
-  --muted-foreground: #95a99b;
-  --accent: #87dd5c;
-  --accent-foreground: #050d08;
+  --background: #ffffff;
+  --foreground: #0d1f16;
+  --card: #f0faf5;
+  --card-foreground: #0d1f16;
+  --popover: #ffffff;
+  --popover-foreground: #0d1f16;
+  --primary: #2a9d6f;
+  --primary-foreground: #ffffff;
+  --secondary: #d6f0e3;
+  --secondary-foreground: #0d1f16;
+  --muted: #f0faf5;
+  --muted-foreground: #4a7a60;
+  --accent: #52b788;
+  --accent-foreground: #0d1f16;
   --destructive: #ef4444;
-  --border: rgba(82, 183, 136, 0.12);
-  --input: rgba(82, 183, 136, 0.18);
-  --ring: #52b788;
+  --border: rgba(42, 157, 111, 0.15);
+  --input: rgba(42, 157, 111, 0.12);
+  --ring: #2a9d6f;
   --radius: 0.875rem;
 }
 
@@ -73,10 +76,10 @@
        no section feels "different colored" from another. Soft blobs are
        larger and lower-opacity to eliminate harsh banding. */
     background-image:
-      radial-gradient(ellipse 70% 50% at 20% 8%, rgba(82, 183, 136, 0.10), transparent 60%),
-      radial-gradient(ellipse 60% 40% at 80% 25%, rgba(135, 221, 92, 0.045), transparent 65%),
-      radial-gradient(ellipse 80% 60% at 50% 70%, rgba(82, 183, 136, 0.055), transparent 70%),
-      radial-gradient(ellipse 70% 50% at 30% 95%, rgba(82, 183, 136, 0.06), transparent 65%);
+      radial-gradient(ellipse 70% 50% at 20% 8%, rgba(42, 157, 111, 0.08), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 25%, rgba(82, 183, 136, 0.05), transparent 65%),
+      radial-gradient(ellipse 80% 60% at 50% 70%, rgba(42, 157, 111, 0.04), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 30% 95%, rgba(82, 183, 136, 0.04), transparent 65%);
     background-attachment: fixed;
   }
   /* Subtle film-grain overlay — masks gradient banding on dark backgrounds.
@@ -88,8 +91,8 @@
     pointer-events: none;
     z-index: 1;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-    opacity: 0.025;
-    mix-blend-mode: overlay;
+    opacity: 0.012;
+    mix-blend-mode: multiply;
   }
   /* Ensure all interactive content sits above the grain overlay */
   body > * {
@@ -112,8 +115,8 @@
     }
   }
   ::selection {
-    background-color: rgba(82, 183, 136, 0.35);
-    color: #f4f1e8;
+    background-color: rgba(42, 157, 111, 0.25);
+    color: #0d1f16;
   }
 }
 
@@ -138,9 +141,9 @@
   }
   .glow-green {
     box-shadow:
-      0 0 0 1px rgba(82, 183, 136, 0.15),
-      0 8px 40px -8px rgba(82, 183, 136, 0.35),
-      inset 0 1px 0 rgba(244, 241, 232, 0.05);
+      0 0 0 1px rgba(42, 157, 111, 0.2),
+      0 8px 40px -8px rgba(42, 157, 111, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
   }
 
   /* Marquee — infinite horizontal scroll. Track contains 2× content side-by-side,

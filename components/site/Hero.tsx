@@ -1,10 +1,37 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Zap, CheckCircle2, TrendingUp } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
+
+const BADGES = [
+  {
+    icon: CheckCircle2,
+    label: "Pay Per Show",
+    sub: "Betal kun ved fremmøde",
+    pos: "top-[18%] left-[3%]",
+    delay: 0.8,
+    float: "0px",
+  },
+  {
+    icon: Zap,
+    label: "AI-drevet",
+    sub: "Automatisk lead-kvalificering",
+    pos: "top-[12%] right-[4%]",
+    delay: 1.0,
+    float: "-6px",
+  },
+  {
+    icon: TrendingUp,
+    label: "7–14 dage",
+    sub: "Første resultater",
+    pos: "bottom-[28%] right-[2%]",
+    delay: 1.2,
+    float: "6px",
+  },
+] as const;
 
 export function Hero() {
   const mouseX = useMotionValue(0);
@@ -34,57 +61,49 @@ export function Hero() {
     <section
       ref={heroRef}
       id="top"
-      className="relative isolate overflow-hidden pt-28 pb-24 lg:pt-40 lg:pb-32"
+      className="relative isolate overflow-hidden pt-28 pb-0 lg:pt-40"
     >
-      {/* Background video — looping, muted, autoplay
-          WebM served to supporting browsers (Chrome/Firefox/Edge) for smaller size
-          MP4 fallback for Safari + older browsers */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        aria-hidden="true"
-        className="absolute inset-0 -z-30 h-full w-full object-cover opacity-[0.4]"
-        poster="/hero-poster.svg"
-      >
-        <source src="/hero-bg.webm" type="video/webm" />
-        <source src="/hero-bg.mp4" type="video/mp4" />
-      </video>
-
-      {/* Dark overlay for text contrast on top of video */}
+      {/* Light gradient background */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-25 bg-gradient-to-b from-[color:var(--color-cactus-deep)]/40 via-[color:var(--color-cactus-deep)]/70 to-[color:var(--color-cactus-deep)]"
+        className="absolute inset-0 -z-20"
+        style={{
+          background:
+            "linear-gradient(160deg, #ffffff 0%, #f0faf5 45%, #d6f0e3 100%)",
+        }}
       />
 
-      {/* Mouse-tracking spotlight */}
+      {/* Large decorative green blob — top center like Brainly */}
+      <div
+        aria-hidden
+        className="absolute -top-24 left-1/2 -z-10 h-[600px] w-[900px] -translate-x-1/2 rounded-full opacity-30"
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(42,157,111,0.18) 0%, rgba(82,183,136,0.08) 50%, transparent 75%)",
+          filter: "blur(60px)",
+        }}
+      />
+
+      {/* Mouse-tracking soft spotlight */}
       <motion.div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
-          background: `radial-gradient(600px circle at ${glowX.get()}% ${glowY.get()}%, rgba(82,183,136,0.18), transparent 40%)`,
+          background: `radial-gradient(500px circle at ${glowX.get()}% ${glowY.get()}%, rgba(42,157,111,0.07), transparent 50%)`,
         }}
       />
 
-      {/* Animated background grid */}
+      {/* Subtle dot grid */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 opacity-[0.04]"
+        className="absolute inset-0 -z-10 opacity-[0.035]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(82,183,136,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(82,183,136,0.5) 1px, transparent 1px)",
-          backgroundSize: "80px 80px",
+            "radial-gradient(circle, rgba(42,157,111,0.8) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
           maskImage:
-            "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+            "radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 80%)",
         }}
-      />
-
-      {/* Big colored glow */}
-      <div
-        aria-hidden
-        className="absolute -top-32 left-1/2 -z-10 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[color:var(--color-cactus-green)]/12 blur-[120px]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
@@ -93,85 +112,175 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="mb-12 inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/45"
+          className="mb-10 inline-flex items-center gap-3 rounded-full border border-[color:var(--color-cactus-green)]/20 bg-[color:var(--color-cactus-green)]/8 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-green)]"
         >
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-cactus-green)] opacity-75" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-cactus-green)] opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--color-cactus-green)]" />
           </span>
-          <span>Live // CactAi // CVR 46210689 // Greve, DK</span>
+          <span>Live · CactAi · CVR 46210689 · Greve, DK</span>
         </motion.div>
 
-        {/* Headline — restrained, contained */}
-        <motion.h1
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
-          }}
-          className="max-w-4xl font-display tracking-[-0.03em] leading-[1.05]"
-        >
-          <HeadlineLine className="text-xl font-light text-[color:var(--color-cactus-cream)]/55 sm:text-2xl lg:text-3xl">
-            Du betaler
-          </HeadlineLine>
-          <HeadlineLine className="mt-2 text-balance text-5xl font-bold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-7xl">
-            kun{" "}
-            <span className="relative italic font-light">
-              når
-              <Underline />
-            </span>{" "}
-            <span className="text-[color:var(--color-cactus-green)]">kunden</span>{" "}
-            møder op
-            <span className="text-[color:var(--color-cactus-green)]">.</span>
-          </HeadlineLine>
-        </motion.h1>
+        {/* Layout: headline left, visual right */}
+        <div className="relative grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-        {/* Editorial split — body + CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.6, ease: EASE }}
-          className="mt-12 grid gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-16"
-        >
-          <div className="lg:col-span-7">
-            <p className="font-display text-lg leading-[1.45] tracking-[-0.01em] text-[color:var(--color-cactus-cream)]/85 sm:text-xl lg:text-2xl">
-              Vi laver{" "}
-              <Strike>halv-dårlige</Strike> Meta-ads målrettet danske
-              boligejere — screener hver lead personligt — booker dem i din
-              kalender. Hvis de møder op, betaler du. Ellers ikke.{" "}
-              <span className="text-[color:var(--color-cactus-green)]">
-                Resten er bare matematik.
+          {/* Left — text */}
+          <div className="relative z-10">
+            <motion.h1
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: {},
+                show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
+              }}
+              className="max-w-xl font-display tracking-[-0.03em] leading-[1.05]"
+            >
+              <HeadlineLine className="text-xl font-light text-[color:var(--color-cactus-cream)]/50 sm:text-2xl">
+                Du betaler
+              </HeadlineLine>
+              <HeadlineLine className="mt-2 text-balance text-5xl font-bold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-6xl xl:text-7xl">
+                kun{" "}
+                <span className="relative italic font-light">
+                  når
+                  <Underline />
+                </span>{" "}
+                <span className="text-[color:var(--color-cactus-green)]">
+                  kunden
+                </span>{" "}
+                møder op
+                <span className="text-[color:var(--color-cactus-green)]">.</span>
+              </HeadlineLine>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.6, ease: EASE }}
+              className="mt-8 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65 sm:text-xl"
+            >
+              Vi kører Meta-ads, screener hvert lead og booker dem i din
+              kalender. Møder de op — betaler du. Ellers ikke.{" "}
+              <span className="font-semibold text-[color:var(--color-cactus-green)]">
+                Resten er matematik.
               </span>
-            </p>
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8, ease: EASE }}
+              className="mt-10 flex flex-wrap items-center gap-4"
+            >
+              <a
+                href="#book"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[color:var(--color-cactus-green)] px-7 py-4 font-display text-base font-semibold text-white shadow-[0_4px_20px_-4px_rgba(42,157,111,0.45)] transition-all hover:shadow-[0_8px_30px_-4px_rgba(42,157,111,0.55)] hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Book gratis møde
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-12" />
+              </a>
+              <a
+                href="#manifest"
+                className="font-medium text-[color:var(--color-cactus-cream)]/55 transition-colors hover:text-[color:var(--color-cactus-green)] text-sm"
+              >
+                Læs hvordan det virker ↓
+              </a>
+            </motion.div>
+
+            {/* Social proof strip */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1.1 }}
+              className="mt-10 flex items-center gap-6"
+            >
+              <div className="flex -space-x-2">
+                {["#2a9d6f","#3bb87e","#52b788","#6fcfa0"].map((c) => (
+                  <div
+                    key={c}
+                    className="h-8 w-8 rounded-full border-2 border-white"
+                    style={{ background: c }}
+                  />
+                ))}
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-[color:var(--color-cactus-cream)]">
+                  Lokal virksomhed? Vi er klar.
+                </div>
+                <div className="text-xs text-[color:var(--color-cactus-cream)]/50">
+                  14-dages garanti · 5 fremmødte eller pengene tilbage
+                </div>
+              </div>
+            </motion.div>
           </div>
 
-          <div className="flex flex-col gap-6 lg:col-span-5 lg:items-end lg:justify-end">
-            <a
-              href="#book"
-              className="group relative inline-flex items-center gap-3 rounded-none border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)] px-7 py-5 font-display text-lg font-medium text-[color:var(--color-cactus-deep)] transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0_0_var(--color-cactus-green)]"
+          {/* Right — decorative visual with floating badges */}
+          <div className="relative hidden lg:block">
+            {/* Main visual card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4, ease: EASE }}
+              className="relative mx-auto h-[480px] w-full max-w-[440px] overflow-hidden rounded-3xl border border-[color:var(--color-cactus-green)]/20 bg-gradient-to-br from-[color:var(--color-cactus-dark)] to-[color:var(--color-cactus-mid)] shadow-[0_24px_80px_-20px_rgba(42,157,111,0.2)]"
             >
-              Book strategi-møde
-              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-12" />
-            </a>
-            <a
-              href="#manifest"
-              className="font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/50 underline decoration-[color:var(--color-cactus-green)]/40 decoration-2 underline-offset-[6px] transition-colors hover:text-[color:var(--color-cactus-cream)] hover:decoration-[color:var(--color-cactus-green)]"
-            >
-              ↓ Først, læs vores manifest
-            </a>
+              {/* Inner glow */}
+              <div
+                className="absolute inset-0 opacity-60"
+                style={{
+                  background:
+                    "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(42,157,111,0.15), transparent 70%)",
+                }}
+              />
+
+              {/* Stats grid */}
+              <div className="absolute inset-0 grid grid-cols-2 gap-px p-8 pt-16">
+                {[
+                  { value: "0 kr", label: "Ved no-show" },
+                  { value: "14 dage", label: "Garanti-periode" },
+                  { value: "5+", label: "Fremmødte eller refund" },
+                  { value: "1:1", label: "Eksklusivitet pr. by" },
+                ].map((s) => (
+                  <div
+                    key={s.value}
+                    className="flex flex-col justify-center rounded-2xl bg-white/60 p-5 backdrop-blur-sm"
+                  >
+                    <div className="font-display text-3xl font-bold tracking-tight text-[color:var(--color-cactus-cream)]">
+                      {s.value}
+                    </div>
+                    <div className="mt-1 text-xs text-[color:var(--color-cactus-cream)]/60">
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Top label */}
+              <div className="absolute left-8 top-8 flex items-center gap-2">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-cactus-green)] opacity-60" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[color:var(--color-cactus-green)]" />
+                </span>
+                <span className="font-mono text-xs font-medium text-[color:var(--color-cactus-green)]">
+                  Live resultater
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Floating badge pills — Brainly.AI style */}
+            {BADGES.map((badge) => (
+              <FloatingBadge key={badge.label} badge={badge} />
+            ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Editorial footer strip */}
+      {/* Bottom stats strip */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="relative mt-32 border-y border-[color:var(--color-cactus-green)]/15"
+        className="relative mt-24 border-t border-[color:var(--color-cactus-green)]/15 bg-[color:var(--color-cactus-dark)]/40"
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[color:var(--color-cactus-green)]/15 lg:grid-cols-4 lg:divide-y-0">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[color:var(--color-cactus-green)]/10 lg:grid-cols-4 lg:divide-y-0">
           {[
             { metric: "0 kr", note: "ved no-show" },
             { metric: "14 dage", note: "garanti-periode" },
@@ -182,13 +291,13 @@ export function Hero() {
               key={s.metric}
               className="group relative px-5 py-8 sm:px-6 sm:py-10 lg:px-10 lg:py-12"
             >
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-cream)]/40">
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-cream)]/35">
                 Fakt #{String(i + 1).padStart(2, "0")}
               </div>
-              <div className="mt-3 font-display text-3xl font-medium tracking-[-0.02em] text-[color:var(--color-cactus-cream)] sm:text-4xl lg:text-5xl">
+              <div className="mt-3 font-display text-3xl font-semibold tracking-[-0.02em] text-[color:var(--color-cactus-cream)] sm:text-4xl lg:text-5xl">
                 {s.metric}
               </div>
-              <div className="mt-2 text-[13px] leading-snug text-[color:var(--color-cactus-cream)]/55 sm:text-sm">
+              <div className="mt-2 text-[13px] leading-snug text-[color:var(--color-cactus-cream)]/50 sm:text-sm">
                 {s.note}
               </div>
               <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[color:var(--color-cactus-green)] transition-all duration-500 group-hover:w-full" />
@@ -197,6 +306,48 @@ export function Hero() {
         </div>
       </motion.div>
     </section>
+  );
+}
+
+function FloatingBadge({
+  badge,
+}: {
+  badge: (typeof BADGES)[number];
+}) {
+  const Icon = badge.icon;
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8, y: 10 }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        y: [0, parseInt(badge.float), 0],
+      }}
+      transition={{
+        opacity: { duration: 0.6, delay: badge.delay, ease: EASE },
+        scale: { duration: 0.6, delay: badge.delay, ease: EASE },
+        y: {
+          duration: 3.5,
+          delay: badge.delay + 0.6,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        },
+      }}
+      className={`absolute ${badge.pos} z-20 flex items-center gap-3 rounded-2xl border border-[color:var(--color-cactus-green)]/20 bg-white/90 px-4 py-3 shadow-[0_8px_30px_-8px_rgba(42,157,111,0.2)] backdrop-blur-sm`}
+    >
+      <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[color:var(--color-cactus-green)]/15">
+        <Icon className="h-4 w-4 text-[color:var(--color-cactus-green)]" />
+      </div>
+      <div>
+        <div className="text-xs font-semibold text-[color:var(--color-cactus-cream)]">
+          {badge.label}
+        </div>
+        <div className="text-[10px] text-[color:var(--color-cactus-cream)]/50">
+          {badge.sub}
+        </div>
+      </div>
+    </motion.div>
   );
 }
 
@@ -222,15 +373,6 @@ function HeadlineLine({
     >
       {children}
     </motion.span>
-  );
-}
-
-function Strike({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="relative inline-block text-[color:var(--color-cactus-cream)]/35">
-      <span className="absolute left-0 top-1/2 h-[3px] w-full -translate-y-1/2 rotate-[-2deg] rounded-full bg-[color:var(--color-cactus-green)]/60" />
-      {children}
-    </span>
   );
 }
 
