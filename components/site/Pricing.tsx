@@ -99,6 +99,127 @@ export function Pricing() {
           Alle priser er ekskl. moms. Ad-budget betales direkte til Meta — går
           aldrig gennem os.
         </motion.p>
+
+        {/* Website pricing */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
+          className="mt-24 border-t border-[color:var(--color-cactus-green)]/10 pt-20"
+        >
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-cactus-green)]/20 bg-[color:var(--color-cactus-green)]/5 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-[color:var(--color-cactus-green)]">
+              Hjemmeside
+            </div>
+            <h3 className="mt-6 font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+              Din hjemmeside.{" "}
+              <span className="text-[color:var(--color-cactus-green)]">
+                Ingen overraskelser.
+              </span>
+            </h3>
+            <p className="mt-4 text-base text-[color:var(--color-cactus-cream)]/65">
+              En hjemmeside er fast ejendom. Du køber grunden én gang — og
+              betaler derefter en lille løbende afgift for at beholde den.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:max-w-3xl lg:mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const }}
+              className="flex flex-col rounded-3xl border border-[color:var(--color-cactus-green)]/10 bg-gradient-to-br from-[color:var(--color-cactus-dark)]/70 to-[color:var(--color-cactus-deep)]/70 p-8 backdrop-blur-sm"
+            >
+              <div className="text-2xl">🏗️</div>
+              <h4 className="mt-4 font-display text-xl font-semibold tracking-tight">
+                Opsætning
+              </h4>
+              <p className="mt-1 text-sm text-[color:var(--color-cactus-cream)]/55">
+                Som at købe grunden
+              </p>
+              <div className="mt-6">
+                <div className="font-display text-4xl font-semibold tracking-tight">
+                  5.000 kr
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-wide text-[color:var(--color-cactus-cream)]/45">
+                  Engangsbeløb
+                </div>
+              </div>
+              <ul className="mt-6 space-y-2 text-sm text-[color:var(--color-cactus-cream)]/75">
+                {[
+                  "Professionelt design fra bunden",
+                  "Mobilvenlig og hurtig",
+                  "SEO-optimeret struktur",
+                  "Kontaktformular + telefon synlig",
+                  "Du ejer siden for altid",
+                ].map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[color:var(--color-cactus-green)]" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
+              className="relative flex flex-col rounded-3xl border border-[color:var(--color-cactus-green)]/40 bg-gradient-to-br from-[color:var(--color-cactus-green)]/10 via-[color:var(--color-cactus-dark)] to-[color:var(--color-cactus-deep)] p-8 shadow-[0_8px_60px_-20px_rgba(82,183,136,0.45)] backdrop-blur-sm"
+            >
+              <div className="absolute -top-3 right-6 inline-flex items-center gap-1.5 rounded-full bg-[color:var(--color-cactus-green)] px-3 py-1 text-xs font-medium text-[color:var(--color-cactus-deep)]">
+                <Sparkles className="h-3 w-3" />
+                Løbende
+              </div>
+              <div className="text-2xl">🏠</div>
+              <h4 className="mt-4 font-display text-xl font-semibold tracking-tight">
+                Drift &amp; Hosting
+              </h4>
+              <p className="mt-1 text-sm text-[color:var(--color-cactus-cream)]/55">
+                Som at betale husleje på grunden
+              </p>
+              <div className="mt-6">
+                <div className="font-display text-4xl font-semibold tracking-tight">
+                  750 kr
+                  <span className="text-xl font-normal text-[color:var(--color-cactus-cream)]/55">
+                    {" "}
+                    / md
+                  </span>
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-wide text-[color:var(--color-cactus-cream)]/45">
+                  Månedligt
+                </div>
+              </div>
+              <ul className="mt-6 space-y-2 text-sm text-[color:var(--color-cactus-cream)]/75">
+                {[
+                  "Domain + hosting betalt",
+                  "Sikkerhedsopdateringer",
+                  "1–2 småændringer om måneden",
+                  "Din side er altid live",
+                  "Ingen binding — stop når du vil",
+                ].map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[color:var(--color-cactus-green)]" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8 text-center text-sm text-[color:var(--color-cactus-cream)]/45"
+          >
+            Alle priser ekskl. moms. Ingen binding på drift — stop når du vil.
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );
