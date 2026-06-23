@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -155,24 +156,43 @@ export function BeforeAfter() {
           </motion.div>
         </div>
 
-        {/* Bottom anchor link */}
+        {/* Suburb panorama — grounds the message in real Danish neighborhoods */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 flex flex-col items-center gap-4 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.9, ease: EASE }}
+          className="relative mt-16 overflow-hidden rounded-3xl shadow-[0_24px_70px_-25px_rgba(13,31,22,0.35)] lg:mt-20"
         >
-          <p className="font-display text-2xl font-medium leading-snug tracking-[-0.02em] text-[color:var(--color-cactus-cream)] sm:text-3xl">
-            Hvilken uge vil du leve næste måned?
-          </p>
-          <a
-            href="/#book"
-            className="group inline-flex items-center gap-3 border-b-2 border-[color:var(--color-cactus-green)] pb-1 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)] transition-all hover:gap-4 hover:text-[color:var(--color-cactus-cream)]"
-          >
-            Book strategi-møde
-            <span aria-hidden>→</span>
-          </a>
+          <Image
+            src="/images/suburb-panorama.jpg"
+            alt="Dansk villakvarter set fra luften — parcelhuse med haver nær kysten"
+            width={2600}
+            height={807}
+            className="h-[280px] w-full object-cover sm:h-[340px] lg:h-[400px]"
+          />
+          {/* Dark gradient for text legibility */}
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-t from-[#0d1f16]/90 via-[#0d1f16]/40 to-transparent"
+          />
+
+          <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 lg:p-14">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-cactus-green)]/90 px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+              Her bor dine kunder
+            </div>
+            <p className="mt-3 max-w-2xl font-display text-2xl font-medium leading-snug tracking-[-0.02em] text-white sm:text-3xl lg:text-4xl">
+              Tusindvis af villaejere i dit område søger en håndværker lige nu.
+              Vi finder dem — du møder dem.
+            </p>
+            <a
+              href="/#book"
+              className="group mt-6 inline-flex items-center gap-3 rounded-full bg-[color:var(--color-cactus-green)] px-6 py-3 font-semibold text-white shadow-[0_4px_20px_-4px_rgba(42,157,111,0.6)] transition-all hover:gap-4 hover:scale-[1.02]"
+            >
+              Book strategi-møde
+              <span aria-hidden>→</span>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

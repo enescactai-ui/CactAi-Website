@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, CheckCircle2, Clock, PhoneCall, Star, TrendingUp, Zap } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Star, TrendingUp, Zap } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -159,100 +160,26 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* ── RIGHT: mock booking dashboard ── */}
+          {/* ── RIGHT: phone product photo + floating badges ── */}
           <motion.div
             initial={{ opacity: 0, x: 30, scale: 0.97 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 1, delay: 0.35, ease: EASE }}
             className="relative hidden lg:block"
           >
-            {/* Outer glow */}
-            <div className="absolute -inset-4 rounded-[2.5rem] bg-[color:var(--color-cactus-green)]/10 blur-2xl" />
+            {/* Soft halo behind the phone */}
+            <div className="absolute left-1/2 top-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[color:var(--color-cactus-green)]/15 blur-3xl" />
 
-            {/* Main dashboard card */}
-            <div className="relative overflow-hidden rounded-3xl border border-white/80 bg-white shadow-[0_32px_80px_-20px_rgba(13,31,22,0.18)]">
-
-              {/* Card header */}
-              <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
-                <div className="flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-red-400" />
-                  <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                  <div className="h-3 w-3 rounded-full bg-green-400" />
-                </div>
-                <span className="text-xs font-medium text-gray-400">CactAi — Live pipeline</span>
-                <div className="flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1 text-xs font-medium text-[color:var(--color-cactus-green)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-cactus-green)] animate-pulse" />
-                  Live
-                </div>
-              </div>
-
-              {/* New lead notification */}
-              <motion.div
-                initial={{ opacity: 0, y: -8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.2 }}
-                className="mx-4 mt-4 flex items-center gap-3 rounded-2xl border border-[color:var(--color-cactus-green)]/20 bg-[color:var(--color-cactus-green)]/6 px-4 py-3"
-              >
-                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-[color:var(--color-cactus-green)]/15">
-                  <PhoneCall className="h-4 w-4 text-[color:var(--color-cactus-green)]" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold text-gray-800">Nyt lead — Mads J.</div>
-                  <div className="text-xs text-gray-400">Villaejere · Rengøring · Gentofte</div>
-                </div>
-                <span className="text-xs text-[color:var(--color-cactus-green)] font-medium">nu</span>
-              </motion.div>
-
-              {/* Appointment cards */}
-              <div className="space-y-2 px-4 py-3">
-                <div className="text-xs font-semibold uppercase tracking-wider text-gray-400 px-1 mb-2">Dagens bookinger</div>
-
-                {[
-                  { name: "Sofie R.", type: "Erhvervsrengøring", time: "09:00", status: "fremmødt", amount: "1.500 kr" },
-                  { name: "Henrik M.", type: "Vinduespolering", time: "11:30", status: "fremmødt", amount: "750 kr" },
-                  { name: "Anna L.", type: "Kontorrengøring", time: "14:00", status: "booket", amount: "–" },
-                ].map((booking, i) => (
-                  <motion.div
-                    key={booking.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 1.3 + i * 0.1 }}
-                    className="flex items-center gap-3 rounded-xl border border-gray-100 bg-gray-50/60 px-4 py-3"
-                  >
-                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[color:var(--color-cactus-green)]/15 text-xs font-bold text-[color:var(--color-cactus-green)]">
-                      {booking.name[0]}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm font-medium text-gray-800">{booking.name}</div>
-                      <div className="text-xs text-gray-400">{booking.type}</div>
-                    </div>
-                    <div className="text-right flex-shrink-0">
-                      <div className="text-xs text-gray-400">{booking.time}</div>
-                      <div className={`mt-0.5 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold ${
-                        booking.status === "fremmødt"
-                          ? "bg-green-100 text-green-700"
-                          : "bg-blue-100 text-blue-600"
-                      }`}>
-                        {booking.status === "fremmødt" ? `✓ ${booking.amount}` : `⏱ ${booking.time}`}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Bottom stats row */}
-              <div className="grid grid-cols-3 gap-px border-t border-gray-100 bg-gray-100">
-                {[
-                  { label: "I dag", value: "2.250 kr" },
-                  { label: "Denne uge", value: "8.750 kr" },
-                  { label: "No-shows", value: "0 kr" },
-                ].map((s) => (
-                  <div key={s.label} className="bg-white px-4 py-4 text-center">
-                    <div className="text-lg font-bold tracking-tight text-gray-800">{s.value}</div>
-                    <div className="text-[10px] text-gray-400 uppercase tracking-wide mt-0.5">{s.label}</div>
-                  </div>
-                ))}
-              </div>
+            {/* Phone photo */}
+            <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[2rem] shadow-[0_40px_90px_-30px_rgba(13,31,22,0.35)]">
+              <Image
+                src="/images/hero-phone.jpg"
+                alt="Booket kalender med kundemøder i en telefon-app"
+                width={840}
+                height={1125}
+                priority
+                className="h-auto w-full"
+              />
             </div>
 
             {/* Floating badges */}
@@ -260,17 +187,25 @@ export function Hero() {
               icon={TrendingUp}
               title="7–14 dages resultater"
               sub="Første leads inden for en uge"
-              className="-left-12 top-1/3 -translate-y-1/2"
-              delay={1.5}
+              className="-left-8 top-1/4"
+              delay={1.2}
               floatY={-8}
             />
             <FloatingBadge
               icon={CheckCircle2}
               title="0 kr ved no-show"
               sub="Aldrig spild af penge"
-              className="-right-10 bottom-1/4"
-              delay={1.7}
+              className="-right-6 bottom-1/3"
+              delay={1.4}
               floatY={8}
+            />
+            <FloatingBadge
+              icon={Star}
+              title="Pay Per Show"
+              sub="Betal kun ved fremmøde"
+              className="-bottom-2 left-6"
+              delay={1.6}
+              floatY={-6}
             />
           </motion.div>
         </div>

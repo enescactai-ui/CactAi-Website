@@ -70,10 +70,13 @@ export function Receipt() {
               <div className="absolute -inset-4 -z-20 rotate-3 rounded-sm border border-gray-200 bg-[#f5f4f0]" />
               <div className="absolute -inset-2 -z-10 rotate-1 rounded-sm border border-gray-200 bg-[#faf9f5]" />
 
-              {/* The actual receipt — real paper cream color */}
-              <div className="relative overflow-hidden rounded-sm border border-gray-200 bg-[#fefdf9] p-8 font-mono text-[13px] text-gray-800 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.12)] lg:p-10">
+              {/* The actual receipt — real cream paper texture */}
+              <div
+                className="relative overflow-hidden rounded-sm border border-gray-200 bg-[#fefdf9] bg-cover bg-center p-8 font-mono text-[13px] text-gray-800 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.12)] lg:p-10"
+                style={{ backgroundImage: "url('/images/paper-texture.jpg')" }}
+              >
                 {/* Perforated edge */}
-                <div className="absolute left-0 top-0 h-full w-1 bg-[radial-gradient(circle_at_center,transparent_2px,var(--color-cactus-deep)_2px,var(--color-cactus-deep)_3px,transparent_3px)] bg-[length:8px_8px] opacity-20" />
+                <div className="absolute left-0 top-0 h-full w-1 bg-[radial-gradient(circle_at_center,transparent_2px,#9ca3af_2px,#9ca3af_3px,transparent_3px)] bg-[length:8px_8px] opacity-20" />
 
                 {/* Header */}
                 <div className="flex items-start justify-between border-b-2 border-dashed border-gray-400/20 pb-6">
