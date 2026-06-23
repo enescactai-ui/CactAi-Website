@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Receipt() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative bg-[#e8f5ee] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20 lg:items-center">
           {/* Left: Story */}
@@ -67,16 +67,16 @@ export function Receipt() {
               className="relative"
             >
               {/* Stack effect — fake shadow invoices behind */}
-              <div className="absolute -inset-4 -z-20 rotate-3 rounded-sm border border-[color:var(--color-cactus-cream)]/5 bg-[color:var(--color-cactus-dark)]/50" />
-              <div className="absolute -inset-2 -z-10 rotate-1 rounded-sm border border-[color:var(--color-cactus-cream)]/8 bg-[color:var(--color-cactus-dark)]/70" />
+              <div className="absolute -inset-4 -z-20 rotate-3 rounded-sm border border-gray-200 bg-[#f5f4f0]" />
+              <div className="absolute -inset-2 -z-10 rotate-1 rounded-sm border border-gray-200 bg-[#faf9f5]" />
 
-              {/* The actual receipt */}
-              <div className="relative overflow-hidden rounded-sm border border-[color:var(--color-cactus-cream)]/15 bg-[color:var(--color-cactus-cream)] p-8 font-mono text-[13px] text-[color:var(--color-cactus-deep)] shadow-2xl lg:p-10">
+              {/* The actual receipt — real paper cream color */}
+              <div className="relative overflow-hidden rounded-sm border border-gray-200 bg-[#fefdf9] p-8 font-mono text-[13px] text-gray-800 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.12)] lg:p-10">
                 {/* Perforated edge */}
                 <div className="absolute left-0 top-0 h-full w-1 bg-[radial-gradient(circle_at_center,transparent_2px,var(--color-cactus-deep)_2px,var(--color-cactus-deep)_3px,transparent_3px)] bg-[length:8px_8px] opacity-20" />
 
                 {/* Header */}
-                <div className="flex items-start justify-between border-b-2 border-dashed border-[color:var(--color-cactus-deep)]/20 pb-6">
+                <div className="flex items-start justify-between border-b-2 border-dashed border-gray-400/20 pb-6">
                   <div>
                     <div className="font-sans font-bold text-base">CactAi</div>
                     <div className="mt-1 text-[11px] opacity-60">
@@ -120,7 +120,7 @@ export function Receipt() {
                 {/* Line items */}
                 <table className="mt-8 w-full border-collapse text-[12px]">
                   <thead>
-                    <tr className="border-b border-[color:var(--color-cactus-deep)]/20 text-[10px] uppercase tracking-wider opacity-50">
+                    <tr className="border-b border-gray-400/20 text-[10px] uppercase tracking-wider opacity-50">
                       <th className="pb-2 text-left">Beskrivelse</th>
                       <th className="pb-2 text-right">Beløb</th>
                     </tr>
@@ -171,7 +171,7 @@ export function Receipt() {
                 </table>
 
                 {/* Totals */}
-                <div className="mt-6 space-y-1 border-t-2 border-dashed border-[color:var(--color-cactus-deep)]/20 pt-4 text-[12px]">
+                <div className="mt-6 space-y-1 border-t-2 border-dashed border-gray-400/20 pt-4 text-[12px]">
                   <div className="flex justify-between opacity-60">
                     <span>Subtotal ex moms</span>
                     <span className="tabular-nums">6.750,00</span>
@@ -180,7 +180,7 @@ export function Receipt() {
                     <span>Moms 25%</span>
                     <span className="tabular-nums">1.687,50</span>
                   </div>
-                  <div className="mt-3 flex justify-between border-t border-[color:var(--color-cactus-deep)]/30 pt-3 text-base font-bold">
+                  <div className="mt-3 flex justify-between border-t border-gray-400/30 pt-3 text-base font-bold">
                     <span>Total DKK</span>
                     <span className="tabular-nums">8.437,50</span>
                   </div>

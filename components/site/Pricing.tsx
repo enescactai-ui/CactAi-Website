@@ -59,7 +59,7 @@ const TIERS = [
 
 export function Pricing() {
   return (
-    <section id="priser" className="relative py-24 lg:py-32">
+    <section id="priser" className="relative bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -236,58 +236,56 @@ function Tier({ tier, index }: { tier: (typeof TIERS)[number]; index: number }) 
         delay: index * 0.1,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className={`relative flex flex-col rounded-3xl border p-8 backdrop-blur-sm lg:p-10 ${
+      className={`relative flex flex-col rounded-3xl border p-8 lg:p-10 ${
         tier.highlight
-          ? "border-[color:var(--color-cactus-green)]/40 bg-gradient-to-br from-[color:var(--color-cactus-green)]/10 via-[color:var(--color-cactus-dark)] to-[color:var(--color-cactus-deep)] shadow-[0_8px_60px_-20px_rgba(82,183,136,0.45)]"
-          : "border-[color:var(--color-cactus-green)]/10 bg-gradient-to-br from-[color:var(--color-cactus-dark)]/70 to-[color:var(--color-cactus-deep)]/70"
+          ? "border-[color:var(--color-cactus-green)]/40 bg-[color:var(--color-cactus-cream)] text-white shadow-[0_20px_60px_-20px_rgba(42,157,111,0.35)]"
+          : "border-[color:var(--color-cactus-green)]/12 bg-white shadow-[0_2px_20px_-8px_rgba(42,157,111,0.10)]"
       }`}
     >
       {tier.highlight && (
-        <div className="absolute -top-3 right-6 inline-flex items-center gap-1.5 rounded-full bg-[color:var(--color-cactus-green)] px-3 py-1 text-xs font-medium text-[color:var(--color-cactus-deep)]">
+        <div className="absolute -top-3 right-6 inline-flex items-center gap-1.5 rounded-full bg-[color:var(--color-cactus-green)] px-3 py-1 text-xs font-semibold text-white">
           <Sparkles className="h-3 w-3" />
           Mest populær
         </div>
       )}
 
       <div>
-        <h3 className="font-display text-2xl font-semibold tracking-tight">
+        <h3 className={`font-display text-2xl font-semibold tracking-tight ${tier.highlight ? "text-white" : "text-gray-900"}`}>
           {tier.name}
         </h3>
-        <p className="mt-2 text-sm text-[color:var(--color-cactus-cream)]/55">
+        <p className={`mt-2 text-sm ${tier.highlight ? "text-white/60" : "text-gray-500"}`}>
           {tier.tagline}
         </p>
       </div>
 
       <div className="mt-8 space-y-4">
         <div>
-          <div className="font-display text-4xl font-semibold tracking-tight">
+          <div className={`font-display text-4xl font-semibold tracking-tight ${tier.highlight ? "text-white" : "text-gray-900"}`}>
             {tier.setup}
           </div>
-          <div className="mt-1 text-xs uppercase tracking-wide text-[color:var(--color-cactus-cream)]/45">
+          <div className={`mt-1 text-xs uppercase tracking-wide ${tier.highlight ? "text-white/45" : "text-gray-400"}`}>
             Setup (engang)
           </div>
         </div>
-        <div className="rounded-2xl border border-[color:var(--color-cactus-green)]/10 bg-[color:var(--color-cactus-deep)]/40 p-4">
+        <div className={`rounded-2xl border p-4 ${tier.highlight ? "border-[color:var(--color-cactus-green)]/30 bg-[color:var(--color-cactus-green)]/12" : "border-[color:var(--color-cactus-green)]/12 bg-[color:var(--color-cactus-green)]/5"}`}>
           <div className="text-lg font-semibold text-[color:var(--color-cactus-green)]">
             {tier.perMeeting}
           </div>
-          <div className="mt-1 text-xs text-[color:var(--color-cactus-cream)]/55">
+          <div className={`mt-1 text-xs ${tier.highlight ? "text-white/55" : "text-gray-400"}`}>
             per fremmødt møde
           </div>
         </div>
-        <div className="text-xs text-[color:var(--color-cactus-cream)]/45">
+        <div className={`text-xs ${tier.highlight ? "text-white/45" : "text-gray-400"}`}>
           Ad-budget: {tier.adBudget}{" "}
-          <span className="text-[color:var(--color-cactus-cream)]/35">
-            (betales direkte til Meta)
-          </span>
+          <span className="opacity-70">(betales direkte til Meta)</span>
         </div>
       </div>
 
-      <ul className="mt-8 space-y-3 text-sm">
+      <ul className="mt-8 flex-1 space-y-3 text-sm">
         {tier.features.map((feature) => (
           <li
             key={feature}
-            className="flex items-start gap-3 text-[color:var(--color-cactus-cream)]/75"
+            className={`flex items-start gap-3 ${tier.highlight ? "text-white/80" : "text-gray-600"}`}
           >
             <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[color:var(--color-cactus-green)]" />
             <span>{feature}</span>
@@ -295,21 +293,21 @@ function Tier({ tier, index }: { tier: (typeof TIERS)[number]; index: number }) 
         ))}
       </ul>
 
-      <div className="mt-8 rounded-xl border border-[color:var(--color-cactus-green)]/10 bg-[color:var(--color-cactus-deep)]/40 p-4">
-        <div className="text-xs uppercase tracking-wide text-[color:var(--color-cactus-cream)]/45">
+      <div className={`mt-8 rounded-xl border p-4 ${tier.highlight ? "border-white/10 bg-white/8" : "border-[color:var(--color-cactus-green)]/10 bg-gray-50"}`}>
+        <div className={`text-xs uppercase tracking-wide ${tier.highlight ? "text-white/45" : "text-gray-400"}`}>
           Ideel til
         </div>
-        <p className="mt-1 text-sm text-[color:var(--color-cactus-cream)]/75">
+        <p className={`mt-1 text-sm ${tier.highlight ? "text-white/75" : "text-gray-600"}`}>
           {tier.bestFor}
         </p>
       </div>
 
       <a
         href="#book"
-        className={`group mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all hover:scale-[1.02] active:scale-[0.98] ${
+        className={`group mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] ${
           tier.highlight
-            ? "bg-[color:var(--color-cactus-green)] text-[color:var(--color-cactus-deep)] hover:shadow-[0_8px_30px_-8px_rgba(82,183,136,0.6)]"
-            : "border border-[color:var(--color-cactus-cream)]/15 text-[color:var(--color-cactus-cream)] hover:border-[color:var(--color-cactus-green)]/40 hover:bg-[color:var(--color-cactus-green)]/5"
+            ? "bg-[color:var(--color-cactus-green)] text-white shadow-[0_4px_20px_-4px_rgba(42,157,111,0.5)] hover:shadow-[0_8px_30px_-4px_rgba(42,157,111,0.65)]"
+            : "border border-[color:var(--color-cactus-green)]/20 bg-white text-gray-700 hover:border-[color:var(--color-cactus-green)]/40 hover:bg-[color:var(--color-cactus-green)]/5 hover:text-[color:var(--color-cactus-green)]"
         }`}
       >
         {tier.cta}

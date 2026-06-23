@@ -36,7 +36,7 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section id="how" className="relative py-24 lg:py-32">
+    <section id="how" className="relative bg-[#e8f5ee] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -88,23 +88,25 @@ function Step({
         delay: index * 0.1,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className="group relative overflow-hidden rounded-3xl border border-[color:var(--color-cactus-green)]/10 bg-gradient-to-br from-[color:var(--color-cactus-dark)] to-[color:var(--color-cactus-deep)] p-8 transition-all hover:border-[color:var(--color-cactus-green)]/25 hover:shadow-[0_8px_40px_-12px_rgba(82,183,136,0.35)] lg:p-10"
+      className="group relative overflow-hidden rounded-3xl border border-white/80 bg-white p-8 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.08),0_1px_4px_-2px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_16px_48px_-8px_rgba(42,157,111,0.18)] lg:p-10"
     >
-      <div className="absolute -top-12 -right-12 h-40 w-40 rounded-full bg-[color:var(--color-cactus-green)]/5 blur-2xl transition-all group-hover:bg-[color:var(--color-cactus-green)]/15" />
+      {/* Hover bg tint */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--color-cactus-green)]/0 to-[color:var(--color-cactus-green)]/0 transition-all duration-500 group-hover:from-[color:var(--color-cactus-green)]/4 group-hover:to-transparent" />
+      <div className="absolute -top-12 -right-12 h-40 w-40 rounded-full bg-[color:var(--color-cactus-green)]/5 blur-2xl transition-all group-hover:bg-[color:var(--color-cactus-green)]/12" />
 
       <div className="relative flex items-start justify-between">
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-cactus-green)]/10 text-[color:var(--color-cactus-green)] ring-1 ring-[color:var(--color-cactus-green)]/20">
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-cactus-green)]/10 text-[color:var(--color-cactus-green)] ring-1 ring-[color:var(--color-cactus-green)]/20 transition-all group-hover:bg-[color:var(--color-cactus-green)]/18 group-hover:ring-[color:var(--color-cactus-green)]/35">
           <Icon className="h-6 w-6" strokeWidth={1.75} />
         </div>
-        <span className="font-mono text-sm text-[color:var(--color-cactus-cream)]/30">
+        <span className="font-mono text-sm font-medium text-[color:var(--color-cactus-green)]/40">
           {step.step}
         </span>
       </div>
 
-      <h3 className="relative mt-8 font-display text-2xl font-semibold tracking-tight">
+      <h3 className="relative mt-8 font-display text-2xl font-semibold tracking-tight text-gray-900">
         {step.title}
       </h3>
-      <p className="relative mt-3 text-[color:var(--color-cactus-cream)]/65 leading-relaxed">
+      <p className="relative mt-3 leading-relaxed text-gray-500">
         {step.description}
       </p>
     </motion.div>
