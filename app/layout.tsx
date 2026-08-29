@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s · CactAi",
   },
   description:
-    "Vi henter kunderne og sørger for, at du aldrig mister én. Annoncer, AI der svarer hvert opkald og lead 24/7, og booking direkte i din kalender. Ét system, én pris.",
+    "Vi henter kunderne og sørger for, at du aldrig mister én. Annoncer, automatisk svar på hvert lead inden for 60 sekunder, og booking direkte i din kalender. Ét system, én pris.",
   keywords: [
     "vækstpartner håndværker",
     "AI receptionist dansk",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "CactAi",
     title: "Mist aldrig en kunde igen · CactAi",
     description:
-      "Vi henter kunderne og sørger for at du aldrig mister én. Annoncer, dansk AI der svarer hvert opkald og lead 24/7, og booking direkte i din kalender.",
+      "Vi henter kunderne og sørger for at du aldrig mister én. Annoncer, automatisk svar på hvert lead døgnet rundt, og booking direkte i din kalender.",
     // Images auto-injected by app/opengraph-image.tsx file convention.
   },
   twitter: {

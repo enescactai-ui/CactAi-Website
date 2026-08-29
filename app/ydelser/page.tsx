@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Vækstmotoren",
   description:
-    "Ét samlet system der henter kunderne, svarer hvert opkald og lead på sekunder, og booker dem direkte i din kalender. Du møder bare op til arbejdet.",
+    "Ét samlet system der henter kunderne, svarer hvert lead på sekunder, og booker dem direkte i din kalender. Du møder bare op til arbejdet.",
 };
 
 type Part = {
@@ -31,9 +31,9 @@ const PARTS: Part[] = [
   },
   {
     n: "03",
-    tag: "AI-receptionisten",
-    title: "Telefonen bliver altid taget",
-    body: "En dansk AI der tager telefonen 24/7, forstår hvad kunden vil, kvalificerer og booker direkte i din kalender.",
+    tag: "Notifikationen",
+    title: "Du ved det med det samme",
+    body: "Navn, opgave og telefonnummer lander på din telefon i samme sekund, leadet kommer ind. Så du kan ringe, mens de stadig sidder med mobilen i hånden.",
   },
   {
     n: "04",
@@ -133,7 +133,7 @@ export default function YdelserPage() {
             </div>
             <div className="flex flex-col justify-center gap-4">
               {[
-                { k: "24/7", v: "hvert opkald besvaret" },
+                { k: "24/7", v: "hvert lead besvaret" },
                 { k: "60 sek.", v: "svartid på nye leads" },
                 { k: "14 dage", v: "resultat-garanti" },
                 { k: "0 kr", v: "ved no-show" },

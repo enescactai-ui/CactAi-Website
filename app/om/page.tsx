@@ -27,7 +27,7 @@ const PERSON_SCHEMA = {
     "Pay-per-show appointment marketing",
     "Meta Ads for danske håndværkere",
     "Lead generation for service-virksomheder",
-    "AI-receptionist og automatisering",
+    "Automatisk leadopfølgning og CRM"
   ],
   address: {
     "@type": "PostalAddress",
