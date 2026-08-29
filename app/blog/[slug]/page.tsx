@@ -138,8 +138,8 @@ export default async function BlogPostPage({ params }: Props) {
                   Enes Tokmak
                 </div>
                 <p className="mt-3 text-base leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-                  19-årig founder af CactAi. Bygger pay-per-show marketing
-                  for danske håndværkere fra Greve. Læs mere{" "}
+                  Founder af CactAi. Bygger vækstsystemer for danske
+                  servicevirksomheder fra Greve. Læs mere{" "}
                   <Link
                     href="/om"
                     className="text-[color:var(--color-cactus-green)] underline decoration-2 underline-offset-4 transition-colors hover:text-[color:var(--color-cactus-cream)]"

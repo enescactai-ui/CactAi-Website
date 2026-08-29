@@ -13,7 +13,6 @@ import type { ComponentType } from "react";
 import PostPpsaVsRetainer from "@/content/blog/ppsa-vs-retainer";
 import PostAiReceptionistGuide from "@/content/blog/ai-receptionist-guide";
 import PostMetaAdsHaandvaerkere from "@/content/blog/meta-ads-haandvaerkere";
-import PostFounderLessons from "@/content/blog/founder-lessons";
 
 export type BlogPost = {
   slug: string;
@@ -58,17 +57,6 @@ export const POSTS: BlogPost[] = [
     readMinutes: 9,
     category: "Marketing",
     Body: PostMetaAdsHaandvaerkere,
-  },
-  {
-    slug: "hvorfor-jeg-startede-cactai",
-    title:
-      "Hvorfor jeg startede CactAi, og 5 ting jeg har lært på det første år",
-    excerpt:
-      "Jeg er 19 og driver et marketing-bureau for danske håndværkere. Her er den ærlige historie om hvorfor jeg startede, hvad der gik galt undervejs, og hvad jeg har lært om at sælge til folk der har set det hele før.",
-    date: "2026-05-15",
-    readMinutes: 6,
-    category: "Founder",
-    Body: PostFounderLessons,
   },
 ];
 

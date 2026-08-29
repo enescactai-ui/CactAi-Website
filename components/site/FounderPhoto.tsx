@@ -22,7 +22,7 @@ export function FounderPhoto({ size = "default" }: { size?: "default" | "large" 
           Enes Tokmak
         </div>
         <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/45">
-          Founder · 19 år
+          Founder · Greve
         </div>
       </div>
     );

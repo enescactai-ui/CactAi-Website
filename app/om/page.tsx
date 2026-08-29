@@ -5,9 +5,9 @@ import { Navbar } from "@/components/site/Navbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Om CactAi · Enes Tokmak, 19-årig founder",
+  title: "Om CactAi · Enes Tokmak, founder",
   description:
-    "Mød Enes Tokmak, 19-årig dansker der bygger CactAi. Læs hvorfor PPSA-modellen findes, og hvad det betyder for danske håndværkere der vil have flere kunder uden risiko.",
+    "Mød Enes Tokmak, manden bag CactAi. Læs hvorfor vi arbejder som vi gør, og hvad det betyder for danske servicevirksomheder der vil have flere kunder uden risiko.",
 };
 
 /* Person schema, gives Google explicit founder data (knowledge panel candidate) */
@@ -113,16 +113,16 @@ export default function OmPage() {
           <div className="mt-16 grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-8 space-y-6 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/75">
               <p>
-                Mit navn er <strong className="text-[color:var(--color-cactus-cream)]">Enes Tokmak</strong>. Jeg er 19 år, dansker, og jeg
-                driver CactAi solo fra Greve.
+                Mit navn er <strong className="text-[color:var(--color-cactus-cream)]">Enes Tokmak</strong>. Jeg driver CactAi fra
+                Greve, og jeg tager selv hver eneste kundesamtale.
               </p>
               <p>
-                Jeg læser <strong className="text-[color:var(--color-cactus-cream)]">HHX</strong> sideløbende, formel
-                business-uddannelse giver mig fundamentet. Det praktiske lærer
-                jeg fra YouTube, mentorships og bøger fra folk som Alex Hormozi.
+                Jeg har lært det her ved at gøre det. Rigtige kunder, rigtige
+                annoncebudgetter, og de fejl der følger med. Resten kommer fra
+                mentorforløb og bøger fra folk som Alex Hormozi.
               </p>
               <p>
-                Skolen giver dig teorien. Marketing i 2026 lærer du ved at gøre,
+                Teori giver dig sproget. Marketing i 2026 lærer du ved at gøre,
                 og ved at have rigtig <em>skin in the game</em>. Det er derfor
                 CactAi virker som det virker. De fleste danske bureauer kører
                 gamle leveringsmodeller (faste retainere, vagt månedsabonnement,
