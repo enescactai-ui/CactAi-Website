@@ -1,5 +1,6 @@
 import { BeforeAfter } from "@/components/site/BeforeAfter";
 import { Comparison } from "@/components/site/Comparison";
+import { CaseStudy } from "@/components/site/CaseStudy";
 import { CTA } from "@/components/site/CTA";
 import { FAQ } from "@/components/site/FAQ";
 import { Footer } from "@/components/site/Footer";
@@ -24,6 +25,7 @@ export default function HomePage() {
         <Manifesto />
         <HowItWorks />
         <BeforeAfter />
+        <CaseStudy />
         <Pricing />
         <Comparison />
         <Guarantee />

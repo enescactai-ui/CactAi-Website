@@ -16,11 +16,9 @@ const ITEMS = [
   "CVR 46210689",
   "Greve · Sjælland",
   "1 founder + dansk setter",
-  "Ingen falske reviews",
   "14 dages garanti",
   "Pay-per-show",
   "0 kr ved no-show",
-  "1:1 eksklusivitet pr. by",
   "Ad-spend direkte til Meta",
   "Faktureret via Billy",
 ];

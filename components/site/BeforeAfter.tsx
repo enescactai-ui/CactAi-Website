@@ -182,7 +182,7 @@ export function BeforeAfter() {
               Her bor dine kunder
             </div>
             <p className="mt-3 max-w-2xl font-display text-2xl font-medium leading-snug tracking-[-0.02em] text-white sm:text-3xl lg:text-4xl">
-              Tusindvis af villaejere i dit område søger en håndværker lige nu.
+              Virksomheder i dit område leder efter en ny leverandør lige nu.
               Vi finder dem, du møder dem.
             </p>
             <a

@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: "Hvad koster det egentlig?",
-    a: "Setup starter ved 5.000 kr (engangsbeløb). Per fremmødt møde betaler du 500–4.500 kr afhængigt af pakke og job-størrelse. Ad-budget (5.000–10.000 kr/md) betales direkte til Meta. Vi får aldrig adgang til dit kort.",
+    a: "Der er to måder at starte. Hjemmeside og Google koster 750 kr/md, ingen opstart og ingen binding. Vil du have kunder hentet aktivt ind med annoncer, hedder det Vækstmotoren: opstart fra 5.000 kr, derefter betaler du kun for fremmødte møder. Annoncebudgettet betaler du direkte til Meta, vi får aldrig adgang til dit kort.",
   },
   {
     q: "Hvor mange leads får jeg om måneden?",
@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: "Hvilke brancher arbejder I med?",
-    a: "VVS, elektriker, maler, tømrer, tagdækker, rengøring (privat + erhverv), murer, brolægger, anlægsgartner, varmepumpe-specialister, glarmester, smed. Hvis du er håndværker i Danmark, har vi formentlig en model for dig.",
+    a: "Vi arbejder primært med rengøringsfirmaer, både privat og erhverv. Vi har også kunder inden for VVS, el og andre servicefag, men rengøring er dér, vi kender branchen bedst: priser per kvadratmeter, servicefradrag, hvad indkøbere kigger efter, og hvordan erhvervskontrakter vindes.",
   },
   {
     q: "Hvordan betaler jeg?",
@@ -74,7 +74,7 @@ export function FAQ() {
             FAQ
           </div>
           <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
-            Spørgsmål andre håndværkere stiller
+            Spørgsmål andre ejere stiller
           </h2>
         </motion.div>
 

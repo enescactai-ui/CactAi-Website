@@ -25,7 +25,7 @@ const PERSON_SCHEMA = {
   worksFor: { "@id": "https://cactaihq.com/#org" },
   knowsAbout: [
     "Pay-per-show appointment marketing",
-    "Meta Ads for danske håndværkere",
+    "Marketing for danske rengøringsfirmaer",
     "Lead generation for service-virksomheder",
     "Automatisk leadopfølgning og CRM"
   ],
@@ -222,7 +222,7 @@ export default function OmPage() {
             </h2>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/75">
               <p>
-                Hvis du har drevet håndværker-virksomhed i 10+ år har du
+                Hvis du har drevet servicevirksomhed i 10+ år har du
                 sikkert aldrig brugt penge på marketing. Mund-til-mund har
                 været nok. Men det er begrænset til folk der allerede kender
                 dig, og dine konkurrenter har nu hver eneste lokal-søgning på
@@ -230,7 +230,7 @@ export default function OmPage() {
               </p>
               <p>
                 Meta og Google er ikke for "tech-virksomheder". De er for
-                håndværkere der vil have flere kunder uden at bruge timer på
+                ejere der vil have flere kunder uden at bruge timer på
                 at jagte dem. Du gør det du er bedst til. Jeg gør resten.
               </p>
             </div>

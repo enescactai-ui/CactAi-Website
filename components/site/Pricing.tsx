@@ -38,17 +38,75 @@ export function Pricing() {
             Pris
           </div>
           <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            Din pris,{" "}
+            To måder at{" "}
             <span className="text-[color:var(--color-cactus-green)]">
-              skræddersyet
+              starte
             </span>{" "}
-            til din virksomhed.
+            på.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-            Ingen virksomheder er ens, så det ville være mærkeligt at give alle
-            den samme pris. Fortæl os hvad du har brug for, så bygger vi
-            Vækstmotoren, og prisen, til lige præcis dig.
+            De fleste starter med hjemmesiden, fordi det er hurtigt, billigt og
+            uden binding. Vil du have kunder hentet ind aktivt bagefter, findes
+            Vækstmotoren. Du behøver ikke tage stilling til den nu.
           </p>
+
+          <div className="mt-14 grid gap-5 text-left sm:grid-cols-2">
+            {/* Indgangstilbud */}
+            <div className="rounded-2xl border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)]/[0.07] p-8">
+              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
+                De fleste starter her
+              </div>
+              <h3 className="mt-4 font-display text-2xl font-bold tracking-tight">
+                Hjemmeside &amp; Google
+              </h3>
+              <div className="mt-4 font-display text-4xl font-bold tracking-tight text-[color:var(--color-cactus-green)]">
+                750 kr<span className="text-lg font-medium">/md</span>
+              </div>
+              <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/50">
+                Ingen opstart · ingen binding
+              </div>
+              <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
+                <li>Hjemmeside bygget, hostet og vedligeholdt</li>
+                <li>Google-profil sat op og optimeret</li>
+                <li>Automatisk svar på hver henvendelse</li>
+                <li>Du ejer alt, også hvis du stopper</li>
+              </ul>
+              <a
+                href="/#book"
+                className="mt-7 block rounded-full bg-[color:var(--color-cactus-green)] px-6 py-3.5 text-center font-display text-sm font-semibold text-white transition-all hover:brightness-110"
+              >
+                Book gratis møde
+              </a>
+            </div>
+
+            {/* Upsell */}
+            <div className="rounded-2xl border border-[color:var(--color-cactus-green)]/20 bg-white/50 p-8">
+              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/45">
+                Når du vil vokse aktivt
+              </div>
+              <h3 className="mt-4 font-display text-2xl font-bold tracking-tight">
+                Vækstmotoren
+              </h3>
+              <div className="mt-4 font-display text-4xl font-bold tracking-tight">
+                Fra 5.000 kr
+              </div>
+              <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/50">
+                Opstart, derefter pris per booket møde
+              </div>
+              <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
+                <li>Alt i Hjemmeside &amp; Google</li>
+                <li>Annoncer der henter kunder ind</li>
+                <li>Du betaler kun for fremmødte møder</li>
+                <li>Annoncebudget betales direkte til Meta</li>
+              </ul>
+              <a
+                href="/#book"
+                className="mt-7 block rounded-full border border-[color:var(--color-cactus-green)]/40 px-6 py-3.5 text-center font-display text-sm font-semibold text-[color:var(--color-cactus-cream)] transition-all hover:bg-[color:var(--color-cactus-green)]/10"
+              >
+                Hør om Vækstmotoren
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-3 lg:mt-16">

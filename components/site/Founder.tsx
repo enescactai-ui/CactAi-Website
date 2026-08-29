@@ -8,7 +8,7 @@ import { FounderPhoto } from "./FounderPhoto";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const TIMELINE = [
-  { date: "2026", event: "CactAi grundlagt på én idé: håndværkere betaler for resultater, ikke for tomme løfter." },
+  { date: "2026", event: "CactAi grundlagt på én idé: du skal betale for resultater, ikke for tomme løfter." },
   { date: "2026", event: "Første faste klient i drift, med rigtige resultater på bordet." },
   { date: "Nu", event: "Vækstmotoren rulles ud til flere faste klienter i hele landet." },
 ];
@@ -152,7 +152,7 @@ export function Founder() {
                   <strong className="text-[color:var(--color-cactus-cream)]">
                     CactAi blev grundlagt i 2026 af Enes Tokmak
                   </strong>{" "}
-                  med én simpel idé: håndværkere skal ikke betale et bureau et
+                  med én simpel idé: du skal ikke betale et bureau et
                   fast beløb hver måned for tomme løfter. De skal betale for
                   resultater, og aldrig miste en kunde igen.
                 </p>

@@ -6,12 +6,12 @@ const PRINCIPLES = [
   {
     n: "01",
     rule: "Vi har ingen falske anmeldelser.",
-    body: "Ingen Trustpilot-buy. Ingen stock-photo testimonials. Når vi har 10 betalende klienter, viser vi deres rigtige navne, og kun deres. Indtil da: stol på matematikken, ikke på en grøn smiley.",
+    body: "Ingen Trustpilot-buy. Ingen stock-photo testimonials. Vi viser resultater vi selv har leveret, og vi nævner aldrig en klient uden deres accept. Derfor står vores case anonymt: firmaet er ægte, tallene er ægte, navnet er deres eget at give."
   },
   {
     n: "02",
     rule: "Vi sælger ikke møder vi ikke kan levere.",
-    body: "Hvis vi ikke kan se hvordan vi får dig 5 fremmødte på 14 dage, siger vi nej til samarbejdet. Vi har droppet 3 leads i denne måned. Vi tager ikke pis på dig for en setup-fee.",
+    body: "Kan vi ikke se en realistisk vej til resultater for netop din forretning, siger vi nej til samarbejdet. Vi tager ikke pis på dig for en setup-fee, og vi sælger ikke et system du ikke har brug for."
   },
   {
     n: "03",

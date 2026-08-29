@@ -92,11 +92,11 @@ export function Comparison() {
             Sammenligning // 07
           </div>
           <h2 className="mt-6 font-display text-5xl font-medium leading-[0.95] tracking-[-0.03em] sm:text-6xl lg:text-7xl">
-            Hvorfor{" "}
+            Sådan er vi{" "}
             <span className="italic font-light text-[color:var(--color-cactus-cream)]/60">
-              95% af bureauer
+              anderledes
             </span>{" "}
-            ikke kan matche det her.
+            fra et almindeligt bureau.
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
             Vi har gjort sammenligningen for dig. Hvis dit nuværende bureau
@@ -158,7 +158,7 @@ export function Comparison() {
           className="mt-12 flex flex-col items-start gap-4 border-t border-[color:var(--color-cactus-green)]/15 pt-8 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/45 sm:flex-row sm:items-center sm:justify-between"
         >
           <span>
-            Baseret på offentlige prismodeller hos 12 danske markedsføringsbureauer · 2026
+            Sammenligningen beskriver den model vi selv arbejder efter · 2026
           </span>
           <a
             href="/#book"
