@@ -68,7 +68,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     addressCountry: "DK",
   },
   description:
-    "Vækstpartner for danske servicevirksomheder. Vi henter kunderne med annoncer, svarer hvert opkald og lead på sekunder med dansk AI, og booker dem direkte i din kalender. Du betaler kun når kunden møder op.",
+    "Vækstpartner for danske servicevirksomheder. Vi bygger hjemmesiden, henter kunderne med annoncer, og sørger for at hvert lead får svar på sekunder, så ingen henvendelse går tabt.",
   areaServed: { "@type": "Country", name: "Denmark" },
   serviceType: "Vækst, marketing & kundeanskaffelse",
   hasOfferCatalog: {
@@ -84,8 +84,8 @@ const LOCAL_BUSINESS_SCHEMA = {
         "Hvert nyt lead får svar på under 60 sekunder, døgnet rundt.",
       ),
       offer(
-        "AI-receptionist",
-        "Dansk AI-stemme der tager telefonen 24/7, kvalificerer og booker tider.",
+        "Hjemmeside & Google",
+        "Hjemmeside der konverterer, plus Google-profil der bliver fundet lokalt.",
       ),
       offer(
         "Automatisk opfølgning",

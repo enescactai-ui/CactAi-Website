@@ -158,8 +158,8 @@ export function Founder() {
                 </p>
                 <p>
                   Vi bygger vækstsystemer der henter kunderne med annoncer og
-                  lader AI besvare hvert opkald og lead på sekunder, døgnet
-                  rundt. Så du bare møder op til arbejdet.
+                  sørger for at hvert lead får svar på sekunder, døgnet rundt.
+                  Så du bare møder op til arbejdet.
                 </p>
                 <p>
                   Ringer du til os, får du fat i et menneske der faktisk kender

@@ -14,9 +14,9 @@ const STEPS = [
   {
     icon: PhoneCall,
     step: "02",
-    title: "AI'en svarer med det samme",
+    title: "Leadet får svar med det samme",
     description:
-      "Hvert opkald og lead bliver besvaret på sekunder, døgnet rundt. AI'en kvalificerer og sorterer, så kun de rigtige kunder kommer videre.",
+      "Hvert nyt lead får automatisk svar på sekunder, døgnet rundt, og du får selv besked med alle detaljerne. Ingen henvendelse bliver liggende til næste dag.",
   },
   {
     icon: CalendarClock,

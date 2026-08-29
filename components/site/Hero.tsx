@@ -83,7 +83,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-cactus-green)] opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--color-cactus-green)]" />
           </span>
-          Live · Vækstpartner for håndværkere
+          Live · Vækstpartner for servicevirksomheder
         </motion.div>
 
         {/* Two-column layout */}
@@ -120,8 +120,8 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
               className="mt-7 max-w-lg text-lg leading-[1.65] text-[color:var(--color-cactus-cream)]/65 sm:text-xl"
             >
-              Vi henter kunderne med annoncer, og AI&apos;en svarer hvert opkald
-              og hvert lead på sekunder, døgnet rundt.{" "}
+              Vi bygger hjemmesiden, henter kunderne med annoncer, og sørger for
+              at ingen henvendelse falder mellem to stole.{" "}
               <strong className="font-semibold text-[color:var(--color-cactus-cream)]/85">
                 Du møder bare op til arbejdet.
               </strong>
@@ -157,7 +157,7 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-6 text-sm text-[color:var(--color-cactus-cream)]/55"
             >
               {[
-                { icon: Zap, text: "Svar på 60 sek." },
+                { icon: Zap, text: "Fast pris fra 750 kr/md" },
                 { icon: CheckCircle2, text: "14-dages garanti" },
                 { icon: Star, text: "Ingen binding" },
               ].map(({ icon: Icon, text }) => (
@@ -202,8 +202,8 @@ export function Hero() {
             />
             <FloatingBadge
               icon={CheckCircle2}
-              title="Hvert opkald besvaret"
-              sub="24/7, også aften & weekend"
+              title="Hvert lead besvaret"
+              sub="Automatisk, også aften & weekend"
               className="-right-6 bottom-1/3"
               delay={1.4}
               floatY={8}
@@ -224,7 +224,7 @@ export function Hero() {
       <div className="relative border-t border-[color:var(--color-cactus-green)]/15 bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[color:var(--color-cactus-green)]/10 lg:grid-cols-4 lg:divide-y-0">
           {[
-            { metric: "24/7", note: "hvert opkald besvaret" },
+            { metric: "24/7", note: "hvert lead besvaret" },
             { metric: "60 sek.", note: "svartid på leads" },
             { metric: "14 dage", note: "resultat-garanti" },
             { metric: "0 kr", note: "ved no-show" },

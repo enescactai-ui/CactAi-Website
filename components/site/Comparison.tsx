@@ -34,7 +34,7 @@ const ROWS: Row[] = [
   {
     feature: "Hvad sker med dine leads",
     traditional: "De ligger og bliver kolde til nogen ringer",
-    cactai: "AI svarer hvert lead på sekunder, 24/7",
+    cactai: "Hvert lead får svar på sekunder, døgnet rundt",
     highlight: true,
   },
   {

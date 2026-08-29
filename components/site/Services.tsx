@@ -26,8 +26,8 @@ const PARTS = [
   },
   {
     icon: PhoneCall,
-    title: "AI-receptionist",
-    desc: "Besvarer hvert opkald 24/7, kvalificerer og booker i din kalender.",
+    title: "Besked med det samme",
+    desc: "Du får navn, opgave og telefonnummer på SMS, så du kan ringe med det samme.",
   },
   {
     icon: MessageSquare,
@@ -68,7 +68,7 @@ export function Services() {
             </span>
           </h2>
           <p className="mt-6 text-lg text-[color:var(--color-cactus-cream)]/65">
-            Annoncer, AI-receptionist, opfølgning, Google og hjemmeside samlet i
+            Annoncer, lynhurtig opfølgning, Google og hjemmeside samlet i
             ét system, der giver dig flere kunder og sørger for, at du aldrig
             mister én.
           </p>
@@ -109,7 +109,7 @@ export function Services() {
                 Vækstmotoren
               </h3>
               <p className="mt-4 text-lg leading-relaxed text-white/70">
-                Flere kunder ind. Hvert opkald og lead besvaret og booket,
+                Flere kunder ind. Hvert lead besvaret og fulgt op,
                 døgnet rundt.{" "}
                 <strong className="font-semibold text-white">
                   Du møder bare op til arbejdet.

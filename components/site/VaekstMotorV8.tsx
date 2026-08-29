@@ -20,7 +20,7 @@ type Node = {
 
 const NODES: Node[] = [
   { id: "lead", mesh: "throttleBody", title: "Lead-motoren", tag: "Meta-annoncer", body: "Annoncer der henter kvalificerede kunder i dit område. Motorens brændstof.", side: "left", top: "20%" },
-  { id: "reception", mesh: "cylinderHeadCoverRight", title: "AI-receptionisten", tag: "Svarer 24/7", body: "Dansk AI der tager telefonen døgnet rundt, kvalificerer og booker i din kalender.", side: "left", top: "45%" },
+  { id: "reception", mesh: "cylinderHeadCoverRight", title: "Notifikationen", tag: "Med det samme", body: "Du får navn, opgave og nummer på SMS i samme sekund, leadet lander. Ingen henvendelse bliver liggende.", side: "left", top: "45%" },
   { id: "synlig", mesh: "intakeManifoldRight", title: "Synligheds-modulet", tag: "Google & SEO", body: "Google-profil og anmeldelser der får kunder til at vælge dig, når de søger.", side: "left", top: "70%" },
   { id: "svar", mesh: "crankshaftSprocket", title: "Lynsvar", tag: "Svar på 60 sek.", body: "Hvert lead får svar på under et minut, før konkurrenten når at ringe.", side: "right", top: "20%" },
   { id: "opfoelg", mesh: "camshaftSprocket", title: "Opfølgnings-drevet", tag: "Auto-opfølgning", body: "Genbooker automatisk de leads der ikke svarede første gang. Ingen tabt.", side: "right", top: "45%" },

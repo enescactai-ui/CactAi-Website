@@ -14,9 +14,30 @@ ONE flagship product: **Vækstmotoren** (a V8-engine metaphor).
 
 - **Positioning:** "Din vækstpartner. Mist aldrig en kunde igen."
 - **The offer is ONE system, not a service menu.** Six parts of the engine:
-  Lead-motoren (Meta ads) · Lynsvar (svar <60 sek) · AI-receptionist (dansk AI 24/7) ·
+  Lead-motoren (Meta ads) · Lynsvar (svar <60 sek på leads) · Notifikation (SMS med det samme) ·
   Opfølgning (auto follow-up) · Synlighed (Google + reviews) · Resultat-garanti (pay-per-show).
-- **AI-receptionist IS now a core part** (the old "deprioritise AI receptionist" rule is dead).
+
+### ⛔ AI-RECEPTIONIST IS OFF THE SITE (Aug 2026) — do not re-add
+
+The Danish voice agent was built for Skandiacare in August 2026 and **failed live
+testing**: it looped on Danish street addresses and could not capture them reliably.
+It was abandoned, not shipped. Advertising it was selling a product that does not work.
+
+**The rule now, and it is a precise one:**
+
+| Claim | Status | Why |
+|---|---|---|
+| "Hvert lead får svar på 60 sekunder, døgnet rundt" | ✅ KEEP | True. GHL workflow sends SMS + email automatically on form submit. Built and running for Skandiacare. |
+| "Du får besked med navn, opgave og nummer" | ✅ KEEP | True. Internal notification workflow. |
+| "AI-stemme tager telefonen 24/7" | ❌ REMOVED | False. The voice agent does not work. |
+| "Hvert opkald besvaret" | ❌ REMOVED | False. Same reason. |
+
+The distinction is **lead vs opkald**. Automated lead response is real and deliverable.
+Automated phone answering is not, until the address-capture problem in the GHL voice
+agent is solved. If it ever ships, the claim can come back — but only then.
+
+Removed from: `Hero.tsx`, `HowItWorks.tsx`, `Services.tsx`, `Comparison.tsx`,
+`JsonLd.tsx`, `VaekstMotorV8.tsx`. (`VaekstMotor.tsx` is dead code, not imported.)
 - **Pricing:** tailored, not fixed tiers. Copy says "Din pris, skræddersyet." Keep the
   pay-per-show + 14-dages garanti risk-reversal.
 - **Theme is now LIGHT** (mint/white). The CSS color vars in `globals.css` were remapped
