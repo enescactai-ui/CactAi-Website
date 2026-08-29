@@ -10,10 +10,8 @@ import { HowItWorks } from "@/components/site/HowItWorks";
 import { Manifesto } from "@/components/site/Manifesto";
 import { Navbar } from "@/components/site/Navbar";
 import { Pricing } from "@/components/site/Pricing";
-import { Receipt } from "@/components/site/Receipt";
-import { ROICalculator } from "@/components/site/ROICalculator";
-import { Services } from "@/components/site/Services";
 import { TrustMarquee } from "@/components/site/TrustMarquee";
+import { VaekstMotorV8 } from "@/components/site/VaekstMotorV8";
 
 export default function HomePage() {
   return (
@@ -22,17 +20,15 @@ export default function HomePage() {
       <main className="flex-1">
         <Hero />
         <TrustMarquee />
+        <VaekstMotorV8 />
         <Manifesto />
-        <Services />
-        <Founder />
         <HowItWorks />
         <BeforeAfter />
-        <Receipt />
-        <ROICalculator />
         <Pricing />
         <Comparison />
         <Guarantee />
         <FAQ />
+        <Founder />
         <CTA />
       </main>
       <Footer />

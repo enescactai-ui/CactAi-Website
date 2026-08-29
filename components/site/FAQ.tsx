@@ -7,11 +7,11 @@ import { useState } from "react";
 const FAQS = [
   {
     q: "Hvad betyder pay-per-show?",
-    a: "Du betaler kun når en kvalificeret kunde faktisk møder op til dit besøg. Hvis de ikke dukker op — koster det dig 0 kr. Vi tjener intet på no-shows, så vi har samme incitament som dig: kun reelle, klare kunder.",
+    a: "Du betaler kun når en kvalificeret kunde faktisk møder op til dit besøg. Hvis de ikke dukker op, koster det dig 0 kr. Vi tjener intet på no-shows, så vi har samme incitament som dig: kun reelle, klare kunder.",
   },
   {
     q: "Hvad hvis det ikke virker?",
-    a: "Vi har 14-dages garanti. Hvis vi ikke leverer 5 fremmødte møder inden for de første 14 dage, refunderer vi setup-fee 100%. Ad-spend dækkes ikke, fordi det er din direkte betaling til Meta — ikke til os.",
+    a: "Vi har 14-dages garanti. Hvis vi ikke leverer 5 fremmødte møder inden for de første 14 dage, refunderer vi setup-fee 100%. Ad-spend dækkes ikke, fordi det er din direkte betaling til Meta, ikke til os.",
   },
   {
     q: "Hvad koster det egentlig?",
@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: "Hvor mange leads får jeg om måneden?",
-    a: "Realistisk 25–30 leads/md, hvoraf 10–14 møder fysisk op (de andre er no-shows eller kommer ikke i mål). Det varierer per branche og ad-budget — vi regner konkret på det på vores strategi-møde.",
+    a: "Realistisk 25–30 leads/md, hvoraf 10–14 møder fysisk op (de andre er no-shows eller kommer ikke i mål). Det varierer per branche og ad-budget, og vi regner konkret på det på vores strategi-møde.",
   },
   {
     q: "Skal jeg lære nyt software?",
@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: "Hvilke brancher arbejder I med?",
-    a: "VVS, elektriker, maler, tømrer, tagdækker, rengøring (privat + erhverv), murer, brolægger, anlægsgartner, varmepumpe-specialister, glarmester, smed. Hvis du er håndværker i Danmark — vi har formentlig en model for dig.",
+    a: "VVS, elektriker, maler, tømrer, tagdækker, rengøring (privat + erhverv), murer, brolægger, anlægsgartner, varmepumpe-specialister, glarmester, smed. Hvis du er håndværker i Danmark, har vi formentlig en model for dig.",
   },
   {
     q: "Hvordan betaler jeg?",

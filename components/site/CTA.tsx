@@ -39,9 +39,9 @@ export function CTA() {
               </h2>
 
               <p className="mt-6 text-lg leading-relaxed text-white/65">
-                Udfyld kort formen, vælg en tid. Vi regner konkret på hvad
-                PPSA-modellen betyder for dit firma — og du beslutter selv
-                om det giver mening.
+                Udfyld kort formen, vælg en tid. Vi regner konkret på hvad det
+                ville betyde for dit firma, og du beslutter selv om det giver
+                mening.
               </p>
 
               <ul className="mt-8 space-y-3 text-sm text-white/65">
@@ -55,7 +55,7 @@ export function CTA() {
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="h-1 w-1 rounded-full bg-[color:var(--color-cactus-green)]" />
-                  20 minutter — så ved du
+                  20 minutter, så ved du
                 </li>
               </ul>
 

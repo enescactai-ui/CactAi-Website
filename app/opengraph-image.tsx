@@ -8,7 +8,7 @@ import { ImageResponse } from "next/og";
  * in layout.tsx — it just works.
  */
 
-export const alt = "CactAi — AI der arbejder. Resultater der tæller.";
+export const alt = "CactAi — Mist aldrig en kunde igen.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -84,18 +84,18 @@ export default async function OpenGraphImage() {
         >
           <div
             style={{
-              fontSize: 92,
+              fontSize: 100,
               fontWeight: 700,
               lineHeight: 0.95,
               letterSpacing: "-0.04em",
               display: "flex",
             }}
           >
-            AI der arbejder.
+            Mist aldrig
           </div>
           <div
             style={{
-              fontSize: 92,
+              fontSize: 100,
               fontWeight: 700,
               lineHeight: 0.95,
               letterSpacing: "-0.04em",
@@ -103,7 +103,7 @@ export default async function OpenGraphImage() {
               display: "flex",
             }}
           >
-            Resultater der tæller.
+            en kunde igen.
           </div>
         </div>
 
@@ -120,9 +120,9 @@ export default async function OpenGraphImage() {
           }}
         >
           <div style={{ display: "flex", gap: 56 }}>
-            <Stat label="No-show" value="0 kr" />
+            <Stat label="Svartid" value="60 sek." />
             <Stat label="Garanti" value="14 dage" />
-            <Stat label="Setup" value="5.000 kr" />
+            <Stat label="No-show" value="0 kr" />
           </div>
           <div
             style={{
@@ -135,7 +135,7 @@ export default async function OpenGraphImage() {
               gap: 8,
             }}
           >
-            <span>Pay-per-show</span>
+            <span>Din vækstpartner</span>
             <span>→</span>
           </div>
         </div>

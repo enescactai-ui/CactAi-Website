@@ -59,7 +59,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   url: "https://cactaihq.com",
   telephone: "+45 91 30 95 60",
   email: "enescactai@gmail.com",
-  priceRange: "5.000–25.000 DKK",
+  priceRange: "Skræddersyet · du betaler kun for fremmødte kunder",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Krogager 44",
@@ -68,32 +68,36 @@ const LOCAL_BUSINESS_SCHEMA = {
     addressCountry: "DK",
   },
   description:
-    "Pay-per-show appointment lead generation til danske håndværkere. Du betaler kun når kunden møder op.",
+    "Vækstpartner for danske servicevirksomheder. Vi henter kunderne med annoncer, svarer hvert opkald og lead på sekunder med dansk AI, og booker dem direkte i din kalender. Du betaler kun når kunden møder op.",
   areaServed: { "@type": "Country", name: "Denmark" },
-  serviceType: "Marketing & Lead Generation",
+  serviceType: "Vækst, marketing & kundeanskaffelse",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "CactAi services",
+    name: "Vækstmotoren",
     itemListElement: [
       offer(
-        "PPSA Lead Generation",
-        "Pay-per-show appointment booking via Meta- og Google-ads.",
+        "Lead-generation",
+        "Meta-annoncer der henter kvalificerede kunder i dit lokalområde.",
       ),
       offer(
-        "AI Receptionist",
-        "Dansk AI-stemme der svarer telefonen 24/7 og booker tider.",
+        "Lynsvar (speed-to-lead)",
+        "Hvert nyt lead får svar på under 60 sekunder, døgnet rundt.",
       ),
       offer(
-        "AI System Integration",
-        "Automatisering mellem CRM, kalender, regnskab og marketing-værktøjer.",
+        "AI-receptionist",
+        "Dansk AI-stemme der tager telefonen 24/7, kvalificerer og booker tider.",
       ),
       offer(
-        "Websites & Landing Pages",
-        "Konverterings-fokuserede sites bygget i Next.js og hostet på Vercel.",
+        "Automatisk opfølgning",
+        "Genbooker automatisk de leads der ikke svarede første gang.",
       ),
       offer(
-        "Google Presence",
+        "Google-synlighed",
         "Google Business Profile, anmeldelses-automation og lokal SEO.",
+      ),
+      offer(
+        "Resultat-garanti (pay-per-show)",
+        "Du betaler kun når en kunde rent faktisk møder op til mødet.",
       ),
     ],
   },
@@ -105,7 +109,7 @@ const WEBSITE_SCHEMA = {
   "@id": "https://cactaihq.com/#website",
   url: "https://cactaihq.com",
   name: "CactAi",
-  description: "Komplet AI-firma for danske håndværkere",
+  description: "Vækstpartner for danske servicevirksomheder",
   inLanguage: "da-DK",
   publisher: { "@id": "https://cactaihq.com/#org" },
 } as const;

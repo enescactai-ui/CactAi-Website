@@ -309,7 +309,7 @@ export function ROICalculator() {
               href="#book"
               className="group mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-cactus-green)] px-7 py-3.5 text-base font-medium text-[color:var(--color-cactus-deep)] transition-all hover:scale-[1.02] hover:shadow-[0_8px_40px_-8px_rgba(82,183,136,0.6)] active:scale-[0.98]"
             >
-              Book et møde — vi regner præcist for dig
+              Book et møde, vi regner præcist for dig
               <span className="transition-transform group-hover:translate-x-0.5">
                 →
               </span>

@@ -23,7 +23,7 @@ const SECTIONS: Section[] = [
     title: "Dataansvarlig",
     body: [
       "CactAi v/Enes Tokmak (enkeltmandsvirksomhed). CVR 46210689. Krogager 44, 2670 Greve. Tlf. +45 91 30 95 60. Email enescactai@gmail.com.",
-      "CactAi er dataansvarlig for de personoplysninger vi indsamler om dig som prospekt, klient eller besøgende på cactaihq.com. Når vi behandler personoplysninger på vegne af en klient (fx leads vi leverer), er vi databehandler — se §07.",
+      "CactAi er dataansvarlig for de personoplysninger vi indsamler om dig som prospekt, klient eller besøgende på cactaihq.com. Når vi behandler personoplysninger på vegne af en klient (fx leads vi leverer), er vi databehandler, se §07.",
     ],
   },
   {
@@ -35,7 +35,7 @@ const SECTIONS: Section[] = [
         items: [
           "Firmanavn, branche, CVR-nummer",
           "Kontaktperson: navn, jobtitel",
-          "Telefonnummer, email — fra offentligt tilgængelige kilder (cvr.dk, virksomhedsdatabaser, LinkedIn)",
+          "Telefonnummer, email, fra offentligt tilgængelige kilder (cvr.dk, virksomhedsdatabaser, LinkedIn)",
           "Notater fra eventuelle samtaler (formål, tidspunkt, opfølgningsbehov)",
         ],
       },
@@ -61,7 +61,7 @@ const SECTIONS: Section[] = [
         items: [
           "Slutkundens navn, telefonnummer, email",
           "Opgavebeskrivelse, ønsket tidspunkt, adresse",
-          "Disse oplysninger tilhører klienten — vi opbevarer dem maksimalt 30 dage efter levering (medmindre garantiperioden kræver længere)",
+          "Disse oplysninger tilhører klienten, vi opbevarer dem maksimalt 30 dage efter levering (medmindre garantiperioden kræver længere)",
         ],
       },
     ],
@@ -75,7 +75,7 @@ const SECTIONS: Section[] = [
           "Samtykke (art. 6(1)(a)): Marketing-emails efter eksplicit opt-in, ikke-nødvendige cookies.",
           "Aftale (art. 6(1)(b)): Klient-aftaler, fakturering, levering af PPSA-services.",
           "Retlig forpligtelse (art. 6(1)(c)): Bogføringsloven (5 års opbevaring af fakturaer og regnskabsbilag).",
-          "Legitim interesse (art. 6(1)(f)): B2B-outreach til erhvervsdrivende (markedsføringsloven §10 stk. 4), it-sikkerhed, fraud prevention. Vi har lavet en Legitimate Interest Assessment (LIA) som dokumentation — kan rekvireres.",
+          "Legitim interesse (art. 6(1)(f)): B2B-outreach til erhvervsdrivende (markedsføringsloven §10 stk. 4), it-sikkerhed, fraud prevention. Vi har lavet en Legitimate Interest Assessment (LIA) som dokumentation, kan rekvireres.",
         ],
       },
     ],
@@ -91,7 +91,7 @@ const SECTIONS: Section[] = [
           "Aktive klienter: aftalens løbetid + 3 år til efterfølgende reklamationer.",
           "Fakturaer og regnskabsbilag: 5 år (bogføringsloven).",
           "Lead-data leveret til klient: slettes fra vores systemer inden 30 dage efter levering, undtaget garantiperioder hvor dokumentation kræves.",
-          "Vercel Analytics: aggregeret, anonym — opbevares hos Vercel iht. deres politik.",
+          "Vercel Analytics: aggregeret, anonym, opbevares hos Vercel iht. deres politik.",
         ],
       },
     ],
@@ -105,12 +105,12 @@ const SECTIONS: Section[] = [
     list: [
       {
         items: [
-          "GoHighLevel (USA) — CRM, kalender, booking-widget, formularer. Overførselsgrundlag: Standard Contractual Clauses (SCC).",
-          "Meta Platforms Ireland (EU) — annoncering. Du betaler direkte til Meta; vi har ikke adgang til dit kort.",
-          "Google Ireland (EU) — Google Ads. Som ovenfor.",
-          "Vercel (USA/EU) — hosting og analytics. Overførselsgrundlag: EU-US Data Privacy Framework + EU-regioner hvor muligt.",
-          "Billy ApS (Danmark) — regnskab og fakturering.",
-          "Google Workspace (USA/EU) — email-kommunikation. Overførselsgrundlag: EU-US Data Privacy Framework.",
+          "GoHighLevel (USA), CRM, kalender, booking-widget, formularer. Overførselsgrundlag: Standard Contractual Clauses (SCC).",
+          "Meta Platforms Ireland (EU), annoncering. Du betaler direkte til Meta; vi har ikke adgang til dit kort.",
+          "Google Ireland (EU), Google Ads. Som ovenfor.",
+          "Vercel (USA/EU), hosting og analytics. Overførselsgrundlag: EU-US Data Privacy Framework + EU-regioner hvor muligt.",
+          "Billy ApS (Danmark), regnskab og fakturering.",
+          "Google Workspace (USA/EU), email-kommunikation. Overførselsgrundlag: EU-US Data Privacy Framework.",
         ],
       },
     ],
@@ -143,7 +143,7 @@ const SECTIONS: Section[] = [
     n: "08",
     title: "Cookies",
     body: [
-      "cactaihq.com bruger Vercel Analytics og Speed Insights — anonymiseret, ingen cookies, ingen fingerprinting. Booking-widgetten fra GoHighLevel sætter funktionelle cookies når du interagerer med den (krævet for at gemme dit valg af tid).",
+      "cactaihq.com bruger Vercel Analytics og Speed Insights, anonymiseret, ingen cookies, ingen fingerprinting. Booking-widgetten fra GoHighLevel sætter funktionelle cookies når du interagerer med den (krævet for at gemme dit valg af tid).",
       "Læs den fulde cookie-politik på /cookies.",
     ],
   },
@@ -160,7 +160,7 @@ const SECTIONS: Section[] = [
           "Berigtigelse af forkerte eller forældede oplysninger (art. 16).",
           "Sletning (\"retten til at blive glemt\") når retsgrundlaget falder bort (art. 17).",
           "Begrænsning af behandling (art. 18).",
-          "Dataportabilitet — udlevering i maskinlæsbart format (art. 20).",
+          "Dataportabilitet, udlevering i maskinlæsbart format (art. 20).",
           "Indsigelse mod behandling baseret på legitim interesse eller direkte markedsføring (art. 21).",
           "Tilbagekaldelse af samtykke til enhver tid (art. 7).",
         ],
@@ -220,7 +220,7 @@ export default function PrivatlivspolitikPage() {
         Privatlivspolitik.
       </h1>
       <p className="mt-6 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-        Hvordan vi behandler personoplysninger — kort, præcist, GDPR-kompatibelt.
+        Hvordan vi behandler personoplysninger, kort, præcist, GDPR-kompatibelt.
         Spørgsmål?{" "}
         <a
           href="mailto:enescactai@gmail.com"

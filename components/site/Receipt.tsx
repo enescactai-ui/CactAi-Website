@@ -30,7 +30,7 @@ export function Receipt() {
                 ud.
               </h2>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-                Vi viser dig præcis hvad du modtager i mailen efter 14 dage —
+                Vi viser dig præcis hvad du modtager i mailen efter 14 dage,
                 inklusiv den ene linje der gør PPSA anderledes end alt andet
                 marketing.
               </p>
@@ -38,7 +38,7 @@ export function Receipt() {
               <ul className="mt-10 space-y-4">
                 {[
                   ["Faktureret via Billy", "Dansk regnskabssoftware. CVR-baseret."],
-                  ["Bank-overførsel", "Du betaler manuelt — vi får aldrig dit kort."],
+                  ["Bank-overførsel", "Du betaler manuelt, vi får aldrig dit kort."],
                   ["Linje pr. fremmødt møde", "Ingen \"miscellaneous fees\". Hvert møde står med navn + dato."],
                   ["Renter ved forsinkelse", "Standard 0,81% pr. måned. Lovkrav, ikke pres."],
                 ].map(([title, body]) => (
@@ -131,7 +131,7 @@ export function Receipt() {
                   <tbody className="divide-y divide-dashed divide-[color:var(--color-cactus-deep)]/15">
                     <tr>
                       <td className="py-3">
-                        Fremmødt møde — Jens Petersen
+                        Fremmødt møde · Jens Petersen
                         <div className="text-[10px] opacity-50">
                           05/05 14:00 · Badeværelses-reno
                         </div>
@@ -140,7 +140,7 @@ export function Receipt() {
                     </tr>
                     <tr>
                       <td className="py-3">
-                        Fremmødt møde — Maria Sørensen
+                        Fremmødt møde · Maria Sørensen
                         <div className="text-[10px] opacity-50">
                           07/05 10:30 · Komplet renovation
                         </div>
@@ -149,7 +149,7 @@ export function Receipt() {
                     </tr>
                     <tr>
                       <td className="py-3">
-                        Fremmødt møde — Peter Larsen
+                        Fremmødt møde · Peter Larsen
                         <div className="text-[10px] opacity-50">
                           09/05 16:00 · Toilet-udskiftning
                         </div>
@@ -160,7 +160,7 @@ export function Receipt() {
                     <tr className="bg-[color:var(--color-cactus-green)]/10">
                       <td className="py-3">
                         <span className="line-through opacity-40">
-                          No-show — Anders K.
+                          No-show · Anders K.
                         </span>
                         <div className="text-[10px] font-bold uppercase text-[color:var(--color-cactus-green)]">
                           → ikke faktureret · 0 kr.

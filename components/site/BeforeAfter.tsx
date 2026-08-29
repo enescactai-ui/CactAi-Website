@@ -8,7 +8,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 const BEFORE = [
   {
     label: "Mandag morgen",
-    body: "Du tjekker telefonen — 4 missede opkald i går aftes mens du arbejdede. To er fra leads. De har sikkert ringet til den næste på Google.",
+    body: "Du tjekker telefonen: 4 missede opkald i går aftes mens du arbejdede. To er fra leads. De har sikkert ringet til den næste på Google.",
   },
   {
     label: "Onsdag eftermiddag",
@@ -27,15 +27,15 @@ const BEFORE = [
 const AFTER = [
   {
     label: "Mandag morgen",
-    body: "Du tjekker kalenderen — 3 nye møder bookede i weekenden. Adresser, navne, opgavebeskrivelse. Du kører direkte ud.",
+    body: "Du tjekker kalenderen: 3 nye møder bookede i weekenden. Adresser, navne, opgavebeskrivelse. Du kører direkte ud.",
   },
   {
     label: "Onsdag eftermiddag",
-    body: "Du laver det arbejde du er god til. Vi ringer dine leads. Du får besked når de er bookede — ellers stille.",
+    body: "Du laver det arbejde du er god til. AI'en svarer dine leads med det samme. Du får besked når de er bookede, ellers stille.",
   },
   {
     label: "Fredag aften",
-    body: "Du tjekker din kalender for ugen. 9 møder bookede. 7 har bekræftet. Du behøver ikke tjekke ads-platforme — det er ikke dit job.",
+    body: "Du tjekker din kalender for ugen. 9 møder bookede. 7 har bekræftet. Du behøver ikke tjekke ads-platforme, det er ikke dit job.",
   },
   {
     label: "Næste måned",
@@ -70,7 +70,7 @@ export function BeforeAfter() {
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
             Det her er ikke salgs-tekst. Det er hvad vores klienter har fortalt
-            os — sammensat til den uge du sandsynligvis lever lige nu.
+            os, sammensat til den uge du sandsynligvis lever lige nu.
           </p>
         </motion.div>
 
@@ -166,7 +166,7 @@ export function BeforeAfter() {
         >
           <Image
             src="/images/suburb-panorama.jpg"
-            alt="Dansk villakvarter set fra luften — parcelhuse med haver nær kysten"
+            alt="Dansk villakvarter set fra luften, parcelhuse med haver nær kysten"
             width={2600}
             height={807}
             className="h-[280px] w-full object-cover sm:h-[340px] lg:h-[400px]"
@@ -183,7 +183,7 @@ export function BeforeAfter() {
             </div>
             <p className="mt-3 max-w-2xl font-display text-2xl font-medium leading-snug tracking-[-0.02em] text-white sm:text-3xl lg:text-4xl">
               Tusindvis af villaejere i dit område søger en håndværker lige nu.
-              Vi finder dem — du møder dem.
+              Vi finder dem, du møder dem.
             </p>
             <a
               href="/#book"

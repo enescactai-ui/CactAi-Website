@@ -35,10 +35,10 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-[#f0faf5]/55">
-              AI der arbejder. Resultater der tæller.
+              Din vækstpartner. Mist aldrig en kunde igen.
             </p>
             <p className="mt-2 text-xs text-[#f0faf5]/40">
-              Komplet AI-firma for danske håndværkere.
+              Vækstpartner for danske servicevirksomheder.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export function Footer() {
             2670 Greve
           </div>
           <div>
-            Bygget med Next.js + Vercel — fordi langsomt er ikke en mulighed.
+            Bygget med Next.js + Vercel, fordi langsomt ikke er en mulighed.
           </div>
         </div>
       </div>

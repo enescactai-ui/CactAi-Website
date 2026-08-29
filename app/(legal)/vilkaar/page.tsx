@@ -24,7 +24,7 @@ const SECTIONS: Section[] = [
     body: [
       'Leverandør: CactAi v/Enes Tokmak, enkeltmandsvirksomhed, CVR 46210689, Krogager 44, 2670 Greve ("CactAi").',
       'Kunde: Den erhvervsdrivende fysiske eller juridiske person der bestiller CactAi\'s tjenester ("Kunden").',
-      "CactAi leverer udelukkende til erhvervskunder (B2B). Forbrugeraftaleloven og forbrugerbeskyttelsesreglerne finder ikke anvendelse — herunder gælder INGEN 14-dages fortrydelsesret.",
+      "CactAi leverer udelukkende til erhvervskunder (B2B). Forbrugeraftaleloven og forbrugerbeskyttelsesreglerne finder ikke anvendelse, herunder gælder INGEN 14-dages fortrydelsesret.",
     ],
   },
   {
@@ -44,7 +44,7 @@ const SECTIONS: Section[] = [
       },
       {
         items: [
-          "CactAi leverer IKKE den endelige salgssamtale eller jobudførelse — det er Kundens ansvar.",
+          "CactAi leverer IKKE den endelige salgssamtale eller jobudførelse, det er Kundens ansvar.",
         ],
       },
     ],
@@ -101,7 +101,7 @@ const SECTIONS: Section[] = [
       },
       {
         items: [
-          "Garantien gælder kun opstartsgebyret — ikke booking-fees eller annonceforbrug betalt til Meta/Google.",
+          "Garantien gælder kun opstartsgebyret, ikke booking-fees eller annonceforbrug betalt til Meta/Google.",
           "Anmodning om refundering skal sendes skriftligt senest 7 dage efter garantiperiodens udløb.",
         ],
       },
@@ -114,7 +114,7 @@ const SECTIONS: Section[] = [
       {
         items: [
           "Levere korrekte, lovlige og opdaterede oplysninger om virksomheden og tjenesteydelser.",
-          "Give CactAi adgang til Meta Business Manager, Google Ads-konto og bookingkalender — i det omfang det er nødvendigt for at levere tjenesten.",
+          "Give CactAi adgang til Meta Business Manager, Google Ads-konto og bookingkalender, i det omfang det er nødvendigt for at levere tjenesten.",
           "Underskrive databehandleraftale (DPA) før idriftsættelse.",
           "Sikre at egen anvendelse af leads overholder GDPR over for slutkunder.",
           "Ikke bruge tjenesten til ulovlige, chikanerende eller vildledende formål.",
@@ -125,10 +125,10 @@ const SECTIONS: Section[] = [
   },
   {
     n: "07",
-    title: "Annoncebudget — direkte til Meta/Google",
+    title: "Annoncebudget, direkte til Meta/Google",
     body: [
       "Kunden opretter selv betalingsmetode i Meta Business Manager og Google Ads. CactAi får aldrig adgang til Kundens kort eller bankkonto.",
-      "CactAi er ikke ansvarlig for annoncebudget der ikke leverer forventet resultat — algoritmer, sæson og konkurrence er udenfor vores kontrol.",
+      "CactAi er ikke ansvarlig for annoncebudget der ikke leverer forventet resultat, algoritmer, sæson og konkurrence er udenfor vores kontrol.",
       "Hvis Meta/Google nedlukker eller suspenderer Kundens konto, kan CactAi ikke holdes ansvarlig.",
     ],
   },
@@ -154,7 +154,7 @@ const SECTIONS: Section[] = [
     title: "Ansvarsbegrænsning",
     body: [
       "CactAi's samlede erstatningsansvar over for Kunden i en periode på 12 måneder er begrænset til det samlede beløb Kunden har betalt CactAi i samme periode (ekskl. annonceudgifter betalt til tredjepart).",
-      "CactAi er ikke ansvarlig for indirekte tab — herunder driftstab, tabt fortjeneste, goodwill, eller datatab — uanset årsag.",
+      "CactAi er ikke ansvarlig for indirekte tab, herunder driftstab, tabt fortjeneste, goodwill, eller datatab, uanset årsag.",
       "Ansvarsbegrænsningen gælder ikke ved forsæt eller grov uagtsomhed.",
     ],
   },
@@ -170,7 +170,7 @@ const SECTIONS: Section[] = [
     n: "11",
     title: "Immaterielle rettigheder",
     body: [
-      "Al teknologi, prompts, ad-templates, screening-scripts og automatisering tilhører CactAi. Kunden får ikke-eksklusiv brugsret i aftaleperioden — ikke ejerskab.",
+      "Al teknologi, prompts, ad-templates, screening-scripts og automatisering tilhører CactAi. Kunden får ikke-eksklusiv brugsret i aftaleperioden, ikke ejerskab.",
       "Annonce-creatives udviklet specifikt til Kunden (billeder, tekst med Kundens brand) tilhører Kunden.",
       "Kundens egne data tilhører Kunden. Ved ophør udleveres relevante kundedata inden for 30 dage i maskinlæsbart format.",
     ],
@@ -187,7 +187,7 @@ const SECTIONS: Section[] = [
     n: "13",
     title: "Fortrolighed",
     body: [
-      "Begge parter behandler forretningsoplysninger (priser, strategier, kunderelationer, tekniske detaljer) fortroligt og videregiver dem ikke til tredjepart uden skriftlig accept — undtagen hvis det kræves af lov eller domstol.",
+      "Begge parter behandler forretningsoplysninger (priser, strategier, kunderelationer, tekniske detaljer) fortroligt og videregiver dem ikke til tredjepart uden skriftlig accept, undtagen hvis det kræves af lov eller domstol.",
       "Fortrolighedsforpligtelsen gælder også efter aftalens ophør.",
     ],
   },
@@ -197,7 +197,7 @@ const SECTIONS: Section[] = [
     list: [
       {
         items: [
-          "Ingen bindingsperiode — Kunden kan opsige til enhver tid.",
+          "Ingen bindingsperiode, Kunden kan opsige til enhver tid.",
           "Opsigelse skal ske skriftligt med 30 dages varsel til udløbet af en betalingsperiode. I varslingsperioden leverer CactAi videre, og Kunden betaler for de leverede ydelser i perioden.",
           "Allerede betalte beløb refunderes ikke (undtaget §05-garantien).",
           "Ved væsentlig misligholdelse kan begge parter ophæve aftalen med 14 dages skriftligt varsel og mulighed for at afhjælpe.",
@@ -209,7 +209,7 @@ const SECTIONS: Section[] = [
     n: "15",
     title: "Force majeure",
     body: [
-      "Ingen part er ansvarlig for forsinkelse eller manglende opfyldelse forårsaget af forhold uden for parternes kontrol — herunder krig, naturkatastrofe, strejke, pandemi, myndighedsindgreb, eller længerevarende nedbrud hos kritiske underleverandører (Meta, Google, hosting).",
+      "Ingen part er ansvarlig for forsinkelse eller manglende opfyldelse forårsaget af forhold uden for parternes kontrol, herunder krig, naturkatastrofe, strejke, pandemi, myndighedsindgreb, eller længerevarende nedbrud hos kritiske underleverandører (Meta, Google, hosting).",
     ],
   },
   {

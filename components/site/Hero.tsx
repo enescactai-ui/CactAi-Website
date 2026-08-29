@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, CheckCircle2, Star, TrendingUp, Zap } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Star, Zap } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import HeroBackground from "./HeroBackground";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -40,6 +41,14 @@ export function Hero() {
         }}
       />
 
+      {/* ── Living, video-like animated background (WebGL flowing green light) ── */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-[92vh] min-h-[700px] overflow-hidden"
+      >
+        <HeroBackground />
+      </div>
+
       {/* Subtle grid overlay */}
       <div
         aria-hidden
@@ -74,7 +83,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-cactus-green)] opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--color-cactus-green)]" />
           </span>
-          Live · CactAi · CVR 46210689 · Danmark
+          Live · Vækstpartner for håndværkere
         </motion.div>
 
         {/* Two-column layout */}
@@ -89,18 +98,18 @@ export function Hero() {
               className="font-display tracking-[-0.035em] leading-[1.04]"
             >
               <Line className="block text-lg font-normal text-[color:var(--color-cactus-cream)]/50 sm:text-xl">
-                Du betaler
+                Din vækstpartner
               </Line>
               <Line className="mt-1 block text-5xl font-extrabold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-7xl xl:text-8xl">
-                kun{" "}
+                Mist{" "}
                 <em className="relative not-italic font-light">
-                  når
+                  aldrig
                   <AnimatedUnderline />
                 </em>
               </Line>
               <Line className="mt-1 block text-5xl font-extrabold sm:text-6xl lg:text-7xl xl:text-8xl">
-                <span className="text-[color:var(--color-cactus-green)]">kunden</span>{" "}
-                <span className="text-[color:var(--color-cactus-cream)]">møder op</span>
+                <span className="text-[color:var(--color-cactus-green)]">en kunde</span>{" "}
+                <span className="text-[color:var(--color-cactus-cream)]">igen</span>
                 <span className="text-[color:var(--color-cactus-green)]">.</span>
               </Line>
             </motion.h1>
@@ -111,10 +120,10 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
               className="mt-7 max-w-lg text-lg leading-[1.65] text-[color:var(--color-cactus-cream)]/65 sm:text-xl"
             >
-              Vi kører Meta-ads, screener hvert lead og booker dem i din kalender.
-              Møder de op — betaler du. Ellers ikke.{" "}
+              Vi henter kunderne med annoncer, og AI&apos;en svarer hvert opkald
+              og hvert lead på sekunder, døgnet rundt.{" "}
               <strong className="font-semibold text-[color:var(--color-cactus-cream)]/85">
-                Resten er matematik.
+                Du møder bare op til arbejdet.
               </strong>
             </motion.p>
 
@@ -148,9 +157,9 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-6 text-sm text-[color:var(--color-cactus-cream)]/55"
             >
               {[
+                { icon: Zap, text: "Svar på 60 sek." },
                 { icon: CheckCircle2, text: "14-dages garanti" },
-                { icon: Zap, text: "Ingen binding" },
-                { icon: Star, text: "Pay Per Show" },
+                { icon: Star, text: "Ingen binding" },
               ].map(({ icon: Icon, text }) => (
                 <span key={text} className="flex items-center gap-1.5">
                   <Icon className="h-4 w-4 text-[color:var(--color-cactus-green)]" />
@@ -184,25 +193,25 @@ export function Hero() {
 
             {/* Floating badges */}
             <FloatingBadge
-              icon={TrendingUp}
-              title="7–14 dages resultater"
-              sub="Første leads inden for en uge"
+              icon={Zap}
+              title="Svar på 60 sek."
+              sub="Før konkurrenten når det"
               className="-left-8 top-1/4"
               delay={1.2}
               floatY={-8}
             />
             <FloatingBadge
               icon={CheckCircle2}
-              title="0 kr ved no-show"
-              sub="Aldrig spild af penge"
+              title="Hvert opkald besvaret"
+              sub="24/7, også aften & weekend"
               className="-right-6 bottom-1/3"
               delay={1.4}
               floatY={8}
             />
             <FloatingBadge
               icon={Star}
-              title="Pay Per Show"
-              sub="Betal kun ved fremmøde"
+              title="0 kr ved no-show"
+              sub="Kun betalt for resultater"
               className="-bottom-2 left-6"
               delay={1.6}
               floatY={-6}
@@ -215,10 +224,10 @@ export function Hero() {
       <div className="relative border-t border-[color:var(--color-cactus-green)]/15 bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[color:var(--color-cactus-green)]/10 lg:grid-cols-4 lg:divide-y-0">
           {[
+            { metric: "24/7", note: "hvert opkald besvaret" },
+            { metric: "60 sek.", note: "svartid på leads" },
+            { metric: "14 dage", note: "resultat-garanti" },
             { metric: "0 kr", note: "ved no-show" },
-            { metric: "14 dage", note: "garanti-periode" },
-            { metric: "5+", note: "fremmødte eller refund" },
-            { metric: "1:1", note: "eksklusivitet pr. by" },
           ].map((s, i) => (
             <div
               key={s.metric}

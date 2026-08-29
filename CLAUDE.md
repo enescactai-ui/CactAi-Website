@@ -3,7 +3,33 @@
 # CactAi Website — Project Memory
 
 > Read this file FIRST in every session. It contains permanent project context.
-> Owner: Enes Tokmak · Last updated: 2026-05-26
+> Owner: Enes Tokmak · Last updated: 2026-07-16
+
+---
+
+## ⚡ CURRENT POSITIONING (Jul 2026) — supersedes anything below
+
+The site was repositioned from "AI marketing agency" to a **growth partner** with
+ONE flagship product: **Vækstmotoren** (a V8-engine metaphor).
+
+- **Positioning:** "Din vækstpartner. Mist aldrig en kunde igen."
+- **The offer is ONE system, not a service menu.** Six parts of the engine:
+  Lead-motoren (Meta ads) · Lynsvar (svar <60 sek) · AI-receptionist (dansk AI 24/7) ·
+  Opfølgning (auto follow-up) · Synlighed (Google + reviews) · Resultat-garanti (pay-per-show).
+- **AI-receptionist IS now a core part** (the old "deprioritise AI receptionist" rule is dead).
+- **Pricing:** tailored, not fixed tiers. Copy says "Din pris, skræddersyet." Keep the
+  pay-per-show + 14-dages garanti risk-reversal.
+- **Theme is now LIGHT** (mint/white). The CSS color vars in `globals.css` were remapped
+  so the SAME `--color-cactus-*` names now render light (cactus-deep=#fff bg,
+  cactus-cream=dark text, cactus-dark=#f0faf5 surface). Don't "fix" components to dark.
+- **No em-dashes in visible copy** — Enes finds them "too AI". Use commas/periods.
+- **Hero** has a real looping background `<video>` (`/hero-aurora.webm|mp4`, `HeroBackground.tsx`)
+  and the **Vækstmotoren V8** is an interactive R3F 3D engine (`VaekstMotorV8.tsx` +
+  `EngineCanvas.tsx` + `EngineBackground.tsx`, model `public/models/v8_engine.glb`, meshopt 2MB).
+- Homepage order: Hero · TrustMarquee · VaekstMotorV8 · Manifesto · HowItWorks · BeforeAfter ·
+  Pricing · Comparison · Guarantee · FAQ · Founder · CTA · Footer.
+  (`Receipt` + `ROICalculator` are no longer on the homepage.)
+- `/ydelser` rewritten to the one-system framing; `/om` is the founder story (kept).
 
 ---
 
@@ -52,7 +78,8 @@ If a design choice makes the site prettier but lowers conversion → reject it.
 - ✅ Risk-reversal first ("Du betaler kun når...")
 - ❌ NO "leverer værdi", "innovative løsninger", agency-speak
 - ❌ NO emojis in body copy (only in chat with Enes)
-- ❌ NO "AI receptionist" focus — that's deprioritized
+- ❌ NO em-dashes in visible copy (Enes finds them "too AI" — use commas/periods)
+- ✅ AI-receptionist IS a core part of the Vækstmotor now (reversed from the old rule)
 - ❌ NO fake testimonials, fake numbers, fake "50+ kunder"
   (Active client: Lindas Rengøring (Linda Okoh, Aalborg). Use "lokal klient" in copy, never name without client's explicit approval.)
 

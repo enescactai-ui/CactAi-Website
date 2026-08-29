@@ -6,7 +6,7 @@ const PRINCIPLES = [
   {
     n: "01",
     rule: "Vi har ingen falske anmeldelser.",
-    body: "Ingen Trustpilot-buy. Ingen stock-photo testimonials. Når vi har 10 betalende klienter, viser vi deres rigtige navne — og kun deres. Indtil da: stol på matematikken, ikke på en grøn smiley.",
+    body: "Ingen Trustpilot-buy. Ingen stock-photo testimonials. Når vi har 10 betalende klienter, viser vi deres rigtige navne, og kun deres. Indtil da: stol på matematikken, ikke på en grøn smiley.",
   },
   {
     n: "02",
@@ -21,7 +21,7 @@ const PRINCIPLES = [
   {
     n: "04",
     rule: "No-show = 0 kr.",
-    body: "Hver gang. Hver kunde. Ingen smålig snak om hvad der \"tæller\". Hvis personen ikke står foran dig — eller ikke ringer tilbage på et bekræftet opkald — så koster det 0 kr.",
+    body: "Hver gang. Hver kunde. Ingen smålig snak om hvad der \"tæller\". Hvis personen ikke står foran dig, eller ikke ringer tilbage på et bekræftet opkald, så koster det 0 kr.",
   },
   {
     n: "05",

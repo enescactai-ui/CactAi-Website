@@ -27,19 +27,19 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://cactaihq.com"),
   title: {
-    default: "CactAi — Komplet AI-firma for danske håndværkere",
+    default: "CactAi · Vækstpartner for danske servicevirksomheder",
     template: "%s · CactAi",
   },
   description:
-    "Vi sender bookede kunder direkte til danske håndværkere. Du betaler kun når kunden møder op. 14-dages garanti. Marketing med den laveste risiko i Danmark.",
+    "Vi henter kunderne og sørger for, at du aldrig mister én. Annoncer, AI der svarer hvert opkald og lead 24/7, og booking direkte i din kalender. Ét system, én pris.",
   keywords: [
-    "AI marketing Danmark",
-    "håndværker leads",
-    "pay per show",
-    "PPSA",
+    "vækstpartner håndværker",
+    "AI receptionist dansk",
+    "missede opkald",
+    "flere kunder håndværker",
     "Meta ads håndværker",
-    "marketing bureau Danmark",
     "lead generation Danmark",
+    "pay per show",
   ],
   authors: [{ name: "CactAi", url: "https://cactaihq.com" }],
   creator: "CactAi",
@@ -49,15 +49,16 @@ export const metadata: Metadata = {
     locale: "da_DK",
     url: "https://cactaihq.com",
     siteName: "CactAi",
-    title: "CactAi — Komplet AI-firma for danske håndværkere",
+    title: "Mist aldrig en kunde igen · CactAi",
     description:
-      "Vi sender bookede kunder direkte til danske håndværkere. Du betaler kun når kunden møder op.",
+      "Vi henter kunderne og sørger for at du aldrig mister én. Annoncer, dansk AI der svarer hvert opkald og lead 24/7, og booking direkte i din kalender.",
     // Images auto-injected by app/opengraph-image.tsx file convention.
   },
   twitter: {
     card: "summary_large_image",
-    title: "CactAi — Komplet AI-firma for danske håndværkere",
-    description: "Pay-per-show marketing. Du betaler kun for resultater.",
+    title: "Mist aldrig en kunde igen · CactAi",
+    description:
+      "Vi henter kunderne, AI'en svarer på sekunder, og booker dem i din kalender. Du møder bare op til arbejdet.",
     // Images auto-injected by app/opengraph-image.tsx file convention.
   },
   robots: {
@@ -75,7 +76,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050d08",
+  themeColor: "#e9f8f0",
   width: "device-width",
   initialScale: 1,
 };

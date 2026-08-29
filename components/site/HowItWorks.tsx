@@ -7,30 +7,30 @@ const STEPS = [
   {
     icon: Megaphone,
     step: "01",
-    title: "Vi annoncerer",
+    title: "Vi henter kunderne",
     description:
-      "Meta- og Google-ads målrettet villaejere i dit område. Du betaler ad-spend direkte til Meta — det går ikke gennem os.",
+      "Meta-annoncer målrettet kunder i dit område. Du betaler ad-budgettet direkte til Meta, det går ikke gennem os.",
   },
   {
     icon: PhoneCall,
     step: "02",
-    title: "Vi screener hver lead",
+    title: "AI'en svarer med det samme",
     description:
-      "Vores danske setter ringer hver lead inden for 5 minutter. Kvalificerer scope, timeline, budget. Kun reelle kunder kommer videre.",
+      "Hvert opkald og lead bliver besvaret på sekunder, døgnet rundt. AI'en kvalificerer og sorterer, så kun de rigtige kunder kommer videre.",
   },
   {
     icon: CalendarClock,
     step: "03",
-    title: "Du får mødet",
+    title: "Booket i din kalender",
     description:
-      "Den kvalificerede kunde bookes direkte i din kalender. Du gør som du plejer — møder op, giver tilbud, lukker.",
+      "Den kvalificerede kunde bookes automatisk i din kalender. Du gør som du plejer: møder op, giver tilbud, lukker.",
   },
   {
     icon: Wallet,
     step: "04",
-    title: "Du betaler kun ved fremmøde",
+    title: "Du betaler kun for resultater",
     description:
-      "Faktureres bi-ugentligt via Billy + bank-overførsel. Hvis kunden ikke møder op? Du betaler 0 kr. Så enkelt er det.",
+      "No-show koster 0 kr. Du betaler kun når en kunde rent faktisk møder op. Så enkelt er det.",
   },
 ];
 
@@ -49,10 +49,10 @@ export function HowItWorks() {
             Sådan virker det
           </div>
           <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            Fra ad-klik til fremmødt kunde
+            Fra annonce til booket kunde
             <br />
             <span className="text-[color:var(--color-cactus-green)]">
-              uden du løfter en finger
+              uden at du løfter en finger
             </span>
           </h2>
           <p className="mt-6 text-lg text-[color:var(--color-cactus-cream)]/65">

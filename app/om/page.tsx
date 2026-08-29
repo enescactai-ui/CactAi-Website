@@ -7,10 +7,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Om CactAi · Enes Tokmak, 19-årig founder",
   description:
-    "Mød Enes Tokmak — 19-årig dansker der bygger CactAi. Læs hvorfor PPSA-modellen findes, og hvad det betyder for danske håndværkere der vil have flere kunder uden risiko.",
+    "Mød Enes Tokmak, 19-årig dansker der bygger CactAi. Læs hvorfor PPSA-modellen findes, og hvad det betyder for danske håndværkere der vil have flere kunder uden risiko.",
 };
 
-/* Person schema — gives Google explicit founder data (knowledge panel candidate) */
+/* Person schema, gives Google explicit founder data (knowledge panel candidate) */
 const PERSON_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -78,7 +78,7 @@ export default function OmPage() {
                   <FounderPhoto size="large" />
                 </div>
                 <div className="mt-4 flex items-start justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/50">
-                  <span>Fig. 01 — Enes T.</span>
+                  <span>Fig. 01, Enes T.</span>
                   <span>Greve, 22.05.2026</span>
                 </div>
               </div>
@@ -117,13 +117,13 @@ export default function OmPage() {
                 driver CactAi solo fra Greve.
               </p>
               <p>
-                Jeg læser <strong className="text-[color:var(--color-cactus-cream)]">HHX</strong> sideløbende — formel
+                Jeg læser <strong className="text-[color:var(--color-cactus-cream)]">HHX</strong> sideløbende, formel
                 business-uddannelse giver mig fundamentet. Det praktiske lærer
                 jeg fra YouTube, mentorships og bøger fra folk som Alex Hormozi.
               </p>
               <p>
-                Skolen giver dig teorien. Marketing i 2026 lærer du ved at gøre
-                — og ved at have rigtig <em>skin in the game</em>. Det er derfor
+                Skolen giver dig teorien. Marketing i 2026 lærer du ved at gøre,
+                og ved at have rigtig <em>skin in the game</em>. Det er derfor
                 CactAi virker som det virker. De fleste danske bureauer kører
                 gamle leveringsmodeller (faste retainere, vagt månedsabonnement,
                 "vi kan ikke garantere noget"). Det irriterede mig.
@@ -132,8 +132,8 @@ export default function OmPage() {
                 Så jeg byggede CactAi omkring{" "}
                 <strong className="text-[color:var(--color-cactus-green)]">
                   pay-per-show appointment
-                </strong>{" "}
-                — en model der ikke fandtes i Danmark da jeg startede.
+                </strong>
+                , en model der ikke fandtes i Danmark da jeg startede.
                 Konceptet er enkelt: du betaler kun når en kunde faktisk møder
                 op til dit besøg. No-show? Du betaler 0 kr. Hvis jeg ikke
                 leverer 5 fremmødte på 14 dage? Du får dine setup-penge
@@ -142,7 +142,7 @@ export default function OmPage() {
               <p>
                 Det er ikke en revolution. Det er bare ærligt arbejde med rigtig{" "}
                 <em>skin in the game</em>. Hvis jeg ikke kan finde dig kunder,
-                tjener jeg ikke en krone — og det er nøjagtigt sådan det burde
+                tjener jeg ikke en krone, og det er nøjagtigt sådan det burde
                 være.
               </p>
             </div>
@@ -161,7 +161,7 @@ export default function OmPage() {
                   <Fact label="CVR" value="46210689" />
                   <Fact label="Struktur" value="Enkeltmandsvirksomhed" />
                   <Fact label="Team" value="1 founder + dansk setter" />
-                  <Fact label="Brancher" value="Håndværkere · DK-wide" />
+                  <Fact label="Brancher" value="Servicevirksomheder · DK" />
                   <Fact label="Sprog" value="Dansk + engelsk" />
                 </dl>
                 <div className="mt-7 border-t border-[color:var(--color-cactus-green)]/15 pt-5">
@@ -177,9 +177,9 @@ export default function OmPage() {
             </aside>
           </div>
 
-          {/* Big pull quote — editorial magazine style */}
+          {/* Big pull quote, editorial magazine style */}
           <figure className="relative mt-24 py-16 lg:py-24">
-            {/* Soft gradient-fade dividers — replace the harsh edge-to-edge border */}
+            {/* Soft gradient-fade dividers, replace the harsh edge-to-edge border */}
             <div
               aria-hidden
               className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:var(--color-cactus-green)]/25 to-transparent"
@@ -189,7 +189,7 @@ export default function OmPage() {
               className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[color:var(--color-cactus-green)]/25 to-transparent"
             />
 
-            {/* Decorative quote mark — anchored top-left, large + faded */}
+            {/* Decorative quote mark, anchored top-left, large + faded */}
             <span
               aria-hidden
               className="absolute left-0 top-6 font-display text-[90px] leading-none text-[color:var(--color-cactus-green)]/20 sm:text-[120px] lg:text-[160px]"
@@ -225,7 +225,7 @@ export default function OmPage() {
                 Hvis du har drevet håndværker-virksomhed i 10+ år har du
                 sikkert aldrig brugt penge på marketing. Mund-til-mund har
                 været nok. Men det er begrænset til folk der allerede kender
-                dig — og dine konkurrenter har nu hver eneste lokal-søgning på
+                dig, og dine konkurrenter har nu hver eneste lokal-søgning på
                 Google.
               </p>
               <p>

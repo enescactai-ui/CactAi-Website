@@ -8,10 +8,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog & Indsigt · Marketing for danske håndværkere",
   description:
-    "Artikler om PPSA, AI-receptionist, Meta Ads og lead-generation for håndværkere i Danmark. Skrevet af founder Enes Tokmak — ingen agency-fluff, kun konkret indsigt.",
+    "Artikler om PPSA, AI-receptionist, Meta Ads og lead-generation for håndværkere i Danmark. Skrevet af founder Enes Tokmak, ingen agency-fluff, kun konkret indsigt.",
 };
 
-/* Blog schema — tells Google this is a publication, lists all posts */
+/* Blog schema, tells Google this is a publication, lists all posts */
 const BLOG_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Blog",
@@ -60,12 +60,12 @@ export default function BlogIndexPage() {
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
               Blog & Indsigt // 2026
             </div>
-            <h1 className="mt-6 font-display text-6xl font-medium leading-[0.92] tracking-[-0.04em] sm:text-7xl lg:text-8xl">
+            <h1 className="mt-6 font-display text-5xl font-medium leading-[0.95] tracking-[-0.04em] break-words sm:text-7xl lg:text-8xl">
               Marketing for{" "}
               <span className="text-[color:var(--color-cactus-green)]">
                 håndværkere
-              </span>{" "}
-              — uden{" "}
+              </span>
+              , uden{" "}
               <span className="italic font-light text-[color:var(--color-cactus-cream)]/60">
                 fluff
               </span>
@@ -74,11 +74,11 @@ export default function BlogIndexPage() {
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70 sm:text-xl">
               Konkrete artikler om PPSA, AI-receptionist, Meta Ads og hvad
               der virker for danske håndværker-firmaer. Ingen agency-jargon,
-              ingen falske statistikker — kun det jeg har lært.
+              ingen falske statistikker, kun det jeg har lært.
             </p>
           </header>
 
-          {/* Featured post — full width, bigger */}
+          {/* Featured post, full width, bigger */}
           <FeaturedCard post={featured} />
 
           {/* Remaining posts in grid */}
@@ -97,7 +97,7 @@ export default function BlogIndexPage() {
                 </h2>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
                   Læsning er én ting. Sparring er noget andet. Book et 20-min
-                  strategi-møde — vi regner konkret på hvad PPSA-modellen
+                  strategi-møde, vi regner konkret på hvad PPSA-modellen
                   ville betyde for dit firma.
                 </p>
               </div>
@@ -120,7 +120,7 @@ export default function BlogIndexPage() {
 }
 
 /* ─────────────────────────────────────────
-   Featured card — large, hero-like
+   Featured card, large, hero-like
    ───────────────────────────────────────── */
 function FeaturedCard({ post }: { post: BlogPost }) {
   return (

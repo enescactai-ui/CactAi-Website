@@ -38,7 +38,7 @@ export function Guarantee() {
               </div>
 
               <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-balance text-white sm:text-5xl lg:text-6xl">
-                Leverer vi ikke 5 fremmødte på 14 dage —{" "}
+                Leverer vi ikke 5 fremmødte på 14 dage,{" "}
                 <span className="text-[color:var(--color-cactus-green)]">
                   får du pengene tilbage
                 </span>
@@ -56,7 +56,7 @@ export function Guarantee() {
                   "Skriftlig garanti i kontrakten",
                   "Refundering inden 14 dage efter anmodning",
                   "Ingen binding ud over de 14 dage",
-                  "Ad-spend går direkte til Meta — aldrig gennem os",
+                  "Ad-spend går direkte til Meta, aldrig gennem os",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-white/80">
                     <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[color:var(--color-cactus-green)]" />
@@ -88,7 +88,7 @@ export function Guarantee() {
                 <div className="absolute inset-0 rounded-full border border-[color:var(--color-cactus-green)]/20 scale-110" />
                 <div className="absolute inset-0 rounded-full border border-[color:var(--color-cactus-green)]/10 scale-125" />
 
-                <div className="flex h-72 w-72 flex-col items-center justify-center rounded-full border-2 border-[color:var(--color-cactus-green)]/40 bg-gradient-to-br from-[color:var(--color-cactus-green)]/20 to-[color:var(--color-cactus-green)]/5">
+                <div className="flex h-60 w-60 flex-col items-center justify-center rounded-full border-2 border-[color:var(--color-cactus-green)]/40 bg-gradient-to-br from-[color:var(--color-cactus-green)]/20 to-[color:var(--color-cactus-green)]/5 sm:h-72 sm:w-72">
                   <ShieldCheck
                     className="h-16 w-16 text-[color:var(--color-cactus-green)]"
                     strokeWidth={1.25}

@@ -78,7 +78,7 @@ export const SERVICES: Service[] = [
       "Vedligeholdelse, hosting og opdateringer inkluderet — vi tager os af alt",
     ],
     idealFor: "Håndværkere uden site eller med en gammel WordPress-side",
-    price: "1.900 kr/md · Eller 3.000 kr/md bundlet med Google Presence",
+    price: "Setup 5.000 kr · drift fra 750 kr/md — eller 2.000 kr/md med Google & SEO",
     cta: { label: "Få et tilbud", href: "/#book" },
   },
   {
@@ -95,7 +95,7 @@ export const SERVICES: Service[] = [
       "Månedlig konkurrent-analyse: hvad gør de bedre end dig",
     ],
     idealFor: "Lokal-fokuserede håndværkere uden eller med få Google-anmeldelser",
-    price: "1.500 kr/md · Eller 3.000 kr/md bundlet med Website",
+    price: "1.500 kr/md alene · 2.000 kr/md bundlet med website",
     cta: { label: "Få et tilbud", href: "/#book" },
   },
 ];

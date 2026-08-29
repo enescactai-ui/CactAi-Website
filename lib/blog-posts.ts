@@ -6,7 +6,7 @@
  *  2. Add an entry to POSTS below with the metadata
  *  3. Posts are auto-listed on /blog and individually routed at /blog/[slug]
  *
- * Order matters — posts are listed in this order (newest first).
+ * Order matters, posts are listed in this order (newest first).
  */
 
 import type { ComponentType } from "react";
@@ -31,7 +31,7 @@ export const POSTS: BlogPost[] = [
     title:
       "Pay-per-show vs månedsretainer: Den ærlige sammenligning",
     excerpt:
-      "De fleste bureauer i Danmark kører fast månedsretainer. Vi gør det modsatte. Her er hvordan de to modeller faktisk er forskellige — og hvornår hver giver mening.",
+      "De fleste bureauer i Danmark kører fast månedsretainer. Vi gør det modsatte. Her er hvordan de to modeller faktisk er forskellige, og hvornår hver giver mening.",
     date: "2026-05-26",
     readMinutes: 7,
     category: "Strategi",
@@ -53,7 +53,7 @@ export const POSTS: BlogPost[] = [
     title:
       "Meta Ads for håndværkere i 2026: Hvad virker (og hvad spilder dine penge)",
     excerpt:
-      "Facebook og Instagram er stadig de billigste kanaler til at få håndværker-leads i Danmark. Men kun hvis du rammer rigtigt. Her er de 5 ting der virker — og de 5 der er rene penge ud af vinduet.",
+      "Facebook og Instagram er stadig de billigste kanaler til at få håndværker-leads i Danmark. Men kun hvis du rammer rigtigt. Her er de 5 ting der virker, og de 5 der er rene penge ud af vinduet.",
     date: "2026-05-20",
     readMinutes: 9,
     category: "Marketing",
@@ -62,7 +62,7 @@ export const POSTS: BlogPost[] = [
   {
     slug: "hvorfor-jeg-startede-cactai",
     title:
-      "Hvorfor jeg startede CactAi — og 5 ting jeg har lært på det første år",
+      "Hvorfor jeg startede CactAi, og 5 ting jeg har lært på det første år",
     excerpt:
       "Jeg er 19 og driver et marketing-bureau for danske håndværkere. Her er den ærlige historie om hvorfor jeg startede, hvad der gik galt undervejs, og hvad jeg har lært om at sælge til folk der har set det hele før.",
     date: "2026-05-15",
@@ -87,7 +87,7 @@ export function getRelatedPosts(currentSlug: string, count = 2): BlogPost[] {
 /**
  * Deterministic Danish date formatting.
  *
- * NEVER use toLocaleDateString here — it depends on ICU locale data which
+ * NEVER use toLocaleDateString here, it depends on ICU locale data which
  * can differ subtly between Node.js (server) and Chrome (client). Even
  * one different character (e.g. normal vs non-breaking space) triggers
  * a React hydration mismatch, which silently wipes the DOM.
@@ -110,7 +110,7 @@ const DANISH_MONTHS = [
 ] as const;
 
 export function formatPostDate(date: string): string {
-  // Expect ISO format "YYYY-MM-DD". Parse manually — no Date object needed.
+  // Expect ISO format "YYYY-MM-DD". Parse manually, no Date object needed.
   const [year, month, day] = date.split("-").map(Number);
   if (!year || !month || !day) return date; // graceful fallback
   return `${day}. ${DANISH_MONTHS[month - 1]} ${year}`;

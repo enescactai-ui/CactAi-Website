@@ -22,7 +22,7 @@ const ROWS: Row[] = [
   {
     feature: "Bindingsperiode",
     traditional: "6–12 måneders binding fra dag ét",
-    cactai: "Nul binding — 30 dages opsigelsesvarsel",
+    cactai: "Nul binding, 30 dages opsigelsesvarsel",
     highlight: true,
   },
   {
@@ -32,14 +32,15 @@ const ROWS: Row[] = [
     highlight: true,
   },
   {
-    feature: "Hvem du taler med",
-    traditional: "Account manager #3 du aldrig har mødt",
-    cactai: "Enes — direkte. Ringer du, tager jeg den.",
+    feature: "Hvad sker med dine leads",
+    traditional: "De ligger og bliver kolde til nogen ringer",
+    cactai: "AI svarer hvert lead på sekunder, 24/7",
+    highlight: true,
   },
   {
-    feature: "Sproget i annoncerne",
-    traditional: "Generisk dansk eller engelsk-oversat template",
-    cactai: "Skrevet TIL håndværkere AF håndværker-energi",
+    feature: "Hvem du taler med",
+    traditional: "Account manager #3 du aldrig har mødt",
+    cactai: "Enes, direkte. Ringer du, tager jeg den.",
   },
   {
     feature: "Tracking & rapportering",
@@ -99,7 +100,7 @@ export function Comparison() {
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
             Vi har gjort sammenligningen for dig. Hvis dit nuværende bureau
-            scorer bedre end os i en eller flere af rækkerne — bliv hos dem.
+            scorer bedre end os i en eller flere af rækkerne, så bliv hos dem.
           </p>
         </motion.div>
 

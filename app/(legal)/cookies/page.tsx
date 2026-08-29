@@ -36,7 +36,7 @@ export default function CookiesPage() {
         </div>
         <p className="mt-6 pl-10 leading-relaxed text-[color:var(--color-cactus-cream)]/75">
           cactaihq.com bruger Vercel Analytics og Vercel Speed Insights. De
-          måler page views, performance og errors — uden cookies, uden
+          måler page views, performance og errors, uden cookies, uden
           fingerprinting, uden at identificere dig personligt.
         </p>
       </section>
@@ -69,7 +69,7 @@ export default function CookiesPage() {
         </div>
         <p className="mt-6 pl-10 leading-relaxed text-[color:var(--color-cactus-cream)]/75">
           Så hjælper vi DIG med at sætte Meta Pixel og Google Ads-tracking op
-          på din hjemmeside — for det er sådan PPSA-modellen virker. Men på{" "}
+          på din hjemmeside, for det er sådan PPSA-modellen virker. Men på{" "}
           <em>vores</em> site? Næsten ingenting.
         </p>
       </section>
