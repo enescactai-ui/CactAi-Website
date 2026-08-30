@@ -34,11 +34,11 @@ export function LeadPhone() {
   }, []);
 
   return (
-    <div className="relative mx-auto w-full max-w-[380px]">
+    <div className="relative mx-auto w-full max-w-[300px]">
       {/* Telefonens krop */}
-      <div className="relative aspect-[9/19] w-full rounded-[2.75rem] bg-[#12201a] p-[10px] shadow-[0_50px_100px_-30px_rgba(13,31,22,0.55),0_0_0_1px_rgba(255,255,255,0.06)_inset]">
+      <div className="relative aspect-[9/17] w-full rounded-[2.4rem] bg-[#12201a] p-[10px] shadow-[0_50px_100px_-30px_rgba(13,31,22,0.55),0_0_0_1px_rgba(255,255,255,0.06)_inset]">
         {/* Skærm */}
-        <div className="relative h-full w-full overflow-hidden rounded-[2.25rem] bg-gradient-to-b from-[#eef8f2] to-[#dceee5]">
+        <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#eef8f2] to-[#dceee5]">
           {/* Statuslinje */}
           <div className="flex items-center justify-between px-6 pt-4 font-mono text-[10px] font-semibold text-[#12201a]/60">
             <span>09:41</span>
@@ -49,10 +49,10 @@ export function LeadPhone() {
           </div>
 
           {/* Notch */}
-          <div className="absolute left-1/2 top-2 h-5 w-24 -translate-x-1/2 rounded-full bg-[#12201a]" />
+          <div className="absolute left-1/2 top-2 h-4 w-20 -translate-x-1/2 rounded-full bg-[#12201a]" />
 
           {/* Notifikationer */}
-          <div className="mt-8 space-y-2.5 px-3.5">
+          <div className="mt-6 space-y-2 px-3">
             {LEADS.slice(0, shown).map((lead, i) => (
               <motion.div
                 key={lead.detail}
@@ -63,10 +63,10 @@ export function LeadPhone() {
                   delay: i < 3 ? 0.8 + i * 0.18 : 0,
                   ease: EASE,
                 }}
-                className="flex items-start gap-3 rounded-2xl bg-white/90 p-3.5 shadow-[0_6px_18px_-6px_rgba(13,31,22,0.18)] backdrop-blur-sm"
+                className="flex items-start gap-3 rounded-xl bg-white/90 p-3 shadow-[0_6px_18px_-6px_rgba(13,31,22,0.18)] backdrop-blur-sm"
               >
                 {/* Ikon */}
-                <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-[color:var(--color-cactus-green)]">
+                <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[color:var(--color-cactus-green)]">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -74,7 +74,7 @@ export function LeadPhone() {
                     strokeWidth="2.4"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="h-4 w-4"
+                    className="h-3.5 w-3.5"
                     aria-hidden
                   >
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -85,14 +85,14 @@ export function LeadPhone() {
 
                 <div className="min-w-0 flex-1">
                   <div className="flex items-baseline justify-between gap-2">
-                    <span className="text-[13px] font-bold leading-tight text-[#12201a]">
+                    <span className="text-[12px] font-bold leading-tight text-[#12201a]">
                       {lead.name}
                     </span>
                     <span className="flex-shrink-0 font-mono text-[9px] uppercase tracking-wider text-[#12201a]/35">
                       {lead.ago}
                     </span>
                   </div>
-                  <p className="mt-0.5 truncate text-[11.5px] leading-snug text-[#12201a]/55">
+                  <p className="mt-0.5 truncate text-[10.5px] leading-snug text-[#12201a]/55">
                     {lead.detail}
                   </p>
                 </div>
@@ -113,7 +113,7 @@ export function LeadPhone() {
       {/* Glas-refleks hen over telefonen */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-[2.75rem] bg-gradient-to-tr from-transparent via-white/10 to-white/25"
+        className="pointer-events-none absolute inset-0 rounded-[2.4rem] bg-gradient-to-tr from-transparent via-white/10 to-white/25"
       />
     </div>
   );

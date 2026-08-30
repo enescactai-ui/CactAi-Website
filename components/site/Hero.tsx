@@ -187,7 +187,7 @@ export function Hero() {
               icon={Zap}
               title="Svar på 60 sek."
               sub="Før konkurrenten når det"
-              className="-left-8 top-1/4"
+              className="-left-16 top-[18%]"
               delay={1.2}
               floatY={-8}
             />
@@ -195,7 +195,7 @@ export function Hero() {
               icon={CheckCircle2}
               title="Hvert lead besvaret"
               sub="Automatisk, også aften & weekend"
-              className="-right-6 bottom-1/3"
+              className="-right-14 bottom-[30%]"
               delay={1.4}
               floatY={8}
             />
@@ -203,7 +203,7 @@ export function Hero() {
               icon={Star}
               title="0 kr ved no-show"
               sub="Kun betalt for resultater"
-              className="-bottom-2 left-6"
+              className="-bottom-4 -left-6"
               delay={1.6}
               floatY={-6}
             />
