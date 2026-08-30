@@ -35,7 +35,7 @@ export function Hero() {
       {/* ── Hero background: full mint-green card like Brainly.AI ── */}
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-[92vh] min-h-[700px]"
+        className="absolute inset-x-0 top-0 h-[98vh] min-h-[780px]"
         style={{
           background: "linear-gradient(145deg, #e8f8ef 0%, #d0f0e2 40%, #c2ead8 70%, #b8e8d2 100%)",
         }}
@@ -44,7 +44,7 @@ export function Hero() {
       {/* ── Living, video-like animated background (WebGL flowing green light) ── */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[92vh] min-h-[700px] overflow-hidden"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[98vh] min-h-[780px] overflow-hidden"
       >
         <HeroBackground />
       </div>
@@ -52,7 +52,7 @@ export function Hero() {
       {/* Subtle grid overlay */}
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-[92vh] min-h-[700px] opacity-[0.04]"
+        className="absolute inset-x-0 top-0 h-[98vh] min-h-[780px] opacity-[0.04]"
         style={{
           backgroundImage:
             "linear-gradient(rgba(42,157,111,1) 1px, transparent 1px), linear-gradient(90deg, rgba(42,157,111,1) 1px, transparent 1px)",
@@ -63,7 +63,7 @@ export function Hero() {
       {/* Mouse glow */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[92vh] min-h-[700px]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[98vh] min-h-[780px]"
         style={{
           background: `radial-gradient(700px circle at ${glowX.get()}% ${glowY.get()}%, rgba(255,255,255,0.4), transparent 50%)`,
         }}
@@ -87,7 +87,7 @@ export function Hero() {
         </motion.div>
 
         {/* Two-column layout */}
-        <div className="grid items-center gap-12 pb-16 lg:grid-cols-[1fr_480px] lg:gap-16 xl:grid-cols-[1fr_520px]">
+        <div className="grid items-center gap-12 pb-28 lg:grid-cols-[1fr_480px] lg:gap-16 xl:grid-cols-[1fr_520px]">
 
           {/* ── LEFT: headline + CTA ── */}
           <div className="relative z-10 max-w-2xl">
@@ -154,7 +154,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.0 }}
-              className="mt-8 flex flex-wrap items-center gap-6 text-sm text-[color:var(--color-cactus-cream)]/55"
+              className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-[color:var(--color-cactus-cream)]/55"
             >
               {[
                 { icon: Zap, text: "Fast pris fra 750 kr/md" },
