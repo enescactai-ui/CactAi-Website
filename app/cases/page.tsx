@@ -11,6 +11,15 @@ export const metadata: Metadata = {
     "Gennemgåede forløb: hjemmeside, Google-tilstedeværelse, annoncer og automatisk opfølgning for danske virksomheder."
 };
 
+
+/* Omfang. Kun tal der kan taelles i mapperne. Ingen skoen, ingen afrunding opad. */
+const SCOPE = [
+  { v: "3", l: "hjemmesider bygget", d: "19 sider i alt, plus denne" },
+  { v: "14", l: "annoncer produceret", d: "flere formater per kampagne" },
+  { v: "2", l: "CRM-systemer sat op", d: "med automatiske workflows" },
+  { v: "8", l: "sider reddet", d: "fra et hacket domæne" },
+];
+
 const PROCESS = [
   {
     n: "01",
@@ -116,6 +125,39 @@ export default function CasesPage() {
                     </span>
                   </div>
                 </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Omfang */}
+        <section className="border-t border-[color:var(--color-cactus-green)]/12 py-16 lg:py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <div className="max-w-2xl">
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
+                Omfang
+              </div>
+              <h2 className="mt-6 font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+                Hvad der er bygget indtil nu.
+              </h2>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {SCOPE.map((s) => (
+                <div
+                  key={s.l}
+                  className="rounded-2xl border border-[color:var(--color-cactus-green)]/15 bg-white/40 p-6"
+                >
+                  <div className="font-display text-4xl font-bold leading-none tracking-tight text-[color:var(--color-cactus-green)]">
+                    {s.v}
+                  </div>
+                  <div className="mt-3 font-display text-[15px] font-semibold tracking-tight">
+                    {s.l}
+                  </div>
+                  <div className="mt-1 text-sm leading-relaxed text-[color:var(--color-cactus-cream)]/55">
+                    {s.d}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

@@ -39,25 +39,21 @@ export const CASES: CaseStudy[] = [
     teaser:
       "Ingen fungerende hjemmeside, ingen struktur på henvendelser, ingen betalt annoncering. Alt blev bygget fra bunden.",
     challenge: [
-      "Det gamle domæne var hacket. Størstedelen af siderne var erstattet af spam.",
-      "Virksomheden var reelt usynlig i lokale søgninger.",
+      "Det gamle domæne var hacket og fyldt med spam.",
+      "Usynlig i lokale søgninger.",
       "Henvendelser blev håndteret manuelt og faldt mellem to stole.",
-      "Ingen erfaring med betalt annoncering, og ingen måde at måle hvad et lead kostede.",
     ],
     solution: [
-      "Byggede ni siders hjemmeside skrevet og struktureret til lokal søgning.",
-      "Gennemgik det hackede domæne og reddede de otte oprindelige sider ud af arkivet, så flere års tekst ikke gik tabt.",
-      "Satte CRM op med automatisk svar på hver henvendelse inden for 60 sekunder.",
-      "Lancerede Meta-kampagne med fem annoncer i tre formater og en kvalificerende leadformular.",
+      "Byggede ny hjemmeside struktureret til lokal søgning.",
+      "Reddede det oprindelige indhold ud af det hackede domæne.",
+      "Satte CRM op med automatisk svar på hver henvendelse.",
+      "Lancerede annoncekampagne med kvalificerende leadformular.",
     ],
     delivered: [
       "Ni siders hjemmeside med lokal SEO",
       "Google Business-profil",
-      "CRM med automatisk leadopsamling og fordeling",
-      "SMS og e-mail til ejeren i samme sekund et lead lander",
+      "CRM med automatisk leadopsamling og besked til ejeren",
       "Fem annoncer produceret i tre formater",
-      "Leadformular med kvalificerende spørgsmål, koblet til CRM",
-      "Otte siders indhold reddet fra det hackede domæne",
     ],
     metrics: [
       { value: "96 kr", label: "pris per lead" },
@@ -84,20 +80,17 @@ export const CASES: CaseStudy[] = [
       "Min egen hjemmeside er bygget med de samme metoder som klienternes. Det er ikke en kundecase, men det er det arbejde jeg kan vise nærmest.",
     challenge: [
       "Et bureau der sælger hjemmesider bliver bedømt på sin egen.",
-      "Besøgende skal kunne se prisen uden at booke et møde først.",
-      "Henvendelser skal fanges automatisk, ikke ligge i en indbakke.",
+      "Prisen skal kunne ses uden at booke et møde først.",
     ],
     solution: [
       "Byggede siden i Next.js med fokus på hastighed og struktureret data.",
-      "Skrev priserne direkte på siden i stedet for at gemme dem bag et møde.",
-      "Koblede booking sammen med CRM, så hver henvendelse fanges automatisk.",
-      "Byggede en interaktiv 3D-model der forklarer systemet visuelt.",
+      "Skrev priserne direkte på siden.",
+      "Koblede booking sammen med CRM.",
     ],
     delivered: [
       "Hjemmeside i Next.js med lokal SEO og struktureret data",
-      "Offentlige priser og pakker",
-      "Bookingflow koblet direkte til CRM",
-      "Blog og cases som egne sektioner",
+      "Offentlige priser, bookingflow koblet til CRM",
+      "Interaktiv 3D-model der forklarer systemet",
     ],
     metrics: [
       { value: "Next.js", label: "bygget fra bunden" },
