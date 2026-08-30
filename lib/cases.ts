@@ -5,13 +5,15 @@
  *  1. Ingen klientnavne. Brug branche og landsdel. Aftalt med klienterne.
  *  2. Alle tal skal kunne dokumenteres. Findes tallet ikke, saa skriv ikke et tal.
  *  3. Igangvaerende projekter markeres med status "loebende". Lyv ikke om faerdighed.
+ *  4. Eget arbejde markeres med status "eget" og maa ALDRIG fremstaa som klientarbejde.
+ *  5. Klienter med uafklarede forhold hoerer ikke hjemme her.
  */
 
 export type CaseMetric = { value: string; label: string };
 
 export type CaseStudy = {
   slug: string;
-  status: "afsluttet" | "loebende";
+  status: "afsluttet" | "loebende" | "eget";
   client: string;          // anonymiseret betegnelse
   region: string;
   year: string;
@@ -28,47 +30,6 @@ export type CaseStudy = {
 
 export const CASES: CaseStudy[] = [
   {
-    slug: "rengoering-nordjylland",
-    status: "afsluttet",
-    client: "Rengøringsvirksomhed",
-    region: "Nordjylland",
-    year: "2026",
-    title: "De havde allerede betalt for kunderne. De nåede dem bare aldrig.",
-    teaser:
-      "Virksomheden kørte annoncer og fik henvendelser, men de fleste blev aldrig til noget. Vi gik tilbage i de leads, de havde afskrevet.",
-    challenge: [
-      "Henvendelser landede i en indbakke og blev ikke ringet op i tide.",
-      "Kunden nåede at booke et andet firma, inden der blev fulgt op.",
-      "Ejeren havde skrevet de gamle leads af som døde.",
-      "Hjemmesiden fangede ikke de kunder, der søgte lokalt.",
-    ],
-    solution: [
-      "Gennemgik de gamle, afskrevne leads i stedet for at købe nye.",
-      "Kontaktede dem personligt og med det samme, kvalificerede og booked dem.",
-      "Byggede en ny hjemmeside med sider for hver ydelse og hvert kundesegment.",
-      "Satte Google-profil og anmeldelser op, så de blev fundet lokalt.",
-    ],
-    delivered: [
-      "Hjemmeside med forside, kontakt, anmeldelser og egne sider til privat, erhverv, flytterengøring og håndværkere",
-      "Mobiloptimering",
-      "Google Business-profil",
-      "Struktureret opfølgning på henvendelser",
-    ],
-    metrics: [
-      { value: "5", label: "kunder booket" },
-      { value: "under 1 uge", label: "fra start til booket" },
-      { value: "0 kr", label: "nye annoncekroner" },
-    ],
-    note:
-      "De fem kunder kom udelukkende fra leads, virksomheden allerede havde betalt for og opgivet. Der blev ikke brugt en krone på nye annoncer.",
-    images: [
-      { src: "/portfolio/case-a-index.jpg", alt: "Forsiden af hjemmesiden" },
-      { src: "/portfolio/case-a-flytter.jpg", alt: "Side om flytterengøring" },
-      { src: "/portfolio/case-a-erhverv.jpg", alt: "Side om erhvervsrengøring" },
-      { src: "/portfolio/case-a-kontakt.jpg", alt: "Kontaktside med formular" },
-    ],
-  },
-  {
     slug: "rengoering-storkoebenhavn",
     status: "loebende",
     client: "Rengøringsvirksomhed",
@@ -78,14 +39,14 @@ export const CASES: CaseStudy[] = [
     teaser:
       "Ingen fungerende hjemmeside, ingen struktur på henvendelser, ingen betalt annoncering. Alt blev bygget fra bunden.",
     challenge: [
-      "Det gamle domæne var hacket og fyldt med spam-sider.",
+      "Det gamle domæne var hacket. Størstedelen af siderne var erstattet af spam.",
       "Virksomheden var reelt usynlig i lokale søgninger.",
       "Henvendelser blev håndteret manuelt og faldt mellem to stole.",
       "Ingen erfaring med betalt annoncering, og ingen måde at måle hvad et lead kostede.",
     ],
     solution: [
       "Byggede ni siders hjemmeside skrevet og struktureret til lokal søgning.",
-      "Reddede det brugbare indhold fra det hackede domæne.",
+      "Gennemgik det hackede domæne og reddede de otte oprindelige sider ud af arkivet, så flere års tekst ikke gik tabt.",
       "Satte CRM op med automatisk svar på hver henvendelse inden for 60 sekunder.",
       "Lancerede Meta-kampagne med fem annoncer i tre formater og en kvalificerende leadformular.",
     ],
@@ -96,6 +57,7 @@ export const CASES: CaseStudy[] = [
       "SMS og e-mail til ejeren i samme sekund et lead lander",
       "Fem annoncer produceret i tre formater",
       "Leadformular med kvalificerende spørgsmål, koblet til CRM",
+      "Otte siders indhold reddet fra det hackede domæne",
     ],
     metrics: [
       { value: "96 kr", label: "pris per lead" },
@@ -110,6 +72,45 @@ export const CASES: CaseStudy[] = [
       { src: "/portfolio/case-b-ovn-foer.jpg", alt: "Før-billede brugt i annoncen" },
       { src: "/portfolio/case-b-ovn-efter.jpg", alt: "Efter-billede brugt i annoncen" },
     ],
+  },
+  {
+    slug: "eget-projekt-cactai",
+    status: "eget",
+    client: "Eget projekt",
+    region: "CactAi",
+    year: "2026",
+    title: "Jeg bruger selv det system, jeg sælger.",
+    teaser:
+      "Min egen hjemmeside er bygget med de samme metoder som klienternes. Det er ikke en kundecase, men det er det arbejde jeg kan vise nærmest.",
+    challenge: [
+      "Et bureau der sælger hjemmesider bliver bedømt på sin egen.",
+      "Besøgende skal kunne se prisen uden at booke et møde først.",
+      "Henvendelser skal fanges automatisk, ikke ligge i en indbakke.",
+    ],
+    solution: [
+      "Byggede siden i Next.js med fokus på hastighed og struktureret data.",
+      "Skrev priserne direkte på siden i stedet for at gemme dem bag et møde.",
+      "Koblede booking sammen med CRM, så hver henvendelse fanges automatisk.",
+      "Byggede en interaktiv 3D-model der forklarer systemet visuelt.",
+    ],
+    delivered: [
+      "Hjemmeside i Next.js med lokal SEO og struktureret data",
+      "Offentlige priser og pakker",
+      "Bookingflow koblet direkte til CRM",
+      "Blog og cases som egne sektioner",
+    ],
+    metrics: [
+      { value: "Next.js", label: "bygget fra bunden" },
+      { value: "Offentlig", label: "prissætning" },
+      { value: "Live", label: "kan besøges nu" },
+    ],
+    note:
+      "Dette er mit eget projekt og ikke et kundeforløb. Det står her, fordi det er den hurtigste måde at se, hvordan jeg arbejder, uden at skulle tage en anden virksomheds ord for det.",
+    images: [
+      { src: "/portfolio/case-c-cactai.jpg", alt: "Forsiden af cactaihq.com" },
+      { src: "/portfolio/case-c-priser.jpg", alt: "Ydelsessiden med priser" },
+    ],
+    liveUrl: "https://cactaihq.com",
   },
 ];
 

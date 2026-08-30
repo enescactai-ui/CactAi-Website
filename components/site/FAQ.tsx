@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: "Hvilke brancher arbejder I med?",
-    a: "Vi arbejder primært med rengøringsfirmaer, både privat og erhverv. Vi har også kunder inden for VVS, el og andre servicefag, men rengøring er dér, vi kender branchen bedst: priser per kvadratmeter, servicefradrag, hvad indkøbere kigger efter, og hvordan erhvervskontrakter vindes.",
+    a: "Vi arbejder med servicevirksomheder og mindre virksomheder generelt: rengøring, VVS, el, håndværk, klinikker, og virksomheder der sælger online. Systemet er det samme, uanset branche. Det der ændrer sig, er hvem annoncerne rammer, og hvad der står på hjemmesiden."
   },
   {
     q: "Hvordan betaler jeg?",

@@ -25,7 +25,7 @@ const PERSON_SCHEMA = {
   worksFor: { "@id": "https://cactaihq.com/#org" },
   knowsAbout: [
     "Pay-per-show appointment marketing",
-    "Marketing for danske rengøringsfirmaer",
+    "Marketing for danske servicevirksomheder",
     "Lead generation for service-virksomheder",
     "Automatisk leadopfølgning og CRM"
   ],

@@ -80,9 +80,9 @@ export default async function CasePage({
               <span>
                 {c.client} · {c.region} · {c.year}
               </span>
-              {c.status === "loebende" && (
+              {c.status !== "afsluttet" && (
                 <span className="rounded-full bg-[color:var(--color-cactus-green)]/12 px-2.5 py-0.5 text-[color:var(--color-cactus-green)]">
-                  Løbende samarbejde
+                  {c.status === "eget" ? "Eget projekt, ikke en kundecase" : "Løbende samarbejde"}
                 </span>
               )}
             </div>

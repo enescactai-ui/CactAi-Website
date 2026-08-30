@@ -13,10 +13,10 @@ type Lead = {
 
 /** Nye leads glider ind ovenfra. Rækkefølgen her er den de vises i. */
 const LEADS: Lead[] = [
-  { name: "Ny kunde", detail: "Kontorrengøring · 340 m² · fast aftale", ago: "nu" },
-  { name: "Ny kunde", detail: "Flytterengøring · 84 m² · lejlighed", ago: "4 min" },
-  { name: "Ny henvendelse", detail: "Fast rengøring · 2 gange om ugen", ago: "18 min" },
-  { name: "Ny kunde", detail: "Erhverv · trappevask · 3 opgange", ago: "41 min" },
+  { name: "Ny kunde", detail: "Ønsker tilbud · ringes op i dag", ago: "nu" },
+  { name: "Ny kunde", detail: "Opgave i næste uge · erhverv", ago: "4 min" },
+  { name: "Ny henvendelse", detail: "Fast aftale · hver 14. dag", ago: "18 min" },
+  { name: "Ny kunde", detail: "Akut opgave · vil ringes op", ago: "41 min" },
 ];
 
 export function LeadPhone() {

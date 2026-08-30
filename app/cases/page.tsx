@@ -6,9 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Cases · Arbejde for danske rengøringsvirksomheder",
+  title: "Cases · Udvalgt arbejde",
   description:
-    "To gennemgåede forløb: hjemmeside, Google-tilstedeværelse, annoncer og opfølgning for rengøringsvirksomheder i Nordjylland og Storkøbenhavn.",
+    "Gennemgåede forløb: hjemmeside, Google-tilstedeværelse, annoncer og automatisk opfølgning for danske virksomheder."
 };
 
 const PROCESS = [
@@ -46,15 +46,15 @@ export default function CasesPage() {
               Cases
             </div>
             <h1 className="mt-6 max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Arbejde for danske{" "}
+              Udvalgt{" "}
               <span className="text-[color:var(--color-cactus-green)]">
-                rengøringsvirksomheder.
+                arbejde.
               </span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-              To forløb, gennemgået fra problem til resultat. Klienterne står
-              anonymt, fordi vi ikke nævner navne uden at spørge først.
-              Virksomhederne og tallene er ægte.
+              Forløb gennemgået fra problem til resultat. Klienter står anonymt,
+              fordi vi ikke nævner navne uden at spørge først. Virksomhederne og
+              tallene er ægte.
             </p>
           </div>
         </section>
@@ -84,9 +84,9 @@ export default function CasesPage() {
                       <span>
                         {c.client} · {c.region}
                       </span>
-                      {c.status === "loebende" && (
+                      {c.status !== "afsluttet" && (
                         <span className="rounded-full bg-[color:var(--color-cactus-green)]/12 px-2.5 py-0.5 text-[color:var(--color-cactus-green)]">
-                          Løbende
+                          {c.status === "eget" ? "Eget projekt" : "Løbende"}
                         </span>
                       )}
                     </div>
