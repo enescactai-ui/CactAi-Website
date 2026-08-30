@@ -2,9 +2,9 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight, CheckCircle2, Star, Zap } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import HeroBackground from "./HeroBackground";
+import { LeadPhone } from "./LeadPhone";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -179,17 +179,8 @@ export function Hero() {
             {/* Soft halo behind the phone */}
             <div className="absolute left-1/2 top-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[color:var(--color-cactus-green)]/15 blur-3xl" />
 
-            {/* Phone photo */}
-            <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[2rem] shadow-[0_40px_90px_-30px_rgba(13,31,22,0.35)]">
-              <Image
-                src="/images/hero-phone.jpg"
-                alt="Booket kalender med kundemøder i en telefon-app"
-                width={840}
-                height={1125}
-                priority
-                className="h-auto w-full"
-              />
-            </div>
+            {/* Telefon bygget i CSS, saa teksten altid er skarp og korrekt */}
+            <LeadPhone />
 
             {/* Floating badges */}
             <FloatingBadge
