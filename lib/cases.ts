@@ -39,13 +39,11 @@ export const CASES: CaseStudy[] = [
     teaser:
       "Ingen fungerende hjemmeside, ingen struktur på henvendelser, ingen betalt annoncering. Alt blev bygget fra bunden.",
     challenge: [
-      "Det gamle domæne var hacket og fyldt med spam.",
       "Usynlig i lokale søgninger.",
       "Henvendelser blev håndteret manuelt og faldt mellem to stole.",
     ],
     solution: [
       "Byggede ny hjemmeside struktureret til lokal søgning.",
-      "Reddede det oprindelige indhold ud af det hackede domæne.",
       "Satte CRM op med automatisk svar på hver henvendelse.",
       "Lancerede annoncekampagne med kvalificerende leadformular.",
     ],
@@ -104,6 +102,42 @@ export const CASES: CaseStudy[] = [
       { src: "/portfolio/case-c-priser.jpg", alt: "Ydelsessiden med priser" },
     ],
     liveUrl: "https://cactaihq.com",
+  },
+  {
+    slug: "hacket-domaene",
+    status: "loebende",
+    client: "Servicevirksomhed",
+    region: "Sjælland",
+    year: "2026",
+    title: "Et hacket domæne havde spist flere års indhold. Vi hentede det tilbage.",
+    teaser:
+      "Domænet var overtaget og fyldt med spam-sider. Det oprindelige indhold så ud til at være tabt. Det var det ikke helt.",
+    challenge: [
+      "Domænet var hacket og størstedelen af siderne erstattet af spam.",
+      "Spam-siderne lå indekseret i Google under virksomhedens eget navn.",
+      "Flere års tekst så ud til at være væk, uden backup.",
+    ],
+    solution: [
+      "Kortlagde hvad der lå på domænet før og efter angrebet.",
+      "Skilte de oprindelige sider fra de spam-sider der var indsat.",
+      "Hentede det ægte indhold tilbage fra webarkivet.",
+      "Samlede det i en form der kan genbruges på et rent domæne.",
+    ],
+    delivered: [
+      "Otte oprindelige sider hentet tilbage",
+      "Kortlægning af hvilke sider der var indsat af angriberen",
+      "Indholdet klargjort til genopbygning",
+    ],
+    metrics: [
+      { value: "8", label: "sider reddet" },
+      { value: "0", label: "backup tilgængelig" },
+      { value: "Arkiv", label: "eneste kilde" },
+    ],
+    note:
+      "Arbejdet med at genopbygge domænet er stadig i gang. Det der er dokumenteret her, er selve redningen af indholdet.",
+    images: [
+      { src: "/portfolio/case-d-arkiv.jpg", alt: "Det reddede indhold, samlet og sorteret" },
+    ],
   },
 ];
 

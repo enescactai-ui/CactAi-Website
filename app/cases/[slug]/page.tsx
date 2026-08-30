@@ -60,7 +60,8 @@ export default async function CasePage({
   const c = getCase(slug);
   if (!c) notFound();
 
-  const other = CASES.find((x) => x.slug !== c.slug);
+  const idx = CASES.findIndex((x) => x.slug === c.slug);
+  const other = CASES[(idx + 1) % CASES.length];
 
   return (
     <>
