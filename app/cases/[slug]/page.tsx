@@ -1,13 +1,13 @@
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
-import { CASES, getCase } from "@/lib/cases";
+import { LIVE_CASES, getCase } from "@/lib/cases";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
-  return CASES.map((c) => ({ slug: c.slug }));
+  return LIVE_CASES.map((c) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata({
@@ -60,8 +60,8 @@ export default async function CasePage({
   const c = getCase(slug);
   if (!c) notFound();
 
-  const idx = CASES.findIndex((x) => x.slug === c.slug);
-  const other = CASES[(idx + 1) % CASES.length];
+  const idx = LIVE_CASES.findIndex((x) => x.slug === c.slug);
+  const other = LIVE_CASES[(idx + 1) % LIVE_CASES.length];
 
   return (
     <>

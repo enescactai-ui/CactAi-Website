@@ -1,6 +1,6 @@
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
-import { CASES } from "@/lib/cases";
+import { LIVE_CASES, UPCOMING_CASES } from "@/lib/cases";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -72,7 +72,7 @@ export default function CasesPage() {
         <section className="py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid gap-6 lg:grid-cols-2">
-              {CASES.map((c) => (
+              {LIVE_CASES.map((c) => (
                 <Link
                   key={c.slug}
                   href={`/cases/${c.slug}`}
@@ -129,6 +129,92 @@ export default function CasesPage() {
             </div>
           </div>
         </section>
+
+        {/* Under opbygning. Laaste kort, ingen tal, ingen detaljeside. */}
+        {UPCOMING_CASES.length > 0 && (
+          <section className="pb-16 lg:pb-24">
+            <div className="mx-auto max-w-7xl px-6 lg:px-12">
+              <div className="flex items-center gap-3">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-cactus-green)] opacity-60 motion-reduce:animate-none" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--color-cactus-green)]" />
+                </span>
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
+                  Under opbygning
+                </h2>
+              </div>
+              <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[color:var(--color-cactus-cream)]/60">
+                Forløb der er i gang. Der står ingen tal her, fordi der ikke er
+                nogen endnu. De kommer når arbejdet er færdigt.
+              </p>
+
+              <div className="mt-10 grid gap-6 lg:grid-cols-2">
+                {UPCOMING_CASES.map((c) => (
+                  <div
+                    key={c.slug}
+                    aria-disabled="true"
+                    className="relative overflow-hidden rounded-2xl border border-dashed border-[color:var(--color-cactus-green)]/25 bg-[color:var(--color-cactus-green)]/[0.03] p-7"
+                  >
+                    <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/45">
+                      <span>
+                        {c.client} · {c.region}
+                      </span>
+                      <span className="rounded-full border border-[color:var(--color-cactus-green)]/25 px-2.5 py-0.5 text-[color:var(--color-cactus-green)]">
+                        I gang
+                      </span>
+                    </div>
+
+                    <h3 className="mt-4 font-display text-xl font-semibold leading-tight tracking-tight text-[color:var(--color-cactus-cream)]/80 sm:text-2xl">
+                      {c.title}
+                    </h3>
+                    <p className="mt-3 text-[15px] leading-relaxed text-[color:var(--color-cactus-cream)]/55">
+                      {c.teaser}
+                    </p>
+
+                    <div className="mt-6 grid gap-x-8 gap-y-5 border-t border-[color:var(--color-cactus-green)]/10 pt-5 sm:grid-cols-2">
+                      <div>
+                        <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-[color:var(--color-cactus-green)]">
+                          Klaret
+                        </div>
+                        <ul className="mt-3 space-y-2">
+                          {c.progress.done.map((t) => (
+                            <li
+                              key={t}
+                              className="relative pl-5 text-[14px] leading-snug text-[color:var(--color-cactus-cream)]/70"
+                            >
+                              <span className="absolute left-0 top-[0.55em] h-1.5 w-1.5 rounded-full bg-[color:var(--color-cactus-green)]" />
+                              {t}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-[color:var(--color-cactus-cream)]/40">
+                          Mangler
+                        </div>
+                        <ul className="mt-3 space-y-2">
+                          {c.progress.pending.map((t) => (
+                            <li
+                              key={t}
+                              className="relative pl-5 text-[14px] leading-snug text-[color:var(--color-cactus-cream)]/40"
+                            >
+                              <span className="absolute left-0 top-[0.55em] h-1.5 w-1.5 rounded-full border border-[color:var(--color-cactus-cream)]/30" />
+                              {t}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 h-[3px] w-full overflow-hidden rounded-full bg-[color:var(--color-cactus-green)]/10">
+                      <div className="h-full w-1/3 animate-pulse rounded-full bg-[color:var(--color-cactus-green)]/50 motion-reduce:animate-none" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Omfang */}
         <section className="border-t border-[color:var(--color-cactus-green)]/12 py-16 lg:py-20">

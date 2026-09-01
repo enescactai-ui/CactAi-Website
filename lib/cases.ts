@@ -7,26 +7,47 @@
  *  3. Igangvaerende projekter markeres med status "loebende". Lyv ikke om faerdighed.
  *  4. Eget arbejde markeres med status "eget" og maa ALDRIG fremstaa som klientarbejde.
  *  5. Klienter med uafklarede forhold hoerer ikke hjemme her.
+ *  6. Status "kommende" er til forloeb der ER i gang, men ikke faerdige.
+ *     De vises som laaste kort uden tal og uden detaljeside.
+ *     Opfind ALDRIG et kommende forloeb. Er arbejdet ikke begyndt,
+ *     hoerer det ikke hjemme paa siden.
  */
 
 export type CaseMetric = { value: string; label: string };
 
-export type CaseStudy = {
+type CaseBase = {
   slug: string;
-  status: "afsluttet" | "loebende" | "eget";
   client: string;          // anonymiseret betegnelse
   region: string;
   year: string;
   title: string;           // resultatet, ikke ydelsen
   teaser: string;          // til oversigten
+};
+
+/** Et forloeb med en faerdig historie. Har altid tal, billeder og en detaljeside. */
+export type LiveCase = CaseBase & {
+  status: "afsluttet" | "loebende" | "eget";
   challenge: string[];
   solution: string[];
   delivered: string[];
   metrics: CaseMetric[];
-  note?: string;           // aerlig kontekst, fx at projektet stadig koerer
   images: { src: string; alt: string }[];
+  note?: string;           // aerlig kontekst, fx at projektet stadig koerer
   liveUrl?: string;        // rigtigt link slaar ethvert skaermbillede
 };
+
+/**
+ * Et forloeb der ER i gang, men ikke faerdigt.
+ * Vises som et laast kort uden tal og uden detaljeside.
+ * `progress` er vigtig: en tom "coming soon"-boks signalerer stilstand,
+ * en boks der viser hvad der ER leveret signalerer aktivitet.
+ */
+export type UpcomingCase = CaseBase & {
+  status: "kommende";
+  progress: { done: string[]; pending: string[] };
+};
+
+export type CaseStudy = LiveCase | UpcomingCase;
 
 export const CASES: CaseStudy[] = [
   {
@@ -139,6 +160,31 @@ export const CASES: CaseStudy[] = [
       { src: "/portfolio/case-d-arkiv.jpg", alt: "Det reddede indhold, samlet og sorteret" },
     ],
   },
+  {
+    slug: "software-venture",
+    status: "kommende",
+    client: "Eget produkt",
+    region: "Under opbygning",
+    year: "2026",
+    title: "Software til rengøringsbranchen, bygget sammen med en medstifter.",
+    teaser:
+      "Et selvstændigt produkt, ikke et klientforløb. Arbejdet er i gang, og der er ingen resultater at vise endnu.",
+    progress: {
+      done: ["Term sheet på plads", "Ejeraftale udarbejdet", "Ejerfordeling aftalt"],
+      pending: ["Produktet bygges", "Første brugere", "Resultater følger"],
+    },
+  },
 ];
 
-export const getCase = (slug: string) => CASES.find((c) => c.slug === slug);
+/** Cases med en faerdig historie og en detaljeside. */
+export const LIVE_CASES = CASES.filter(
+  (c): c is LiveCase => c.status !== "kommende",
+);
+
+/** Forloeb i gang. Vises laaste, uden tal, uden detaljeside. */
+export const UPCOMING_CASES = CASES.filter(
+  (c): c is UpcomingCase => c.status === "kommende",
+);
+
+export const getCase = (slug: string) =>
+  LIVE_CASES.find((c) => c.slug === slug);

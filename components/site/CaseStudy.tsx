@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { CASES } from "@/lib/cases";
+import { LIVE_CASES } from "@/lib/cases";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 /** Forsidens bevis-sektion. Trækker fra lib/cases.ts, så der kun er ét sted at rette. */
 export function CaseStudy() {
-  const c = CASES.find((x) => x.status !== "eget") ?? CASES[0];
+  const c = LIVE_CASES.find((x) => x.status !== "eget") ?? LIVE_CASES[0];
   if (!c) return null;
 
   return (
