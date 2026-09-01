@@ -38,16 +38,16 @@ export function Pricing() {
             Pris
           </div>
           <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            To måder at{" "}
+            Ingen fast pris her.{" "}
             <span className="text-[color:var(--color-cactus-green)]">
-              starte
-            </span>{" "}
-            på.
+              Med vilje.
+            </span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-            De fleste starter med hjemmesiden, fordi det er hurtigt, billigt og
-            uden binding. Vil du have kunder hentet ind aktivt bagefter, findes
-            Vækstmotoren. Du behøver ikke tage stilling til den nu.
+            En hjemmeside der skal stå klar til fredag, og kunder der skal
+            hentes ind måned efter måned, passer ikke i samme linje. Book en
+            kort snak, og du får et konkret tilbud til din forretning, ikke et
+            tal fra en prisliste der passer på ingen.
           </p>
 
           <div className="mt-14 grid gap-5 text-left sm:grid-cols-2">
@@ -60,7 +60,7 @@ export function Pricing() {
                 Hjemmeside &amp; Google
               </h3>
               <div className="mt-4 font-display text-4xl font-bold tracking-tight text-[color:var(--color-cactus-green)]">
-                750 kr<span className="text-lg font-medium">/md</span>
+                Skræddersyet
               </div>
               <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/50">
                 Ingen opstart · ingen binding
@@ -88,10 +88,10 @@ export function Pricing() {
                 Vækstmotoren
               </h3>
               <div className="mt-4 font-display text-4xl font-bold tracking-tight">
-                Fra 5.000 kr
+                Skræddersyet
               </div>
               <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/50">
-                Opstart, derefter pris per booket møde
+                Pris aftales på mødet, efter omfang
               </div>
               <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
                 <li>Alt i Hjemmeside &amp; Google</li>

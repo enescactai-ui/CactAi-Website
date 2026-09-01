@@ -64,7 +64,7 @@ const SECTIONS: Section[] = [
     list: [
       {
         items: [
-          "Opstartsgebyr: forud, betalt før igangsætning (typisk 5.000–7.500 kr afhængigt af pakke).",
+          "Opstartsgebyr: forud, betalt før igangsætning. Beløbet fastsættes individuelt ud fra opgavens omfang og fremgår af den skriftlige aftale eller faktura.",
           "PPSA-bookinger: faktureres bi-ugentligt bagud via Billy. Betalingsfrist netto 8 dage.",
           "Annoncebudget: betales DIREKTE af Kunden til Meta og/eller Google. Går aldrig gennem CactAi.",
           "Morarente: 0,81% pr. påbegyndt måned (renteloven §5). Rykkergebyr 100 kr pr. rykker (rentelovens §9b).",

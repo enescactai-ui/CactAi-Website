@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: "Hvad koster det egentlig?",
-    a: "Der er to måder at starte. Hjemmeside og Google koster 750 kr/md, ingen opstart og ingen binding. Vil du have kunder hentet aktivt ind med annoncer, hedder det Vækstmotoren: opstart fra 5.000 kr, derefter betaler du kun for fremmødte møder. Annoncebudgettet betaler du direkte til Meta, vi får aldrig adgang til dit kort.",
+    a: "Der er to måder at starte. Hjemmeside og Google har ingen opstart og ingen binding. Vil du have kunder hentet aktivt ind med annoncer, hedder det Vækstmotoren. Prisen afhænger af omfang og mål, og vi regner den konkret ud på et kort møde, ikke ud fra en fast liste. Annoncebudgettet betaler du direkte til Meta, vi får aldrig adgang til dit kort.",
   },
   {
     q: "Hvor mange leads får jeg om måneden?",

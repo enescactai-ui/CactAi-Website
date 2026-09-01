@@ -157,7 +157,7 @@ export function Hero() {
               className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-[color:var(--color-cactus-cream)]/55"
             >
               {[
-                { icon: Zap, text: "Fast pris fra 750 kr/md" },
+                { icon: Zap, text: "Prisen tilpasses opgaven" },
                 { icon: CheckCircle2, text: "14-dages garanti" },
                 { icon: Star, text: "Ingen binding" },
               ].map(({ icon: Icon, text }) => (
