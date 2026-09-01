@@ -8,6 +8,7 @@ import { Hero } from "@/components/site/Hero";
 import { Navbar } from "@/components/site/Navbar";
 import { Pricing } from "@/components/site/Pricing";
 import { TrustMarquee } from "@/components/site/TrustMarquee";
+import { VaekstMotorV8 } from "@/components/site/VaekstMotorV8";
 
 /*
  *  Forsiden er en lead-capture-side, ikke en broche.
@@ -16,13 +17,15 @@ import { TrustMarquee } from "@/components/site/TrustMarquee";
  *  firmaet op bagefter. Siden skal derfor ikke saelge forfra, den skal
  *  bekraefte at det er et rigtigt firma og goere vejen til en booking kort.
  *
- *  Raekkefoelgen er: hvem er I → bevis → hvad koster det → hvad risikerer
- *  jeg → book. FAQ og Founder ligger EFTER CTA'en, til dem der stadig
- *  tvivler efter at have set knappen.
+ *  Raekkefoelgen er: hvem er I → bevis (3D-motor + cases) → hvad koster
+ *  det → hvad risikerer jeg → book. FAQ og Founder ligger EFTER CTA'en,
+ *  til dem der stadig tvivler efter at have set knappen.
  *
- *  Taget AF forsiden, men stadig i kodebasen:
- *    VaekstMotorV8   3D-motoren. 1,9 MB model + hele three/R3F i bundlen.
- *                    Et vaerktoej til kolde besoegende, ikke til varme.
+ *  VaekstMotorV8 er tilbage, bevidst, efter Enes' eget valg 1. sep 2026.
+ *  Koster reelt: 1,9 MB 3D-model + hele three/R3F i bundlen. Overvej
+ *  dynamic import med ssr:false hvis LCP bliver et problem paa mobil.
+ *
+ *  Taget AF forsiden, stadig i kodebasen:
  *    Manifesto       gentager pitchet fra opkaldet.
  *    HowItWorks      samme.
  *    BeforeAfter     samme.
@@ -36,6 +39,7 @@ export default function HomePage() {
       <main className="flex-1">
         <Hero />
         <TrustMarquee />
+        <VaekstMotorV8 />
         <CaseStudy />
         <Pricing />
         <Guarantee />

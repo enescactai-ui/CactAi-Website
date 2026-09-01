@@ -33,11 +33,11 @@ export const metadata: Metadata = {
   description:
     "Vi henter kunderne og sørger for, at du aldrig mister én. Annoncer, automatisk svar på hvert lead inden for 60 sekunder, og booking direkte i din kalender. Ét system, én pris.",
   keywords: [
-    "vækstpartner håndværker",
-    "AI receptionist dansk",
+    "vækstpartner servicevirksomhed",
+    "automatisk leadsvar",
     "missede opkald",
-    "flere kunder håndværker",
-    "Meta ads håndværker",
+    "flere kunder lokal virksomhed",
+    "Meta ads Google ads Danmark",
     "lead generation Danmark",
     "pay per show",
   ],

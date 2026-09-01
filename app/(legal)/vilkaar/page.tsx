@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Vilkår og betingelser",
   description:
-    "CactAi's salgs- og leveringsbetingelser for PPSA-services til danske håndværkere. B2B-aftale med 14-dages garanti.",
+    "CactAi's salgs- og leveringsbetingelser for PPSA-services til danske servicevirksomheder. B2B-aftale med 14-dages garanti.",
 };
 
 const LAST_UPDATED = "22. maj 2026";
