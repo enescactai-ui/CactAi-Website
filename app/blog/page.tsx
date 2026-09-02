@@ -6,9 +6,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog & Indsigt · Marketing for danske håndværkere",
+  title: "Blog & Indsigt · Marketing for danske servicevirksomheder",
   description:
-    "Artikler om PPSA, AI-receptionist, Meta Ads og lead-generation for håndværkere i Danmark. Skrevet af founder Enes Tokmak, ingen agency-fluff, kun konkret indsigt.",
+    "Artikler om PPSA, Meta Ads og lead-generation for lokale servicevirksomheder i Danmark. Skrevet af founder Enes Tokmak, ingen agency-fluff, kun konkret indsigt.",
 };
 
 /* Blog schema, tells Google this is a publication, lists all posts */
@@ -19,7 +19,7 @@ const BLOG_SCHEMA = {
   url: "https://cactaihq.com/blog",
   name: "CactAi Blog & Indsigt",
   description:
-    "Artikler om PPSA, AI-receptionist, Meta Ads og lead-generation for danske håndværkere.",
+    "Artikler om PPSA, Meta Ads og lead-generation for danske servicevirksomheder.",
   inLanguage: "da-DK",
   publisher: { "@id": "https://cactaihq.com/#org" },
   blogPost: POSTS.map((p) => ({
@@ -63,7 +63,7 @@ export default function BlogIndexPage() {
             <h1 className="mt-6 font-display text-5xl font-medium leading-[0.95] tracking-[-0.04em] break-words sm:text-7xl lg:text-8xl">
               Marketing for{" "}
               <span className="text-[color:var(--color-cactus-green)]">
-                håndværkere
+                lokale virksomheder
               </span>
               , uden{" "}
               <span className="italic font-light text-[color:var(--color-cactus-cream)]/60">
@@ -72,9 +72,9 @@ export default function BlogIndexPage() {
               .
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70 sm:text-xl">
-              Konkrete artikler om PPSA, AI-receptionist, Meta Ads og hvad
-              der virker for danske håndværker-firmaer. Ingen agency-jargon,
-              ingen falske statistikker, kun det jeg har lært.
+              Konkrete artikler om PPSA, Meta Ads og hvad der virker for
+              danske servicevirksomheder. Ingen agency-jargon, ingen
+              falske statistikker, kun det jeg har lært.
             </p>
           </header>
 

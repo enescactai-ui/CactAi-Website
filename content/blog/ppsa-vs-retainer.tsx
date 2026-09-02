@@ -7,7 +7,6 @@ import {
   LI,
   P,
   Prose,
-  Quote,
   Strong,
   UL,
 } from "@/components/blog/Prose";
@@ -40,10 +39,10 @@ export default function PpsaVsRetainerPost() {
       </P>
 
       <Callout title="Real talk">
-        Jeg har talt med håndværkere der har brugt 9.000 kr/md i 11 måneder
-        hos et københavnsk bureau. Resultat: 4 møder. Det er 24.750 kr per
-        møde — før annonceforbrug. Det er ikke en marketing-strategi, det
-        er en abonnementsfælde.
+        Jeg har talt med lokale servicevirksomheder der har brugt
+        9.000 kr/md i 11 måneder hos et københavnsk bureau. Resultat:
+        4 møder. Det er 24.750 kr per møde, før annonceforbrug. Det er
+        ikke en marketing-strategi, det er en abonnementsfælde.
       </Callout>
 
       <H2>Sådan virker pay-per-show (PPSA)</H2>
@@ -96,7 +95,7 @@ export default function PpsaVsRetainerPost() {
         </LI>
         <LI>
           Du sælger noget med lang sales cycle (B2B SaaS, enterprise
-          deals, ikke håndværker-jobs).
+          deals, ikke lokale serviceopgaver).
         </LI>
         <LI>
           Du har in-house marketing der skal koordineres med bureauet på
@@ -119,17 +118,12 @@ export default function PpsaVsRetainerPost() {
         </LI>
       </UL>
 
-      <Quote attribution="Ahmet, ejer af Solrød Rengøring">
-        Det første jeg tænkte var "det her er for godt til at være sandt".
-        Det andet jeg tænkte efter to uger var "okay, hvorfor gør INGEN
-        ANDRE det her?"
-      </Quote>
-
       <H2>Hvad det her betyder for dig konkret</H2>
 
       <P>
-        Hvis du er håndværker i Danmark med en gennemsnitlig job-værdi
-        over 5.000 kr og kapacitet til 5-10 ekstra møder/md, er PPSA
+        Hvis du driver en lokal servicevirksomhed i Danmark med en
+        gennemsnitlig job-værdi over 5.000 kr og kapacitet til 5-10
+        ekstra møder/md, er PPSA
         matematisk overlegen. Du betaler kun for resultater. Du kan ikke
         tabe mere end setup-fee. Vi har samme incitament som dig.
       </P>

@@ -11,8 +11,20 @@
 
 import type { ComponentType } from "react";
 import PostPpsaVsRetainer from "@/content/blog/ppsa-vs-retainer";
-import PostAiReceptionistGuide from "@/content/blog/ai-receptionist-guide";
 import PostMetaAdsHaandvaerkere from "@/content/blog/meta-ads-haandvaerkere";
+
+/*
+ *  ai-receptionist-guide.tsx findes stadig i content/blog/, men er bevidst
+ *  IKKE listet herunder. Indlægget saelger AI-receptionisten som et
+ *  virkende produkt, og den paastand er forbudt paa resten af sitet siden
+ *  aug 2026, den virker ikke, se det oeverste afsnit i CLAUDE.md. Genindsaet
+ *  den ikke uden foerst at rette selve indlaeggets indhold.
+ *
+ *  founder-lessons.tsx findes ogsaa i content/blog/, upubliceret. Den
+ *  aabner med "Jeg er 19, dansker", hvilket direkte modsiger onsket om
+ *  at holde alderen ude af sitet. Ret den foerst, hvis den nogensinde
+ *  skal publiceres.
+ */
 
 export type BlogPost = {
   slug: string;
@@ -37,22 +49,11 @@ export const POSTS: BlogPost[] = [
     Body: PostPpsaVsRetainer,
   },
   {
-    slug: "ai-receptionist-til-haandvaerkere",
+    slug: "meta-ads-lokale-virksomheder-2026",
     title:
-      "AI receptionist for danske håndværkere: Hvad det koster, hvad det kan, og hvornår det giver mening",
+      "Meta Ads for lokale servicevirksomheder i 2026: Hvad virker (og hvad spilder dine penge)",
     excerpt:
-      "Danske AI-stemmer er nu så gode at de fleste der ringer ikke opdager forskellen. Her er hvad teknologien faktisk kan, hvad det koster, og om det er en god investering for dit firma.",
-    date: "2026-05-24",
-    readMinutes: 8,
-    category: "AI",
-    Body: PostAiReceptionistGuide,
-  },
-  {
-    slug: "meta-ads-haandvaerkere-2026",
-    title:
-      "Meta Ads for håndværkere i 2026: Hvad virker (og hvad spilder dine penge)",
-    excerpt:
-      "Facebook og Instagram er stadig de billigste kanaler til at få håndværker-leads i Danmark. Men kun hvis du rammer rigtigt. Her er de 5 ting der virker, og de 5 der er rene penge ud af vinduet.",
+      "Facebook og Instagram er stadig blandt de billigste kanaler til at få leads for lokale servicevirksomheder i Danmark. Men kun hvis du rammer rigtigt. Her er de 5 ting der virker, og de 5 der er rene penge ud af vinduet.",
     date: "2026-05-20",
     readMinutes: 9,
     category: "Marketing",

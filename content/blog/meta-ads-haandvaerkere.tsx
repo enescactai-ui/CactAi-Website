@@ -17,20 +17,20 @@ export default function MetaAdsHaandvaerkerePost() {
     <Prose>
       <Lead>
         Meta Ads (Facebook + Instagram) er stadig den billigste kanal til at
-        få håndværker-leads i Danmark. Men kun hvis du ved hvad du laver.
+        få leads for lokale servicevirksomheder i Danmark. Men kun hvis du ved hvad du laver.
         Her er præcis hvad der virker — og hvad der koster dig penge uden
         afkast.
       </Lead>
 
-      <H2>Hvorfor Meta stadig virker for håndværkere i 2026</H2>
+      <H2>Hvorfor Meta stadig virker for lokale servicevirksomheder i 2026</H2>
 
       <P>
         Mens TikTok og YouTube Shorts tager forbrugersegmenter, er Meta
         stadig dominerende for én ting: <Strong>lokal targeting med
           household-data</Strong>. Facebook ved hvor du bor, hvor gammelt dit
         hus er (via offentlige BBR-data integrationen), om du har børn,
-        din indkomst-bracket. Det er guld for håndværkere der vil ramme
-        boligejere i specifikke områder.
+        din indkomst-bracket. Det er guld for lokale servicevirksomheder
+        der vil ramme boligejere i specifikke områder.
       </P>
 
       <P>
@@ -95,7 +95,7 @@ export default function MetaAdsHaandvaerkerePost() {
         kampagner gennem Meta Business Manager.
       </P>
 
-      <H3>2. "Awareness"-objective for håndværker-services</H3>
+      <H3>2. "Awareness"-objective for lokale services</H3>
 
       <P>
         Facebook har 11 forskellige kampagne-objectives. "Awareness" er
@@ -104,7 +104,7 @@ export default function MetaAdsHaandvaerkerePost() {
         Punktum. "Awareness" er penge i havet for service-virksomheder.
       </P>
 
-      <H3>3. Stock-billeder af smilende håndværkere</H3>
+      <H3>3. Stock-billeder af smilende medarbejdere</H3>
 
       <P>
         Algoritmen kan SE at det er stock. Reach falder, CTR styrtdykker.
