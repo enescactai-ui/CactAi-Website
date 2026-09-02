@@ -4,11 +4,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Vilkår og betingelser",
   description:
-    "CactAi's salgs- og leveringsbetingelser for PPSA-services til danske servicevirksomheder. B2B-aftale med 14-dages garanti.",
+    "CactAi's salgs- og leveringsbetingelser for danske servicevirksomheder. B2B-aftale med fast månedspris, ingen binding og resultatgaranti.",
 };
 
-const LAST_UPDATED = "22. maj 2026";
-const VERSION = "2.0";
+const LAST_UPDATED = "2. september 2026";
+const VERSION = "3.0";
 
 type Section = {
   n: string;
@@ -31,7 +31,7 @@ const SECTIONS: Section[] = [
     n: "02",
     title: "Tjenesten",
     body: [
-      "CactAi leverer pay-per-show appointment lead-generation (PPSA) via betalt annoncering på Meta og Google. Tjenesten består typisk af:",
+      "CactAi leverer lead-generering og opfølgning via betalt annoncering på Google og Meta, afregnet som fast månedligt honorar. Tjenesten består typisk af:",
     ],
     list: [
       {
@@ -65,8 +65,8 @@ const SECTIONS: Section[] = [
       {
         items: [
           "Opstartsgebyr: forud, betalt før igangsætning. Beløbet fastsættes individuelt ud fra opgavens omfang og fremgår af den skriftlige aftale eller faktura.",
-          "PPSA-bookinger: faktureres bi-ugentligt bagud via Billy. Betalingsfrist netto 8 dage.",
-          "Annoncebudget: betales DIREKTE af Kunden til Meta og/eller Google. Går aldrig gennem CactAi.",
+          "Månedligt honorar: fast beløb, faktureres forud for hver påbegyndt måned. Beløbet fastsættes individuelt og fremgår af den skriftlige aftale. Betalingsfrist fremgår af fakturaen.",
+          "Annoncebudget: betales DIREKTE af Kunden til Google og/eller Meta. Går aldrig gennem CactAi og er aldrig omfattet af garantien.",
           "Morarente: 0,81% pr. påbegyndt måned (renteloven §5). Rykkergebyr 100 kr pr. rykker (rentelovens §9b).",
           "CactAi kan suspendere tjenesten ved 14 dages forsinkelse efter første rykker.",
         ],
@@ -75,18 +75,18 @@ const SECTIONS: Section[] = [
   },
   {
     n: "05",
-    title: "14-dages garanti (PPSA)",
+    title: "Resultatgaranti",
     body: [
-      "Hvis CactAi ikke leverer mindst 5 fremmødte bookinger inden for 14 kalenderdage fra første godkendte annoncestart, refunderes opstartsgebyret 100% inden 14 dage efter skriftlig anmodning.",
+      "Hvis CactAi ikke leverer mindst 5 kvalificerede henvendelser inden for den første kalendermåned fra første godkendte annoncestart, refunderes det månedlige honorar for den pågældende måned 100% inden 14 dage efter skriftlig anmodning.",
     ],
     list: [
       {
-        heading: "Definition af 'fremmødt booking'",
+        heading: "Definition af 'kvalificeret henvendelse'",
         items: [
-          "Planlagt møde hvor potentiel slutkunde bekræfter og deltager fysisk.",
-          "Slutkunde er beslutningstager i hjemmet/virksomheden.",
-          "Aftalen ligger inden for det aftalte målgruppe-segment (geografi, opgavetype, jobstørrelse).",
-          "Mødet varer minimum 15 minutter.",
+          "Henvendelsen kommer fra en potentiel slutkunde inden for det aftalte målgruppe-segment (geografi, opgavetype, jobstørrelse).",
+          "Henvendelsen indeholder reelle kontaktoplysninger (telefonnummer og/eller e-mail der kan besvares).",
+          "Slutkunden efterspørger den ydelse Kunden har aftalt at annoncere for.",
+          "Slutkunden reagerer på mindst én opfølgning fra Kunden eller CactAi.",
         ],
       },
       {
@@ -96,12 +96,12 @@ const SECTIONS: Section[] = [
           "Afviser eller aflyser bookinger uden saglig grund.",
           "Pauser, ændrer eller blokerer annoncering.",
           "Ikke leverer aftalt materiale rettidigt (billeder, tekst, brand-assets).",
-          "Ikke tilstede ved bookede møder.",
+          "Ikke følger op på modtagne henvendelser.",
         ],
       },
       {
         items: [
-          "Garantien gælder kun opstartsgebyret, ikke booking-fees eller annonceforbrug betalt til Meta/Google.",
+          "Garantien gælder kun det månedlige honorar for den første måned, ikke opstartsgebyr eller annonceforbrug betalt til Google/Meta.",
           "Anmodning om refundering skal sendes skriftligt senest 7 dage efter garantiperiodens udløb.",
         ],
       },
@@ -257,7 +257,7 @@ export default function VilkaarPage() {
         Vilkår og betingelser.
       </h1>
       <p className="mt-6 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-        Standard salgs- og leveringsbetingelser for CactAi's PPSA-services.
+        Standard salgs- og leveringsbetingelser for CactAi's ydelser.
         Individuel kontrakt vinder over disse vilkår hvor de er i konflikt.
       </p>
 

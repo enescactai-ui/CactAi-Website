@@ -59,6 +59,27 @@ export function CTA() {
                 </li>
               </ul>
 
+              {/* Garantien staar her, ikke som egen sektion. En risiko-fjerner
+                  virker i det oejeblik nogen skal forpligte sig, ikke midt paa
+                  siden. Flyttet hertil 2. sep 2026. */}
+              <div className="mt-8 rounded-2xl border border-[color:var(--color-cactus-green)]/25 bg-[color:var(--color-cactus-green)]/[0.07] p-5">
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
+                  Garanti
+                </div>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-white/80">
+                  Får du ikke mindst{" "}
+                  <span className="font-semibold text-white">
+                    5 kvalificerede henvendelser
+                  </span>{" "}
+                  i den første måned annoncerne kører, får du månedens
+                  honorar tilbage.
+                </p>
+                <p className="mt-2 text-[13px] leading-relaxed text-white/45">
+                  Ingen binding, 30 dages opsigelse. Annoncebudgettet
+                  betaler du direkte til platformen, aldrig gennem os.
+                </p>
+              </div>
+
               <div className="mt-10 border-t border-white/10 pt-6">
                 <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/40">
                   Foretrækker du telefon?

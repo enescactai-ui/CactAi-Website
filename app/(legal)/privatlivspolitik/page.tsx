@@ -73,7 +73,7 @@ const SECTIONS: Section[] = [
       {
         items: [
           "Samtykke (art. 6(1)(a)): Marketing-emails efter eksplicit opt-in, ikke-nødvendige cookies.",
-          "Aftale (art. 6(1)(b)): Klient-aftaler, fakturering, levering af PPSA-services.",
+          "Aftale (art. 6(1)(b)): Klient-aftaler, fakturering, levering af aftalte ydelser.",
           "Retlig forpligtelse (art. 6(1)(c)): Bogføringsloven (5 års opbevaring af fakturaer og regnskabsbilag).",
           "Legitim interesse (art. 6(1)(f)): B2B-outreach til erhvervsdrivende (markedsføringsloven §10 stk. 4), it-sikkerhed, fraud prevention. Vi har lavet en Legitimate Interest Assessment (LIA) som dokumentation, kan rekvireres.",
         ],

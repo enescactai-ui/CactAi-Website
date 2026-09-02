@@ -59,7 +59,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   url: "https://cactaihq.com",
   telephone: "+45 91 30 95 60",
   email: "enescactai@gmail.com",
-  priceRange: "Skræddersyet · du betaler kun for fremmødte kunder",
+  priceRange: "Skræddersyet · fast månedspris uden binding",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Krogager 44",
@@ -96,7 +96,7 @@ const LOCAL_BUSINESS_SCHEMA = {
         "Google Business Profile, anmeldelses-automation og lokal SEO.",
       ),
       offer(
-        "Resultat-garanti (pay-per-show)",
+        "Resultat-garanti (5 bookede opgaver eller pengene tilbage)",
         "Du betaler kun når en kunde rent faktisk møder op til mødet.",
       ),
     ],

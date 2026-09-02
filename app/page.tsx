@@ -2,7 +2,6 @@ import { CaseStudy } from "@/components/site/CaseStudy";
 import { CTA } from "@/components/site/CTA";
 import { FAQ } from "@/components/site/FAQ";
 import { Footer } from "@/components/site/Footer";
-import { Guarantee } from "@/components/site/Guarantee";
 import { Hero } from "@/components/site/Hero";
 import { Navbar } from "@/components/site/Navbar";
 import { Pricing } from "@/components/site/Pricing";
@@ -17,8 +16,13 @@ import { VaekstMotorV8 } from "@/components/site/VaekstMotorV8";
  *  bekraefte at det er et rigtigt firma og goere vejen til en booking kort.
  *
  *  Raekkefoelgen er: hvem er I → bevis (3D-motor + cases) → hvad koster
- *  det → hvad risikerer jeg → book. FAQ ligger EFTER CTA'en, til dem der
- *  stadig tvivler efter at have set knappen.
+ *  det → book. FAQ ligger EFTER CTA'en, til dem der stadig tvivler efter
+ *  at have set knappen.
+ *
+ *  Garantien har IKKE sin egen sektion laengere (2. sep 2026). Den ligger
+ *  inde i CTA'en, lige ved booking-widgeten, fordi en risiko-fjerner
+ *  virker i det oejeblik nogen skal forpligte sig, ikke midt paa siden.
+ *  Guarantee.tsx findes stadig i kodebasen, ubrugt.
  *
  *  VaekstMotorV8 er tilbage, bevidst, efter Enes' eget valg 1. sep 2026.
  *  Koster reelt: 1,9 MB 3D-model + hele three/R3F i bundlen. Overvej
@@ -46,7 +50,6 @@ export default function HomePage() {
         <VaekstMotorV8 />
         <CaseStudy />
         <Pricing />
-        <Guarantee />
         <CTA />
         <FAQ />
       </main>

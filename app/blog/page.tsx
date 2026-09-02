@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog & Indsigt · Marketing for danske servicevirksomheder",
   description:
-    "Artikler om PPSA, Meta Ads og lead-generation for lokale servicevirksomheder i Danmark. Skrevet af founder Enes Tokmak, ingen agency-fluff, kun konkret indsigt.",
+    "Artikler om annoncering, lead-generation og hvad der faktisk virker for lokale servicevirksomheder i Danmark. Skrevet af founder Enes Tokmak, ingen agency-fluff, kun konkret indsigt.",
 };
 
 /* Blog schema, tells Google this is a publication, lists all posts */
@@ -19,7 +19,7 @@ const BLOG_SCHEMA = {
   url: "https://cactaihq.com/blog",
   name: "CactAi Blog & Indsigt",
   description:
-    "Artikler om PPSA, Meta Ads og lead-generation for danske servicevirksomheder.",
+    "Artikler om annoncering og lead-generation for danske servicevirksomheder.",
   inLanguage: "da-DK",
   publisher: { "@id": "https://cactaihq.com/#org" },
   blogPost: POSTS.map((p) => ({
@@ -72,7 +72,7 @@ export default function BlogIndexPage() {
               .
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70 sm:text-xl">
-              Konkrete artikler om PPSA, Meta Ads og hvad der virker for
+              Konkrete artikler om annoncering, opfølgning og hvad der virker for
               danske servicevirksomheder. Ingen agency-jargon, ingen
               falske statistikker, kun det jeg har lært.
             </p>
@@ -97,7 +97,7 @@ export default function BlogIndexPage() {
                 </h2>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
                   Læsning er én ting. Sparring er noget andet. Book et 20-min
-                  strategi-møde, vi regner konkret på hvad PPSA-modellen
+                  strategi-møde, vi regner konkret på hvad systemet
                   ville betyde for dit firma.
                 </p>
               </div>

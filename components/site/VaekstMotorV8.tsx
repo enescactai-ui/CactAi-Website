@@ -24,7 +24,7 @@ const NODES: Node[] = [
   { id: "synlig", mesh: "intakeManifoldRight", title: "Synligheds-modulet", tag: "Google & SEO", body: "Google-profil og anmeldelser der får kunder til at vælge dig, når de søger.", side: "left", top: "70%" },
   { id: "svar", mesh: "crankshaftSprocket", title: "Lynsvar", tag: "Svar på 60 sek.", body: "Hvert lead får svar på under et minut, før konkurrenten når at ringe.", side: "right", top: "20%" },
   { id: "opfoelg", mesh: "camshaftSprocket", title: "Opfølgnings-drevet", tag: "Auto-opfølgning", body: "Genbooker automatisk de leads der ikke svarede første gang. Ingen tabt.", side: "right", top: "45%" },
-  { id: "resultat", mesh: "oilPanCap", title: "Resultat-garantien", tag: "PPSA", body: "Du betaler kun når en kunde møder op. Ingen fremmøde, ingen regning.", side: "right", top: "70%" },
+  { id: "resultat", mesh: "oilPanCap", title: "Resultat-garantien", tag: "Garanti", body: "Fast pris om måneden. Får du ikke 5 kvalificerede henvendelser den første måned, får du honoraret tilbage.", side: "right", top: "70%" },
 ];
 
 const ANCHORS = NODES.map((n) => ({ id: n.id, mesh: n.mesh }));

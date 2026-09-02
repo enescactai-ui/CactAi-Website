@@ -21,10 +21,9 @@ const PERSON_SCHEMA = {
   jobTitle: "Founder",
   nationality: "Danish",
   url: "https://cactaihq.com/om",
-  image: "https://cactaihq.com/enes.webp",
   worksFor: { "@id": "https://cactaihq.com/#org" },
   knowsAbout: [
-    "Pay-per-show appointment marketing",
+    "Lead generation og annoncering for lokale virksomheder",
     "Marketing for danske servicevirksomheder",
     "Lead generation for service-virksomheder",
     "Automatisk leadopfølgning og CRM"
@@ -64,7 +63,7 @@ export default function OmPage() {
             </span>
             . Jeg sælger{" "}
             <span className="text-[color:var(--color-cactus-green)]">
-              fremmøder
+              kunder
             </span>
             .
           </h1>
@@ -124,26 +123,27 @@ export default function OmPage() {
               <p>
                 Teori giver dig sproget. Marketing i 2026 lærer du ved at gøre,
                 og ved at have rigtig <em>skin in the game</em>. Det er derfor
-                CactAi virker som det virker. De fleste danske bureauer kører
-                gamle leveringsmodeller (faste retainere, vagt månedsabonnement,
-                "vi kan ikke garantere noget"). Det irriterede mig.
+                CactAi virker som det virker. De fleste danske bureauer tager
+                et fast beløb hver måned og siger samtidig "vi kan ikke
+                garantere noget". Det er den kombination der irriterede mig,
+                ikke den faste pris i sig selv.
               </p>
               <p>
                 Så jeg byggede CactAi omkring{" "}
                 <strong className="text-[color:var(--color-cactus-green)]">
-                  pay-per-show appointment
+                  en fast pris og en garanti
                 </strong>
-                , en model der ikke fandtes i Danmark da jeg startede.
-                Konceptet er enkelt: du betaler kun når en kunde faktisk møder
-                op til dit besøg. No-show? Du betaler 0 kr. Hvis jeg ikke
-                leverer 5 fremmødte på 14 dage? Du får dine setup-penge
+                . Konceptet er enkelt: du betaler et fast beløb om måneden,
+                ingen provision oveni dine egne priser, og ingen binding.
+                Får du ikke mindst 5 kvalificerede henvendelser i den
+                første måned annoncerne kører? Så får du månedens honorar
                 tilbage.
               </p>
               <p>
                 Det er ikke en revolution. Det er bare ærligt arbejde med rigtig{" "}
-                <em>skin in the game</em>. Hvis jeg ikke kan finde dig kunder,
-                tjener jeg ikke en krone, og det er nøjagtigt sådan det burde
-                være.
+                <em>skin in the game</em>. Du kender prisen på forhånd, og
+                leverer jeg ikke, betaler jeg tilbage. Det er nøjagtigt sådan
+                det burde være.
               </p>
             </div>
 

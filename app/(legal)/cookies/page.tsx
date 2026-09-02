@@ -69,7 +69,7 @@ export default function CookiesPage() {
         </div>
         <p className="mt-6 pl-10 leading-relaxed text-[color:var(--color-cactus-cream)]/75">
           Så hjælper vi DIG med at sætte Meta Pixel og Google Ads-tracking op
-          på din hjemmeside, for det er sådan PPSA-modellen virker. Men på{" "}
+          på din hjemmeside, for det er sådan systemet virker. Men på{" "}
           <em>vores</em> site? Næsten ingenting.
         </p>
       </section>

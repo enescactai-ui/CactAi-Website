@@ -159,7 +159,7 @@ export default async function BlogPostPage({ params }: Props) {
                 Vil du tale konkret om dit firma?
               </h3>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--color-cactus-cream)]/75">
-                20 min. Ingen salgs-pres. Vi regner præcis på hvad PPSA
+                20 min. Ingen salgs-pres. Vi regner præcis på hvad systemet
                 ville betyde for dig.
               </p>
               <Link

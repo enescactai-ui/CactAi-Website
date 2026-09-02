@@ -14,7 +14,7 @@ const POINTS = [
   {
     icon: ShieldCheck,
     title: "Du betaler for resultater",
-    desc: "Med vores pay-per-show model betaler du kun når en kunde rent faktisk møder op. Ingen fremmøde, ingen regning.",
+    desc: "Fast beløb om måneden. Ingen provision oveni dine egne priser, og ingen regning der svinger fra måned til måned.",
   },
   {
     icon: Unlock,
@@ -96,7 +96,7 @@ export function Pricing() {
               <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
                 <li>Alt i Hjemmeside &amp; Google</li>
                 <li>Annoncer der henter kunder ind</li>
-                <li>Du betaler kun for fremmødte møder</li>
+                <li>Fast månedspris, ingen provision</li>
                 <li>Annoncebudget betales direkte til Meta</li>
               </ul>
               <a

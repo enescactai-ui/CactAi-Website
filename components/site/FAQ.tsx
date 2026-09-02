@@ -6,12 +6,12 @@ import { useState } from "react";
 
 const FAQS = [
   {
-    q: "Hvad betyder pay-per-show?",
-    a: "Du betaler kun når en kvalificeret kunde faktisk møder op til dit besøg. Hvis de ikke dukker op, koster det dig 0 kr. Vi tjener intet på no-shows, så vi har samme incitament som dig: kun reelle, klare kunder.",
+    q: "Hvordan afregner I?",
+    a: "Fast beløb om måneden, ingen provision og ingen binding. Du ved præcis hvad det koster, uanset hvor mange opgaver der kommer ind. Annoncebudgettet betaler du direkte til Google eller Meta, det går aldrig gennem os.",
   },
   {
     q: "Hvad hvis det ikke virker?",
-    a: "Vi har 14-dages garanti. Hvis vi ikke leverer 5 fremmødte møder inden for de første 14 dage, refunderer vi setup-fee 100%. Ad-spend dækkes ikke, fordi det er din direkte betaling til Meta, ikke til os.",
+    a: "Får du ikke mindst 5 kvalificerede henvendelser i den første måned annoncerne kører, får du månedens honorar tilbage. En henvendelse tæller når den ligger inden for din aftalte målgruppe, har reel kontaktinfo og svarer på opfølgning. Annoncebudgettet dækkes ikke, fordi det er din direkte betaling til platformen, ikke til os.",
   },
   {
     q: "Hvad koster det egentlig?",
@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: "Hvor mange leads får jeg om måneden?",
-    a: "Realistisk 25–30 leads/md, hvoraf 10–14 møder fysisk op (de andre er no-shows eller kommer ikke i mål). Det varierer per branche og ad-budget, og vi regner konkret på det på vores strategi-møde.",
+    a: "Det varierer meget efter branche, område og annoncebudget, og alle der giver dig et fast tal uden at kende din forretning gætter. Vi regner konkret på det ud fra dine egne tal på strategi-mødet, og vi siger nej hvis regnestykket ikke hænger sammen.",
   },
   {
     q: "Skal jeg lære nyt software?",
