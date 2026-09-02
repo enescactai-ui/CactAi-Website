@@ -2,7 +2,6 @@ import { CaseStudy } from "@/components/site/CaseStudy";
 import { CTA } from "@/components/site/CTA";
 import { FAQ } from "@/components/site/FAQ";
 import { Footer } from "@/components/site/Footer";
-import { Founder } from "@/components/site/Founder";
 import { Guarantee } from "@/components/site/Guarantee";
 import { Hero } from "@/components/site/Hero";
 import { Navbar } from "@/components/site/Navbar";
@@ -18,12 +17,17 @@ import { VaekstMotorV8 } from "@/components/site/VaekstMotorV8";
  *  bekraefte at det er et rigtigt firma og goere vejen til en booking kort.
  *
  *  Raekkefoelgen er: hvem er I → bevis (3D-motor + cases) → hvad koster
- *  det → hvad risikerer jeg → book. FAQ og Founder ligger EFTER CTA'en,
- *  til dem der stadig tvivler efter at have set knappen.
+ *  det → hvad risikerer jeg → book. FAQ ligger EFTER CTA'en, til dem der
+ *  stadig tvivler efter at have set knappen.
  *
  *  VaekstMotorV8 er tilbage, bevidst, efter Enes' eget valg 1. sep 2026.
  *  Koster reelt: 1,9 MB 3D-model + hele three/R3F i bundlen. Overvej
  *  dynamic import med ssr:false hvis LCP bliver et problem paa mobil.
+ *
+ *  Founder er bevidst IKKE paa forsiden, efter Enes' eget valg 2. sep 2026.
+ *  "Om os" skal vaere noget folk selv klikker sig hen til, ikke noget
+ *  der praesenteres uopfordret paa forsiden. Findes stadig paa /om, linket
+ *  fra hovedmenuen.
  *
  *  Taget AF forsiden, stadig i kodebasen:
  *    Manifesto       gentager pitchet fra opkaldet.
@@ -45,7 +49,6 @@ export default function HomePage() {
         <Guarantee />
         <CTA />
         <FAQ />
-        <Founder />
       </main>
       <Footer />
     </>
