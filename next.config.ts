@@ -27,17 +27,25 @@ import type { NextConfig } from "next";
  */
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://api.leadconnectorhq.com https://beta.leadconnectorhq.com https://va.vercel-scripts.com",
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://*.leadconnectorhq.com",
-  "font-src 'self' data:",
-  "media-src 'self'",
-  "connect-src 'self' https://*.leadconnectorhq.com wss://*.leadconnectorhq.com",
-  "frame-src https://api.leadconnectorhq.com https://beta.leadconnectorhq.com",
+  // *.leadconnectorhq.com, ikke kun api og beta. Chat-widgeten henter
+  // scripts fra services. og stcdn. underdomaenerne, og med kun de to
+  // eksplicitte vaerter blev de blokeret.
+  "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://*.leadconnectorhq.com https://va.vercel-scripts.com",
+  // fonts.bunny.net: GHL's chat-widget henter Roboto derfra, baade som
+  // stylesheet og som selve skriftfilerne.
+  "style-src 'self' 'unsafe-inline' https://fonts.bunny.net https://*.leadconnectorhq.com",
+  "font-src 'self' data: https://fonts.bunny.net",
+  // assets.cdn.filesafe.space: GHL's eget billed-CDN, bruges til avatar
+  // og vedhaeftninger i chatten.
+  "img-src 'self' data: blob: https://*.leadconnectorhq.com https://assets.cdn.filesafe.space",
+  // blob: kraeves af widgeten selv. services.msgsndr.com er GHL's
+  // attributions-endpoint.
+  "connect-src 'self' blob: https://*.leadconnectorhq.com wss://*.leadconnectorhq.com https://services.msgsndr.com",
+  "frame-src https://*.leadconnectorhq.com",
   "worker-src 'self' blob:",
   "frame-ancestors 'none'",
   "base-uri 'self'",
-  "form-action 'self' https://api.leadconnectorhq.com",
+  "form-action 'self' https://*.leadconnectorhq.com",
   "object-src 'none'",
   /*
    *  "upgrade-insecure-requests" er BEVIDST ikke med her.
