@@ -65,7 +65,7 @@ export function Navbar() {
         transition={{ duration: 0.6, ease: EASE }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "border-b border-[color:var(--color-cactus-green)]/15 bg-white/85 backdrop-blur-md shadow-[0_1px_12px_-4px_rgba(42,157,111,0.12)]"
+            ? "border-b border-[color:var(--color-cactus-green)]/15 bg-white/85 backdrop-blur-md shadow-[0_1px_12px_-4px_rgba(31, 125, 88,0.12)]"
             : "bg-transparent"
         }`}
       >
@@ -99,7 +99,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="/#book"
-              className="group relative hidden items-center gap-2 overflow-hidden rounded-full bg-[color:var(--color-cactus-green)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_12px_-4px_rgba(42,157,111,0.4)] transition-all hover:scale-[1.02] hover:shadow-[0_4px_20px_-4px_rgba(42,157,111,0.5)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-cactus-green)] sm:inline-flex"
+              className="group relative hidden items-center gap-2 overflow-hidden rounded-full bg-[color:var(--color-cactus-green)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_12px_-4px_rgba(31, 125, 88,0.4)] transition-all hover:scale-[1.02] hover:shadow-[0_4px_20px_-4px_rgba(31, 125, 88,0.5)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-cactus-green)] sm:inline-flex"
             >
               <span className="relative z-10">Få din kundeanalyse</span>
               <span className="relative z-10 transition-transform group-hover:translate-x-0.5">

@@ -91,7 +91,7 @@ export default function YdelserPage() {
             {PARTS.map((p) => (
               <article
                 key={p.n}
-                className="group relative flex flex-col rounded-2xl border border-[color:var(--color-cactus-green)]/15 bg-[color:var(--color-cactus-dark)] p-7 transition-all hover:-translate-y-1 hover:border-[color:var(--color-cactus-green)]/40 hover:shadow-[0_20px_50px_-24px_rgba(42,157,111,0.4)]"
+                className="group relative flex flex-col rounded-2xl border border-[color:var(--color-cactus-green)]/15 bg-[color:var(--color-cactus-dark)] p-7 transition-all hover:-translate-y-1 hover:border-[color:var(--color-cactus-green)]/40 hover:shadow-[0_20px_50px_-24px_rgba(31,125,88,0.4)]"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-green)]">

@@ -29,7 +29,7 @@ export function Logo({
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#52b788" />
-          <stop offset="1" stopColor="#2a9d6f" />
+          <stop offset="1" stopColor="#1f7d58" />
         </linearGradient>
       </defs>
 

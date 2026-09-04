@@ -29,7 +29,11 @@
   --color-cactus-deep: #ffffff;
   --color-cactus-dark: #f0faf5;
   --color-cactus-mid: #d6f0e3;
-  --color-cactus-green: #2a9d6f;
+  /* #1f7d58, ikke #2a9d6f. Den gamle ramte kun 3,41:1 i kontrast, saa
+     hvid tekst paa groenne knapper faldt igennem WCAG AA, og det samme
+     gjorde groen tekst paa hvid. Denne er samme kuloer, bare dybere, og
+     rammer 5,08:1 begge veje. Lys den ikke op igen uden at regne efter. */
+  --color-cactus-green: #1f7d58;
   --color-cactus-lime: #52b788;
   --color-cactus-cream: #0d1f16;
   --color-cactus-surface: #ffffff;
@@ -50,7 +54,7 @@
   --card-foreground: #0d1f16;
   --popover: #ffffff;
   --popover-foreground: #0d1f16;
-  --primary: #2a9d6f;
+  --primary: #1f7d58;
   --primary-foreground: #ffffff;
   --secondary: #d6f0e3;
   --secondary-foreground: #0d1f16;
@@ -59,9 +63,9 @@
   --accent: #52b788;
   --accent-foreground: #0d1f16;
   --destructive: #ef4444;
-  --border: rgba(42, 157, 111, 0.15);
-  --input: rgba(42, 157, 111, 0.12);
-  --ring: #2a9d6f;
+  --border: rgba(31, 125, 88, 0.15);
+  --input: rgba(31, 125, 88, 0.12);
+  --ring: #1f7d58;
   --radius: 0.875rem;
 }
 
@@ -76,9 +80,9 @@
        no section feels "different colored" from another. Soft blobs are
        larger and lower-opacity to eliminate harsh banding. */
     background-image:
-      radial-gradient(ellipse 70% 50% at 20% 8%, rgba(42, 157, 111, 0.08), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 20% 8%, rgba(31, 125, 88, 0.08), transparent 60%),
       radial-gradient(ellipse 60% 40% at 80% 25%, rgba(82, 183, 136, 0.05), transparent 65%),
-      radial-gradient(ellipse 80% 60% at 50% 70%, rgba(42, 157, 111, 0.04), transparent 70%),
+      radial-gradient(ellipse 80% 60% at 50% 70%, rgba(31, 125, 88, 0.04), transparent 70%),
       radial-gradient(ellipse 70% 50% at 30% 95%, rgba(82, 183, 136, 0.04), transparent 65%);
     background-attachment: fixed;
   }
@@ -115,7 +119,7 @@
     }
   }
   ::selection {
-    background-color: rgba(42, 157, 111, 0.25);
+    background-color: rgba(31, 125, 88, 0.25);
     color: #0d1f16;
   }
 }
@@ -141,8 +145,8 @@
   }
   .glow-green {
     box-shadow:
-      0 0 0 1px rgba(42, 157, 111, 0.2),
-      0 8px 40px -8px rgba(42, 157, 111, 0.25),
+      0 0 0 1px rgba(31, 125, 88, 0.2),
+      0 8px 40px -8px rgba(31, 125, 88, 0.25),
       inset 0 1px 0 rgba(255, 255, 255, 0.8);
   }
 

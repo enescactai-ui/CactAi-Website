@@ -47,7 +47,7 @@ export function Hero() {
         className="absolute inset-x-0 top-0 h-[98vh] min-h-[780px] opacity-[0.04]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(42,157,111,1) 1px, transparent 1px), linear-gradient(90deg, rgba(42,157,111,1) 1px, transparent 1px)",
+            "linear-gradient(rgba(31, 125, 88,1) 1px, transparent 1px), linear-gradient(90deg, rgba(31, 125, 88,1) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
