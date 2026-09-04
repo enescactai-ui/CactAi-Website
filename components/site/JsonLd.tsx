@@ -80,14 +80,19 @@ const BUSINESS_SCHEMA = {
    *  vaerre end ingen, fordi det peger Googles entitetsmatch et forkert sted
    *  hen.
    *
-   *  MANGLER, og kan kun leveres af Enes:
-   *    - Google Business Profile: aabn din virksomhed i Google Maps, tryk
-   *      Del, og kopier linket. Det ser ud som maps.app.goo.gl/xxx eller
-   *      g.co/kgs/xxx. Et soegeresultat-link duer ikke.
-   *    - Facebook-siden: den fulde URL til SIDEN, altsaa
-   *      facebook.com/<sidenavn>, ikke facebook.com.
+   *  Alle tre er verificeret 4. sep 2026: de svarer og peger paa den
+   *  rigtige profil. Tilfoej aldrig et link her uden at aabne det foerst.
+   *
+   *  Google-linket er den korte delelink Google selv genererer. Skulle
+   *  maps.app.goo.gl en dag holde op med at virke, er den fulde adresse:
+   *  https://www.google.com/maps/place/CactAI/
+   *  med sted-id 0x8d795eafb5443a49:0x80fcdf0be7903989
    */
-  sameAs: ["https://www.linkedin.com/in/cactai/"],
+  sameAs: [
+    "https://maps.app.goo.gl/FXGm8x6bCit68Q2v9",
+    "https://www.linkedin.com/in/cactai/",
+    "https://www.facebook.com/CactAi123",
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Krogager 44",
