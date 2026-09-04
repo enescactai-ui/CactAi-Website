@@ -1,7 +1,9 @@
 import { Breadcrumb } from "@/components/site/Breadcrumb";
+import { BRANCHER } from "@/lib/brancher";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { pageMeta } from "@/lib/seo";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -151,6 +153,45 @@ export default function YdelserPage() {
                     {s.v}
                   </span>
                 </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Branchesider.
+              De skal linkes herfra, ellers er de foraeldreloese og bliver
+              hverken crawlet ordentligt eller fundet af en besoegende. */}
+          <section className="mt-20 lg:mt-28">
+            <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-balance sm:text-4xl">
+              Hvad betyder det i din branche?
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
+              Systemet er det samme. Det der ændrer sig er hvem vi går efter,
+              hvad der er penge i, og hvor hurtigt der skal svares. Vælg dit
+              fag, så er teksten skrevet til dig.
+            </p>
+            <div className="mt-9 grid gap-4 sm:grid-cols-2">
+              {BRANCHER.map((b) => (
+                <Link
+                  key={b.slug}
+                  href={`/flere-kunder/${b.slug}`}
+                  className="group flex items-center justify-between gap-4 rounded-2xl border border-[color:var(--color-cactus-green)]/20 bg-white p-6 transition-all hover:border-[color:var(--color-cactus-green)] hover:shadow-[0_12px_36px_-16px_rgba(31,125,88,0.35)]"
+                >
+                  <span>
+                    <span className="block font-display text-lg font-semibold tracking-tight">
+                      {b.h1.fremhaevet.charAt(0).toUpperCase() +
+                        b.h1.fremhaevet.slice(1)}
+                    </span>
+                    <span className="mt-1 block text-[14px] text-[color:var(--color-cactus-cream)]/65">
+                      {b.metaTitle}
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden
+                    className="shrink-0 text-[color:var(--color-cactus-green)] transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </Link>
               ))}
             </div>
           </section>

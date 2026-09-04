@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { POSTS } from "@/lib/blog-posts";
+import { BRANCHER } from "@/lib/brancher";
 import { LIVE_CASES } from "@/lib/cases";
 import { SITE } from "@/lib/seo";
 
@@ -46,11 +47,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // Branchesiderne er de eneste sider der kan rangere for det folk faktisk
+  // soeger paa. Hoej prioritet, de er ikke pynt.
+  const branchePages: MetadataRoute.Sitemap = BRANCHER.map((b) => ({
+    url: `${SITE}/flere-kunder/${b.slug}`,
+    lastModified: new Date("2026-09-04"),
+    priority: 0.9,
+  }));
+
   const blogPosts: MetadataRoute.Sitemap = POSTS.map((post) => ({
     url: `${SITE}/blog/${post.slug}`,
     lastModified: new Date(post.date),
     priority: 0.7,
   }));
 
-  return [...staticPages, ...casePages, ...blogPosts];
+  return [...staticPages, ...branchePages, ...casePages, ...blogPosts];
 }
