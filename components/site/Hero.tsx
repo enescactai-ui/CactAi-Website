@@ -78,12 +78,12 @@ export function Hero() {
               initial="hidden"
               animate="show"
               variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
-              className="font-display tracking-[-0.035em] leading-[1.04]"
+              className="font-display tracking-[-0.035em] leading-[1.12]"
             >
-              <Line className="block text-5xl font-extrabold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-7xl xl:text-8xl">
+              <Line className="block text-[2.75rem] font-extrabold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-7xl">
                 Bliv den de ringer til
               </Line>
-              <Line className="mt-1 block text-5xl font-extrabold sm:text-6xl lg:text-7xl xl:text-8xl">
+              <Line className="mt-1 block text-[2.75rem] font-extrabold sm:text-6xl lg:text-7xl">
                 <em className="relative not-italic font-light text-[color:var(--color-cactus-green)]">
                   først
                   <AnimatedUnderline />

@@ -51,9 +51,9 @@ export function CTA() {
               </div>
 
               <h2 className="mt-6 font-display text-4xl font-medium leading-[0.95] tracking-[-0.03em] text-balance text-white sm:text-5xl lg:text-6xl">
-                Se hvad der er at hente{" "}
+                Se hvad der er at hente i{" "}
                 <span className="text-[color:var(--color-cactus-green)]">
-                  i dit område.
+                  dit område.
                 </span>
               </h2>
 

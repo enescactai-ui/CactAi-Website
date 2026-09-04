@@ -1,5 +1,6 @@
 "use client";
 
+import { MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
 /**
@@ -85,9 +86,16 @@ export function ChatBot() {
 
   if (allowed) return null; // GHL tegner nu sin egen boble
 
+  /*
+   *  Kompakt paa mobil, med vilje. Som bred pille daekkede den indhold i
+   *  hver eneste sektion paa en 390px skaerm. En chat-knap skal vaere en
+   *  lille cirkel paa telefon og maa foerst blive en pille naar der er
+   *  plads. aria-label baerer teksten for skaermlaesere i begge tilstande.
+   */
   return (
     <button
       type="button"
+      aria-label="Åbn chat og skriv til os"
       onClick={() => {
         try {
           window.localStorage.setItem(CONSENT_KEY, "yes");
@@ -96,9 +104,12 @@ export function ChatBot() {
         }
         setAllowed(true);
       }}
-      className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-[color:var(--color-cactus-green)] px-5 py-3.5 font-mono text-[11px] uppercase tracking-[0.16em] text-white shadow-[0_8px_30px_-8px_rgba(82,183,136,0.7)] transition-transform hover:scale-[1.04] active:scale-[0.98]"
+      className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center gap-2 rounded-full bg-[color:var(--color-cactus-green)] text-white shadow-[0_8px_30px_-8px_rgba(82,183,136,0.7)] transition-transform hover:scale-[1.04] active:scale-[0.98] sm:h-auto sm:w-auto sm:px-5 sm:py-3.5"
     >
-      Skriv til os
+      <MessageCircle className="h-6 w-6 sm:h-4 sm:w-4" aria-hidden />
+      <span className="hidden font-mono text-[11px] uppercase tracking-[0.16em] sm:inline">
+        Skriv til os
+      </span>
     </button>
   );
 }

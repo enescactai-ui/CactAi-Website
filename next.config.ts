@@ -39,7 +39,18 @@ const csp = [
   "base-uri 'self'",
   "form-action 'self' https://api.leadconnectorhq.com",
   "object-src 'none'",
-  "upgrade-insecure-requests",
+  /*
+   *  "upgrade-insecure-requests" er BEVIDST ikke med her.
+   *
+   *  Browsere ignorerer det direktiv i en Report-Only-politik og skriver en
+   *  fejl i konsollen om det. Det er stoej man kommer til at jagte.
+   *  HSTS-headeren nedenfor tvinger alligevel HTTPS paa det rigtige domaene,
+   *  saa der er intet tabt.
+   *
+   *  NAAR du omdoeber noeglen til "Content-Security-Policy" (altsaa slaar
+   *  haandhaevelse til efter verifikation paa preview), saa saet linjen
+   *  "upgrade-insecure-requests" tilbage her.
+   */
 ].join("; ");
 
 const nextConfig: NextConfig = {
