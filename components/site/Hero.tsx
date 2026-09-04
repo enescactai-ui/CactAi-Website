@@ -25,33 +25,51 @@ export function Hero() {
   return (
     <section id="top" className="relative isolate overflow-hidden">
 
-      {/* ── Hero background: full mint-green card like Brainly.AI ── */}
-      <div
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-[98vh] min-h-[780px]"
-        style={{
-          background: "linear-gradient(145deg, #e8f8ef 0%, #d0f0e2 40%, #c2ead8 70%, #b8e8d2 100%)",
-        }}
-      />
+      {/*
+        Baggrunden foelger indholdets hoejde, den gaetter den ikke.
 
-      {/* ── Living, video-like animated background (WebGL flowing green light) ── */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[98vh] min-h-[780px] overflow-hidden"
-      >
-        <HeroBackground />
-      </div>
+        Foer havde alle tre lag "h-[98vh] min-h-[780px]", altsaa en fast
+        hoejde uafhaengig af hvad der stod ovenpaa. Paa en 390px skaerm blev
+        indholdet hoejere end de 780px, og saa faldt tillidsraekken
+        ("Fast maanedspris, Ingen provision, Ingen binding") ud over kanten
+        og ned paa den hvide baggrund. Der var en synlig vandret soem lige
+        under knapperne.
 
-      {/* Subtle grid overlay */}
-      <div
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-[98vh] min-h-[780px] opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(31, 125, 88,1) 1px, transparent 1px), linear-gradient(90deg, rgba(31, 125, 88,1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
+        Nu ligger lagene i en wrapper med inset-0, saa de er praecis lige
+        saa hoeje som indholdet, uanset skaerm og uanset hvor meget tekst
+        der staar. Paa desktop holder min-h stadig den fulde foelelse.
+
+        Roer ikke inset-0 tilbage til en fast hoejde. Saa er fejlen tilbage,
+        bare ved en anden skaermstoerrelse.
+      */}
+      <div className="relative lg:min-h-[92vh]">
+        {/* ── Hero background: full mint-green card like Brainly.AI ── */}
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(145deg, #e8f8ef 0%, #d0f0e2 40%, #c2ead8 70%, #b8e8d2 100%)",
+          }}
+        />
+
+        {/* ── Living, video-like animated background (WebGL flowing green light) ── */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+        >
+          <HeroBackground />
+        </div>
+
+        {/* Subtle grid overlay */}
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(31, 125, 88,1) 1px, transparent 1px), linear-gradient(90deg, rgba(31, 125, 88,1) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
 
       {/* ── Content ── */}
       <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-0 lg:px-12 lg:pt-36">
@@ -82,7 +100,7 @@ export function Hero() {
               className="font-display tracking-[-0.035em] leading-[1.12]"
             >
               <Line className="block text-[2.75rem] font-extrabold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-7xl">
-                Bliv den de ringer til
+                Bliv den de ringer til{" "}
               </Line>
               <Line className="mt-1 block text-[2.75rem] font-extrabold sm:text-6xl lg:text-7xl">
                 <em className="relative not-italic font-light text-[color:var(--color-cactus-green)]">
@@ -193,8 +211,19 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── Stats strip — white, sits cleanly below hero ── */}
+      </div>
+
+      {/* ── Stats strip ──
+          Fire store tal paa en side der bevidst IKKE har et bevis-afsnit
+          laeses som resultater, hvis man ikke rammer dem ind. Overskriften
+          herunder goer det tydeligt at det er loefter man kan holde mig op
+          paa, ikke maalinger fra kunder. Fjern den ikke. */}
       <div className="relative border-t border-[color:var(--color-cactus-green)]/15 bg-white">
+        <div className="mx-auto max-w-7xl px-6 pt-10 lg:px-12">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-cream)]/65">
+            Det her kan du holde mig op på
+          </p>
+        </div>
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[color:var(--color-cactus-green)]/10 lg:grid-cols-4 lg:divide-y-0">
           {[
             { metric: "24/7", note: "også aften og weekend" },

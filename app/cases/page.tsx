@@ -2,7 +2,7 @@ import { Breadcrumb } from "@/components/site/Breadcrumb";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { LIVE_CASES, UPCOMING_CASES } from "@/lib/cases";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE } from "@/lib/seo";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,8 +52,8 @@ export default function CasesPage() {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://www.cactaihq.com" },
-          { name: "Cases", url: "https://www.cactaihq.com/cases" },
+          { name: "Hjem", url: SITE },
+          { name: "Cases", url: `${SITE}/cases` },
         ]}
       />
       <main id="main" className="flex-1">

@@ -39,7 +39,7 @@ export function FounderPhoto({ size = "default" }: { size?: "default" | "large" 
           Enes Tokmak
         </div>
         <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
-          Founder · Greve
+          Stifter · Greve
         </div>
       </div>
     );

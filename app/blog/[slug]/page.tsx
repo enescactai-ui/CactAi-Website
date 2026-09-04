@@ -9,7 +9,7 @@ import {
 } from "@/lib/blog-posts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE } from "@/lib/seo";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -57,14 +57,14 @@ export default async function BlogPostPage({ params }: Props) {
     dateModified: post.date,
     inLanguage: "da-DK",
     url: `https://www.cactaihq.com/blog/${post.slug}`,
-    image: "https://www.cactaihq.com/opengraph-image",
+    image: `${SITE}/opengraph-image`,
     author: {
       "@type": "Person",
-      "@id": "https://www.cactaihq.com/om#person",
+      "@id": `${SITE}/om#person`,
       name: "Enes Tokmak",
-      url: "https://www.cactaihq.com/om",
+      url: `${SITE}/om`,
     },
-    publisher: { "@id": "https://www.cactaihq.com/#org" },
+    publisher: { "@id": `${SITE}/#org` },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://www.cactaihq.com/blog/${post.slug}`,
@@ -78,8 +78,8 @@ export default async function BlogPostPage({ params }: Props) {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://www.cactaihq.com" },
-          { name: "Blog & Indsigt", url: "https://www.cactaihq.com/blog" },
+          { name: "Hjem", url: SITE },
+          { name: "Blog & Indsigt", url: `${SITE}/blog` },
           { name: post.title, url: `https://www.cactaihq.com/blog/${post.slug}` },
         ]}
       />

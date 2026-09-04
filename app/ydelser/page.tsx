@@ -2,7 +2,7 @@ import { Breadcrumb } from "@/components/site/Breadcrumb";
 import { BRANCHER } from "@/lib/brancher";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE } from "@/lib/seo";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -65,8 +65,8 @@ export default function YdelserPage() {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://www.cactaihq.com" },
-          { name: "Vækstmotoren", url: "https://www.cactaihq.com/ydelser" },
+          { name: "Hjem", url: SITE },
+          { name: "Vækstmotoren", url: `${SITE}/ydelser` },
         ]}
       />
       <main id="main" className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
@@ -105,9 +105,9 @@ export default function YdelserPage() {
                     {p.n}
                   </span>
                 </div>
-                <h2 className="mt-4 font-display text-xl font-bold leading-snug text-[color:var(--color-cactus-cream)]">
+                <h3 className="mt-4 font-display text-xl font-bold leading-snug text-[color:var(--color-cactus-cream)]">
                   {p.title}
-                </h2>
+                </h3>
                 <p className="mt-3 text-sm leading-relaxed text-[color:var(--color-cactus-cream)]/60">
                   {p.body}
                 </p>

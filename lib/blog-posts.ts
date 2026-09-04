@@ -56,7 +56,7 @@ export const POSTS: BlogPost[] = [
     title:
       "Fast pris er ikke problemet. Bindingen er.",
     excerpt:
-      "Næsten ingen ejere er sure over hvad bureauet kostede. De er sure over at de ikke kunne komme ud. Her er hvorfor jeg tager fast betaling og alligevel lader dig gå med 30 dages varsel.",
+      "Næsten ingen ejere er sure over hvad bureauet kostede. De er sure over at de ikke kunne komme ud. Derfor kan du gå med 30 dages varsel.",
     date: "2026-09-03",
     readMinutes: 7,
     category: "Strategi",

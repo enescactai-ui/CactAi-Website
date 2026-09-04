@@ -1,11 +1,9 @@
 import { Breadcrumb } from "@/components/site/Breadcrumb";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  ...pageMeta("/cookies", "Cookie-politik", "Hvilke cookies CactAi bruger (spoiler: næsten ingen)."),
-  title: "Cookie-politik",
-  description: "Hvilke cookies CactAi bruger (spoiler: næsten ingen).",
+  ...pageMeta("/cookies", "Cookie-politik", "Hvilke cookies cactaihq.com bruger, og hvorfor der næsten ingen er. Ingen tracking på tværs af sites, ingen remarketing, ingen banner du skal klikke væk."),
 };
 
 export default function CookiesPage() {
@@ -13,8 +11,8 @@ export default function CookiesPage() {
     <article>
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://www.cactaihq.com" },
-          { name: "Cookie-politik", url: "https://www.cactaihq.com/cookies" },
+          { name: "Hjem", url: SITE },
+          { name: "Cookie-politik", url: `${SITE}/cookies` },
         ]}
       />
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
@@ -65,7 +63,7 @@ export default function CookiesPage() {
         </div>
         <ul className="mt-6 space-y-3 pl-10 text-[color:var(--color-cactus-cream)]/75">
           <li>→ Vi tracker dig ikke på tværs af sites</li>
-          <li>→ Vi sælger ikke dine data til Facebook/Google</li>
+          <li>→ Vi sælger ikke dine data videre til nogen</li>
           <li>→ Vi har ikke en cookie-banner du skal klikke væk. Det du selv åbner, indlæses først når du åbner det</li>
           <li>→ Vi bruger ikke remarketing-pixels på dig</li>
         </ul>
@@ -81,7 +79,7 @@ export default function CookiesPage() {
           </h2>
         </div>
         <p className="mt-6 pl-10 leading-relaxed text-[color:var(--color-cactus-cream)]/75">
-          Så hjælper vi DIG med at sætte Meta Pixel og Google Ads-tracking op
+          Så hjælper vi DIG med at få målingen på plads
           på din hjemmeside, for det er sådan systemet virker. Men på{" "}
           <em>vores</em> site? Næsten ingenting.
         </p>

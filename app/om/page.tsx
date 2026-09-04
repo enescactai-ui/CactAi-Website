@@ -2,28 +2,25 @@ import { Breadcrumb } from "@/components/site/Breadcrumb";
 import { Footer } from "@/components/site/Footer";
 import { FounderPhoto } from "@/components/site/FounderPhoto";
 import { Navbar } from "@/components/site/Navbar";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  ...pageMeta("/om", "Om CactAi · Enes Tokmak, founder", "Mød Enes Tokmak, manden bag CactAi. Læs hvorfor vi arbejder som vi gør, og hvad det betyder for danske servicevirksomheder der vil have flere kunder uden risiko."),
-  title: "Om CactAi · Enes Tokmak, founder",
-  description:
-    "Mød Enes Tokmak, manden bag CactAi. Læs hvorfor vi arbejder som vi gør, og hvad det betyder for danske servicevirksomheder der vil have flere kunder uden risiko.",
+  ...pageMeta("/om", "Enes Tokmak, stifter", "Mød Enes Tokmak, manden bag CactAi. Hvorfor jeg arbejder som jeg gør, og hvad det betyder for dig der driver en lokal servicevirksomhed."),
 };
 
 /* Person schema, gives Google explicit founder data (knowledge panel candidate) */
 const PERSON_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://www.cactaihq.com/om#person",
+  "@id": `${SITE}/om#person`,
   name: "Enes Tokmak",
   givenName: "Enes",
   familyName: "Tokmak",
   jobTitle: "Founder",
   nationality: "Danish",
-  url: "https://www.cactaihq.com/om",
-  worksFor: { "@id": "https://www.cactaihq.com/#org" },
+  url: `${SITE}/om`,
+  worksFor: { "@id": `${SITE}/#org` },
   knowsAbout: [
     "Kundeanskaffelse for lokale servicevirksomheder",
     "Marketing for danske servicevirksomheder",
@@ -43,8 +40,8 @@ export default function OmPage() {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://www.cactaihq.com" },
-          { name: "Om CactAi", url: "https://www.cactaihq.com/om" },
+          { name: "Hjem", url: SITE },
+          { name: "Om CactAi", url: `${SITE}/om` },
         ]}
       />
       <script
@@ -106,7 +103,7 @@ export default function OmPage() {
               </blockquote>
               <div className="flex items-center gap-3 border-t border-[color:var(--color-cactus-green)]/15 pt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
                 <span className="h-[2px] w-8 bg-[color:var(--color-cactus-green)]" />
-                <span>Enes Tokmak · Founder</span>
+                <span>Enes Tokmak · Stifter</span>
               </div>
             </div>
           </div>
@@ -209,7 +206,7 @@ export default function OmPage() {
               </p>
               <figcaption className="mt-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
                 <span className="h-[2px] w-8 bg-[color:var(--color-cactus-green)]" />
-                <span>Enes Tokmak · Founder</span>
+                <span>Enes Tokmak · Stifter</span>
               </figcaption>
             </blockquote>
           </figure>
@@ -224,8 +221,8 @@ export default function OmPage() {
             </h2>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/75">
               <p>
-                Hvis du har drevet servicevirksomhed i 10+ år har du
-                sikkert aldrig brugt penge på marketing. Mund-til-mund har
+                Har du drevet servicevirksomhed i ti år eller mere, har du
+                sikkert aldrig brugt penge på markedsføring. Mund-til-mund har
                 været nok. Men det er begrænset til folk der allerede kender
                 dig, og dine konkurrenter har nu hver eneste lokal-søgning på
                 Google.

@@ -55,6 +55,14 @@ const FAQS = [
     a: "Der er ingen. Du kan opsige med 30 dages varsel, fra første dag. Vi bygger forretningen på at du bliver fordi det virker, ikke fordi du er låst inde i en kontrakt.",
   },
   {
+    q: "Arbejder du med mine konkurrenter i mit område?",
+    a: "Nej. Jeg tager kun ét firma per branche i det samme område. Kører jeg allerede for en tagmand i Køge, siger jeg nej til den næste der ringer derfra. Det er ikke gavmildhed, det er logik: sætter jeg to af jer op mod hinanden, byder jeg jeres priser ned og gør begge dele dårligere.",
+  },
+  {
+    q: "Hvad hvis du bliver syg eller får for travlt?",
+    a: "Det er et rimeligt spørgsmål, for jeg er én mand. Systemet kører videre af sig selv, også hvis jeg ligger med feber. Annoncerne stopper ikke, svarene sendes stadig automatisk, og henvendelserne lander stadig på din telefon. Det jeg laver manuelt er justeringen en gang om måneden, og den kan vente en uge uden at det koster dig noget. Bliver jeg for travl til at tage flere kunder, siger jeg nej til de nye i stedet for at forsømme dem jeg har.",
+  },
+  {
     q: "Skal jeg lære nyt software?",
     a: "Nej. Du får hver ny henvendelse direkte på SMS, og bookede aftaler lander i din almindelige kalender, Google eller Outlook. Du arbejder præcis som du plejer.",
   },

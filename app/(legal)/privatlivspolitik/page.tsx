@@ -1,5 +1,5 @@
 import { Breadcrumb } from "@/components/site/Breadcrumb";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -208,8 +208,8 @@ export default function PrivatlivspolitikPage() {
     <article>
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://www.cactaihq.com" },
-          { name: "Privatlivspolitik", url: "https://www.cactaihq.com/privatlivspolitik" },
+          { name: "Hjem", url: SITE },
+          { name: "Privatlivspolitik", url: `${SITE}/privatlivspolitik` },
         ]}
       />
       <div className="flex items-baseline justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">

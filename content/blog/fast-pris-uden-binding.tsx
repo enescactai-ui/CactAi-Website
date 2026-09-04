@@ -49,7 +49,7 @@ export default function FastPrisUdenBindingPost() {
         Det er to helt forskellige jobs.
       </P>
 
-      <Callout title="Real talk">
+      <Callout title="Et konkret eksempel">
         Jeg har talt med en lokal servicevirksomhed der brugte 9.000 kr om
         måneden i elleve måneder hos et københavnsk bureau. Resultatet var
         fire møder. Det er 24.750 kr per møde, før annonceforbrug. Det er

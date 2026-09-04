@@ -3,27 +3,24 @@ import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { POSTS, formatPostDate, type BlogPost } from "@/lib/blog-posts";
 import Link from "next/link";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  ...pageMeta("/blog", "Indsigt til danske servicevirksomheder", "Konkrete artikler om hvordan lokale danske servicevirksomheder får flere opgaver. Skrevet af Enes Tokmak. Ingen jargon, kun det jeg selv har lært."),
-  title: "Blog & Indsigt · Marketing for danske servicevirksomheder",
-  description:
-    "Konkrete artikler om hvordan lokale danske servicevirksomheder får flere opgaver. Skrevet af Enes Tokmak. Ingen jargon, kun det jeg selv har lært.",
+  ...pageMeta("/blog", "Indsigt til servicevirksomheder", "Konkrete artikler om hvordan lokale danske servicevirksomheder får flere opgaver. Skrevet af Enes Tokmak. Ingen jargon, kun det jeg selv har lært."),
 };
 
 /* Blog schema, tells Google this is a publication, lists all posts */
 const BLOG_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "@id": "https://www.cactaihq.com/blog#blog",
-  url: "https://www.cactaihq.com/blog",
+  "@id": `${SITE}/blog#blog`,
+  url: `${SITE}/blog`,
   name: "CactAi Blog & Indsigt",
   description:
     "Artikler om hvordan lokale danske servicevirksomheder får flere opgaver.",
   inLanguage: "da-DK",
-  publisher: { "@id": "https://www.cactaihq.com/#org" },
+  publisher: { "@id": `${SITE}/#org` },
   blogPost: POSTS.map((p) => ({
     "@type": "BlogPosting",
     "@id": `https://www.cactaihq.com/blog/${p.slug}#post`,
@@ -31,7 +28,7 @@ const BLOG_SCHEMA = {
     description: p.excerpt,
     datePublished: p.date,
     url: `https://www.cactaihq.com/blog/${p.slug}`,
-    author: { "@id": "https://www.cactaihq.com/om#person" },
+    author: { "@id": `${SITE}/om#person` },
   })),
 };
 
@@ -44,8 +41,8 @@ export default function BlogIndexPage() {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://www.cactaihq.com" },
-          { name: "Blog & Indsigt", url: "https://www.cactaihq.com/blog" },
+          { name: "Hjem", url: SITE },
+          { name: "Blog & Indsigt", url: `${SITE}/blog` },
         ]}
       />
       <script
