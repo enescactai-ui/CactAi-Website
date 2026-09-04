@@ -20,10 +20,15 @@ import type { NextConfig } from "next";
  *  Skrifttyper hostes af os selv. next/font henter dem ved build og lægger
  *  dem i /_next/static/media, saa der er INGEN fonts.googleapis.com.
  *
- *  Koerer som Report-Only indtil den er verificeret paa en preview-deploy.
- *  GHL's chat-widget kalder videre til backends der ikke kan udledes af
- *  kildekoden. Tjek browserkonsollen paa preview, og omdoeb foerst derefter
- *  noeglen til "Content-Security-Policy".
+ *  HAANDHAEVES nu, efter verifikation paa den levende side 4. sep 2026 med
+ *  chat-widgeten aabnet. Foerste runde i Report-Only fangede 53
+ *  overtraedelser, som er rettet i listen herunder. Anden runde gav nul.
+ *
+ *  AENDRER DU EN INTEGRATION, saa saet noeglen tilbage til
+ *  "Content-Security-Policy-Report-Only" foerst, deploy, aabn siden og
+ *  chatten, og tjek konsollen. En manglende kilde braekker tingene LYDLOEST
+ *  under haandhaevelse. Der kommer ingen tydelig fejl, funktionen holder
+ *  bare op med at virke.
  */
 const csp = [
   "default-src 'self'",
@@ -47,18 +52,7 @@ const csp = [
   "base-uri 'self'",
   "form-action 'self' https://*.leadconnectorhq.com",
   "object-src 'none'",
-  /*
-   *  "upgrade-insecure-requests" er BEVIDST ikke med her.
-   *
-   *  Browsere ignorerer det direktiv i en Report-Only-politik og skriver en
-   *  fejl i konsollen om det. Det er stoej man kommer til at jagte.
-   *  HSTS-headeren nedenfor tvinger alligevel HTTPS paa det rigtige domaene,
-   *  saa der er intet tabt.
-   *
-   *  NAAR du omdoeber noeglen til "Content-Security-Policy" (altsaa slaar
-   *  haandhaevelse til efter verifikation paa preview), saa saet linjen
-   *  "upgrade-insecure-requests" tilbage her.
-   */
+  "upgrade-insecure-requests",
 ].join("; ");
 
 const nextConfig: NextConfig = {
@@ -117,7 +111,7 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         headers: [
-          { key: "Content-Security-Policy-Report-Only", value: csp },
+          { key: "Content-Security-Policy", value: csp },
           {
             key: "Strict-Transport-Security",
             value: "max-age=63072000; includeSubDomains; preload",
