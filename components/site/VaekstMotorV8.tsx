@@ -21,10 +21,10 @@ type Node = {
 const NODES: Node[] = [
   { id: "lead", mesh: "throttleBody", title: "Kunde-indtaget", tag: "Lokal efterspørgsel", body: "Henter folk i dit område der leder efter det du laver, netop nu. Motorens brændstof.", side: "left", top: "20%" },
   { id: "reception", mesh: "cylinderHeadCoverRight", title: "Notifikationen", tag: "Med det samme", body: "Du får navn, opgave og nummer på SMS i samme sekund, den lander. Ingen bliver liggende.", side: "left", top: "45%" },
-  { id: "synlig", mesh: "intakeManifoldRight", title: "Synligheds-modulet", tag: "Bliv fundet først", body: "Så du er dem der dukker op, når nogen i dit område søger efter din ydelse.", side: "left", top: "70%" },
+  { id: "synlig", mesh: "intakeManifoldRight", title: "Synligheds-modulet", tag: "Bliv fundet først", body: "Så det er dig der dukker op, når nogen i dit område søger efter din ydelse.", side: "left", top: "70%" },
   { id: "svar", mesh: "crankshaftSprocket", title: "Lynsvar", tag: "Svar på 60 sek.", body: "Hver ny henvendelse får svar på under et minut, før konkurrenten når at ringe.", side: "right", top: "20%" },
   { id: "opfoelg", mesh: "camshaftSprocket", title: "Opfølgnings-drevet", tag: "Auto-opfølgning", body: "Vender automatisk tilbage til dem der ikke svarede første gang. Ingen tabt.", side: "right", top: "45%" },
-  { id: "resultat", mesh: "oilPanCap", title: "Regnskabet", tag: "Fast pris", body: "Fast beløb om måneden, ingen provision. Du kan opsige med 30 dages varsel, hvis det ikke virker for dig.", side: "right", top: "70%" },
+  { id: "resultat", mesh: "oilPanCap", title: "Prisen", tag: "Fast pris", body: "Fast beløb om måneden, ingen provision. Du kan opsige med 30 dages varsel, hvis det ikke virker for dig.", side: "right", top: "70%" },
 ];
 
 const ANCHORS = NODES.map((n) => ({ id: n.id, mesh: n.mesh }));
@@ -355,6 +355,45 @@ export function VaekstMotorV8() {
             </p>
           </div>
         </motion.div>
+
+        {/*
+          De seks dele som RIGTIG tekst paa siden. Tilfoejet 4. sep 2026.
+
+          Foer laa de KUN inde i WebGL-overlayet, som mounts via createPortal
+          efter et klik. Det havde to konsekvenser, og begge var alvorlige:
+
+          1. Googlebot saa 35 ord i den sektion menuen kalder "Saadan virker
+             det". Ingen af de seks dele optraadte i den byggede HTML,
+             samtidig med at vores JSON-LD lovede seks ydelser. Altsaa
+             strukturerede data der paastod noget siden ikke sagde.
+
+          2. En laeser paa mobil fik en sort boks og en opfordring til at
+             trykke. Han staar paa en trappeopgang paa 4G mellem to opgaver.
+             Han trykker ikke paa en sort boks for at finde ud af hvad han
+             skal koebe.
+
+          3D-motoren er stadig god, men den skal vaere beloenningen for at
+          laese, ikke beholderen for argumentet. Samme NODES-array bruges
+          begge steder, saa listen og overlayet kan aldrig komme ud af trit.
+        */}
+        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {NODES.map((n) => (
+            <li
+              key={n.id}
+              className="rounded-2xl border border-[color:var(--color-cactus-green)]/15 bg-white p-6 shadow-[0_4px_24px_-8px_rgba(13,31,22,0.08)]"
+            >
+              <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-green)]">
+                {n.tag}
+              </div>
+              <h3 className="mt-3 font-display text-lg font-semibold tracking-tight text-[color:var(--color-cactus-cream)]">
+                {n.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-[color:var(--color-cactus-cream)]/65">
+                {n.body}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {mounted && createPortal(overlay, document.body)}

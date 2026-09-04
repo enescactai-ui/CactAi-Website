@@ -9,7 +9,7 @@ export default function LegalLayout({
   return (
     <>
       <Navbar />
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main id="main" className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-3xl px-6 lg:px-12">{children}</div>
       </main>
       <Footer />

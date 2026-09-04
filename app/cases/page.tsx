@@ -1,11 +1,14 @@
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { LIVE_CASES, UPCOMING_CASES } from "@/lib/cases";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  ...pageMeta("/cases", "Cases · Udvalgt arbejde", "Gennemgåede forløb fra problem til resultat. Hvad der blev bygget, hvad det gjorde, og hvad der stadig er i gang."),
   title: "Cases · Udvalgt arbejde",
   description:
     "Gennemgåede forløb: hjemmeside, Google-tilstedeværelse, annoncer og automatisk opfølgning for danske virksomheder."
@@ -47,7 +50,13 @@ export default function CasesPage() {
   return (
     <>
       <Navbar />
-      <main className="flex-1">
+      <Breadcrumb
+        items={[
+          { name: "Hjem", url: "https://cactaihq.com" },
+          { name: "Cases", url: "https://cactaihq.com/cases" },
+        ]}
+      />
+      <main id="main" className="flex-1">
         {/* Hero */}
         <section className="relative border-b border-[color:var(--color-cactus-green)]/12 py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">

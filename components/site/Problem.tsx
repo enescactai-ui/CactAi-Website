@@ -27,12 +27,12 @@ const PROBLEMS = [
   {
     n: "02",
     title: "Dem der ringer, når du ikke at svare.",
-    body: "Folk ringer til tre firmaer og vælger den der svarer først. Står du på en opgave, taber du dem, uden nogensinde at vide at de var der.",
+    body: "Folk ringer til tre firmaer og vælger den der svarer først. Står du på en opgave, mister du dem, uden overhovedet at opdage at de ringede.",
   },
   {
     n: "03",
     title: "Du er selv sælgeren.",
-    body: "Salget står stille når du er ude at arbejde, og arbejdet står stille når du sælger. Det er loftet der gør at firmaet ikke vokser, uanset hvor dygtig du er.",
+    body: "Salget står stille når du er ude at arbejde, og arbejdet står stille når du sælger. Det er loftet. Og det flytter sig ikke, uanset hvor dygtig du er.",
   },
 ];
 

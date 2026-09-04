@@ -1,7 +1,9 @@
 import { Breadcrumb } from "@/components/site/Breadcrumb";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  ...pageMeta("/cookies", "Cookie-politik", "Hvilke cookies CactAi bruger (spoiler: næsten ingen)."),
   title: "Cookie-politik",
   description: "Hvilke cookies CactAi bruger (spoiler: næsten ingen).",
 };
@@ -36,8 +38,10 @@ export default function CookiesPage() {
         </div>
         <p className="mt-6 pl-10 leading-relaxed text-[color:var(--color-cactus-cream)]/75">
           cactaihq.com bruger Vercel Analytics og Vercel Speed Insights. De
-          måler page views, performance og errors, uden cookies, uden
-          fingerprinting, uden at identificere dig personligt.
+          måler page views, performance, fejl, og hvor mange der klikker på
+          en knap eller gennemfører en booking. Det sker uden cookies, uden
+          fingerprinting og uden at identificere dig personligt. Vi tæller
+          altså hvor mange, ikke hvem.
         </p>
         <p className="mt-4 pl-10 leading-relaxed text-[color:var(--color-cactus-cream)]/75">
           Derudover bruger vi to værktøjer fra GoHighLevel (LeadConnector,

@@ -1,20 +1,23 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+/**
+ * Branded 404 page, replaces Next.js's default minimal "404 This page
+ * could not be found" with something that matches CactAi's design system
+ * and offers escape routes.
+ */
 export const metadata: Metadata = {
   title: "Siden findes ikke",
   description:
-    "Den side du leder efter findes ikke. Måske har du fulgt et gammelt link, eller siden er flyttet.",
+    "Den side du leder efter findes ikke. Måske har du fulgt et gammelt link, eller også er siden flyttet.",
+  // Uden denne arves "index, follow" fra rod-layoutet, og siden fik dermed
+  // to modstridende robots-tags. En 404 skal aldrig indekseres.
+  robots: { index: false, follow: true },
 };
 
-/**
- * Branded 404 page — replaces Next.js's default minimal "404 This page
- * could not be found" with something that matches CactAi's design system
- * and offers escape routes (homepage, services, contact).
- */
 export default function NotFound() {
   return (
-    <main className="flex min-h-screen items-center justify-center px-6 py-24">
+    <main id="main" className="flex min-h-screen items-center justify-center px-6 py-24">
       <div className="mx-auto max-w-2xl text-center">
         <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-cactus-green)]">
           404 // Side ikke fundet
@@ -30,7 +33,7 @@ export default function NotFound() {
 
         <p className="mt-8 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
           Du har enten klikket på et gammelt link, eller skrevet adressen
-          forkert. Ingen drama, her er hvor du kan komme i stedet:
+          forkert. Intet drama, her er hvor du kan komme i stedet:
         </p>
 
         <div className="mt-12 grid gap-3 sm:grid-cols-2">
@@ -68,7 +71,7 @@ export default function NotFound() {
 
 const LINKS = [
   { href: "/", label: "Hjem", title: "Forsiden" },
-  { href: "/ydelser", label: "Services", title: "Hvad vi laver" },
-  { href: "/blog", label: "Blog", title: "Indsigt & artikler" },
+  { href: "/ydelser", label: "Vækstmotoren", title: "Hvad du får" },
+  { href: "/blog", label: "Blog", title: "Artikler" },
   { href: "/#book", label: "Book", title: "20-min lokal kundeanalyse" },
 ];

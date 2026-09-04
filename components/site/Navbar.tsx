@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { trackConversion } from "@/lib/tracking";
 import { Logo } from "./Logo";
 
 const NAV_LINKS = [
@@ -99,6 +100,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="/#book"
+              onClick={() => trackConversion("cta_klik", { sted: "navbar" })}
               className="group relative hidden items-center gap-2 overflow-hidden rounded-full bg-[color:var(--color-cactus-green)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_12px_-4px_rgba(31, 125, 88,0.4)] transition-all hover:scale-[1.02] hover:shadow-[0_4px_20px_-4px_rgba(31, 125, 88,0.5)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-cactus-green)] sm:inline-flex"
             >
               <span className="relative z-10">Få din kundeanalyse</span>

@@ -1,6 +1,8 @@
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { LIVE_CASES, getCase } from "@/lib/cases";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,9 +20,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const c = getCase(slug);
   if (!c) return { title: "Case ikke fundet" };
+  const title = c.status === "eget" ? c.title : `${c.client}, ${c.region} · Case`;
   return {
-    title: `${c.client}, ${c.region} · Case`,
+    title,
     description: c.teaser,
+    ...pageMeta(`/cases/${c.slug}`, title, c.teaser),
   };
 }
 
@@ -33,9 +37,12 @@ function Block({
 }) {
   return (
     <div>
-      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
+      {/* h2, ikke div. Foer havde "Udfordringen", "Hvad jeg gjorde" og
+          "Leveret" ingen overskrift overhovedet, saa siden havde ingen
+          disposition mellem h1 og "Naeste case". */}
+      <h2 className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
         {label}
-      </div>
+      </h2>
       <ul className="mt-4 space-y-2.5">
         {items.map((t) => (
           <li
@@ -66,7 +73,14 @@ export default async function CasePage({
   return (
     <>
       <Navbar />
-      <main className="flex-1">
+      <Breadcrumb
+        items={[
+          { name: "Hjem", url: "https://cactaihq.com" },
+          { name: "Cases", url: "https://cactaihq.com/cases" },
+          { name: c.title, url: `https://cactaihq.com/cases/${c.slug}` },
+        ]}
+      />
+      <main id="main" className="flex-1">
         {/* Hero */}
         <section className="border-b border-[color:var(--color-cactus-green)]/12 py-16 lg:py-24">
           <div className="mx-auto max-w-4xl px-6 lg:px-12">

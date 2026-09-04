@@ -35,7 +35,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-[#f0faf5]/55">
-              Din vækstpartner. Mist aldrig en kunde igen.
+              Vækstpartner for lokale danske servicevirksomheder. Fast pris, ingen binding.
             </p>
             <p className="mt-2 text-xs text-[#f0faf5]/40">
               Vækstpartner for danske servicevirksomheder.

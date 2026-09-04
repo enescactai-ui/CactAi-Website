@@ -108,7 +108,7 @@ export const CASES: CaseStudy[] = [
     ],
     delivered: [
       "Hjemmeside i Next.js med lokal SEO og struktureret data",
-      "Offentlige priser, bookingflow koblet til CRM",
+      "Bookingflow koblet direkte til CRM",
       "Interaktiv 3D-model der forklarer systemet",
     ],
     metrics: [
@@ -120,7 +120,7 @@ export const CASES: CaseStudy[] = [
       "Dette er mit eget projekt og ikke et kundeforløb. Det står her, fordi det er den hurtigste måde at se, hvordan jeg arbejder, uden at skulle tage en anden virksomheds ord for det.",
     images: [
       { src: "/portfolio/case-c-cactai.jpg", alt: "Forsiden af cactaihq.com" },
-      { src: "/portfolio/case-c-priser.jpg", alt: "Ydelsessiden med priser" },
+      { src: "/portfolio/case-c-priser.jpg", alt: "Ydelsessiden, hvor systemet er skilt ad i seks dele" },
     ],
     liveUrl: "https://cactaihq.com",
   },

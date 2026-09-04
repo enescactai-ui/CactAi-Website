@@ -6,6 +6,22 @@ import { Navbar } from "@/components/site/Navbar";
 import { Pricing } from "@/components/site/Pricing";
 import { Problem } from "@/components/site/Problem";
 import { VaekstMotorV8 } from "@/components/site/VaekstMotorV8";
+import { pageMeta } from "@/lib/seo";
+import type { Metadata } from "next";
+
+/*
+ *  Forsiden arver titel og beskrivelse fra rod-layoutet, men den skal have
+ *  sin EGEN canonical. Uden den findes der ingen <link rel="canonical"> paa
+ *  sitet overhovedet, og saa afgoer Google selv hvilken adresse der er den
+ *  rigtige. Det er et problem her, fordi apex og www begge svarer.
+ */
+export const metadata: Metadata = {
+  ...pageMeta(
+    "/",
+    "Bliv den de ringer til først i dit område · CactAi",
+    "Vi henter opgaverne ind i dit område, svarer på hver eneste inden for et minut, og lægger dem direkte i din kalender. Fast månedspris, ingen binding.",
+  ),
+};
 
 /*
  *  Forsiden er en lead-capture-side, ikke en broche.
@@ -54,7 +70,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         <Hero />
         <Problem />
         <VaekstMotorV8 />

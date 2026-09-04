@@ -14,25 +14,63 @@
  * execution required, no client bundle weight.
  */
 
-const ORG_SCHEMA = {
+/*
+ *  ÉN virksomhedsenhed, ikke to. Slaaet sammen 4. sep 2026.
+ *
+ *  Foer laa der et Organization-objekt (#org) og et
+ *  ProfessionalService-objekt (#localbusiness) side om side, med samme
+ *  navn, samme telefon og samme adresse, men uden nogen relation mellem
+ *  sig. Google skulle selv gaette om det var én eller to virksomheder.
+ *  Et objekt med begge @type loeser det uden at miste noget.
+ *
+ *  Tre andre fejl er rettet samtidig:
+ *
+ *  - `logo` pegede paa /opengraph-image, som er et 1200x630 reklamebanner
+ *    der siger "Fyld kalenderen med opgaver". Det er ikke et logo.
+ *  - `founder` var et Person-objekt UDEN @id, altsaa en anden node end
+ *    den paa /om#person. /om pegede tilbage med worksFor, men grafen
+ *    lukkede kun i den ene retning. Nu peger begge veje.
+ *  - `priceRange` indeholdt en saetning. Feltet forventer et
+ *    pengeinterval eller "$$"-notation, og prosa gav en ugyldig vaerdi i
+ *    Rich Results Test. "$$" siger intet tal, saa reglen om at der ikke
+ *    staar priser paa sitet er stadig overholdt.
+ *
+ *  areaServed sagde "Denmark". Vi daekker Sjaelland fra en adresse i
+ *  Greve, og en landsdaekkende paastand er baade mindre brugbar og mindre
+ *  troværdig end sandheden.
+ *
+ *  MANGLER STADIG, og det kraever Enes: `sameAs` med links til Google
+ *  Business Profile, LinkedIn og Facebook. Det er den eneste forbindelse
+ *  mellem sitet og en GBP-visning, og uden den skal Google matche paa
+ *  adressetekst alene. Et forkert eller tomt sameAs er dog vaerre end
+ *  ingen, saa der skal staa profiler der faktisk findes.
+ */
+const BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
   "@id": "https://cactaihq.com/#org",
   name: "CactAi",
   legalName: "CactAi v/Enes Tokmak",
   url: "https://cactaihq.com",
-  logo: "https://cactaihq.com/opengraph-image",
+  logo: {
+    "@type": "ImageObject",
+    "@id": "https://cactaihq.com/#logo",
+    url: "https://cactaihq.com/apple-icon.png",
+    width: 180,
+    height: 180,
+    caption: "CactAi",
+  },
+  image: { "@id": "https://cactaihq.com/#logo" },
   email: "enescactai@gmail.com",
   telephone: "+45 91 30 95 60",
   taxID: "DK46210689",
   vatID: "DK46210689",
-  founder: {
-    "@type": "Person",
-    name: "Enes Tokmak",
-    jobTitle: "Founder",
-    nationality: "Danish",
-  },
-  foundingDate: "2026-01",
+  founder: { "@id": "https://cactaihq.com/om#person" },
+  foundingDate: "2026-01-01",
+  priceRange: "$$",
+  currenciesAccepted: "DKK",
+  paymentAccepted: "Bankoverførsel, betalingskort",
+  knowsLanguage: ["da", "en"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Krogager 44",
@@ -48,29 +86,26 @@ const ORG_SCHEMA = {
     areaServed: "DK",
     availableLanguage: ["Danish", "English"],
   },
-} as const;
-
-const LOCAL_BUSINESS_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://cactaihq.com/#localbusiness",
-  name: "CactAi",
-  image: "https://cactaihq.com/opengraph-image",
-  url: "https://cactaihq.com",
-  telephone: "+45 91 30 95 60",
-  email: "enescactai@gmail.com",
-  priceRange: "Skræddersyet · fast månedspris uden binding",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Krogager 44",
-    addressLocality: "Greve",
-    postalCode: "2670",
-    addressCountry: "DK",
-  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "16:00",
+      closes: "20:00",
+    },
+  ],
   description:
     "Vækstpartner for lokale danske servicevirksomheder. Vi henter opgaverne ind i dit område, svarer på hver eneste inden for et minut, og lægger dem i din kalender, så ingen kunde går tabt.",
-  areaServed: { "@type": "Country", name: "Denmark" },
-  serviceType: "Vækst, marketing & kundeanskaffelse",
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Region Hovedstaden" },
+    { "@type": "AdministrativeArea", name: "Region Sjælland" },
+    { "@type": "City", name: "København" },
+    { "@type": "City", name: "Greve" },
+    { "@type": "City", name: "Roskilde" },
+    { "@type": "City", name: "Køge" },
+    { "@type": "City", name: "Solrød" },
+  ],
+  serviceType: "Kundeanskaffelse for lokale servicevirksomheder",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Vækstmotoren",
@@ -84,7 +119,7 @@ const LOCAL_BUSINESS_SCHEMA = {
         "Hver ny henvendelse får svar på under et minut, døgnet rundt.",
       ),
       offer(
-        "Hjemmeside der får folk til at ringe",
+        "Bliv den de finder først lokalt",
         "Bygget til mobil og til at blive fundet lokalt, ikke til at se pæn ud.",
       ),
       offer(
@@ -126,11 +161,7 @@ export function JsonLd() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: ld(ORG_SCHEMA) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: ld(LOCAL_BUSINESS_SCHEMA) }}
+        dangerouslySetInnerHTML={{ __html: ld(BUSINESS_SCHEMA) }}
       />
       <script
         type="application/ld+json"

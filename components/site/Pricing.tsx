@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Layers, ShieldCheck, Unlock } from "lucide-react";
+import { trackConversion } from "@/lib/tracking";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -19,7 +20,7 @@ const POINTS = [
   {
     icon: Unlock,
     title: "Ingen binding",
-    desc: "Fast, gennemsigtig drift uden lange kontrakter. Du bliver fordi det virker, ikke fordi du er låst inde.",
+    desc: "Ingen lange kontrakter. Du kan gå med 30 dages varsel, fra dag ét.",
   },
 ];
 
@@ -47,65 +48,57 @@ export function Pricing() {
             En hjemmeside der skal stå klar til fredag, og opgaver der skal
             hentes ind måned efter måned, kan ikke koste det samme. Book en
             kort snak, og du får et konkret tilbud til din forretning, ikke et
-            tal fra en prisliste der passer på ingen.
+            tal fra en prisliste der ikke passer på nogen.
           </p>
 
-          <div className="mt-14 grid gap-5 text-left sm:grid-cols-2">
-            {/* Indgangstilbud */}
+          {/*
+            ÉT kort, ikke to. Rettet 4. sep 2026.
+            
+            Foer stod her to kort side om side, og det fremhaevede med
+            "De fleste starter her" solgte en HJEMMESIDE. Hele siden
+            ovenfor bygger oensket om Vaekstmotoren, og saa blev laeseren
+            i selve forpligtelses-oejeblikket fortalt at det han lige var
+            solgt paa, var opsalget. Argumentet og tilbuddet pegede hver
+            sin vej praecis der hvor de skulle pege samme vej.
+            
+            Hjemmeside-produktet findes stadig, men det hoerer til som et
+            svar i FAQ'en for dem der ikke er klar til det hele, ikke som
+            det fremhaevede kort.
+          */}
+          <div className="mx-auto mt-14 max-w-xl text-left">
             <div className="rounded-2xl border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)]/[0.07] p-8">
               <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
-                De fleste starter her
+                Det du har læst om ovenfor
               </div>
               <h3 className="mt-4 font-display text-2xl font-bold tracking-tight">
-                Hjemmeside &amp; Synlighed
+                Vækstmotoren
               </h3>
               <div className="mt-4 font-display text-4xl font-bold tracking-tight text-[color:var(--color-cactus-green)]">
-                Uden opstart
+                Fast pr. måned
               </div>
               <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/65">
-                Ingen opstart · ingen binding
+                Ingen binding · 30 dages opsigelse fra dag ét
               </div>
               <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
-                <li>Hjemmeside bygget, hostet og vedligeholdt</li>
-                <li>Google-profil sat op og optimeret</li>
-                <li>Automatisk svar på hver ny opgave</li>
-                <li>Du ejer alt, også hvis du stopper</li>
+                <li>Opgaver hentet ind i dit område</li>
+                <li>Svar på hver ny opgave på under et minut</li>
+                <li>Navn, opgave og nummer på din telefon med det samme</li>
+                <li>Hjemmeside og lokal synlighed, hvor det er en del af aftalen</li>
+                <li>Du ejer hjemmeside, konti og data, også hvis du stopper</li>
               </ul>
               <a
                 href="/#book"
+                onClick={() => trackConversion("cta_klik", { sted: "pris" })}
                 className="mt-7 block rounded-full bg-[color:var(--color-cactus-green)] px-6 py-3.5 text-center font-display text-sm font-semibold text-white transition-all hover:brightness-110"
               >
                 Få din kundeanalyse
               </a>
             </div>
 
-            {/* Upsell */}
-            <div className="rounded-2xl border border-[color:var(--color-cactus-green)]/20 bg-white/50 p-8">
-              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
-                Når du vil vokse aktivt
-              </div>
-              <h3 className="mt-4 font-display text-2xl font-bold tracking-tight">
-                Vækstmotoren
-              </h3>
-              <div className="mt-4 font-display text-4xl font-bold tracking-tight">
-                Fast pr. måned
-              </div>
-              <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/65">
-                Pris aftales på mødet, efter omfang
-              </div>
-              <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
-                <li>Alt i Hjemmeside &amp; Synlighed</li>
-                <li>Opgaver hentet aktivt ind i dit område</li>
-                <li>Fast månedspris, ingen provision</li>
-                <li>Annoncebudget betales direkte til platformen</li>
-              </ul>
-              <a
-                href="/#book"
-                className="mt-7 block rounded-full border border-[color:var(--color-cactus-green)]/40 px-6 py-3.5 text-center font-display text-sm font-semibold text-[color:var(--color-cactus-cream)] transition-all hover:bg-[color:var(--color-cactus-green)]/10"
-              >
-                Hør om Vækstmotoren
-              </a>
-            </div>
+            <p className="mt-5 text-center text-[14px] leading-relaxed text-[color:var(--color-cactus-cream)]/65">
+              Er du ikke klar til det hele endnu, kan vi starte med
+              hjemmeside og lokal synlighed alene. Det tager vi på mødet.
+            </p>
           </div>
         </motion.div>
 
@@ -154,7 +147,7 @@ export function Pricing() {
               <li>Du har et lokalt servicefirma med 1 til 15 ansatte.</li>
               <li>Du har kunder i forvejen, men de kommer tilfældigt.</li>
               <li>Du har plads til flere opgaver i kalenderen.</li>
-              <li>Du er klar til at lægge et budget i annoncerne oveni honoraret.</li>
+              <li>Du er klar til at lægge et mediebudget oveni honoraret. Det betaler du selv, direkte.</li>
             </ul>
           </div>
 

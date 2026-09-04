@@ -33,7 +33,7 @@ export default function RouteError({
   }, [error]);
 
   return (
-    <main className="flex min-h-screen items-center justify-center px-6 py-24">
+    <main id="main" className="flex min-h-screen items-center justify-center px-6 py-24">
       <div className="mx-auto max-w-2xl text-center">
         <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-cactus-green)]">
           Fejl // Noget gik galt

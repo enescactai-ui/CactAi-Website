@@ -3,12 +3,14 @@ import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { POSTS, formatPostDate, type BlogPost } from "@/lib/blog-posts";
 import Link from "next/link";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  ...pageMeta("/blog", "Indsigt til danske servicevirksomheder", "Konkrete artikler om hvordan lokale danske servicevirksomheder får flere opgaver. Skrevet af Enes Tokmak. Ingen jargon, kun det jeg selv har lært."),
   title: "Blog & Indsigt · Marketing for danske servicevirksomheder",
   description:
-    "Artikler om annoncering, lead-generation og hvad der faktisk virker for lokale servicevirksomheder i Danmark. Skrevet af founder Enes Tokmak, ingen agency-fluff, kun konkret indsigt.",
+    "Konkrete artikler om hvordan lokale danske servicevirksomheder får flere opgaver. Skrevet af Enes Tokmak. Ingen jargon, kun det jeg selv har lært.",
 };
 
 /* Blog schema, tells Google this is a publication, lists all posts */
@@ -19,7 +21,7 @@ const BLOG_SCHEMA = {
   url: "https://cactaihq.com/blog",
   name: "CactAi Blog & Indsigt",
   description:
-    "Artikler om annoncering og lead-generation for danske servicevirksomheder.",
+    "Artikler om hvordan lokale danske servicevirksomheder får flere opgaver.",
   inLanguage: "da-DK",
   publisher: { "@id": "https://cactaihq.com/#org" },
   blogPost: POSTS.map((p) => ({
@@ -29,7 +31,7 @@ const BLOG_SCHEMA = {
     description: p.excerpt,
     datePublished: p.date,
     url: `https://cactaihq.com/blog/${p.slug}`,
-    author: { "@type": "Person", name: "Enes Tokmak" },
+    author: { "@id": "https://cactaihq.com/om#person" },
   })),
 };
 
@@ -53,7 +55,7 @@ export default function BlogIndexPage() {
         }}
       />
 
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main id="main" className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           {/* Hero */}
           <header className="max-w-4xl">
@@ -61,20 +63,20 @@ export default function BlogIndexPage() {
               Blog & Indsigt // 2026
             </div>
             <h1 className="mt-6 font-display text-5xl font-medium leading-[0.95] tracking-[-0.04em] break-words sm:text-7xl lg:text-8xl">
-              Marketing for{" "}
+              Sådan får lokale firmaer{" "}
               <span className="text-[color:var(--color-cactus-green)]">
-                lokale virksomheder
+                flere opgaver
               </span>
-              , uden{" "}
+              . Uden{" "}
               <span className="italic font-light text-[color:var(--color-cactus-cream)]/60">
-                fluff
+                fyld
               </span>
               .
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70 sm:text-xl">
-              Konkrete artikler om annoncering, opfølgning og hvad der virker for
-              danske servicevirksomheder. Ingen agency-jargon, ingen
-              falske statistikker, kun det jeg har lært.
+              Konkrete artikler om hvad der virker for danske
+              servicevirksomheder, og hvad der ikke gør. Ingen jargon, ingen
+              tal jeg ikke kan stå inde for, kun det jeg selv har lært.
             </p>
           </header>
 

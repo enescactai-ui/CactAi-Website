@@ -92,8 +92,7 @@ export function CTA() {
                   Virker det ikke for dig, siger du op, og så er det slut.
                 </p>
                 <p className="mt-2 text-[13px] leading-relaxed text-white/45">
-                  Annoncebudgettet betaler du direkte til platformen, aldrig
-                  gennem os. Du ejer selv konti, data og hjemmeside, også
+                  Mediebudgettet betaler du direkte, aldrig gennem os. Du ejer selv konti, data og hjemmeside, også
                   hvis du stopper.
                 </p>
               </div>

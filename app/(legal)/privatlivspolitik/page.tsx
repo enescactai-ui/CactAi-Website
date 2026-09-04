@@ -1,7 +1,9 @@
 import { Breadcrumb } from "@/components/site/Breadcrumb";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  ...pageMeta("/privatlivspolitik", "Privatlivspolitik", "Sådan behandler CactAi personoplysninger. GDPR-kompatibel privatlivspolitik for prospekter, klienter og besøgende på cactaihq.com."),
   title: "Privatlivspolitik",
   description:
     "Sådan behandler CactAi personoplysninger. GDPR-kompatibel privatlivspolitik for prospekter, klienter og besøgende på cactaihq.com.",
@@ -61,7 +63,7 @@ const SECTIONS: Section[] = [
         items: [
           "Slutkundens navn, telefonnummer, email",
           "Opgavebeskrivelse, ønsket tidspunkt, adresse",
-          "Disse oplysninger tilhører klienten, vi opbevarer dem maksimalt 30 dage efter levering (medmindre garantiperioden kræver længere)",
+          "Disse oplysninger tilhører klienten, vi opbevarer dem maksimalt 30 dage efter levering",
         ],
       },
     ],
@@ -90,7 +92,7 @@ const SECTIONS: Section[] = [
           "Opt-outs: opbevares permanent på vores suppression-list, så vi ikke ved et uheld kontakter dig igen.",
           "Aktive klienter: aftalens løbetid + 3 år til efterfølgende reklamationer.",
           "Fakturaer og regnskabsbilag: 5 år (bogføringsloven).",
-          "Lead-data leveret til klient: slettes fra vores systemer inden 30 dage efter levering, undtaget garantiperioder hvor dokumentation kræves.",
+          "Lead-data leveret til klient: slettes fra vores systemer inden 30 dage efter levering.",
           "Vercel Analytics: aggregeret, anonym, opbevares hos Vercel iht. deres politik.",
         ],
       },

@@ -2,9 +2,11 @@ import { Breadcrumb } from "@/components/site/Breadcrumb";
 import { Footer } from "@/components/site/Footer";
 import { FounderPhoto } from "@/components/site/FounderPhoto";
 import { Navbar } from "@/components/site/Navbar";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  ...pageMeta("/om", "Om CactAi · Enes Tokmak, founder", "Mød Enes Tokmak, manden bag CactAi. Læs hvorfor vi arbejder som vi gør, og hvad det betyder for danske servicevirksomheder der vil have flere kunder uden risiko."),
   title: "Om CactAi · Enes Tokmak, founder",
   description:
     "Mød Enes Tokmak, manden bag CactAi. Læs hvorfor vi arbejder som vi gør, og hvad det betyder for danske servicevirksomheder der vil have flere kunder uden risiko.",
@@ -23,10 +25,10 @@ const PERSON_SCHEMA = {
   url: "https://cactaihq.com/om",
   worksFor: { "@id": "https://cactaihq.com/#org" },
   knowsAbout: [
-    "Lead generation og annoncering for lokale virksomheder",
+    "Kundeanskaffelse for lokale servicevirksomheder",
     "Marketing for danske servicevirksomheder",
-    "Lead generation for service-virksomheder",
-    "Automatisk leadopfølgning og CRM"
+    "Lokal synlighed for danske servicevirksomheder",
+    "Automatisk opfølgning på nye kundehenvendelser"
   ],
   address: {
     "@type": "PostalAddress",
@@ -51,19 +53,19 @@ export default function OmPage() {
           __html: JSON.stringify(PERSON_SCHEMA).replace(/</g, "\\u003c"),
         }}
       />
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main id="main" className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <article className="mx-auto max-w-4xl px-6 lg:px-12">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
             Om // 2026
           </div>
           <h1 className="mt-6 font-display text-6xl font-medium leading-[0.92] tracking-[-0.04em] sm:text-7xl lg:text-8xl">
-            Jeg sælger ikke{" "}
+            Jeg lover ikke{" "}
             <span className="italic font-light text-[color:var(--color-cactus-cream)]/60">
-              løfter
+              tal
             </span>
-            . Jeg sælger{" "}
+            . Jeg bygger det der henter{" "}
             <span className="text-[color:var(--color-cactus-green)]">
-              kunder
+              opgaverne ind
             </span>
             .
           </h1>
@@ -122,7 +124,7 @@ export default function OmPage() {
               </p>
               <p>
                 Teori giver dig sproget. Marketing i 2026 lærer du ved at gøre,
-                og ved at have rigtig <em>skin in the game</em>. Det er derfor
+                og ved at have rigtige penge på spil. Det er derfor
                 CactAi virker som det virker. De fleste danske bureauer tager
                 et fast beløb hver måned og binder dig i tolv. Det er
                 bindingen der irriterede mig. Er prisen fast, skal døren
@@ -151,7 +153,7 @@ export default function OmPage() {
               <div className="lg:sticky lg:top-32 rounded-sm border border-[color:var(--color-cactus-green)]/20 bg-[color:var(--color-cactus-dark)]/60 p-7">
                 <div className="flex items-center justify-between gap-3">
                   <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
-                    CactAi // Snapshot
+                    CactAi // Kort fortalt
                   </div>
                   <div className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-cactus-green)] shadow-[0_0_12px_var(--color-cactus-green)]" />
                 </div>
@@ -160,7 +162,7 @@ export default function OmPage() {
                   <Fact label="Lokation" value="Greve, Sjælland" />
                   <Fact label="CVR" value="46210689" />
                   <Fact label="Struktur" value="Enkeltmandsvirksomhed" />
-                  <Fact label="Team" value="1 founder + dansk setter" />
+                  <Fact label="Hvem du får" value="Enes, hele vejen" />
                   <Fact label="Brancher" value="Servicevirksomheder · DK" />
                   <Fact label="Sprog" value="Dansk + engelsk" />
                 </dl>
@@ -229,7 +231,7 @@ export default function OmPage() {
                 Google.
               </p>
               <p>
-                Betalt synlighed er ikke for "tech-virksomheder". De er for
+                Det her er ikke noget der kun er for tech-virksomheder. De er for
                 ejere der vil have flere kunder uden at bruge timer på
                 at jagte dem. Du gør det du er bedst til. Jeg gør resten.
               </p>

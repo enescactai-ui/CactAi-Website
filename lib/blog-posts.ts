@@ -11,7 +11,6 @@
 
 import type { ComponentType } from "react";
 import PostFastPrisUdenBinding from "@/content/blog/fast-pris-uden-binding";
-import PostMetaAdsHaandvaerkere from "@/content/blog/meta-ads-haandvaerkere";
 
 /*
  *  ai-receptionist-guide.tsx findes stadig i content/blog/, men er bevidst
@@ -62,17 +61,6 @@ export const POSTS: BlogPost[] = [
     readMinutes: 7,
     category: "Strategi",
     Body: PostFastPrisUdenBinding,
-  },
-  {
-    slug: "meta-ads-lokale-virksomheder-2026",
-    title:
-      "Meta Ads for lokale servicevirksomheder i 2026: Hvad virker (og hvad spilder dine penge)",
-    excerpt:
-      "Facebook og Instagram er stadig blandt de billigste kanaler til at få leads for lokale servicevirksomheder i Danmark. Men kun hvis du rammer rigtigt. Her er de 5 ting der virker, og de 5 der er rene penge ud af vinduet.",
-    date: "2026-05-20",
-    readMinutes: 9,
-    category: "Marketing",
-    Body: PostMetaAdsHaandvaerkere,
   },
 ];
 

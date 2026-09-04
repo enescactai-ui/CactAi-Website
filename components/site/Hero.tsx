@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, CheckCircle2, Star, Zap } from "lucide-react";
+import { trackConversion } from "@/lib/tracking";
 import HeroBackground from "./HeroBackground";
 import { LeadPhone } from "./LeadPhone";
 
@@ -116,6 +117,7 @@ export function Hero() {
             >
               <a
                 href="#book"
+                onClick={() => trackConversion("cta_klik", { sted: "hero" })}
                 className="group inline-flex items-center gap-2.5 rounded-full bg-[color:var(--color-cactus-cream)] px-7 py-4 text-base font-semibold text-[color:var(--color-cactus-dark)] shadow-[0_4px_24px_-6px_rgba(13,31,22,0.35)] transition-all hover:scale-[1.03] hover:shadow-[0_8px_32px_-6px_rgba(13,31,22,0.45)] active:scale-[0.98]"
               >
                 Få din lokale kundeanalyse

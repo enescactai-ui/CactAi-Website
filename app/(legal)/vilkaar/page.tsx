@@ -1,7 +1,9 @@
 import { Breadcrumb } from "@/components/site/Breadcrumb";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  ...pageMeta("/vilkaar", "Vilkår og betingelser", "CactAi's salgs- og leveringsbetingelser for danske servicevirksomheder. B2B-aftale med fast månedspris, ingen binding og 30 dages opsigelse."),
   title: "Vilkår og betingelser",
   description:
     "CactAi's salgs- og leveringsbetingelser for danske servicevirksomheder. B2B-aftale med fast månedspris, ingen binding og 30 dages opsigelse.",
@@ -36,9 +38,9 @@ const SECTIONS: Section[] = [
     list: [
       {
         items: [
-          "Opsætning og konfiguration af kampagner i Kundens Meta Business Manager/Google Ads-konto.",
-          "Screening og kvalificering af indkomne leads (telefon- og SMS-opfølgning).",
-          "Booking af kvalificerede aftaler direkte i Kundens kalender.",
+          "Opsætning og drift af det aftalte system til kundeanskaffelse, herunder kampagner i Kundens egne annoncekonti.",
+          "Automatisk svar på hver indkommen henvendelse, og besked til Kunden med det samme.",
+          "Automatisk opfølgning på henvendelser der ikke besvares første gang.",
           "Løbende drift, optimering og rapportering.",
         ],
       },
@@ -53,7 +55,7 @@ const SECTIONS: Section[] = [
     n: "03",
     title: "Aftalens indgåelse",
     body: [
-      "Aftalen er bindende når Kunden accepterer skriftligt (email, e-signatur, eller betaling af setup-faktura via Billy).",
+      "Aftalen er bindende når Kunden accepterer skriftligt (email, e-signatur, eller ved betaling af første faktura).",
       "Da Kunden er erhvervsdrivende, gælder INGEN 14-dages fortrydelsesret jf. forbrugeraftaleloven §18 stk. 2 nr. 11.",
     ],
   },

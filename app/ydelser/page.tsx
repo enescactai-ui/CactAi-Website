@@ -1,9 +1,11 @@
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  ...pageMeta("/ydelser", "Vækstmotoren", "Ét samlet system der henter opgaver ind i dit område, svarer på sekunder, og lægger dem direkte i din kalender. Du møder bare op til arbejdet."),
   title: "Vækstmotoren",
   description:
     "Ét samlet system der henter opgaver ind i dit område, svarer på sekunder, og lægger dem direkte i din kalender. Du møder bare op til arbejdet.",
@@ -21,7 +23,7 @@ const PARTS: Part[] = [
     n: "01",
     tag: "Kunde-indtaget",
     title: "Vi henter kunderne",
-    body: "Annoncer målrettet præcis de folk der leder efter din ydelse i dit område, netop nu. Det er brændstoffet der driver hele motoren.",
+    body: "Vi går ud og finder præcis de folk der leder efter din ydelse i dit område, netop nu. Det er brændstoffet der driver hele motoren.",
   },
   {
     n: "02",
@@ -65,7 +67,7 @@ export default function YdelserPage() {
           { name: "Vækstmotoren", url: "https://cactaihq.com/ydelser" },
         ]}
       />
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main id="main" className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           {/* Hero */}
           <header className="max-w-3xl">
@@ -128,7 +130,7 @@ export default function YdelserPage() {
               </p>
               <p className="mt-4 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
                 Du skal ikke lære et eneste værktøj. Du skal bare møde op til
-                de kunder vi sender.
+                de opgaver der lander i din kalender.
               </p>
             </div>
             <div className="flex flex-col justify-center gap-4">

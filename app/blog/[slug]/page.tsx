@@ -9,6 +9,7 @@ import {
 } from "@/lib/blog-posts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -29,13 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
+    ...pageMeta(`/blog/${post.slug}`, post.title, post.excerpt, {
       type: "article",
       publishedTime: post.date,
       authors: ["Enes Tokmak"],
-    },
+    }),
   };
 }
 
@@ -91,7 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
         }}
       />
 
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main id="main" className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <article>
           {/* Hero header */}
           <header className="mx-auto max-w-3xl px-6 lg:px-12">
@@ -159,7 +158,7 @@ export default async function BlogPostPage({ params }: Props) {
                 Vil du tale konkret om dit firma?
               </h3>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--color-cactus-cream)]/75">
-                20 min. Ingen salgs-pres. Vi regner præcis på hvad systemet
+                20 min. Intet salgspres. Vi regner præcis på hvad systemet
                 ville betyde for dig.
               </p>
               <Link

@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "Har I resultater fra andre kunder I kan vise mig?",
-    a: "Ikke nogen færdige endnu, og jeg vil ikke pynte på det. CactAi er startet i 2026, og der kører ét forløb lige nu som ikke er afsluttet. Under Cases kan du se præcis hvad der er bygget, og hvad der stadig mangler. Den dag der er en færdig case med tal du kan efterprøve, kommer den op. Indtil da kan du bedømme mig på to ting: hvad jeg finder i din egen kundeanalyse, og at du kan gå med 30 dages varsel.",
+    a: "Ingen afsluttede endnu, og jeg vil ikke pynte på det. CactAi er startet i 2026, og der kører to forløb lige nu. Under Cases kan du se præcis hvad der er bygget, hvilke tal der er kommet ind indtil videre, og hvad der stadig mangler. Den dag et forløb er kørt helt til dørs, kommer det op som en rigtig case. Indtil da kan du bedømme mig på to ting: hvad jeg finder i din egen kundeanalyse, og at du kan gå med 30 dages varsel.",
   },
   {
     q: "Hvordan afregner I?",
@@ -37,6 +37,14 @@ const FAQS = [
   {
     q: "Hvor mange opgaver får jeg om måneden?",
     a: "Det varierer meget efter branche, område og budget. Vi regner konkret på det ud fra dine egne tal på mødet, og vi siger nej hvis regnestykket ikke hænger sammen. Det er billigere for os begge at finde ud af det inden, end tre måneder inde.",
+  },
+  {
+    q: "Hvor meget tid skal jeg selv lægge i det?",
+    a: "En time i opstarten, hvor jeg får fat i det jeg skal bruge fra dig. Derefter cirka et kvarter om måneden. Resten er at ringe til dem der henvender sig, og det gjorde du alligevel. Har du ikke det kvarter, skal du ikke købe det her, for så bliver systemet aldrig justeret efter din virkelighed.",
+  },
+  {
+    q: "Hvad koster budgettet oveni honoraret?",
+    a: "Regn med mindst 3.000 kr om måneden, og typisk omkring 5.000, for at der er nok data til at justere på. Du betaler det direkte, du kan se hver eneste krone, og du kan lukke for hanen når du vil. På mødet regner vi baglæns fra hvad en opgave er værd for dig, så du kan se om regnestykket overhovedet hænger sammen.",
   },
   {
     q: "Hvor lang tid går der før det virker?",
@@ -52,7 +60,7 @@ const FAQS = [
   },
   {
     q: "Hvilke brancher arbejder I med?",
-    a: "Lokale servicevirksomheder: rengøring, tag, VVS, el, håndværk og klinikker. Systemet er det samme uanset branche. Det der ændrer sig er hvem annoncerne rammer, og hvad der står på hjemmesiden.",
+    a: "Lokale servicevirksomheder: rengøring, tag, VVS, el, håndværk og klinikker. Systemet er det samme uanset branche. Det der ændrer sig er hvem vi går efter, og hvad der står på din side.",
   },
   {
     q: "Hvem ejer hjemmesiden og kontiene?",

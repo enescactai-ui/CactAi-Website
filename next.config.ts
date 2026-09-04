@@ -90,6 +90,12 @@ const nextConfig: NextConfig = {
       // 2026. Det argumenterede imod fast maanedsbetaling, altsaa imod den
       // model vi selv saelger. Erstattet af fast-pris-uden-binding, som
       // beholder pointen om incitamenter men lander det rigtige sted.
+      // Afpubliceret 4. sep 2026, se noten i lib/blog-posts.ts.
+      {
+        source: "/blog/meta-ads-lokale-virksomheder-2026",
+        destination: "/blog",
+        permanent: true,
+      },
       {
         source: "/blog/pay-per-show-vs-retainer",
         destination: "/blog/fast-pris-uden-binding",

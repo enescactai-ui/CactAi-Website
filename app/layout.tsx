@@ -33,21 +33,15 @@ export const metadata: Metadata = {
   },
   description:
     "Vi henter opgaverne ind i dit område, svarer på hver eneste inden for 60 sekunder, og lægger dem direkte i din kalender. Fast månedspris, ingen binding.",
-  keywords: [
-    "vækstpartner servicevirksomhed",
-    "automatisk svar på henvendelser",
-    "missede opkald",
-    "flere kunder lokal virksomhed",
-    "flere opgaver servicevirksomhed",
-    "fast månedspris marketing",
-  ],
   authors: [{ name: "CactAi", url: "https://cactaihq.com" }],
   creator: "CactAi",
   publisher: "CactAi",
   openGraph: {
     type: "website",
     locale: "da_DK",
-    url: "https://cactaihq.com",
+    // og:url saettes bevidst PER SIDE via lib/seo.ts, ikke her.
+    // Stod den her, ville alle ruter arve forsidens URL, og hver deling
+    // af en undersides link ville blive slaaet sammen til ét opslag.
     siteName: "CactAi",
     title: "Bliv den de ringer til først i dit område · CactAi",
     description:
@@ -95,7 +89,7 @@ export default function RootLayout({
         {/* Skip-to-content link — invisible until focused with keyboard.
             Critical for a11y: lets keyboard/screen-reader users bypass nav. */}
         <a
-          href="#top"
+          href="#main"
           className="sr-only fixed left-4 top-4 z-[100] rounded-md bg-[color:var(--color-cactus-green)] px-4 py-2 font-mono text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-cactus-deep)] focus:not-sr-only focus:outline-none focus:ring-2 focus:ring-[color:var(--color-cactus-cream)]"
         >
           Spring til indhold
