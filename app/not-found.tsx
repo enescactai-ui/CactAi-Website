@@ -58,7 +58,7 @@ export default function NotFound() {
           ))}
         </div>
 
-        <div className="mt-12 border-t border-[color:var(--color-cactus-green)]/15 pt-8 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/45">
+        <div className="mt-12 border-t border-[color:var(--color-cactus-green)]/15 pt-8 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
           Eller ring direkte +45 91 30 95 60
         </div>
       </div>

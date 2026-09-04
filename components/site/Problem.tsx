@@ -52,7 +52,7 @@ export function Problem() {
           </div>
           <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Du har bygget firmaet.{" "}
-            <span className="text-[color:var(--color-cactus-cream)]/45">
+            <span className="text-[color:var(--color-cactus-cream)]/65">
               Men du kan ikke vokse det alene.
             </span>
           </h2>
@@ -68,7 +68,7 @@ export function Problem() {
               transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
               className="rounded-3xl border border-[color:var(--color-cactus-green)]/12 bg-white p-8 shadow-[0_4px_24px_-8px_rgba(13,31,22,0.08)]"
             >
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-cream)]/35">
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-cream)]/65">
                 {p.n}
               </div>
               <h3 className="mt-4 font-display text-xl font-semibold leading-snug tracking-tight text-[color:var(--color-cactus-cream)]">

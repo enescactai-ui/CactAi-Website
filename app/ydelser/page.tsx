@@ -97,7 +97,7 @@ export default function YdelserPage() {
                   <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-green)]">
                     {p.tag}
                   </span>
-                  <span className="font-mono text-xs text-[color:var(--color-cactus-cream)]/30">
+                  <span className="font-mono text-xs text-[color:var(--color-cactus-cream)]/65">
                     {p.n}
                   </span>
                 </div>
@@ -178,7 +178,7 @@ export default function YdelserPage() {
               </a>
               <a
                 href="tel:+4591309560"
-                className="font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55 transition-colors hover:text-[color:var(--color-cactus-cream)]"
+                className="font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65 transition-colors hover:text-[color:var(--color-cactus-cream)]"
               >
                 Eller ring +45 91 30 95 60
               </a>

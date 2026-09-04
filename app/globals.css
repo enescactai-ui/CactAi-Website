@@ -162,6 +162,35 @@
   }
 }
 
+/* ─────────────────────────────────────────────────────────────
+   Synligt tastaturfokus, globalt.
+
+   Foer denne regel havde KUN Navbar.tsx focus-visible-klasser. Alle
+   andre knapper, links og accordion-udloesere paa sitet stod tilbage med
+   browserens standard-outline, som er naesten usynlig paa afrundede
+   elementer med egen baggrundsfarve. En tastaturbruger kunne altsaa ikke
+   se hvor han var.
+
+   :focus-visible rammer KUN tastatur- og hjaelpemiddelnavigation, ikke
+   museklik, saa der kommer ingen ring naar man klikker med musen.
+
+   outline-offset giver luft, saa ringen ikke smelter sammen med
+   elementets egen kant. Elementer der allerede har egne
+   focus-visible-klasser overskriver bare denne.
+   ───────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--color-cactus-green);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Paa moerke flader (CTA-sektionen, motorens fuldskaerm) ville den
+   groenne ring drukne. Der bruges en lys ring i stedet. */
+.on-dark :focus-visible,
+[data-theme="dark"] :focus-visible {
+  outline-color: #ffffff;
+}
+
 /* Respect reduced-motion preference, disable non-essential animations.
    Denne blok daekker KUN vores CSS-drevne animationer (marquee, ping).
    Framer Motion respekterer det IKKE af sig selv, hvilket kommentaren her

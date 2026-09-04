@@ -72,7 +72,7 @@ export default function CasesPage() {
         <section className="py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid gap-6 lg:grid-cols-2">
-              {LIVE_CASES.map((c) => (
+              {LIVE_CASES.map((c, i) => (
                 <Link
                   key={c.slug}
                   href={`/cases/${c.slug}`}
@@ -83,13 +83,17 @@ export default function CasesPage() {
                       src={c.images[0].src}
                       alt={c.images[0].alt}
                       fill
+                      /* Foerste kort er over folden og er sidens LCP-element.
+                         Uden priority indlaeses det dovent, og Next skriver en
+                         advarsel om det. Resten maa gerne vente. */
+                      priority={i === 0}
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
 
                   <div className="flex flex-1 flex-col p-7">
-                    <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/45">
+                    <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/65">
                       <span>
                         {c.client} · {c.region}
                       </span>
@@ -113,7 +117,7 @@ export default function CasesPage() {
                           <div className="font-display text-xl font-bold tracking-tight text-[color:var(--color-cactus-green)]">
                             {m.value}
                           </div>
-                          <div className="font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-cactus-cream)]/45">
+                          <div className="font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-cactus-cream)]/65">
                             {m.label}
                           </div>
                         </div>
@@ -155,7 +159,7 @@ export default function CasesPage() {
                     aria-disabled="true"
                     className="relative overflow-hidden rounded-2xl border border-dashed border-[color:var(--color-cactus-green)]/25 bg-[color:var(--color-cactus-green)]/[0.03] p-7"
                   >
-                    <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/45">
+                    <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/65">
                       <span>
                         {c.client} · {c.region}
                       </span>
@@ -167,7 +171,7 @@ export default function CasesPage() {
                     <h3 className="mt-4 font-display text-xl font-semibold leading-tight tracking-tight text-[color:var(--color-cactus-cream)]/80 sm:text-2xl">
                       {c.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-[color:var(--color-cactus-cream)]/55">
+                    <p className="mt-3 text-[15px] leading-relaxed text-[color:var(--color-cactus-cream)]/65">
                       {c.teaser}
                     </p>
 
@@ -189,14 +193,14 @@ export default function CasesPage() {
                         </ul>
                       </div>
                       <div>
-                        <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-[color:var(--color-cactus-cream)]/40">
+                        <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-[color:var(--color-cactus-cream)]/65">
                           Mangler
                         </div>
                         <ul className="mt-3 space-y-2">
                           {c.progress.pending.map((t) => (
                             <li
                               key={t}
-                              className="relative pl-5 text-[14px] leading-snug text-[color:var(--color-cactus-cream)]/40"
+                              className="relative pl-5 text-[14px] leading-snug text-[color:var(--color-cactus-cream)]/65"
                             >
                               <span className="absolute left-0 top-[0.55em] h-1.5 w-1.5 rounded-full border border-[color:var(--color-cactus-cream)]/30" />
                               {t}
@@ -240,7 +244,7 @@ export default function CasesPage() {
                   <div className="mt-3 font-display text-[15px] font-semibold tracking-tight">
                     {s.l}
                   </div>
-                  <div className="mt-1 text-sm leading-relaxed text-[color:var(--color-cactus-cream)]/55">
+                  <div className="mt-1 text-sm leading-relaxed text-[color:var(--color-cactus-cream)]/65">
                     {s.d}
                   </div>
                 </div>

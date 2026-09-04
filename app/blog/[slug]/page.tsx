@@ -102,19 +102,19 @@ export default async function BlogPostPage({ params }: Props) {
               >
                 ← Blog & Indsigt
               </Link>
-              <span className="text-[color:var(--color-cactus-cream)]/30">·</span>
+              <span className="text-[color:var(--color-cactus-cream)]/65">·</span>
               <span>{post.category}</span>
             </div>
             <h1 className="mt-6 font-display text-4xl font-medium leading-[1] tracking-[-0.03em] text-balance sm:text-5xl lg:text-6xl">
               {post.title}
             </h1>
-            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-[color:var(--color-cactus-green)]/15 pt-5 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55">
+            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-[color:var(--color-cactus-green)]/15 pt-5 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
               <span className="text-[color:var(--color-cactus-cream)]/75">
                 Enes Tokmak
               </span>
-              <span className="text-[color:var(--color-cactus-cream)]/30">·</span>
+              <span className="text-[color:var(--color-cactus-cream)]/65">·</span>
               <time dateTime={post.date}>{formatPostDate(post.date)}</time>
-              <span className="text-[color:var(--color-cactus-cream)]/30">·</span>
+              <span className="text-[color:var(--color-cactus-cream)]/65">·</span>
               <span>{post.readMinutes} min læsning</span>
             </div>
           </header>

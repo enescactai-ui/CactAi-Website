@@ -60,7 +60,7 @@ export default function BlogPostLoading() {
         </div>
 
         {/* Loading hint */}
-        <div className="mt-16 text-center font-mono text-[11px] uppercase tracking-[0.22em] text-[color:var(--color-cactus-cream)]/35">
+        <div className="mt-16 text-center font-mono text-[11px] uppercase tracking-[0.22em] text-[color:var(--color-cactus-cream)]/65">
           Indlæser artikel...
         </div>
         </article>

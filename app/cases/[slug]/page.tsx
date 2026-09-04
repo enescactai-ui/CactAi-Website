@@ -77,7 +77,7 @@ export default async function CasePage({
               ← Alle cases
             </Link>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/45">
+            <div className="mt-8 flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/65">
               <span>
                 {c.client} · {c.region} · {c.year}
               </span>
@@ -98,7 +98,7 @@ export default async function CasePage({
                   <div className="font-display text-3xl font-bold tracking-tight text-[color:var(--color-cactus-green)] sm:text-4xl">
                     {m.value}
                   </div>
-                  <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-cactus-cream)]/45">
+                  <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-cactus-cream)]/65">
                     {m.label}
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default async function CasePage({
                       className="object-cover object-top"
                     />
                   </div>
-                  <figcaption className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-cactus-cream)]/45">
+                  <figcaption className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-cactus-cream)]/65">
                     {img.alt}
                   </figcaption>
                 </figure>
@@ -172,7 +172,7 @@ export default async function CasePage({
         {other && (
           <section className="border-t border-[color:var(--color-cactus-green)]/12 py-16">
             <div className="mx-auto max-w-4xl px-6 lg:px-12">
-              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/45">
+              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
                 Næste case
               </div>
               <Link

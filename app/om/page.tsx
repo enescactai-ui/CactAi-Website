@@ -76,7 +76,7 @@ export default function OmPage() {
                 <div className="relative aspect-[4/5] overflow-hidden border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-mid)]">
                   <FounderPhoto size="large" />
                 </div>
-                <div className="mt-4 flex items-start justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/50">
+                <div className="mt-4 flex items-start justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
                   <span>Fig. 01, Enes T.</span>
                   <span>Greve, 22.05.2026</span>
                 </div>
@@ -102,7 +102,7 @@ export default function OmPage() {
                   så virker det ikke.
                 </p>
               </blockquote>
-              <div className="flex items-center gap-3 border-t border-[color:var(--color-cactus-green)]/15 pt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/50">
+              <div className="flex items-center gap-3 border-t border-[color:var(--color-cactus-green)]/15 pt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
                 <span className="h-[2px] w-8 bg-[color:var(--color-cactus-green)]" />
                 <span>Enes Tokmak · Founder</span>
               </div>
@@ -205,7 +205,7 @@ export default function OmPage() {
                 </span>
                 . Ikke prisen.
               </p>
-              <figcaption className="mt-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55">
+              <figcaption className="mt-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
                 <span className="h-[2px] w-8 bg-[color:var(--color-cactus-green)]" />
                 <span>Enes Tokmak · Founder</span>
               </figcaption>
@@ -255,7 +255,7 @@ export default function OmPage() {
 function Fact({ label, value }: { label: string; value: string }) {
   return (
     <div className="border-b border-[color:var(--color-cactus-green)]/10 pb-4 last:border-b-0 last:pb-0">
-      <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/40">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
         {label}
       </dt>
       <dd className="mt-1.5 font-display text-[15px] font-medium leading-tight text-[color:var(--color-cactus-cream)]">

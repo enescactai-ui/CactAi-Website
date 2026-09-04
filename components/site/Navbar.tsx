@@ -82,7 +82,7 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <nav
-            className="hidden items-center gap-1 md:flex"
+            className="hidden items-center gap-1 lg:flex"
             aria-label="Hovedmenu"
           >
             {NAV_LINKS.map((link) => (
@@ -111,7 +111,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--color-cactus-cream)]/15 text-[color:var(--color-cactus-cream)] transition-colors hover:bg-[color:var(--color-cactus-green)]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-cactus-green)] md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--color-cactus-cream)]/15 text-[color:var(--color-cactus-cream)] transition-colors hover:bg-[color:var(--color-cactus-green)]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-cactus-green)] lg:hidden"
               aria-label="Åbn menu"
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
@@ -141,7 +141,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[60] bg-white md:hidden"
+            className="fixed inset-0 z-[60] bg-white lg:hidden"
           >
             {/* Top bar with close */}
             <div className="flex h-16 items-center justify-between px-6">
@@ -213,7 +213,7 @@ export function Navbar() {
                   Få din kundeanalyse →
                 </a>
 
-                <div className="mt-8 space-y-3 font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/55">
+                <div className="mt-8 space-y-3 font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/65">
                   <a
                     href="tel:+4591309560"
                     className="block transition-colors hover:text-[color:var(--color-cactus-cream)]"

@@ -247,7 +247,7 @@ export default function VilkaarPage() {
       />
       <div className="flex items-baseline justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">
         <span>Juridisk // Salgsbetingelser</span>
-        <span className="text-[color:var(--color-cactus-cream)]/40">
+        <span className="text-[color:var(--color-cactus-cream)]/65">
           v{VERSION} · {LAST_UPDATED}
         </span>
       </div>
@@ -278,7 +278,7 @@ export default function VilkaarPage() {
               {s.list?.map((block, bi) => (
                 <div key={`block-${bi}`} className="space-y-2">
                   {block.heading && (
-                    <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55">
+                    <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
                       {block.heading}
                     </div>
                   )}
@@ -299,7 +299,7 @@ export default function VilkaarPage() {
         ))}
       </div>
 
-      <div className="relative mt-16 pt-8 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/45 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[color:var(--color-cactus-green)]/20 before:to-transparent">
+      <div className="relative mt-16 pt-8 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[color:var(--color-cactus-green)]/20 before:to-transparent">
         CactAi · CVR 46210689 · Version {VERSION} · {LAST_UPDATED}
       </div>
     </article>

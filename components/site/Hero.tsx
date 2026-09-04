@@ -134,7 +134,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.0 }}
-              className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-[color:var(--color-cactus-cream)]/55"
+              className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-[color:var(--color-cactus-cream)]/65"
             >
               {[
                 { icon: Zap, text: "Fast månedspris" },

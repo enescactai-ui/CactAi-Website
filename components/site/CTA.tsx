@@ -34,7 +34,7 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: EASE }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0d1f16] to-[#1a3d28] p-8 lg:p-14"
+          className="on-dark relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0d1f16] to-[#1a3d28] p-8 lg:p-14"
         >
           {/* Ambient background glow */}
           <div className="absolute inset-0 -z-0 opacity-40">

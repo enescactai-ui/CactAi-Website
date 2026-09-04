@@ -53,7 +53,7 @@ export default function RouteError({
         </p>
 
         {error.digest && (
-          <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--color-cactus-green)]/25 bg-[color:var(--color-cactus-deep)]/40 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55">
+          <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--color-cactus-green)]/25 bg-[color:var(--color-cactus-deep)]/40 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
             <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-cactus-green)]" />
             Fejl-ID: {error.digest}
           </div>

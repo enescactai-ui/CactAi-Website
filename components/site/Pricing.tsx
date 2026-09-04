@@ -62,7 +62,7 @@ export function Pricing() {
               <div className="mt-4 font-display text-4xl font-bold tracking-tight text-[color:var(--color-cactus-green)]">
                 Uden opstart
               </div>
-              <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/50">
+              <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/65">
                 Ingen opstart · ingen binding
               </div>
               <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
@@ -81,7 +81,7 @@ export function Pricing() {
 
             {/* Upsell */}
             <div className="rounded-2xl border border-[color:var(--color-cactus-green)]/20 bg-white/50 p-8">
-              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/45">
+              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
                 Når du vil vokse aktivt
               </div>
               <h3 className="mt-4 font-display text-2xl font-bold tracking-tight">
@@ -90,7 +90,7 @@ export function Pricing() {
               <div className="mt-4 font-display text-4xl font-bold tracking-tight">
                 Fast pr. måned
               </div>
-              <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/50">
+              <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/65">
                 Pris aftales på mødet, efter omfang
               </div>
               <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
@@ -159,10 +159,10 @@ export function Pricing() {
           </div>
 
           <div className="rounded-3xl border border-[color:var(--color-cactus-green)]/12 bg-white p-8 shadow-[0_4px_24px_-8px_rgba(13,31,22,0.08)]">
-            <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/40">
+            <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
               Sig nej hvis
             </div>
-            <ul className="mt-5 space-y-3 text-[15px] leading-relaxed text-[color:var(--color-cactus-cream)]/55">
+            <ul className="mt-5 space-y-3 text-[15px] leading-relaxed text-[color:var(--color-cactus-cream)]/65">
               <li>Du leder efter det billigste tilbud på markedet.</li>
               <li>Du skal bruge nye kunder i denne uge. Det tager uger, ikke dage.</li>
               <li>Du har ikke kapacitet til at tage flere opgaver ind.</li>
@@ -185,7 +185,7 @@ export function Pricing() {
             Få din lokale kundeanalyse
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-12" />
           </a>
-          <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/40">
+          <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/65">
             Uforpligtende · 20 minutter · du får analysen uanset hvad
           </span>
         </motion.div>

@@ -132,7 +132,7 @@ function FeaturedCard({ post }: { post: BlogPost }) {
         <span className="rounded-full border border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)]/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
           Senest
         </span>
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55">
+        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
           {post.category} · {post.readMinutes} min læsning
         </span>
       </div>
@@ -143,7 +143,7 @@ function FeaturedCard({ post }: { post: BlogPost }) {
         {post.excerpt}
       </p>
       <div className="mt-8 flex items-center justify-between gap-4 border-t border-[color:var(--color-cactus-green)]/20 pt-6">
-        <span className="font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/50">
+        <span className="font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
           {formatPostDate(post.date)}
         </span>
         <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)] transition-transform group-hover:translate-x-1">
@@ -174,8 +174,8 @@ function PostCard({ post }: { post: BlogPost }) {
         <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
           {post.category}
         </span>
-        <span className="text-[color:var(--color-cactus-cream)]/30">·</span>
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55">
+        <span className="text-[color:var(--color-cactus-cream)]/65">·</span>
+        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
           {post.readMinutes} min læsning
         </span>
       </div>
@@ -189,7 +189,7 @@ function PostCard({ post }: { post: BlogPost }) {
 
       <div className="mt-auto pt-8">
         <div className="flex items-center justify-between gap-4 border-t border-[color:var(--color-cactus-green)]/15 pt-5">
-          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/50">
+          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/65">
             {formatPostDate(post.date)}
           </span>
           <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)] transition-transform group-hover:translate-x-1">
