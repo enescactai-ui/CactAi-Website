@@ -13,8 +13,8 @@ export default function CookiesPage() {
     <article>
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://cactaihq.com" },
-          { name: "Cookie-politik", url: "https://cactaihq.com/cookies" },
+          { name: "Hjem", url: "https://www.cactaihq.com" },
+          { name: "Cookie-politik", url: "https://www.cactaihq.com/cookies" },
         ]}
       />
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">

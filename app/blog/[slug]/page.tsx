@@ -50,24 +50,24 @@ export default async function BlogPostPage({ params }: Props) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "@id": `https://cactaihq.com/blog/${post.slug}#post`,
+    "@id": `https://www.cactaihq.com/blog/${post.slug}#post`,
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: "da-DK",
-    url: `https://cactaihq.com/blog/${post.slug}`,
-    image: "https://cactaihq.com/opengraph-image",
+    url: `https://www.cactaihq.com/blog/${post.slug}`,
+    image: "https://www.cactaihq.com/opengraph-image",
     author: {
       "@type": "Person",
-      "@id": "https://cactaihq.com/om#person",
+      "@id": "https://www.cactaihq.com/om#person",
       name: "Enes Tokmak",
-      url: "https://cactaihq.com/om",
+      url: "https://www.cactaihq.com/om",
     },
-    publisher: { "@id": "https://cactaihq.com/#org" },
+    publisher: { "@id": "https://www.cactaihq.com/#org" },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://cactaihq.com/blog/${post.slug}`,
+      "@id": `https://www.cactaihq.com/blog/${post.slug}`,
     },
     articleSection: post.category,
     timeRequired: `PT${post.readMinutes}M`,
@@ -78,9 +78,9 @@ export default async function BlogPostPage({ params }: Props) {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://cactaihq.com" },
-          { name: "Blog & Indsigt", url: "https://cactaihq.com/blog" },
-          { name: post.title, url: `https://cactaihq.com/blog/${post.slug}` },
+          { name: "Hjem", url: "https://www.cactaihq.com" },
+          { name: "Blog & Indsigt", url: "https://www.cactaihq.com/blog" },
+          { name: post.title, url: `https://www.cactaihq.com/blog/${post.slug}` },
         ]}
       />
       <script

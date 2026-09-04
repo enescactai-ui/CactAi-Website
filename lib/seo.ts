@@ -1,4 +1,4 @@
-export const SITE = "https://cactaihq.com";
+export const SITE = "https://www.cactaihq.com";
 
 /*
  *  Delt metadata-hjaelper. Tilfoejet 4. sep 2026.

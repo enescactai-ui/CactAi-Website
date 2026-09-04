@@ -208,8 +208,8 @@ export default function PrivatlivspolitikPage() {
     <article>
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://cactaihq.com" },
-          { name: "Privatlivspolitik", url: "https://cactaihq.com/privatlivspolitik" },
+          { name: "Hjem", url: "https://www.cactaihq.com" },
+          { name: "Privatlivspolitik", url: "https://www.cactaihq.com/privatlivspolitik" },
         ]}
       />
       <div className="flex items-baseline justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">

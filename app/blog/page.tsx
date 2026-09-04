@@ -17,21 +17,21 @@ export const metadata: Metadata = {
 const BLOG_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "@id": "https://cactaihq.com/blog#blog",
-  url: "https://cactaihq.com/blog",
+  "@id": "https://www.cactaihq.com/blog#blog",
+  url: "https://www.cactaihq.com/blog",
   name: "CactAi Blog & Indsigt",
   description:
     "Artikler om hvordan lokale danske servicevirksomheder får flere opgaver.",
   inLanguage: "da-DK",
-  publisher: { "@id": "https://cactaihq.com/#org" },
+  publisher: { "@id": "https://www.cactaihq.com/#org" },
   blogPost: POSTS.map((p) => ({
     "@type": "BlogPosting",
-    "@id": `https://cactaihq.com/blog/${p.slug}#post`,
+    "@id": `https://www.cactaihq.com/blog/${p.slug}#post`,
     headline: p.title,
     description: p.excerpt,
     datePublished: p.date,
-    url: `https://cactaihq.com/blog/${p.slug}`,
-    author: { "@id": "https://cactaihq.com/om#person" },
+    url: `https://www.cactaihq.com/blog/${p.slug}`,
+    author: { "@id": "https://www.cactaihq.com/om#person" },
   })),
 };
 
@@ -44,8 +44,8 @@ export default function BlogIndexPage() {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://cactaihq.com" },
-          { name: "Blog & Indsigt", url: "https://cactaihq.com/blog" },
+          { name: "Hjem", url: "https://www.cactaihq.com" },
+          { name: "Blog & Indsigt", url: "https://www.cactaihq.com/blog" },
         ]}
       />
       <script

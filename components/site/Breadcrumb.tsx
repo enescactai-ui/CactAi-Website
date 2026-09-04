@@ -8,8 +8,8 @@
  *
  * Usage in a page:
  *   <Breadcrumb items={[
- *     { name: "Hjem", url: "https://cactaihq.com" },
- *     { name: "Om", url: "https://cactaihq.com/om" },
+ *     { name: "Hjem", url: "https://www.cactaihq.com" },
+ *     { name: "Om", url: "https://www.cactaihq.com/om" },
  *   ]} />
  *
  * Server component — zero client JS, rendered as inline <script> in SSR HTML.

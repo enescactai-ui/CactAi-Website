@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://cactaihq.com/sitemap.xml",
-    host: "https://cactaihq.com",
+    sitemap: "https://www.cactaihq.com/sitemap.xml",
+    host: "https://www.cactaihq.com",
   };
 }

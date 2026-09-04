@@ -17,7 +17,7 @@ import type { Metadata } from "next";
  *
  *  OPSAETNING I GHL, uden den virker maalingen ikke:
  *    Calendars -> Lokal kundeanalyse -> Form & confirmation
- *    -> saet "Redirect URL" til https://cactaihq.com/tak
+ *    -> saet "Redirect URL" til https://www.cactaihq.com/tak
  *
  *  Siden er noindex. Den skal ikke i Google, og den maa aldrig blive en
  *  landingsside nogen kan finde uden at have booket.

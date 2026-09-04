@@ -243,8 +243,8 @@ export default function VilkaarPage() {
     <article>
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://cactaihq.com" },
-          { name: "Vilkår og betingelser", url: "https://cactaihq.com/vilkaar" },
+          { name: "Hjem", url: "https://www.cactaihq.com" },
+          { name: "Vilkår og betingelser", url: "https://www.cactaihq.com/vilkaar" },
         ]}
       />
       <div className="flex items-baseline justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-cactus-green)]">

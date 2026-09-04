@@ -26,14 +26,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cactaihq.com"),
+  metadataBase: new URL("https://www.cactaihq.com"),
   title: {
     default: "CactAi · Vækstpartner for danske servicevirksomheder",
     template: "%s · CactAi",
   },
   description:
     "Vi henter opgaverne ind i dit område, svarer på hver eneste inden for 60 sekunder, og lægger dem direkte i din kalender. Fast månedspris, ingen binding.",
-  authors: [{ name: "CactAi", url: "https://cactaihq.com" }],
+  authors: [{ name: "CactAi", url: "https://www.cactaihq.com" }],
   creator: "CactAi",
   publisher: "CactAi",
   openGraph: {

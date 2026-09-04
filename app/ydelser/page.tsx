@@ -65,8 +65,8 @@ export default function YdelserPage() {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://cactaihq.com" },
-          { name: "Vækstmotoren", url: "https://cactaihq.com/ydelser" },
+          { name: "Hjem", url: "https://www.cactaihq.com" },
+          { name: "Vækstmotoren", url: "https://www.cactaihq.com/ydelser" },
         ]}
       />
       <main id="main" className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">

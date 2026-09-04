@@ -75,9 +75,9 @@ export default async function CasePage({
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://cactaihq.com" },
-          { name: "Cases", url: "https://cactaihq.com/cases" },
-          { name: c.title, url: `https://cactaihq.com/cases/${c.slug}` },
+          { name: "Hjem", url: "https://www.cactaihq.com" },
+          { name: "Cases", url: "https://www.cactaihq.com/cases" },
+          { name: c.title, url: `https://www.cactaihq.com/cases/${c.slug}` },
         ]}
       />
       <main id="main" className="flex-1">

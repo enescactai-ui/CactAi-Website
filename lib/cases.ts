@@ -122,7 +122,7 @@ export const CASES: CaseStudy[] = [
       { src: "/portfolio/case-c-cactai.jpg", alt: "Forsiden af cactaihq.com" },
       { src: "/portfolio/case-c-priser.jpg", alt: "Ydelsessiden, hvor systemet er skilt ad i seks dele" },
     ],
-    liveUrl: "https://cactaihq.com",
+    liveUrl: "https://www.cactaihq.com",
   },
   {
     slug: "hacket-domaene",

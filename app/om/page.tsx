@@ -16,14 +16,14 @@ export const metadata: Metadata = {
 const PERSON_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://cactaihq.com/om#person",
+  "@id": "https://www.cactaihq.com/om#person",
   name: "Enes Tokmak",
   givenName: "Enes",
   familyName: "Tokmak",
   jobTitle: "Founder",
   nationality: "Danish",
-  url: "https://cactaihq.com/om",
-  worksFor: { "@id": "https://cactaihq.com/#org" },
+  url: "https://www.cactaihq.com/om",
+  worksFor: { "@id": "https://www.cactaihq.com/#org" },
   knowsAbout: [
     "Kundeanskaffelse for lokale servicevirksomheder",
     "Marketing for danske servicevirksomheder",
@@ -43,8 +43,8 @@ export default function OmPage() {
       <Navbar />
       <Breadcrumb
         items={[
-          { name: "Hjem", url: "https://cactaihq.com" },
-          { name: "Om CactAi", url: "https://cactaihq.com/om" },
+          { name: "Hjem", url: "https://www.cactaihq.com" },
+          { name: "Om CactAi", url: "https://www.cactaihq.com/om" },
         ]}
       />
       <script
