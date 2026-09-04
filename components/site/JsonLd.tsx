@@ -71,6 +71,23 @@ const BUSINESS_SCHEMA = {
   currenciesAccepted: "DKK",
   paymentAccepted: "Bankoverførsel, betalingskort",
   knowsLanguage: ["da", "en"],
+  /*
+   *  sameAs binder sitet sammen med profiler paa andre platforme. Det er
+   *  den staerkeste enkeltforbindelse mellem en hjemmeside og en Google
+   *  Business Profile, fordi Google ellers skal matche paa adressetekst.
+   *
+   *  KUN profiler der findes maa staa her. Et forkert eller tomt sameAs er
+   *  vaerre end ingen, fordi det peger Googles entitetsmatch et forkert sted
+   *  hen.
+   *
+   *  MANGLER, og kan kun leveres af Enes:
+   *    - Google Business Profile: aabn din virksomhed i Google Maps, tryk
+   *      Del, og kopier linket. Det ser ud som maps.app.goo.gl/xxx eller
+   *      g.co/kgs/xxx. Et soegeresultat-link duer ikke.
+   *    - Facebook-siden: den fulde URL til SIDEN, altsaa
+   *      facebook.com/<sidenavn>, ikke facebook.com.
+   */
+  sameAs: ["https://www.linkedin.com/in/cactai/"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Krogager 44",
