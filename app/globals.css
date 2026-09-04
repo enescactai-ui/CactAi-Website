@@ -162,9 +162,12 @@
   }
 }
 
-/* Respect reduced-motion preference — disable non-essential animations.
-   Framer Motion has its own internal reduced-motion handling; this covers
-   our CSS-driven animations (marquee, ping, etc.). */
+/* Respect reduced-motion preference, disable non-essential animations.
+   Denne blok daekker KUN vores CSS-drevne animationer (marquee, ping).
+   Framer Motion respekterer det IKKE af sig selv, hvilket kommentaren her
+   tidligere paastod. Det haandteres i components/site/MotionProvider.tsx
+   med MotionConfig reducedMotion="user". Fjerner du den, mister siden
+   halvdelen af sin reduced-motion-understoettelse uden at noget faejler. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

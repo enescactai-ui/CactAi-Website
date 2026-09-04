@@ -1,5 +1,18 @@
 "use client";
 
+/*
+ *  DOED KODE pr. 4. sep 2026. Ingen side importerer denne fil.
+ *
+ *  PAS PAA: denne fil hedder naesten det samme som den LEVENDE
+ *  VaekstMotorV8.tsx, saa den er den mest sandsynlige at aabne ved en
+ *  fejl. Indholdet paastaar at en dansk AI tager telefonen 24/7. Den
+ *  stemme-agent blev bygget til Skandiacare og FEJLEDE i live-test, den
+ *  loopede paa danske vejnavne. Den paastand maa ikke paa sitet.
+ *  Filen saelger ogsaa pay-per-show, som er den forladte model.
+ *
+ *  Se den oeverste blok i CLAUDE.md. Skal filen bruges igen, skal teksten
+ *  skrives om FOERST. Saet den ikke paa en side som den er.
+ */
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowUpRight,

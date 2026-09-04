@@ -1,5 +1,14 @@
 "use client";
 
+/*
+ *  DOED KODE pr. 4. sep 2026. Ingen side importerer denne fil.
+ *
+ *  Beskriver '14-dages garanti' og '5 fremmoedte', som ikke findes mere.
+ *  Der staar bevidst INTET tal i nogen garanti paa sitet laengere.
+ *
+ *  Se den oeverste blok i CLAUDE.md. Skal filen bruges igen, skal teksten
+ *  skrives om FOERST. Saet den ikke paa en side som den er.
+ */
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 

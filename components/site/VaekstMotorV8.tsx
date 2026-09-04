@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Loader2, Play, X } from "lucide-react";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -19,12 +19,12 @@ type Node = {
 };
 
 const NODES: Node[] = [
-  { id: "lead", mesh: "throttleBody", title: "Lead-motoren", tag: "Meta-annoncer", body: "Annoncer der henter kvalificerede kunder i dit område. Motorens brændstof.", side: "left", top: "20%" },
-  { id: "reception", mesh: "cylinderHeadCoverRight", title: "Notifikationen", tag: "Med det samme", body: "Du får navn, opgave og nummer på SMS i samme sekund, leadet lander. Ingen henvendelse bliver liggende.", side: "left", top: "45%" },
-  { id: "synlig", mesh: "intakeManifoldRight", title: "Synligheds-modulet", tag: "Google & SEO", body: "Google-profil og anmeldelser der får kunder til at vælge dig, når de søger.", side: "left", top: "70%" },
-  { id: "svar", mesh: "crankshaftSprocket", title: "Lynsvar", tag: "Svar på 60 sek.", body: "Hvert lead får svar på under et minut, før konkurrenten når at ringe.", side: "right", top: "20%" },
-  { id: "opfoelg", mesh: "camshaftSprocket", title: "Opfølgnings-drevet", tag: "Auto-opfølgning", body: "Genbooker automatisk de leads der ikke svarede første gang. Ingen tabt.", side: "right", top: "45%" },
-  { id: "resultat", mesh: "oilPanCap", title: "Resultat-garantien", tag: "Garanti", body: "Fast pris om måneden. Får du ikke 5 kvalificerede henvendelser den første måned, får du honoraret tilbage.", side: "right", top: "70%" },
+  { id: "lead", mesh: "throttleBody", title: "Kunde-indtaget", tag: "Lokal efterspørgsel", body: "Henter folk i dit område der leder efter det du laver, netop nu. Motorens brændstof.", side: "left", top: "20%" },
+  { id: "reception", mesh: "cylinderHeadCoverRight", title: "Notifikationen", tag: "Med det samme", body: "Du får navn, opgave og nummer på SMS i samme sekund, den lander. Ingen bliver liggende.", side: "left", top: "45%" },
+  { id: "synlig", mesh: "intakeManifoldRight", title: "Synligheds-modulet", tag: "Bliv fundet først", body: "Så du er dem der dukker op, når nogen i dit område søger efter din ydelse.", side: "left", top: "70%" },
+  { id: "svar", mesh: "crankshaftSprocket", title: "Lynsvar", tag: "Svar på 60 sek.", body: "Hver ny henvendelse får svar på under et minut, før konkurrenten når at ringe.", side: "right", top: "20%" },
+  { id: "opfoelg", mesh: "camshaftSprocket", title: "Opfølgnings-drevet", tag: "Auto-opfølgning", body: "Vender automatisk tilbage til dem der ikke svarede første gang. Ingen tabt.", side: "right", top: "45%" },
+  { id: "resultat", mesh: "oilPanCap", title: "Regnskabet", tag: "Fast pris", body: "Fast beløb om måneden, ingen provision. Du kan opsige med 30 dages varsel, hvis det ikke virker for dig.", side: "right", top: "70%" },
 ];
 
 const ANCHORS = NODES.map((n) => ({ id: n.id, mesh: n.mesh }));
@@ -95,6 +95,38 @@ export function VaekstMotorV8() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [inView, setInView] = useState(false);
+
+  /*
+   *  To forskellige signaler, med vilje.
+   *
+   *  `inView` er en envejskontakt: naar sektionen foerste gang kommer i
+   *  syne, monteres WebGL-canvaset og bliver monteret. Det er det der
+   *  goer at 3D-stakken ikke hentes ved sideindlaesning.
+   *
+   *  `visible` slaar frem og tilbage. Uden den blev motoren ved med at
+   *  tegne 128 draw calls per frame i det uendelige, ogsaa naar man var
+   *  scrollet flere tusinde pixels forbi. Maalt: 15.360 draw calls paa to
+   *  sekunder, praecis det samme i syne som helt ude af syne. Det braendte
+   *  GPU og batteri paa resten af siden. `visible` fodrer nu
+   *  frameloop-pausen i EngineBackground, saa den stopper med at tegne
+   *  uden at blive afmonteret.
+   */
+  const [visible, setVisible] = useState(false);
+  const wrapRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        setVisible(entry.isIntersecting);
+        if (entry.isIntersecting) setInView(true);
+      },
+      { rootMargin: "200px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
   const [focus, setFocus] = useState<Node | null>(null);
 
   useEffect(() => setMounted(true), []);
@@ -248,7 +280,7 @@ export function VaekstMotorV8() {
   );
 
   return (
-    <section id="ydelser" className="relative py-24 lg:py-32">
+    <section id="system" className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -267,20 +299,20 @@ export function VaekstMotorV8() {
             </span>
           </h2>
           <p className="mt-6 text-lg text-[color:var(--color-cactus-cream)]/65">
-            Otte cylindre, ét mål: at skalere din forretning hurtigt og effektivt.
-            Åbn motoren og se præcis hvad hver del gør for dig.
+            Mange dele, ét mål: opgaver i din kalender. Åbn motoren og se
+            præcis hvad hver del laver for dig.
           </p>
         </motion.div>
 
         {/* Teaser with the engine rotating in the background */}
         <motion.div
+          ref={wrapRef}
           role="button"
           tabIndex={0}
           onClick={() => setOpen(true)}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") setOpen(true);
           }}
-          onViewportEnter={() => setInView(true)}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -291,7 +323,7 @@ export function VaekstMotorV8() {
           {/* live rotating engine (frozen, not unmounted, while fullscreen is open) */}
           {inView && (
             <div className="pointer-events-none absolute inset-0">
-              <EngineBackground paused={open} />
+              <EngineBackground paused={open || !visible} />
             </div>
           )}
           {/* dim overlay for contrast */}

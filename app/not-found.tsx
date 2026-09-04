@@ -30,7 +30,7 @@ export default function NotFound() {
 
         <p className="mt-8 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
           Du har enten klikket på et gammelt link, eller skrevet adressen
-          forkert. Ingen drama — her er hvor du kan komme i stedet:
+          forkert. Ingen drama, her er hvor du kan komme i stedet:
         </p>
 
         <div className="mt-12 grid gap-3 sm:grid-cols-2">
@@ -70,5 +70,5 @@ const LINKS = [
   { href: "/", label: "Hjem", title: "Forsiden" },
   { href: "/ydelser", label: "Services", title: "Hvad vi laver" },
   { href: "/blog", label: "Blog", title: "Indsigt & artikler" },
-  { href: "/#book", label: "Book", title: "20-min strategi-møde" },
+  { href: "/#book", label: "Book", title: "20-min lokal kundeanalyse" },
 ];

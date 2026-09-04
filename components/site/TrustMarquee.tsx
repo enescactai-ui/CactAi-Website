@@ -1,3 +1,13 @@
+/*
+ *  DOED KODE pr. 4. sep 2026. Ingen side importerer denne fil.
+ *
+ *  Kørte 'Pay-per-show' og '0 kr ved no-show' hen over skaermen, altsaa
+ *  den forretningsmodel vi forlod. Taget af forsiden 3. sep 2026.
+ *
+ *  Se den oeverste blok i CLAUDE.md. Skal filen bruges igen, skal teksten
+ *  skrives om FOERST. Saet den ikke paa en side som den er.
+ */
+
 /**
  * Infinite horizontal marquee of trust signals.
  *

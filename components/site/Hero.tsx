@@ -1,36 +1,28 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight, CheckCircle2, Star, Zap } from "lucide-react";
-import { useEffect, useRef } from "react";
 import HeroBackground from "./HeroBackground";
 import { LeadPhone } from "./LeadPhone";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function Hero() {
-  const mouseX = useMotionValue(50);
-  const mouseY = useMotionValue(50);
-  const heroRef = useRef<HTMLElement | null>(null);
-
-  const springX = useSpring(mouseX, { stiffness: 60, damping: 25 });
-  const springY = useSpring(mouseY, { stiffness: 60, damping: 25 });
-  const glowX = useTransform(springX, (v) => `${v}%`);
-  const glowY = useTransform(springY, (v) => `${v}%`);
-
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (!heroRef.current) return;
-      const rect = heroRef.current.getBoundingClientRect();
-      mouseX.set(((e.clientX - rect.left) / rect.width) * 100);
-      mouseY.set(((e.clientY - rect.top) / rect.height) * 100);
-    };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
-  }, [mouseX, mouseY]);
-
+  /*
+   *  Muse-glowet er FJERNET 3. sep 2026, og det aendrer ingenting visuelt.
+   *
+   *  Det virkede aldrig. glowX gav allerede strengen "50%", og
+   *  template-strengen satte endnu et procenttegn paa, saa CSS'en blev
+   *  "at 50%% 50%%". Ugyldig, saa browseren smed hele deklarationen vaek
+   *  og laget tegnede ingenting. Samtidig laeste den
+   *  getBoundingClientRect() ved hver eneste musebevaegelse, hvilket
+   *  tvinger layout synkront, plus to spring-loops der kørte for evigt.
+   *
+   *  Skal glowet tilbage, er det en ny funktion der skal bygges rigtigt,
+   *  ikke en genindsaettelse af det her. Det er Enes' beslutning.
+   */
   return (
-    <section ref={heroRef} id="top" className="relative isolate overflow-hidden">
+    <section id="top" className="relative isolate overflow-hidden">
 
       {/* ── Hero background: full mint-green card like Brainly.AI ── */}
       <div
@@ -60,15 +52,6 @@ export function Hero() {
         }}
       />
 
-      {/* Mouse glow */}
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[98vh] min-h-[780px]"
-        style={{
-          background: `radial-gradient(700px circle at ${glowX.get()}% ${glowY.get()}%, rgba(255,255,255,0.4), transparent 50%)`,
-        }}
-      />
-
       {/* ── Content ── */}
       <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-0 lg:px-12 lg:pt-36">
 
@@ -83,7 +66,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-cactus-green)] opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--color-cactus-green)]" />
           </span>
-          Live · Vækstpartner for servicevirksomheder
+          Vækstmotoren · for lokale servicefirmaer
         </motion.div>
 
         {/* Two-column layout */}
@@ -97,19 +80,15 @@ export function Hero() {
               variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
               className="font-display tracking-[-0.035em] leading-[1.04]"
             >
-              <Line className="block text-lg font-normal text-[color:var(--color-cactus-cream)]/50 sm:text-xl">
-                Din vækstpartner
-              </Line>
-              <Line className="mt-1 block text-5xl font-extrabold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-7xl xl:text-8xl">
-                Mist{" "}
-                <em className="relative not-italic font-light">
-                  aldrig
-                  <AnimatedUnderline />
-                </em>
+              <Line className="block text-5xl font-extrabold text-[color:var(--color-cactus-cream)] sm:text-6xl lg:text-7xl xl:text-8xl">
+                Bliv den de ringer til
               </Line>
               <Line className="mt-1 block text-5xl font-extrabold sm:text-6xl lg:text-7xl xl:text-8xl">
-                <span className="text-[color:var(--color-cactus-green)]">en kunde</span>{" "}
-                <span className="text-[color:var(--color-cactus-cream)]">igen</span>
+                <em className="relative not-italic font-light text-[color:var(--color-cactus-green)]">
+                  først
+                  <AnimatedUnderline />
+                </em>{" "}
+                <span className="text-[color:var(--color-cactus-cream)]">i dit område</span>
                 <span className="text-[color:var(--color-cactus-green)]">.</span>
               </Line>
             </motion.h1>
@@ -120,8 +99,9 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
               className="mt-7 max-w-lg text-lg leading-[1.65] text-[color:var(--color-cactus-cream)]/65 sm:text-xl"
             >
-              Vi bygger hjemmesiden, henter kunderne med annoncer, og sørger for
-              at ingen henvendelse falder mellem to stole.{" "}
+              De fleste lokale servicefirmaer venter på at telefonen ringer.
+              Vi henter opgaverne ind, svarer på under et minut, og lægger dem
+              i din kalender.{" "}
               <strong className="font-semibold text-[color:var(--color-cactus-cream)]/85">
                 Du møder bare op til arbejdet.
               </strong>
@@ -138,11 +118,11 @@ export function Hero() {
                 href="#book"
                 className="group inline-flex items-center gap-2.5 rounded-full bg-[color:var(--color-cactus-cream)] px-7 py-4 text-base font-semibold text-[color:var(--color-cactus-dark)] shadow-[0_4px_24px_-6px_rgba(13,31,22,0.35)] transition-all hover:scale-[1.03] hover:shadow-[0_8px_32px_-6px_rgba(13,31,22,0.45)] active:scale-[0.98]"
               >
-                Book gratis møde
+                Få din lokale kundeanalyse
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-12" />
               </a>
               <a
-                href="#how"
+                href="#system"
                 className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-cactus-cream)]/25 bg-white/50 px-6 py-4 text-base font-medium text-[color:var(--color-cactus-cream)]/75 backdrop-blur-sm transition-all hover:bg-white/70 hover:text-[color:var(--color-cactus-cream)]"
               >
                 Se hvordan det virker →
@@ -157,8 +137,8 @@ export function Hero() {
               className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-[color:var(--color-cactus-cream)]/55"
             >
               {[
-                { icon: Zap, text: "Prisen tilpasses opgaven" },
-                { icon: CheckCircle2, text: "14-dages garanti" },
+                { icon: Zap, text: "Fast månedspris" },
+                { icon: CheckCircle2, text: "Ingen provision" },
                 { icon: Star, text: "Ingen binding" },
               ].map(({ icon: Icon, text }) => (
                 <span key={text} className="flex items-center gap-1.5">
@@ -193,7 +173,7 @@ export function Hero() {
             />
             <FloatingBadge
               icon={CheckCircle2}
-              title="Hvert lead besvaret"
+              title="Hver ny opgave besvaret"
               sub="Automatisk, også aften & weekend"
               className="-right-14 bottom-[30%]"
               delay={1.4}
@@ -201,8 +181,8 @@ export function Hero() {
             />
             <FloatingBadge
               icon={Star}
-              title="0 kr ved no-show"
-              sub="Kun betalt for resultater"
+              title="Fast månedspris"
+              sub="Ingen provision oveni dine priser"
               className="-bottom-4 -left-6"
               delay={1.6}
               floatY={-6}
@@ -215,17 +195,17 @@ export function Hero() {
       <div className="relative border-t border-[color:var(--color-cactus-green)]/15 bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[color:var(--color-cactus-green)]/10 lg:grid-cols-4 lg:divide-y-0">
           {[
-            { metric: "24/7", note: "hvert lead besvaret" },
-            { metric: "60 sek.", note: "svartid på leads" },
-            { metric: "14 dage", note: "resultat-garanti" },
-            { metric: "0 kr", note: "ved no-show" },
+            { metric: "24/7", note: "også aften og weekend" },
+            { metric: "60 sek.", note: "svartid på hver ny opgave" },
+            { metric: "Fast", note: "månedspris, ingen provision" },
+            { metric: "30 dage", note: "opsigelse, ingen binding" },
           ].map((s, i) => (
             <div
               key={s.metric}
               className="group relative px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14"
             >
               <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-gray-400">
-                Fakt #{String(i + 1).padStart(2, "0")}
+                Nr. {String(i + 1).padStart(2, "0")}
               </div>
               <div className="mt-3 font-display text-4xl font-extrabold tracking-[-0.03em] text-gray-900 sm:text-5xl">
                 {s.metric}

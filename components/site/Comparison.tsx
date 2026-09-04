@@ -1,5 +1,13 @@
 "use client";
 
+/*
+ *  DOED KODE pr. 4. sep 2026. Ingen side importerer denne fil.
+ *
+ *  Indeholder 'Du betaler kun per fremmoedt moede' og 'Setup refunderes'.
+ *
+ *  Se den oeverste blok i CLAUDE.md. Skal filen bruges igen, skal teksten
+ *  skrives om FOERST. Saet den ikke paa en side som den er.
+ */
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
 

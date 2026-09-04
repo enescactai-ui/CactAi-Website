@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 /**
  * GoHighLevel AI chat widget — loaded OUTSIDE React's render tree.
@@ -10,37 +10,67 @@ import { useEffect } from "react";
  * If we render the mount-point <div> inside React's tree, those injected
  * nodes become unexpected siblings to React's managed children. On client
  * navigation, React's reconciler tries to insertBefore/removeChild but the
- * node positions don't match what React expected → throws NotFoundError →
- * entire DOM gets wiped → blank screen.
+ * node positions don't match what React expected, throws NotFoundError,
+ * and the entire DOM gets wiped, leaving a blank screen.
  *
- * Solution: append the mount-point div + loader script directly to document.body
- * via useEffect. React renders nothing (returns null) so it never tries to
- * manage these elements. GHL is free to inject whatever it needs without
- * conflicting with React's reconciliation.
- *
- * The check for existing script prevents double-loading on hot reload or
- * accidental re-mount.
+ * Solution: append the mount-point div + loader script directly to
+ * document.body via useEffect. React renders nothing for those, so it never
+ * tries to manage them.
  */
 
+/*
+ *  SAMTYKKE-PORT, tilfoejet 3. sep 2026. Rul den ikke tilbage.
+ *
+ *  To grunde, og den foerste er juridisk:
+ *
+ *  1. GDPR / cookiebekendtgoerelsen. Widgeten indlaeser et tredjepartsscript
+ *     fra beta.leadconnectorhq.com bundet til vores GHL-konto, og den gemmer
+ *     besoegs- og samtale-id i browserens storage og sender til HighLevel i
+ *     USA. Det er ikke-noedvendig tredjepartslagring, og den kraever
+ *     FORUDGAAENDE samtykke. Foer var den paa hver eneste side for hver
+ *     eneste besoegende, mens cookiepolitikken samtidig paastod at vi ikke
+ *     havde brug for en cookie-banner. Den kombination var problemet.
+ *
+ *     Loesningen her er ikke en banner. Knappen ER samtykket: intet loader
+ *     foer nogen aktivt klikker for at aabne chatten. Derfor kan vi stadig
+ *     sige at der ikke er en banner, og nu passer det ogsaa.
+ *
+ *  2. Ydelse. Widgeten trak 25 tredjepartsforespoergsler ved sideindlaesning,
+ *     inklusive fire separate Roboto-kald til fonts.bunny.net, og
+ *     konkurrerede med hero-posteren som er sidens LCP-element.
+ *
+ *  Valget huskes i localStorage, saa den kun skal klikkes en gang.
+ */
 const WIDGET_ID = "69e35f8729e846567a4d1e68";
 const LOCATION_ID = "sdQQXNwPIvPRf3iIayFm";
 const LOADER_SRC = "https://beta.leadconnectorhq.com/loader.js";
 const RESOURCES_URL = "https://beta.leadconnectorhq.com/chat-widget/loader.js";
 const SCRIPT_ID = "ghl-chat-widget-loader";
+const CONSENT_KEY = "cactai-chat-consent";
 
 export function ChatBot() {
+  const [allowed, setAllowed] = useState(false);
+
+  // Husk et tidligere ja. Storage kan vaere blokeret, saa fejl = bliv slukket.
   useEffect(() => {
-    // Don't double-load if already present
+    try {
+      setAllowed(window.localStorage.getItem(CONSENT_KEY) === "yes");
+    } catch {
+      /* privat vindue eller blokeret storage, chatten forbliver slukket */
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!allowed) return;
     if (document.getElementById(SCRIPT_ID)) return;
 
-    // Create mount-point div — GHL's script looks for [data-chat-widget]
+    // Mount-point, GHL's script leder efter [data-chat-widget]
     const mount = document.createElement("div");
     mount.setAttribute("data-chat-widget", "");
     mount.setAttribute("data-widget-id", WIDGET_ID);
     mount.setAttribute("data-location-id", LOCATION_ID);
     document.body.appendChild(mount);
 
-    // Load the loader script — async so it doesn't block other work
     const script = document.createElement("script");
     script.id = SCRIPT_ID;
     script.src = LOADER_SRC;
@@ -49,10 +79,26 @@ export function ChatBot() {
     script.setAttribute("data-widget-id", WIDGET_ID);
     document.body.appendChild(script);
 
-    // Note: we DON'T clean up on unmount. GHL's widget has its own lifecycle
-    // and removing the script after load would orphan its injected DOM.
-    // The script + mount-point persist for the entire SPA session.
-  }, []);
+    // Ingen oprydning ved unmount. GHL's widget har sin egen livscyklus, og
+    // at fjerne scriptet efter load ville efterlade dens injicerede DOM.
+  }, [allowed]);
 
-  return null; // Nothing in React's tree
+  if (allowed) return null; // GHL tegner nu sin egen boble
+
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        try {
+          window.localStorage.setItem(CONSENT_KEY, "yes");
+        } catch {
+          /* kan ikke huskes, men chatten aabner stadig i denne session */
+        }
+        setAllowed(true);
+      }}
+      className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-[color:var(--color-cactus-green)] px-5 py-3.5 font-mono text-[11px] uppercase tracking-[0.16em] text-white shadow-[0_8px_30px_-8px_rgba(82,183,136,0.7)] transition-transform hover:scale-[1.04] active:scale-[0.98]"
+    >
+      Skriv til os
+    </button>
+  );
 }

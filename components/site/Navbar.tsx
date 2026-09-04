@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const NAV_LINKS = [
-  { label: "Ydelser", href: "/ydelser" },
-  { label: "Sådan virker det", href: "/#how" },
+  { label: "Vækstmotoren", href: "/ydelser" },
+  { label: "Sådan virker det", href: "/#system" },
   { label: "Priser", href: "/#priser" },
   { label: "Cases", href: "/cases" },
   { label: "Blog", href: "/blog" },
@@ -101,7 +101,7 @@ export function Navbar() {
               href="/#book"
               className="group relative hidden items-center gap-2 overflow-hidden rounded-full bg-[color:var(--color-cactus-green)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_12px_-4px_rgba(42,157,111,0.4)] transition-all hover:scale-[1.02] hover:shadow-[0_4px_20px_-4px_rgba(42,157,111,0.5)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-cactus-green)] sm:inline-flex"
             >
-              <span className="relative z-10">Book et møde</span>
+              <span className="relative z-10">Få din kundeanalyse</span>
               <span className="relative z-10 transition-transform group-hover:translate-x-0.5">
                 →
               </span>
@@ -210,7 +210,7 @@ export function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="block w-full border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)] px-6 py-5 text-center font-display text-lg font-medium text-[color:var(--color-cactus-deep)] transition-all active:scale-[0.98]"
                 >
-                  Book strategi-møde →
+                  Få din kundeanalyse →
                 </a>
 
                 <div className="mt-8 space-y-3 font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/55">

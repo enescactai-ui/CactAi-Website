@@ -4,8 +4,8 @@ import { Logo } from "./Logo";
 
 const FOOTER_LINKS = {
   Firma: [
-    { label: "Ydelser", href: "/ydelser" },
-    { label: "Sådan virker det", href: "/#how" },
+    { label: "Vækstmotoren", href: "/ydelser" },
+    { label: "Sådan virker det", href: "/#system" },
     { label: "Priser", href: "/#priser" },
     { label: "Blog & Indsigt", href: "/blog" },
     { label: "Om", href: "/om" },
@@ -69,7 +69,7 @@ export function Footer() {
             2670 Greve
           </div>
           <div>
-            Bygget med Next.js + Vercel, fordi langsomt ikke er en mulighed.
+            Bygget til at være hurtig på mobil, fordi det er der dine kunder er.
           </div>
         </div>
       </div>

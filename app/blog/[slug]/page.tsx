@@ -166,7 +166,7 @@ export default async function BlogPostPage({ params }: Props) {
                 href="/#book"
                 className="mt-6 inline-flex items-center gap-3 border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)] px-6 py-4 font-display text-base font-medium text-[color:var(--color-cactus-deep)] transition-all hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[6px_6px_0_0_var(--color-cactus-green)]"
               >
-                Book strategi-møde
+                Få din kundeanalyse
                 <span aria-hidden>→</span>
               </Link>
             </div>

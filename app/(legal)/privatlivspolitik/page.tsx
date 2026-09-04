@@ -53,7 +53,7 @@ const SECTIONS: Section[] = [
         items: [
           "Anonymiseret traffic-data via Vercel Analytics (page views, referrer, generisk land/region)",
           "Form-data hvis du udfylder booking-widget (navn, email, telefon, firma)",
-          "Ingen tracking-cookies, ingen fingerprinting, ingen tredjeparts-remarketing",
+          "Ingen tracking-cookies, ingen fingerprinting, ingen tredjeparts-remarketing. Funktionelle id'er fra GoHighLevel til booking og chat, se cookiepolitikken",
         ],
       },
       {
@@ -105,7 +105,7 @@ const SECTIONS: Section[] = [
     list: [
       {
         items: [
-          "GoHighLevel (USA), CRM, kalender, booking-widget, formularer. Overførselsgrundlag: Standard Contractual Clauses (SCC).",
+          "GoHighLevel / LeadConnector (USA), CRM, kalender, booking-widget, chat-widget, formularer. Overførselsgrundlag: Standard Contractual Clauses (SCC).",
           "Meta Platforms Ireland (EU), annoncering. Du betaler direkte til Meta; vi har ikke adgang til dit kort.",
           "Google Ireland (EU), Google Ads. Som ovenfor.",
           "Vercel (USA/EU), hosting og analytics. Overførselsgrundlag: EU-US Data Privacy Framework + EU-regioner hvor muligt.",
@@ -136,14 +136,14 @@ const SECTIONS: Section[] = [
     title: "Når CactAi er databehandler",
     body: [
       "Når CactAi leverer leads til en klient, er klienten dataansvarlig for de slutkundedata vi videregiver. CactAi fungerer som databehandler i den fase, reguleret af separat databehandleraftale med klienten.",
-      "Slutkunder med spørgsmål om hvordan deres data bruges, skal kontakte den virksomhed der modtog leadet (vores klient).",
+      "Slutkunder med spørgsmål om hvordan deres data bruges, skal kontakte den virksomhed der modtog henvendelsen (vores klient).",
     ],
   },
   {
     n: "08",
     title: "Cookies",
     body: [
-      "cactaihq.com bruger Vercel Analytics og Speed Insights, anonymiseret, ingen cookies, ingen fingerprinting. Booking-widgetten fra GoHighLevel sætter funktionelle cookies når du interagerer med den (krævet for at gemme dit valg af tid).",
+      "cactaihq.com bruger Vercel Analytics og Speed Insights, anonymiseret, ingen cookies, ingen fingerprinting. Booking-widgetten fra GoHighLevel indlæses sammen med siden og gemmer et funktionelt besøgs-id i din browser, så din booking kan gennemføres. Chat-widgeten fra GoHighLevel indlæses først når du selv klikker for at åbne den. Se cookiepolitikken for detaljer.",
       "Læs den fulde cookie-politik på /cookies.",
     ],
   },

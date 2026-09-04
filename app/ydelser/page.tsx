@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Vækstmotoren",
   description:
-    "Ét samlet system der henter kunderne, svarer hvert lead på sekunder, og booker dem direkte i din kalender. Du møder bare op til arbejdet.",
+    "Ét samlet system der henter opgaver ind i dit område, svarer på sekunder, og lægger dem direkte i din kalender. Du møder bare op til arbejdet.",
 };
 
 type Part = {
@@ -19,39 +19,39 @@ type Part = {
 const PARTS: Part[] = [
   {
     n: "01",
-    tag: "Lead-motoren",
+    tag: "Kunde-indtaget",
     title: "Vi henter kunderne",
-    body: "Meta-annoncer målrettet præcis de kunder der leder efter dig i dit område. Det er brændstoffet der driver hele motoren.",
+    body: "Annoncer målrettet præcis de folk der leder efter din ydelse i dit område, netop nu. Det er brændstoffet der driver hele motoren.",
   },
   {
     n: "02",
     tag: "Lynsvar",
     title: "Svar på under 60 sekunder",
-    body: "Hvert nyt lead får svar på under et minut, døgnet rundt, før konkurrenten overhovedet når at ringe tilbage.",
+    body: "Hver ny henvendelse får svar på under et minut, døgnet rundt, før konkurrenten overhovedet når at ringe tilbage.",
   },
   {
     n: "03",
     tag: "Notifikationen",
     title: "Du ved det med det samme",
-    body: "Navn, opgave og telefonnummer lander på din telefon i samme sekund, leadet kommer ind. Så du kan ringe, mens de stadig sidder med mobilen i hånden.",
+    body: "Navn, opgave og telefonnummer lander på din telefon i samme sekund, henvendelsen kommer ind. Så du kan ringe, mens de stadig sidder med mobilen i hånden.",
   },
   {
     n: "04",
     tag: "Opfølgning",
-    title: "Ingen lead falder mellem to stole",
-    body: "De leads der ikke svarede første gang bliver automatisk fulgt op og genbooket. Ingen kunde bliver glemt.",
+    title: "Ingen opgave falder mellem to stole",
+    body: "Dem der ikke svarede første gang bliver automatisk fulgt op. Ingen kunde bliver glemt.",
   },
   {
     n: "05",
-    tag: "Google & synlighed",
+    tag: "Synlighed",
     title: "Du bliver den de vælger",
-    body: "Din Google-profil optimeres og anmeldelser samles ind automatisk, så du står stærkest når kunderne søger.",
+    body: "Din profil og dine anmeldelser passes automatisk, så du står stærkest i det øjeblik nogen søger efter din ydelse.",
   },
   {
     n: "06",
-    tag: "Resultat-garantien",
-    title: "Du betaler kun for fremmøde",
-    body: "Du betaler kun når en kunde rent faktisk møder op. Møder de ikke op, koster det ikke en krone.",
+    tag: "Fast pris",
+    title: "Du ved hvad det koster",
+    body: "Fast beløb om måneden, ingen provision oveni dine egne priser. Ingen binding, og 30 dages opsigelse fra første dag.",
   },
 ];
 
@@ -121,10 +121,10 @@ export default function YdelserPage() {
                 Én motor, ikke fem værktøjer.
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-                Delene virker kun fordi de sidder i samme motor. Annoncen
-                henter leadet, lynsvaret fanger det på sekunder, AI&apos;en
-                booker mødet, opfølgningen redder dem der tøver, og garantien
-                sikrer at du kun betaler for det der faktisk virker.
+                Delene virker kun fordi de sidder i samme motor.
+                Efterspørgslen bliver hentet ind, svaret går ud på under et
+                minut, opfølgningen redder dem der tøver, og opgaven lander i
+                din kalender. Ikke fem værktøjer du selv skal binde sammen.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
                 Du skal ikke lære et eneste værktøj. Du skal bare møde op til
@@ -133,10 +133,10 @@ export default function YdelserPage() {
             </div>
             <div className="flex flex-col justify-center gap-4">
               {[
-                { k: "24/7", v: "hvert lead besvaret" },
-                { k: "60 sek.", v: "svartid på nye leads" },
-                { k: "14 dage", v: "resultat-garanti" },
-                { k: "0 kr", v: "ved no-show" },
+                { k: "24/7", v: "hver opgave besvaret" },
+                { k: "60 sek.", v: "svartid på nye opgaver" },
+                { k: "Fast", v: "månedspris, ingen provision" },
+                { k: "30 dage", v: "opsigelse, ingen binding" },
               ].map((s) => (
                 <div
                   key={s.k}
@@ -163,15 +163,15 @@ export default function YdelserPage() {
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
               Ingen pakker der ikke passer. Vi ser på din forretning, dit
-              område og dine mål, og bygger en pris der matcher. Og du betaler
-              kun når kunder rent faktisk møder op.
+              område og dine mål, og bygger en pris der matcher. Fast beløb om
+              måneden, ingen provision, og 30 dages opsigelse fra første dag.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="/#book"
                 className="group inline-flex items-center gap-2.5 rounded-full bg-[color:var(--color-cactus-cream)] px-7 py-4 text-base font-semibold text-[color:var(--color-cactus-dark)] shadow-[0_4px_24px_-6px_rgba(13,31,22,0.35)] transition-all hover:scale-[1.03] active:scale-[0.98]"
               >
-                Book gratis møde
+                Få din lokale kundeanalyse
                 <span aria-hidden className="transition-transform group-hover:translate-x-1">
                   →
                 </span>

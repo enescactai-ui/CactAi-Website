@@ -1,5 +1,13 @@
 "use client";
 
+/*
+ *  DOED KODE pr. 4. sep 2026. Ingen side importerer denne fil.
+ *
+ *  Regner paa den gamle pay-per-show-oekonomi.
+ *
+ *  Se den oeverste blok i CLAUDE.md. Skal filen bruges igen, skal teksten
+ *  skrives om FOERST. Saet den ikke paa en side som den er.
+ */
 import { motion } from "framer-motion";
 import { Calculator, TrendingUp } from "lucide-react";
 import { useMemo, useState } from "react";

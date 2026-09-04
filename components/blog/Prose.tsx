@@ -65,7 +65,7 @@ export function Quote({
       </blockquote>
       {attribution && (
         <figcaption className="mt-3 font-mono text-xs uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55">
-          — {attribution}
+          {attribution}
         </figcaption>
       )}
     </figure>

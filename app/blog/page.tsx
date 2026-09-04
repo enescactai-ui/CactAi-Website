@@ -96,9 +96,9 @@ export default function BlogIndexPage() {
                   Vil du tale om dit firma direkte?
                 </h2>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
-                  Læsning er én ting. Sparring er noget andet. Book et 20-min
-                  strategi-møde, vi regner konkret på hvad systemet
-                  ville betyde for dit firma.
+                  Læsning er én ting. Tal er noget andet. Få en 20-min lokal
+                  kundeanalyse, så ved du hvad der faktisk er at hente i dit
+                  område.
                 </p>
               </div>
               <div className="flex items-end lg:col-span-4 lg:justify-end">
@@ -106,7 +106,7 @@ export default function BlogIndexPage() {
                   href="/#book"
                   className="inline-flex items-center gap-3 border-2 border-[color:var(--color-cactus-green)] bg-[color:var(--color-cactus-green)] px-7 py-5 font-display text-lg font-medium text-[color:var(--color-cactus-deep)] transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0_0_var(--color-cactus-green)]"
                 >
-                  Book strategi-møde
+                  Få din kundeanalyse
                   <span aria-hidden>→</span>
                 </Link>
               </div>

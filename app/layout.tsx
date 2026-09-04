@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ChatBot } from "@/components/site/ChatBot";
+import { MotionProvider } from "@/components/site/MotionProvider";
 import { JsonLd } from "@/components/site/JsonLd";
 import "./globals.css";
 
@@ -31,15 +32,14 @@ export const metadata: Metadata = {
     template: "%s · CactAi",
   },
   description:
-    "Vi henter kunderne og sørger for, at du aldrig mister én. Annoncer, automatisk svar på hvert lead inden for 60 sekunder, og booking direkte i din kalender. Ét system, én pris.",
+    "Vi henter opgaverne ind i dit område, svarer på hver eneste inden for 60 sekunder, og lægger dem direkte i din kalender. Fast månedspris, ingen binding.",
   keywords: [
     "vækstpartner servicevirksomhed",
-    "automatisk leadsvar",
+    "automatisk svar på henvendelser",
     "missede opkald",
     "flere kunder lokal virksomhed",
-    "Meta ads Google ads Danmark",
-    "lead generation Danmark",
-    "pay per show",
+    "flere opgaver servicevirksomhed",
+    "fast månedspris marketing",
   ],
   authors: [{ name: "CactAi", url: "https://cactaihq.com" }],
   creator: "CactAi",
@@ -49,16 +49,16 @@ export const metadata: Metadata = {
     locale: "da_DK",
     url: "https://cactaihq.com",
     siteName: "CactAi",
-    title: "Mist aldrig en kunde igen · CactAi",
+    title: "Bliv den de ringer til først i dit område · CactAi",
     description:
-      "Vi henter kunderne og sørger for at du aldrig mister én. Annoncer, automatisk svar på hvert lead døgnet rundt, og booking direkte i din kalender.",
+      "Vi henter opgaverne ind i dit område, svarer på hver eneste inden for et minut, og lægger dem i din kalender. Fast månedspris, ingen binding.",
     // Images auto-injected by app/opengraph-image.tsx file convention.
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mist aldrig en kunde igen · CactAi",
+    title: "Bliv den de ringer til først i dit område · CactAi",
     description:
-      "Vi henter kunderne, AI'en svarer på sekunder, og booker dem i din kalender. Du møder bare op til arbejdet.",
+      "Vi henter opgaverne ind, svarer på under et minut, og lægger dem i din kalender. Du møder bare op til arbejdet.",
     // Images auto-injected by app/opengraph-image.tsx file convention.
   },
   robots: {
@@ -100,7 +100,7 @@ export default function RootLayout({
         >
           Spring til indhold
         </a>
-        {children}
+        <MotionProvider>{children}</MotionProvider>
         <ChatBot />
         <JsonLd />
         {/* Vercel Analytics + Speed Insights — auto-activates when deployed,

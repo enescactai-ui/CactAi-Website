@@ -1,5 +1,14 @@
 "use client";
 
+/*
+ *  DOED KODE pr. 4. sep 2026. Ingen side importerer denne fil.
+ *
+ *  Peger paa et GHL-skema der hedder 'Discovery call qualification'.
+ *  Moedet hedder nu 'lokal kundeanalyse', ikke discovery call.
+ *
+ *  Se den oeverste blok i CLAUDE.md. Skal filen bruges igen, skal teksten
+ *  skrives om FOERST. Saet den ikke paa en side som den er.
+ */
 import Script from "next/script";
 
 /**

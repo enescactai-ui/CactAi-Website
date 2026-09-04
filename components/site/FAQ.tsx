@@ -4,38 +4,63 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
+/*
+ *  FAQ'en er sidens aerlighedstest. Den er det sidste folk laeser foer de
+ *  booker, og den ene ting der adskiller os fra alle andre bureauer er at
+ *  vi IKKE lover et tal vi ikke kan holde.
+ *
+ *  "Kan I garantere resultater" er det vigtigste svar paa hele siden.
+ *  Svaret er nej, med vilje, og begrundelsen er selve saelgeren: alle
+ *  andre lover fem leads om maaneden, og enhver ejer der er blevet
+ *  braendt foer ved godt at det er et kroghook. At sige det hoejt
+ *  koeber mere tillid end garantien nogensinde ville.
+ *
+ *  Skriv aldrig et fast antal kunder eller leads ind her.
+ */
 const FAQS = [
   {
-    q: "Hvordan afregner I?",
-    a: "Fast beløb om måneden, ingen provision og ingen binding. Du ved præcis hvad det koster, uanset hvor mange opgaver der kommer ind. Annoncebudgettet betaler du direkte til Google eller Meta, det går aldrig gennem os.",
+    q: "Kan I garantere mig et bestemt antal kunder?",
+    a: "Nej, og det er et bevidst valg. Vi garanterer at systemet bliver bygget, at det kører, og at hver eneste henvendelse bliver besvaret. Hvor mange der ender med at sige ja afhænger også af dine priser, dit område og hvor hurtigt du selv følger op, og det er ting vi ikke styrer. Alle der lover dig et fast antal kunder uden at kende din forretning, gætter. Din sikkerhed er i stedet at du kan sige op med 30 dages varsel fra dag ét.",
   },
   {
-    q: "Hvad hvis det ikke virker?",
-    a: "Får du ikke mindst 5 kvalificerede henvendelser i den første måned annoncerne kører, får du månedens honorar tilbage. En henvendelse tæller når den ligger inden for din aftalte målgruppe, har reel kontaktinfo og svarer på opfølgning. Annoncebudgettet dækkes ikke, fordi det er din direkte betaling til platformen, ikke til os.",
+    q: "Har I resultater fra andre kunder I kan vise mig?",
+    a: "Ikke nogen færdige endnu, og jeg vil ikke pynte på det. CactAi er startet i 2026, og der kører ét forløb lige nu som ikke er afsluttet. Under Cases kan du se præcis hvad der er bygget, og hvad der stadig mangler. Den dag der er en færdig case med tal du kan efterprøve, kommer den op. Indtil da kan du bedømme mig på to ting: hvad jeg finder i din egen kundeanalyse, og at du kan gå med 30 dages varsel.",
+  },
+  {
+    q: "Hvordan afregner I?",
+    a: "Fast beløb om måneden. Ingen provision oveni dine egne priser, og ingen regning der svinger fra måned til måned. Annoncebudgettet betaler du direkte til platformen, det går aldrig gennem os, og vi får aldrig adgang til dit kort.",
   },
   {
     q: "Hvad koster det egentlig?",
-    a: "Der er to måder at starte. Hjemmeside og Google har ingen opstart og ingen binding. Vil du have kunder hentet aktivt ind med annoncer, hedder det Vækstmotoren. Prisen afhænger af omfang og mål, og vi regner den konkret ud på et kort møde, ikke ud fra en fast liste. Annoncebudgettet betaler du direkte til Meta, vi får aldrig adgang til dit kort.",
+    a: "Der er to måder at starte. Hjemmeside og synlighed har ingen opstart og ingen binding. Vil du have opgaver hentet aktivt ind, hedder det Vækstmotoren, og prisen følger omfanget. Vi regner den konkret ud på mødet ud fra dine egne tal, ikke ud fra en prisliste der passer på ingen.",
   },
   {
-    q: "Hvor mange leads får jeg om måneden?",
-    a: "Det varierer meget efter branche, område og annoncebudget, og alle der giver dig et fast tal uden at kende din forretning gætter. Vi regner konkret på det ud fra dine egne tal på strategi-mødet, og vi siger nej hvis regnestykket ikke hænger sammen.",
+    q: "Hvor mange opgaver får jeg om måneden?",
+    a: "Det varierer meget efter branche, område og budget. Vi regner konkret på det ud fra dine egne tal på mødet, og vi siger nej hvis regnestykket ikke hænger sammen. Det er billigere for os begge at finde ud af det inden, end tre måneder inde.",
   },
   {
-    q: "Skal jeg lære nyt software?",
-    a: "Nej. Du får leads direkte via SMS, og bookede møder lander i din almindelige kalender (Google/Outlook). Du arbejder præcis som du plejer.",
-  },
-  {
-    q: "Hvilke brancher arbejder I med?",
-    a: "Vi arbejder med servicevirksomheder og mindre virksomheder generelt: rengøring, VVS, el, håndværk, klinikker, og virksomheder der sælger online. Systemet er det samme, uanset branche. Det der ændrer sig, er hvem annoncerne rammer, og hvad der står på hjemmesiden."
-  },
-  {
-    q: "Hvordan betaler jeg?",
-    a: "Bank-overførsel via Billy (dansk regnskabssoftware). Faktura sendes hver 14. dag. Netto 8 dages betalingsfrist. Ingen amerikanske payment-systemer, ingen card-on-file, ingen autotræk.",
+    q: "Hvor lang tid går der før det virker?",
+    a: "Regn med uger, ikke dage. Systemet skal bygges, annoncerne skal finde ud af hvem de rammer, og de første tal skal ind før vi kan justere. Målet er en jævn strøm af opgaver måned efter måned, ikke ét spring den første uge.",
   },
   {
     q: "Hvor lang er bindingsperioden?",
-    a: "Ingen lang binding. Du kan opsige med 30 dages varsel efter de første 14 dages garanti-periode. Vi bygger forretningen på resultater, ikke kontrakter.",
+    a: "Der er ingen. Du kan opsige med 30 dages varsel, fra første dag. Vi bygger forretningen på at du bliver fordi det virker, ikke fordi du er låst inde i en kontrakt.",
+  },
+  {
+    q: "Skal jeg lære nyt software?",
+    a: "Nej. Du får hver ny henvendelse direkte på SMS, og bookede aftaler lander i din almindelige kalender, Google eller Outlook. Du arbejder præcis som du plejer.",
+  },
+  {
+    q: "Hvilke brancher arbejder I med?",
+    a: "Lokale servicevirksomheder: rengøring, tag, VVS, el, håndværk og klinikker. Systemet er det samme uanset branche. Det der ændrer sig er hvem annoncerne rammer, og hvad der står på hjemmesiden.",
+  },
+  {
+    q: "Hvem ejer hjemmesiden og kontiene?",
+    a: "Det gør du. Annoncekonti, hjemmeside, domæne og alle data står i dit navn, også hvis du stopper hos os. Du skal aldrig købe dit eget fra os for at kunne gå.",
+  },
+  {
+    q: "Hvordan betaler jeg?",
+    a: "Du får en faktura på mail og betaler med bankoverførsel eller kort. Netto 8 dages betalingsfrist. Ingen autotræk og intet kort gemt hos os.",
   },
 ];
 
@@ -74,7 +99,7 @@ export function FAQ() {
             FAQ
           </div>
           <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
-            Spørgsmål andre ejere stiller
+            De spørgsmål ejere faktisk stiller
           </h2>
         </motion.div>
 

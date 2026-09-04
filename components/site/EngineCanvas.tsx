@@ -107,8 +107,38 @@ function Projector({ anchors, assembled }: { anchors: Anchor[]; assembled: boole
 export default function EngineCanvas({ anchors }: { anchors: Anchor[] }) {
   const [assembled, setAssembled] = useState(false);
 
+  /*
+   *  Paa touch-enheder droppes device pixel ratio til 1 og antialias slaas
+   *  fra. Ved DPR 1.5 med MSAA rasteres omkring 740k pixels paa en
+   *  390x844-skaerm, ved DPR 1 uden MSAA er det 329k og ingen
+   *  multisample-resolve. Cirka 2,5 gange mindre fill rate.
+   *
+   *  Sikkert mod hydration mismatch: komponenten SSR'er aldrig, den
+   *  indlaeses med dynamic + ssr:false.
+   */
+  const coarse =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+
   return (
-    <Canvas dpr={[1, 1.5]} camera={{ fov: 38, position: [5, 1.5, 8] }} gl={{ antialias: true }}>
+    <Canvas
+      /*
+       *  Uden fallback kaster R3F naar der ikke kan oprettes en
+       *  WebGL-kontekst, fx aeldre iOS Safari, GPU-blocklists eller
+       *  haardede firmaopsaetninger. Komponenten ligger paa forsiden, saa
+       *  kastet bobler op til app/error.tsx og ERSTATTER hele forsiden med
+       *  fejlsiden. Suspense fanger indlaesning, ikke fejl.
+       */
+      fallback={
+        <div className="flex h-full w-full items-center justify-center px-6 text-center font-mono text-xs uppercase tracking-[0.18em] text-white/50">
+          Din browser understøtter ikke 3D-visning
+        </div>
+      }
+      dpr={coarse ? 1 : [1, 1.5]}
+      camera={{ fov: 38, position: [5, 1.5, 8] }}
+      gl={{ antialias: !coarse, powerPreference: "high-performance" }}
+      performance={{ min: 0.5 }}
+    >
       <color attach="background" args={["#06120c"]} />
 
       <hemisphereLight args={["#cdfbe6", "#08170e", 1.4]} />

@@ -295,7 +295,7 @@ export default function CasesPage() {
               href="/#book"
               className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-[color:var(--color-cactus-green)] px-8 py-4 font-display text-base font-semibold text-white transition-all hover:brightness-110"
             >
-              Book et gratis møde
+              Få din lokale kundeanalyse
             </a>
           </div>
         </section>

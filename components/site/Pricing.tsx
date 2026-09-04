@@ -9,11 +9,11 @@ const POINTS = [
   {
     icon: Layers,
     title: "Skræddersyet til dig",
-    desc: "Vi giver ikke én pris til alle. Vi bygger Vækstmotoren til præcis dét din forretning har brug for, og prisen følger opgaven.",
+    desc: "Vi giver ikke én pris til alle. Vi bygger Vækstmotoren til præcis det din forretning har brug for, og prisen følger opgaven.",
   },
   {
     icon: ShieldCheck,
-    title: "Du betaler for resultater",
+    title: "Én fast pris",
     desc: "Fast beløb om måneden. Ingen provision oveni dine egne priser, og ingen regning der svinger fra måned til måned.",
   },
   {
@@ -38,14 +38,14 @@ export function Pricing() {
             Pris
           </div>
           <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            Ingen fast pris her.{" "}
+            Prisen står ikke her.{" "}
             <span className="text-[color:var(--color-cactus-green)]">
               Med vilje.
             </span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/65">
-            En hjemmeside der skal stå klar til fredag, og kunder der skal
-            hentes ind måned efter måned, passer ikke i samme linje. Book en
+            En hjemmeside der skal stå klar til fredag, og opgaver der skal
+            hentes ind måned efter måned, kan ikke koste det samme. Book en
             kort snak, og du får et konkret tilbud til din forretning, ikke et
             tal fra en prisliste der passer på ingen.
           </p>
@@ -57,10 +57,10 @@ export function Pricing() {
                 De fleste starter her
               </div>
               <h3 className="mt-4 font-display text-2xl font-bold tracking-tight">
-                Hjemmeside &amp; Google
+                Hjemmeside &amp; Synlighed
               </h3>
               <div className="mt-4 font-display text-4xl font-bold tracking-tight text-[color:var(--color-cactus-green)]">
-                Skræddersyet
+                Uden opstart
               </div>
               <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/50">
                 Ingen opstart · ingen binding
@@ -68,14 +68,14 @@ export function Pricing() {
               <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
                 <li>Hjemmeside bygget, hostet og vedligeholdt</li>
                 <li>Google-profil sat op og optimeret</li>
-                <li>Automatisk svar på hver henvendelse</li>
+                <li>Automatisk svar på hver ny opgave</li>
                 <li>Du ejer alt, også hvis du stopper</li>
               </ul>
               <a
                 href="/#book"
                 className="mt-7 block rounded-full bg-[color:var(--color-cactus-green)] px-6 py-3.5 text-center font-display text-sm font-semibold text-white transition-all hover:brightness-110"
               >
-                Book gratis møde
+                Få din kundeanalyse
               </a>
             </div>
 
@@ -88,16 +88,16 @@ export function Pricing() {
                 Vækstmotoren
               </h3>
               <div className="mt-4 font-display text-4xl font-bold tracking-tight">
-                Skræddersyet
+                Fast pr. måned
               </div>
               <div className="mt-1 font-mono text-[11px] text-[color:var(--color-cactus-cream)]/50">
                 Pris aftales på mødet, efter omfang
               </div>
               <ul className="mt-6 space-y-2.5 text-sm text-[color:var(--color-cactus-cream)]/70">
-                <li>Alt i Hjemmeside &amp; Google</li>
-                <li>Annoncer der henter kunder ind</li>
+                <li>Alt i Hjemmeside &amp; Synlighed</li>
+                <li>Opgaver hentet aktivt ind i dit område</li>
                 <li>Fast månedspris, ingen provision</li>
-                <li>Annoncebudget betales direkte til Meta</li>
+                <li>Annoncebudget betales direkte til platformen</li>
               </ul>
               <a
                 href="/#book"
@@ -135,6 +135,42 @@ export function Pricing() {
           ))}
         </div>
 
+        {/* Hvem det passer til, og hvem det ikke goer.
+            At skrive hvem man siger nej til er den billigste
+            troevaerdighed der findes, og naesten ingen bureauer goer det.
+            Det sorterer ogsaa moederne, saa der kommer faerre spildte kald. */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: EASE }}
+          className="mt-14 grid gap-5 text-left lg:mt-16 lg:grid-cols-2"
+        >
+          <div className="rounded-3xl border border-[color:var(--color-cactus-green)]/25 bg-[color:var(--color-cactus-green)]/[0.06] p-8">
+            <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
+              Det passer til dig hvis
+            </div>
+            <ul className="mt-5 space-y-3 text-[15px] leading-relaxed text-[color:var(--color-cactus-cream)]/70">
+              <li>Du har et lokalt servicefirma med 1 til 15 ansatte.</li>
+              <li>Du har kunder i forvejen, men de kommer tilfældigt.</li>
+              <li>Du har plads til flere opgaver i kalenderen.</li>
+              <li>Du er klar til at lægge et budget i annoncerne oveni honoraret.</li>
+            </ul>
+          </div>
+
+          <div className="rounded-3xl border border-[color:var(--color-cactus-green)]/12 bg-white p-8 shadow-[0_4px_24px_-8px_rgba(13,31,22,0.08)]">
+            <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/40">
+              Sig nej hvis
+            </div>
+            <ul className="mt-5 space-y-3 text-[15px] leading-relaxed text-[color:var(--color-cactus-cream)]/55">
+              <li>Du leder efter det billigste tilbud på markedet.</li>
+              <li>Du skal bruge nye kunder i denne uge. Det tager uger, ikke dage.</li>
+              <li>Du har ikke kapacitet til at tage flere opgaver ind.</li>
+              <li>Du vil helst ikke involveres, og bare have en regning i indbakken hver måned.</li>
+            </ul>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -146,11 +182,11 @@ export function Pricing() {
             href="/#book"
             className="group inline-flex items-center gap-2.5 rounded-full bg-[color:var(--color-cactus-green)] px-8 py-4 font-display text-base font-semibold text-white transition-all hover:brightness-110 hover:shadow-[0_8px_30px_-8px_rgba(82,183,136,0.6)]"
           >
-            Book et møde og få din pris
+            Få din lokale kundeanalyse
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-12" />
           </a>
           <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[color:var(--color-cactus-cream)]/40">
-            Uforpligtende · 20 minutter · du ved besked samme dag
+            Uforpligtende · 20 minutter · du får analysen uanset hvad
           </span>
         </motion.div>
       </div>

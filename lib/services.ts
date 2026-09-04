@@ -1,3 +1,20 @@
+/*
+ *  ADVARSEL, laes foer du bruger denne fil.
+ *
+ *  DOED KODE pr. 3. sep 2026. Ingen side importerer SERVICES. /ydelser
+ *  har sin egen tekst inline.
+ *
+ *  Indholdet er FORAELDET og delvist forkert:
+ *    - "PPSA Lead Generation" er den gamle forretningsmodel. Vi koerer
+ *      fast maanedshonorar nu, ikke betaling per fremmoede.
+ *    - "AI Receptionist" fremstilles som et faerdigt produkt der kan
+ *      koebes. Det er det ikke. Samme grund som ai-receptionist-guide
+ *      blev afpubliceret fra bloggen.
+ *    - Priserne er ikke dem vi saelger til.
+ *
+ *  Skal filen bruges igen, skal indholdet skrives om foerst. Saet den
+ *  ikke paa en side som den er.
+ */
 export type Service = {
   n: string;
   badge: string;

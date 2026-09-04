@@ -16,6 +16,19 @@ export default function HeroBackground() {
         }}
       />
 
+      {/*
+        LCP-elementet paa mobil er posteren herunder. Uden preload blev den
+        koeet bag 15 JS-chunks, 2 CSS-filer og 3 skrifttyper, saa den var
+        587 ms om overhovedet at komme i gang, selvom filen kun er 10 KB.
+        React 19 loefter dette link op i <head>.
+      */}
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-aurora-poster.jpg?v=2"
+        fetchPriority="high"
+      />
+
       <video
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay

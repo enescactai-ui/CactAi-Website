@@ -18,7 +18,7 @@ export default function MetaAdsHaandvaerkerePost() {
       <Lead>
         Meta Ads (Facebook + Instagram) er stadig den billigste kanal til at
         få leads for lokale servicevirksomheder i Danmark. Men kun hvis du ved hvad du laver.
-        Her er præcis hvad der virker — og hvad der koster dig penge uden
+        Her er præcis hvad der virker, og hvad der koster dig penge uden
         afkast.
       </Lead>
 
@@ -36,7 +36,7 @@ export default function MetaAdsHaandvaerkerePost() {
       <P>
         Til sammenligning: Google Ads er fantastisk når nogen aktivt
         søger ("VVS Greve akut"), men kostbart (45-180 kr per klik). Meta
-        rammer folk der IKKE søger endnu, men matcher din ICP — typisk
+        rammer folk der IKKE søger endnu, men matcher din ICP, typisk
         til 8-25 kr per klik.
       </P>
 
@@ -46,7 +46,7 @@ export default function MetaAdsHaandvaerkerePost() {
 
       <P>
         "Vi tilbyder årligt VVS-tjek for 1.495 kr" konverterer 4-8× bedre
-        end "Velkommen til VVS Hansen — vi laver alt". Folk scroller forbi
+        end "Velkommen til VVS Hansen, vi laver alt". Folk scroller forbi
         introduktioner. De stopper for tilbud med tal.
       </P>
 
@@ -73,7 +73,7 @@ export default function MetaAdsHaandvaerkerePost() {
       <P>
         9:16 videoer på 8-15 sekunder converter 60-90% bedre end statiske
         billeder. Vis et FÆRDIGT job (før/efter), ikke et stock-billede.
-        iPhone-kvalitet er fint — det skal bare være ægte.
+        iPhone-kvalitet er fint, det skal bare være ægte.
       </P>
 
       <H3>5. Retargeting de der besøgte din side</H3>
@@ -131,8 +131,8 @@ export default function MetaAdsHaandvaerkerePost() {
       <Callout title="Hvor meget skal du bruge?">
         Som rule-of-thumb: minimum 100 kr/dag (~3.000 kr/md) for at
         Meta-algoritmen har nok data til at optimere. Under det, jagter
-        du støj. Vores standardpakke starter ved 5.000 kr/md i ad-spend
-        — du betaler det DIREKTE til Meta, ikke til os.
+        du støj. Vi anbefaler typisk at starte ved 5.000 kr/md i annoncebudget.
+        Du betaler det DIREKTE til Meta, ikke til os.
       </Callout>
 
       <H2>Hvad realistiske tal ser ud som</H2>
@@ -146,14 +146,14 @@ export default function MetaAdsHaandvaerkerePost() {
         <LI>~250-400 leads (3-5 leads per dag)</LI>
         <LI>~80-130 kvalificerede (efter telefon-screening)</LI>
         <LI>~15-25 bookede møder</LI>
-        <LI>~10-18 fremmødte (no-show rate ~25%)</LI>
-        <LI>~5-9 lukkede jobs (close rate ~50% efter fremmøde)</LI>
+        <LI>~10-18 der møder op til et tilbud</LI>
+        <LI>~5-9 lukkede opgaver</LI>
         <LI>~60.000-108.000 kr i ny omsætning</LI>
       </UL>
 
       <P>
-        Det er 12-21× ROI på ad-spend. Plus du betaler vores PPSA-fee
-        per fremmødt møde (500-1.500 kr) — så netto er det 5-8× ROI.
+        Det er 12-21× ROI på annonceforbruget, før mit honorar. Honoraret
+        er et fast beløb om måneden, uanset hvor godt måneden går.
       </P>
 
       <Quote>
@@ -177,7 +177,7 @@ export default function MetaAdsHaandvaerkerePost() {
           kan hjælpe).
         </LI>
         <LI>
-          <Strong>Kalender klar til 10+ ekstra møder/md</Strong> — det
+          <Strong>Kalender klar til 10+ ekstra møder/md</Strong>, det
           nytter ikke at få leads hvis du ikke kan komme ud til dem.
         </LI>
       </UL>

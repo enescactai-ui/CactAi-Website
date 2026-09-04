@@ -124,25 +124,25 @@ export default function OmPage() {
                 Teori giver dig sproget. Marketing i 2026 lærer du ved at gøre,
                 og ved at have rigtig <em>skin in the game</em>. Det er derfor
                 CactAi virker som det virker. De fleste danske bureauer tager
-                et fast beløb hver måned og siger samtidig "vi kan ikke
-                garantere noget". Det er den kombination der irriterede mig,
-                ikke den faste pris i sig selv.
+                et fast beløb hver måned og binder dig i tolv. Det er
+                bindingen der irriterede mig. Er prisen fast, skal døren
+                være åben.
               </p>
               <p>
                 Så jeg byggede CactAi omkring{" "}
                 <strong className="text-[color:var(--color-cactus-green)]">
-                  en fast pris og en garanti
+                  en fast pris og en åben dør
                 </strong>
                 . Konceptet er enkelt: du betaler et fast beløb om måneden,
-                ingen provision oveni dine egne priser, og ingen binding.
-                Får du ikke mindst 5 kvalificerede henvendelser i den
-                første måned annoncerne kører? Så får du månedens honorar
-                tilbage.
+                ingen provision oveni dine egne priser, og ingen binding. Du
+                kan sige op med 30 dages varsel fra dag ét, uden at skulle
+                forklare hvorfor.
               </p>
               <p>
-                Det er ikke en revolution. Det er bare ærligt arbejde med rigtig{" "}
-                <em>skin in the game</em>. Du kender prisen på forhånd, og
-                leverer jeg ikke, betaler jeg tilbage. Det er nøjagtigt sådan
+                Det er ikke en revolution. Det er bare ærligt arbejde. Du
+                kender prisen på forhånd, og leverer jeg ikke, går du.
+                Jeg lover dig ikke et bestemt antal kunder, for det tal kan
+                jeg ikke styre alene, og alle der lover dig det gætter. Det er nøjagtigt sådan
                 det burde være.
               </p>
             </div>
@@ -199,11 +199,11 @@ export default function OmPage() {
 
             <blockquote className="relative mx-auto max-w-3xl pl-6 sm:pl-10 lg:pl-14">
               <p className="font-display text-3xl font-medium leading-[1.1] tracking-[-0.03em] text-balance text-[color:var(--color-cactus-cream)] sm:text-4xl lg:text-5xl">
-                De bureauer der kræver retainer er bureauer der ikke{" "}
+                Bindingen er{" "}
                 <span className="italic font-light text-[color:var(--color-cactus-green)]">
-                  stoler
-                </span>{" "}
-                på deres eget arbejde.
+                  fælden
+                </span>
+                . Ikke prisen.
               </p>
               <figcaption className="mt-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-cream)]/55">
                 <span className="h-[2px] w-8 bg-[color:var(--color-cactus-green)]" />
@@ -229,7 +229,7 @@ export default function OmPage() {
                 Google.
               </p>
               <p>
-                Meta og Google er ikke for "tech-virksomheder". De er for
+                Betalt synlighed er ikke for "tech-virksomheder". De er for
                 ejere der vil have flere kunder uden at bruge timer på
                 at jagte dem. Du gør det du er bedst til. Jeg gør resten.
               </p>

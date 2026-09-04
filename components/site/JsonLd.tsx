@@ -68,7 +68,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     addressCountry: "DK",
   },
   description:
-    "Vækstpartner for danske servicevirksomheder. Vi bygger hjemmesiden, henter kunderne med annoncer, og sørger for at hvert lead får svar på sekunder, så ingen henvendelse går tabt.",
+    "Vækstpartner for lokale danske servicevirksomheder. Vi henter opgaverne ind i dit område, svarer på hver eneste inden for et minut, og lægger dem i din kalender, så ingen kunde går tabt.",
   areaServed: { "@type": "Country", name: "Denmark" },
   serviceType: "Vækst, marketing & kundeanskaffelse",
   hasOfferCatalog: {
@@ -76,28 +76,28 @@ const LOCAL_BUSINESS_SCHEMA = {
     name: "Vækstmotoren",
     itemListElement: [
       offer(
-        "Lead-generation",
-        "Meta-annoncer der henter kvalificerede kunder i dit lokalområde.",
+        "Opgaver ind i dit område",
+        "Vi henter folk i dit lokalområde der leder efter din ydelse, netop nu.",
       ),
       offer(
-        "Lynsvar (speed-to-lead)",
-        "Hvert nyt lead får svar på under 60 sekunder, døgnet rundt.",
+        "Svar på under 60 sekunder",
+        "Hver ny henvendelse får svar på under et minut, døgnet rundt.",
       ),
       offer(
-        "Hjemmeside & Google",
-        "Hjemmeside der konverterer, plus Google-profil der bliver fundet lokalt.",
+        "Hjemmeside der får folk til at ringe",
+        "Bygget til mobil og til at blive fundet lokalt, ikke til at se pæn ud.",
       ),
       offer(
         "Automatisk opfølgning",
-        "Genbooker automatisk de leads der ikke svarede første gang.",
+        "Vender automatisk tilbage til dem der ikke svarede første gang.",
       ),
       offer(
-        "Google-synlighed",
-        "Google Business Profile, anmeldelses-automation og lokal SEO.",
+        "Bliv fundet først lokalt",
+        "Din profil og dine anmeldelser passes, så du står stærkest når nogen søger.",
       ),
       offer(
-        "Resultat-garanti (5 bookede opgaver eller pengene tilbage)",
-        "Du betaler kun når en kunde rent faktisk møder op til mødet.",
+        "Fast månedspris uden binding, 30 dages opsigelse",
+        "Fast beløb om måneden, ingen provision, og 30 dages opsigelse fra første dag.",
       ),
     ],
   },

@@ -1,5 +1,14 @@
 "use client";
 
+/*
+ *  DOED KODE pr. 4. sep 2026. Ingen side importerer denne fil.
+ *
+ *  Indeholder priser vi ikke saelger: 'Setup fra 7.500 kr, drift fra
+ *  3.000 kr/md'.
+ *
+ *  Se den oeverste blok i CLAUDE.md. Skal filen bruges igen, skal teksten
+ *  skrives om FOERST. Saet den ikke paa en side som den er.
+ */
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,

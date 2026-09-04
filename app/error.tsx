@@ -4,7 +4,14 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 /**
- * Global error boundary — catches errors from any route under app/.
+ * Route-level error boundary, catches errors thrown while rendering a
+ * route segment under app/.
+ *
+ * VIGTIG AFGRAENSNING: den fanger IKKE fejl i rod-layoutet. Kommentaren
+ * her paastod tidligere at den fangede alt under app/, og navnet var
+ * GlobalError, hvilket var to gange misvisende. ChatBot, JsonLd og
+ * Analytics ligger netop i rod-layoutet, og et kast der bliver fanget af
+ * app/global-error.tsx i stedet. Det er en anden fil, se den.
  *
  * Replaces Next.js's default "This page couldn't load" UI (which shows
  * to all users in production with no way to debug) with a branded page
@@ -13,7 +20,7 @@ import { useEffect } from "react";
  *
  * Must be a Client Component because it uses useEffect + an onClick reset.
  */
-export default function GlobalError({
+export default function RouteError({
   error,
   reset,
 }: {
@@ -33,7 +40,7 @@ export default function GlobalError({
         </div>
 
         <h1 className="mt-6 font-display text-5xl font-medium leading-[1] tracking-[-0.03em] text-balance sm:text-6xl lg:text-7xl">
-          Beklager —{" "}
+          Beklager,{" "}
           <span className="italic font-light text-[color:var(--color-cactus-cream)]/60">
             siden
           </span>{" "}
@@ -42,7 +49,7 @@ export default function GlobalError({
 
         <p className="mt-8 text-lg leading-relaxed text-[color:var(--color-cactus-cream)]/70">
           Vi har logget fejlen og kigger på den. I mellemtiden kan du prøve at
-          klikke knappen nedenfor — det fungerer som regel.
+          klikke knappen nedenfor, det fungerer som regel.
         </p>
 
         {error.digest && (

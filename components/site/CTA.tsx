@@ -6,6 +6,25 @@ import { BookingEmbed } from "./BookingEmbed";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
+/*
+ *  Booking-sektionen. Ligger bevidst NEDERST paa forsiden, saa folk har
+ *  set problem, system og pris foer de ser kalenderen.
+ *
+ *  To ting er bevidste valg, rul dem ikke tilbage uden at snakke med Enes:
+ *
+ *  1. Moedet hedder "lokal kundeanalyse", ikke "gratis strategi-moede".
+ *     Ingen vaagner og oensker sig et salgsmoede. Analysen er noget de
+ *     gerne tager imod, ogsaa hvis de aldrig koeber. Det er hele grunden
+ *     til at de booker.
+ *
+ *  2. Der staar INTET tal i garantien. Vi kan styre hvor mange der
+ *     henvender sig, ikke hvor mange der bliver lukket, for det afhaenger
+ *     af kundens egne priser. Et tal paa siden flytter samtalen fra
+ *     "virker det for min forretning" til "hvad taeller som kvalificeret",
+ *     og den samtale kan vi kun tabe. Tallet hoerer til i det enkelte
+ *     tilbud, hvor vi kender budget og marked.
+ */
+
 export function CTA() {
   return (
     <section id="book" className="relative py-24 lg:py-32">
@@ -28,55 +47,54 @@ export function CTA() {
             <div className="lg:col-span-5">
               <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-cactus-green)]/40 bg-[color:var(--color-cactus-green)]/12 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-[color:var(--color-cactus-green)]">
                 <CalendarDays className="h-3.5 w-3.5" />
-                Gratis 20-min strategi-møde
+                Gratis lokal kundeanalyse · 20 min
               </div>
 
               <h2 className="mt-6 font-display text-4xl font-medium leading-[0.95] tracking-[-0.03em] text-balance text-white sm:text-5xl lg:text-6xl">
-                Klar til at få kunder{" "}
+                Se hvad der er at hente{" "}
                 <span className="text-[color:var(--color-cactus-green)]">
-                  uden risiko?
+                  i dit område.
                 </span>
               </h2>
 
               <p className="mt-6 text-lg leading-relaxed text-white/65">
-                Udfyld kort formen, vælg en tid. Vi regner konkret på hvad det
-                ville betyde for dit firma, og du beslutter selv om det giver
-                mening.
+                Vi gennemgår dit område sammen på 20 minutter. Du får tallene
+                med dig, uanset om vi ender med at arbejde sammen eller ej.
               </p>
 
               <ul className="mt-8 space-y-3 text-sm text-white/65">
                 <li className="flex items-center gap-3">
                   <span className="h-1 w-1 rounded-full bg-[color:var(--color-cactus-green)]" />
-                  Intet salgspres
+                  Hvor mange der søger efter din ydelse i dit område
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="h-1 w-1 rounded-full bg-[color:var(--color-cactus-green)]" />
-                  Konkret regneeksempel for dit firma
+                  Hvad dine nærmeste konkurrenter gør, og ikke gør
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="h-1 w-1 rounded-full bg-[color:var(--color-cactus-green)]" />
-                  20 minutter, så ved du
+                  Hvad en ny fast kunde realistisk koster dig at få ind
                 </li>
               </ul>
 
-              {/* Garantien staar her, ikke som egen sektion. En risiko-fjerner
-                  virker i det oejeblik nogen skal forpligte sig, ikke midt paa
-                  siden. Flyttet hertil 2. sep 2026. */}
+              {/* Risiko-fjerneren staar her, ikke som egen sektion, fordi den
+                  virker i det oejeblik nogen skal forpligte sig.
+                  Uden tal, med vilje, se noten i toppen af filen. */}
               <div className="mt-8 rounded-2xl border border-[color:var(--color-cactus-green)]/25 bg-[color:var(--color-cactus-green)]/[0.07] p-5">
                 <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-cactus-green)]">
-                  Garanti
+                  Din risiko
                 </div>
                 <p className="mt-2.5 text-[15px] leading-relaxed text-white/80">
-                  Får du ikke mindst{" "}
+                  Ingen binding.{" "}
                   <span className="font-semibold text-white">
-                    5 kvalificerede henvendelser
+                    30 dages opsigelse fra dag ét.
                   </span>{" "}
-                  i den første måned annoncerne kører, får du månedens
-                  honorar tilbage.
+                  Virker det ikke for dig, siger du op, og så er det slut.
                 </p>
                 <p className="mt-2 text-[13px] leading-relaxed text-white/45">
-                  Ingen binding, 30 dages opsigelse. Annoncebudgettet
-                  betaler du direkte til platformen, aldrig gennem os.
+                  Annoncebudgettet betaler du direkte til platformen, aldrig
+                  gennem os. Du ejer selv konti, data og hjemmeside, også
+                  hvis du stopper.
                 </p>
               </div>
 

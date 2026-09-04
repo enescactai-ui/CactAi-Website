@@ -10,7 +10,7 @@
  */
 
 import type { ComponentType } from "react";
-import PostPpsaVsRetainer from "@/content/blog/ppsa-vs-retainer";
+import PostFastPrisUdenBinding from "@/content/blog/fast-pris-uden-binding";
 import PostMetaAdsHaandvaerkere from "@/content/blog/meta-ads-haandvaerkere";
 
 /*
@@ -20,10 +20,25 @@ import PostMetaAdsHaandvaerkere from "@/content/blog/meta-ads-haandvaerkere";
  *  aug 2026, den virker ikke, se det oeverste afsnit i CLAUDE.md. Genindsaet
  *  den ikke uden foerst at rette selve indlaeggets indhold.
  *
- *  founder-lessons.tsx findes ogsaa i content/blog/, upubliceret. Den
- *  aabner med "Jeg er 19, dansker", hvilket direkte modsiger onsket om
- *  at holde alderen ude af sitet. Ret den foerst, hvis den nogensinde
- *  skal publiceres.
+ *  founder-lessons.tsx findes ogsaa i content/blog/, upubliceret. Der er
+ *  TO grunde, og den anden er den alvorlige:
+ *
+ *    1. Den aabner med "Jeg er 19, dansker", hvilket direkte modsiger
+ *       oensket om at holde alderen ude af sitet.
+ *    2. Den skriver "Vi er paa 1 betalende kunde lige nu (Solroed
+ *       Rengoering)". Ahmet ghostede i maj 2026 og er IKKE kunde. At
+ *       navngive en klient offentligt er desuden imod reglen om at vi
+ *       aldrig naevner klienter ved navn i materiale andre ser.
+ *
+ *  Retter du kun alderen og publicerer, sender du en falsk kundepaastand
+ *  ud med navns naevnelse. Begge dele skal rettes foerst.
+ *
+ *  ppsa-vs-retainer.tsx er AFPUBLICERET 3. sep 2026 og erstattet af
+ *  fast-pris-uden-binding.tsx. Den gamle version argumenterede imod fast
+ *  maanedsbetaling, altsaa imod den model vi selv saelger nu, og laa
+ *  oeverst paa /blog som fremhaevet indlaeg. Den gamle URL
+ *  /blog/pay-per-show-vs-retainer redirecter permanent til den nye,
+ *  se next.config. Genindsaet den ikke.
  */
 
 export type BlogPost = {
@@ -38,15 +53,15 @@ export type BlogPost = {
 
 export const POSTS: BlogPost[] = [
   {
-    slug: "pay-per-show-vs-retainer",
+    slug: "fast-pris-uden-binding",
     title:
-      "Pay-per-show vs månedsretainer: Den ærlige sammenligning",
+      "Fast pris er ikke problemet. Bindingen er.",
     excerpt:
-      "De fleste bureauer i Danmark kører fast månedsretainer. Vi gør det modsatte. Her er hvordan de to modeller faktisk er forskellige, og hvornår hver giver mening.",
-    date: "2026-05-26",
+      "Næsten ingen ejere er sure over hvad bureauet kostede. De er sure over at de ikke kunne komme ud. Her er hvorfor jeg tager fast betaling og alligevel lader dig gå med 30 dages varsel.",
+    date: "2026-09-03",
     readMinutes: 7,
     category: "Strategi",
-    Body: PostPpsaVsRetainer,
+    Body: PostFastPrisUdenBinding,
   },
   {
     slug: "meta-ads-lokale-virksomheder-2026",

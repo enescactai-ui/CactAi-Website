@@ -75,7 +75,7 @@ export const CASES: CaseStudy[] = [
       "Fem annoncer produceret i tre formater",
     ],
     metrics: [
-      { value: "96 kr", label: "pris per lead" },
+      { value: "96 kr", label: "pris per henvendelse" },
       { value: "+17 %", label: "søgevisninger, første uger" },
       { value: "under 60 sek.", label: "automatisk svartid" },
     ],
@@ -99,11 +99,11 @@ export const CASES: CaseStudy[] = [
       "Min egen hjemmeside er bygget med de samme metoder som klienternes. Det er ikke en kundecase, men det er det arbejde jeg kan vise nærmest.",
     challenge: [
       "Et bureau der sælger hjemmesider bliver bedømt på sin egen.",
-      "Prisen skal kunne ses uden at booke et møde først.",
+      "Det skal kunne ses hvordan jeg arbejder, uden at booke et møde først.",
     ],
     solution: [
       "Byggede siden i Next.js med fokus på hastighed og struktureret data.",
-      "Skrev priserne direkte på siden.",
+      "Skrev hvem det passer til, og hvem jeg siger nej til, direkte på siden.",
       "Koblede booking sammen med CRM.",
     ],
     delivered: [
@@ -113,7 +113,7 @@ export const CASES: CaseStudy[] = [
     ],
     metrics: [
       { value: "Next.js", label: "bygget fra bunden" },
-      { value: "Offentlig", label: "prissætning" },
+      { value: "Åben", label: "om hvem det ikke er for" },
       { value: "Live", label: "kan besøges nu" },
     ],
     note:

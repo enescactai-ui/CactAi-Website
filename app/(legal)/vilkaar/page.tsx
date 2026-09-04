@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Vilkår og betingelser",
   description:
-    "CactAi's salgs- og leveringsbetingelser for danske servicevirksomheder. B2B-aftale med fast månedspris, ingen binding og resultatgaranti.",
+    "CactAi's salgs- og leveringsbetingelser for danske servicevirksomheder. B2B-aftale med fast månedspris, ingen binding og 30 dages opsigelse.",
 };
 
 const LAST_UPDATED = "2. september 2026";
@@ -31,7 +31,7 @@ const SECTIONS: Section[] = [
     n: "02",
     title: "Tjenesten",
     body: [
-      "CactAi leverer lead-generering og opfølgning via betalt annoncering på Google og Meta, afregnet som fast månedligt honorar. Tjenesten består typisk af:",
+      "CactAi leverer opsætning og drift af systemer til kundeanskaffelse for lokale servicevirksomheder, afregnet som fast månedligt honorar. Omfanget aftales individuelt og fremgår af den skriftlige aftale. Tjenesten omfatter typisk:",
     ],
     list: [
       {
@@ -64,9 +64,9 @@ const SECTIONS: Section[] = [
     list: [
       {
         items: [
-          "Opstartsgebyr: forud, betalt før igangsætning. Beløbet fastsættes individuelt ud fra opgavens omfang og fremgår af den skriftlige aftale eller faktura.",
+          "Opstartsgebyr: opkræves kun hvor det udtrykkeligt fremgår af den skriftlige aftale. Aftaler uden opstartsgebyr er markeret som sådan i tilbuddet. Hvor det opkræves, betales det forud for igangsætning.",
           "Månedligt honorar: fast beløb, faktureres forud for hver påbegyndt måned. Beløbet fastsættes individuelt og fremgår af den skriftlige aftale. Betalingsfrist fremgår af fakturaen.",
-          "Annoncebudget: betales DIREKTE af Kunden til Google og/eller Meta. Går aldrig gennem CactAi og er aldrig omfattet af garantien.",
+          "Annoncebudget: betales DIREKTE af Kunden til Google og/eller Meta. Går aldrig gennem CactAi og indgår aldrig i CactAis honorar.",
           "Morarente: 0,81% pr. påbegyndt måned (renteloven §5). Rykkergebyr 100 kr pr. rykker (rentelovens §9b).",
           "CactAi kan suspendere tjenesten ved 14 dages forsinkelse efter første rykker.",
         ],
@@ -75,34 +75,32 @@ const SECTIONS: Section[] = [
   },
   {
     n: "05",
-    title: "Resultatgaranti",
+    title: "Leverance og opsigelsesret",
     body: [
-      "Hvis CactAi ikke leverer mindst 5 kvalificerede henvendelser inden for den første kalendermåned fra første godkendte annoncestart, refunderes det månedlige honorar for den pågældende måned 100% inden 14 dage efter skriftlig anmodning.",
+      "CactAi giver ingen garanti for et bestemt antal henvendelser, bookinger eller indgåede aftaler. Antallet af henvendelser afhænger af faktorer uden for CactAis kontrol, herunder Kundens egne priser, kapacitet, svartid og konkurrencesituationen i det pågældende geografiske område. Enhver angivelse af forventede mængder er et estimat, ikke et tilsagn.",
+      "Kundens sikkerhed er i stedet en ubetinget ret til at opsige aftalen med 30 dages skriftligt varsel, fra og med aftalens første dag og uden begrundelse. Der er ingen bindingsperiode.",
     ],
     list: [
       {
-        heading: "Definition af 'kvalificeret henvendelse'",
+        heading: "CactAi forpligter sig til",
         items: [
-          "Henvendelsen kommer fra en potentiel slutkunde inden for det aftalte målgruppe-segment (geografi, opgavetype, jobstørrelse).",
-          "Henvendelsen indeholder reelle kontaktoplysninger (telefonnummer og/eller e-mail der kan besvares).",
-          "Slutkunden efterspørger den ydelse Kunden har aftalt at annoncere for.",
-          "Slutkunden reagerer på mindst én opfølgning fra Kunden eller CactAi.",
+          "At opsætte og drive det aftalte system i hele aftaleperioden.",
+          "At hver indkommen henvendelse modtager et automatisk svar, og at Kunden notificeres om den.",
+          "At justere kampagner løbende på baggrund af de faktiske resultater.",
+          "At give Kunden adgang til de tal kampagnen genererer, på anmodning.",
         ],
       },
       {
-        heading: "Garantien bortfalder hvis Kunden",
+        heading: "Kundens ejerskab",
         items: [
-          "Ikke responderer på lead-notifikationer inden for 24 timer i hverdage.",
-          "Afviser eller aflyser bookinger uden saglig grund.",
-          "Pauser, ændrer eller blokerer annoncering.",
-          "Ikke leverer aftalt materiale rettidigt (billeder, tekst, brand-assets).",
-          "Ikke følger op på modtagne henvendelser.",
+          "Annoncekonti, hjemmeside, domæne og indsamlede kundedata tilhører Kunden og oprettes i Kundens navn.",
+          "Ved ophør overdrages adgangen til Kunden uden gebyr.",
         ],
       },
       {
         items: [
-          "Garantien gælder kun det månedlige honorar for den første måned, ikke opstartsgebyr eller annonceforbrug betalt til Google/Meta.",
-          "Anmodning om refundering skal sendes skriftligt senest 7 dage efter garantiperiodens udløb.",
+          "Annonceforbrug betales af Kunden direkte til annonceplatformen og indgår ikke i CactAis honorar. Forbruget refunderes ikke af CactAi under nogen omstændighed.",
+          "Eventuelle konkrete resultatmål aftales særskilt og skriftligt i det enkelte tilbud, og gælder kun i det omfang de fremgår heraf.",
         ],
       },
     ],
@@ -141,10 +139,10 @@ const SECTIONS: Section[] = [
     list: [
       {
         items: [
-          "Bestemte konverteringsrater, omsætningstal eller forretningsresultater udover §05's garanti-mekanisme.",
+          "Bestemte konverteringsrater, omsætningstal eller forretningsresultater, jf. §05.",
           "Driftsstabilitet hos underleverandører (Meta, Google, GoHighLevel m.fl.).",
           "Tab som følge af Kundens forkerte konfiguration eller manglende opfølgning på leads.",
-          "Slutkunders adfærd, herunder no-shows efter §05's definition.",
+          "Slutkunders adfærd, herunder manglende svar eller afbud.",
         ],
       },
     ],
@@ -180,7 +178,7 @@ const SECTIONS: Section[] = [
     title: "Databehandleraftale",
     body: [
       "Hvor CactAi behandler personoplysninger på Kundens vegne (leads fra slutkunder), indgås separat databehandleraftale (DPA).",
-      "DPA'en regulerer behandlingsformål, underdatabehandlere, sikkerhed, tredjelandsoverførsler og auditrettigheder. Se Privatlivspolitikken §05–06.",
+      "DPA'en regulerer behandlingsformål, underdatabehandlere, sikkerhed, tredjelandsoverførsler og auditrettigheder. Se Privatlivspolitikken §05-06.",
     ],
   },
   {
@@ -199,7 +197,7 @@ const SECTIONS: Section[] = [
         items: [
           "Ingen bindingsperiode, Kunden kan opsige til enhver tid.",
           "Opsigelse skal ske skriftligt med 30 dages varsel til udløbet af en betalingsperiode. I varslingsperioden leverer CactAi videre, og Kunden betaler for de leverede ydelser i perioden.",
-          "Allerede betalte beløb refunderes ikke (undtaget §05-garantien).",
+          "Allerede betalte beløb refunderes ikke.",
           "Ved væsentlig misligholdelse kan begge parter ophæve aftalen med 14 dages skriftligt varsel og mulighed for at afhjælpe.",
         ],
       },
