@@ -28,6 +28,10 @@ const EMBED_SCRIPT = "https://api.leadconnectorhq.com/js/form_embed.js";
  *  Der findes ingen paalidelig onError paa cross-origin iframes, saa vi
  *  bruger en timeout: har onLoad ikke meldt tilbage efter 8 sekunder,
  *  antager vi det er gaaet galt og viser kontaktinfo i stedet.
+ *
+ *  Fallback-panelet har egen baggrund (22/9 2026): uden den skinnede
+ *  "Indlaeser kalender..."-teksten igennem bag fejlteksten, saa begge stod
+ *  oven i hinanden. Set paa det daglige site-tjek.
  */
 const IFRAME_TIMEOUT_MS = 8000;
 
@@ -57,7 +61,7 @@ export function BookingEmbed() {
       {/* Scroll viewport — iframe grows naturally inside, user scrolls within */}
       <div className="relative h-full overflow-y-auto overscroll-contain">
         {failed ? (
-          <div className="flex h-full min-h-[420px] flex-col items-center justify-center gap-4 px-8 text-center">
+          <div className="relative flex h-full min-h-[420px] flex-col items-center justify-center gap-4 bg-[color:var(--color-cactus-cream)] px-8 text-center">
             <p className="text-[15px] leading-relaxed text-[color:var(--color-cactus-deep)]/70">
               Kalenderen kunne ikke indlæses. Ring eller skriv, så finder vi
               et tidspunkt med det samme.
