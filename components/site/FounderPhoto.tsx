@@ -21,7 +21,7 @@ import { useState } from "react";
  *  glemmer filen, degraderer siden pænt i stedet for at vise et brudt
  *  billede.
  */
-const HAS_PHOTO = false;
+const HAS_PHOTO = true;
 
 export function FounderPhoto({ size = "default" }: { size?: "default" | "large" }) {
   const [errored, setErrored] = useState(false);
