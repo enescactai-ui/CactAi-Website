@@ -7,6 +7,33 @@
 
 ---
 
+## ⚡ NY FLAGSKIBSNICHE TILFOEJET (25. sep 2026) — laeg oven paa, ikke i stedet for
+
+Nicheanalysen `09 Viden og research/2026-09-25 ENDELIG ANBEFALING, nichevalg.md`
+pegede paa badevaerelsesrenovering i Storkoebenhavn (VVS'ere og toemrere der
+laver badevaerelser) som den nicche der baerer bedst: hoejest ordrevaerdi
+(80.000 til 250.000 kr), lavest bureaumaetning, og gron jura.
+
+**Hvad der er aendret paa sitet:**
+- `components/site/Hero.tsx`: pillen og overskriften taler nu badevaerelser
+  foerst ("... naar badevaerelset skal skiftes"), ikke generisk "lokale
+  servicefirmaer".
+- `components/site/FAQ.tsx`: "Hvilke brancher arbejder I med?" naevner nu
+  badevaerelsesrenovering foerst, de andre brancher staar stadig med.
+- `lib/brancher.ts` har en femte branche, slug `badevaerelse`, samme moenster
+  som de fire andre. Vises automatisk paa `/ydelser` og i `app/sitemap.ts`.
+- `app/page.tsx` har ny title/description mod soegeordet "badevaerelsesrenovering
+  Storkoebenhavn".
+
+**Hvad der IKKE er aendret:** rengoering, tag, vvs (generelt) og klinik lever
+uaendret videre som branchesider, og de eksisterende klienter (rengoering) er
+stadig reelle. Dette er en ny FOERSTE prioritet for ny kundeanskaffelse, ikke
+en exit fra de gamle brancher. Roed-CLAUDE.md afsnit 3 (maalgruppe) er ikke
+rettet, det kraever boss-agent og Enes' ja foerst, se
+`.claude/workspace/_faelles/fakta.md` 25. sep 2026 for status.
+
+---
+
 ## ⚡ CURRENT POSITIONING (3. sep 2026) — supersedes EVERYTHING below
 
 Alt under denne blok der modsiger den her, er forældet. Ret det, eller lad

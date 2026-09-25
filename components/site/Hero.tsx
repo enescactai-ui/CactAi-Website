@@ -85,7 +85,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-cactus-green)] opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--color-cactus-green)]" />
           </span>
-          Vækstmotoren · for lokale servicefirmaer
+          Vækstmotoren · badeværelsesrenovering i Storkøbenhavn
         </motion.div>
 
         {/* Two-column layout */}
@@ -107,7 +107,7 @@ export function Hero() {
                   først
                   <AnimatedUnderline />
                 </em>{" "}
-                <span className="text-[color:var(--color-cactus-cream)]">i dit område</span>
+                <span className="text-[color:var(--color-cactus-cream)]">når badeværelset skal skiftes</span>
                 <span className="text-[color:var(--color-cactus-green)]">.</span>
               </Line>
             </motion.h1>
@@ -118,11 +118,12 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
               className="mt-7 max-w-lg text-lg leading-[1.65] text-[color:var(--color-cactus-cream)]/65 sm:text-xl"
             >
-              De fleste lokale servicefirmaer venter på at telefonen ringer.
-              Vi henter opgaverne ind, svarer på under et minut, og lægger dem
-              i din kalender.{" "}
+              De fleste VVS'ere og tømrere der laver badeværelser, venter på
+              at nogen ringer efter en anbefaling. Vi finder dem der er i
+              gang med at undersøge en renovering i dit område, svarer på
+              under et minut, og lægger dem i din kalender.{" "}
               <strong className="font-semibold text-[color:var(--color-cactus-cream)]/85">
-                Du møder bare op til arbejdet.
+                Du møder bare op til opgaven.
               </strong>
             </motion.p>
 

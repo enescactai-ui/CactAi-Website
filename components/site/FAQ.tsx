@@ -68,7 +68,7 @@ const FAQS = [
   },
   {
     q: "Hvilke brancher arbejder I med?",
-    a: "Lokale servicevirksomheder: rengøring, tag, VVS, el, håndværk og klinikker. Systemet er det samme uanset branche. Det der ændrer sig er hvem vi går efter, og hvad der står på din side.",
+    a: "Lige nu retter jeg mest ind mod VVS'ere og tømrere der laver badeværelsesrenoveringer i Storkøbenhavn, det er der jeg kender markedet bedst. Ud over det arbejder jeg også med rengøring, tag, VVS generelt og klinikker. Systemet er det samme uanset branche. Det der ændrer sig er hvem vi går efter, og hvad der står på din side.",
   },
   {
     q: "Hvem ejer hjemmesiden og kontiene?",

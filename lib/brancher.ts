@@ -343,6 +343,82 @@ export const BRANCHER: Branche[] = [
       "Du leder efter den billigste løsning frem for den der virker.",
     ],
   },
+  {
+    slug: "badevaerelse",
+    navn: "badeværelsesfirma",
+    navnBestemt: "badeværelsesfirmaet",
+    metaTitle: "Flere badeværelsesopgaver i Storkøbenhavn",
+    metaDesc:
+      "Sådan får et VVS- eller tømrerfirma flere badeværelsesrenoveringer i Storkøbenhavn, uden at jagte dem selv. Fast månedspris, ingen binding.",
+    h1: {
+      foer: "Flere badeværelsesopgaver til dit",
+      fremhaevet: "VVS- eller tømrerfirma",
+      efter: "i Storkøbenhavn.",
+    },
+    lead:
+      "Et nyt badeværelse er den slags opgave der betaler en hel måned selv. Men den kommer sjældent af sig selv, og kunden når som regel at tale med to andre firmaer før dig. Her er hvordan du bliver den han vælger.",
+    soegeord: [
+      "badeværelsesrenovering København",
+      "nyt badeværelse pris",
+      "VVS badeværelse Storkøbenhavn",
+      "tømrer badeværelse renovering",
+      "badeværelse ombygning pris",
+    ],
+    smerter: [
+      {
+        titel: "Store opgaver kommer sjældent, og aldrig når du har plads",
+        tekst:
+          "En badeværelsesrenovering ligger ikke i kalenderen hver måned. Den kommer i klumper, og imellem er der stille perioder hvor du selv skal ud og finde det næste.",
+      },
+      {
+        titel: "Han indhenter flere tilbud, og du hører ikke altid om det",
+        tekst:
+          "Før han beslutter sig, har han typisk talt med to eller tre firmaer. Er du ikke en af dem han fandt først, konkurrerer du ikke på pris eller håndværk, du får bare aldrig opkaldet.",
+      },
+      {
+        titel: "En renovering besluttes ikke på en eftermiddag",
+        tekst:
+          "Der går ofte uger fra første søgning til underskrift. Følger du ikke op undervejs, glider han videre til den næste, uden at du nogensinde finder ud af at han var interesseret.",
+      },
+    ],
+    systemet: [
+      {
+        titel: "Vi finder dem der er i gang med at undersøge et badeværelse",
+        tekst:
+          "Ikke alle i dit område, kun dem der aktivt leder efter en renovering lige nu. De har taget beslutningen om at det skal ske, og mangler bare at vælge hvem.",
+      },
+      {
+        titel: "Hver henvendelse får svar under et minut",
+        tekst:
+          "Også mens du står midt i en opgave. Den der svarer først bliver som regel den der bliver husket, når han til sidst skal vælge.",
+      },
+      {
+        titel: "Du får navn, opgave og nummer på SMS",
+        tekst:
+          "I samme sekund henvendelsen lander. Du kan ringe tilbage mens han stadig sammenligner, i stedet for dagen efter når han allerede har booket et andet møde.",
+      },
+      {
+        titel: "De der ikke er klar endnu, bliver fulgt automatisk op",
+        tekst:
+          "De fleste beslutter sig ikke ved første kontakt. Systemet vender tilbage til dem der har vist interesse, så de ender hos dig, ikke hos den næste der ringede.",
+      },
+    ],
+    vaerdi:
+      "En badeværelsesrenovering ligger typisk mellem 80.000 og 250.000 kroner, de fleste lander omkring 100.000 til 150.000. Én ekstra opgave om måneden ændrer regnestykket markant, fordi honoraret er småpenge sammenlignet med hvad opgaven selv er værd. På mødet regner vi konkret på hvad en gennemsnitlig opgave er værd hos dig, og hvor mange ekstra der skal til før det giver mening. Hænger det ikke sammen, siger jeg det.",
+    lokalt:
+      "Vi arbejder i Storkøbenhavn, der hvor de fleste badeværelsesrenoveringer i vores research faktisk foregår. På mødet kigger vi konkret på hvor mange der søger efter badeværelsesrenovering i dit område, og hvad de firmaer der allerede er synlige, gør.",
+    foerste30: [
+      { naar: "Uge 1", hvad: "En time, hvor jeg får fat i hvilke opgaver du helst vil have, hvor stort et område du dækker, og hvad en gennemsnitlig renovering er værd hos dig. Derefter bygger jeg." },
+      { naar: "Uge 2", hvad: "Systemet går i luften. De første henvendelser fra folk der undersøger en renovering begynder at lande hos dig, med det samme." },
+      { naar: "Uge 3 og 4", hvad: "Vi justerer efter hvad der faktisk kommer ind. Kommer der for mange der bare vil have et prisoverslag og for få der er klar til at booke, skruer vi på det." },
+      { naar: "Derefter", hvad: "Et kvarter om måneden, hvor vi kigger på tallene og retter til." },
+    ],
+    ikkeForDig: [
+      "Du har fuldt booket kalender måneder frem.",
+      "Du leder efter den billigste løsning på markedet.",
+      "Du kan ikke tage imod en henvendelse inden for et døgn.",
+    ],
+  },
 ];
 
 export const getBranche = (slug: string) =>

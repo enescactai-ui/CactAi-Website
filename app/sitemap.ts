@@ -19,8 +19,8 @@ import { SITE } from "@/lib/seo";
  *     domaene med naesten intet crawl-budget er sitemappet hovedvejen ind.
  */
 const UPDATED = {
-  forside: "2026-09-04",
-  ydelser: "2026-09-04",
+  forside: "2026-09-25",
+  ydelser: "2026-09-25",
   blog: "2026-09-03",
   om: "2026-09-22",
   cases: "2026-09-04",
@@ -28,6 +28,23 @@ const UPDATED = {
   privatliv: "2026-09-04",
   cookies: "2026-09-04",
 } as const;
+
+/*
+ *  Branchesiderne bliver ikke alle rettet paa samme dag. Foer stod der ét
+ *  fast tal for hele BRANCHER-arrayet, saa en ny side fra i dag ville faa
+ *  samme lastmod som fire sider der ikke er roert siden 4. sep. Det er
+ *  lige saa forkert som `new Date()`, bare den anden vej: det underdriver
+ *  hvor frisk den nye side er. Hver slug har sin egen dato, og en ny
+ *  branche der ikke staar her, falder tilbage til den gamle standarddato.
+ */
+const BRANCHE_UPDATED: Record<string, string> = {
+  rengoering: "2026-09-04",
+  tag: "2026-09-04",
+  vvs: "2026-09-04",
+  klinik: "2026-09-04",
+  badevaerelse: "2026-09-25",
+};
+const BRANCHE_UPDATED_FALLBACK = "2026-09-04";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -51,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // soeger paa. Hoej prioritet, de er ikke pynt.
   const branchePages: MetadataRoute.Sitemap = BRANCHER.map((b) => ({
     url: `${SITE}/flere-kunder/${b.slug}`,
-    lastModified: new Date("2026-09-04"),
+    lastModified: new Date(BRANCHE_UPDATED[b.slug] ?? BRANCHE_UPDATED_FALLBACK),
     priority: 0.9,
   }));
 
